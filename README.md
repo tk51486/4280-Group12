@@ -1,2 +1,3 @@
 # 4280-Group12
-UGA 4280 Group-12
+UGA CSEE 4280 Spring 25
+Tushar & Amr
