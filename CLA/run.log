@@ -1,1 +1,3 @@
-LXT2 info: dumpfile dump.lx2 opened for output.
+Self-checking complete.
+Number of errors =           0
+cla2_test.v:52: $finish called at 20971530 (1ns)

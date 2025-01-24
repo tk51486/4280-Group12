@@ -8,7 +8,7 @@ reg [3:0] A_s, B_s;
 reg Cin_s;
 wire [3:0] S_s;
 wire C4_s;
-reg Clk_s, Rst_s; //defining all inputs and outputs
+reg Clk_s, Rst_s; //defining all inputs and outputs for module
 integer i, j;   //iterators used for looping
 
 cla CompToTest(A_s, B_s, Cin_s, S_s, C4_s, Clk_s, Rst_s); //calling module
@@ -23,18 +23,12 @@ end
 
 // Test inputs
 initial begin
-$dumpvars(0,cla_test);
-	#5 Rst_s <= 1;
-	@(posedge Clk_s);
-	#5 Rst_s <= 0;
-	@(posedge Clk_s);
-    #5 Cin_s <= 0;
-    @(posedge Clk_s);
-    for (i = 0; i < 16; i++) begin
-        for (j = 0; j < 16; j++) begin
+$dumpvars(0,cla_test);  //creating dump file
+    for (i = 0; i < 16; i++) begin  //looping through A's inputs
+        for (j = 0; j < 16; j++) begin  //looping through B's inputs
             #5 A_s <= i;
-            B_s <= j;
-            @(posedge Clk_s); //iterating through all possible inputs
+            B_s <= j;   //setting A and B
+            @(posedge Clk_s); //wait one cycle for the output to update
         end
     end
 $finish;
