@@ -24,6 +24,7 @@ end
 
 //Testing inputs
 initial begin
+    $dumpvars(0,cla2_test);
     A_s = 16'b0;
     B_s = 16'b0;    //setting inputs, this prevents an error due to unknown input
 
@@ -34,9 +35,9 @@ initial begin
             #5 A_s <= i;    
             B_s <= j;       //setting A and B
 
-            /*if(j == 45056) begin
+            if(j == 45056) begin
                 B_s <= 20480;   //forcing errors, comment out to remove
-            end*/
+            end
 
             @(posedge Clk_s);   //wait one clock for S and C16 to update
 
