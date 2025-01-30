@@ -197,7 +197,7 @@ initial begin
 	arr[167] = 997;	//initializing lookup table
 	j = 0;	//initializing iterator
 
-	NumMax_s <= 1000;	//setting NumMax
+	NumMax_s <= 505;	//setting NumMax
 	#100000		//wait an arbitrary amount of time
 
 	while (arr[j] <= NumMax_s & j < 168) begin	//finding primes up to NumMax with lookup table
