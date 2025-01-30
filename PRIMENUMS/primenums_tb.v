@@ -14,7 +14,7 @@ wire Prime_s;	//defining all inputs and outputs for primenums
 primenums primetest(NumMax_s, Reset_s, SysClk_s, Prime_s, NumberChecked_s, NumberofPrimesFound_s);
 
 reg [9:0] arr [0:167];	//array with 168 10-bit indexes. will hold all prime numbers under 1000
-integer j; //iterator used for self-checking
+integer i, j; //iterator used for self-checking
 
 //clock
 always begin
@@ -195,16 +195,33 @@ initial begin
 	arr[165] = 983;
 	arr[166] = 991;
 	arr[167] = 997;	//initializing lookup table
-	j = 0;	//initializing iterator
+	i = 0;	//i loops through the lookup table
+	j = 0;	//j is used for self-checking
+	NumMax_s <= 20;	//setting NumMax
 
-	NumMax_s <= 505;	//setting NumMax
-	#100000		//wait an arbitrary amount of time
+	@(posedge SysClk_s);
+	@(posedge SysClk_s);	//waiting for Prime to be set
+	while (NumberChecked_s < NumMax_s) begin	//self-checking
+		#5
+		j = 0;	//resetting j
+		for (i = 0; i < 168; i++) begin
+			if (NumberChecked_s == arr[i] && j != 1) begin
+				j = 1;	//if NumberChecked is found in the lookup table, it's prime
+			end
+		end
+		$display("Self-checking: Is %d prime? %d", NumberChecked_s, j);
+		@(posedge SysClk_s);
+		@(posedge SysClk_s);
+		@(posedge SysClk_s);
+		@(posedge SysClk_s);	//waiting until Prime is set again
+	end
 
+	//calculating correct number of primes with j
 	while (arr[j] <= NumMax_s & j < 168) begin	//finding primes up to NumMax with lookup table
 	 	j = j + 1;	//j is one less than the number of primes up to arr[j]
 	end
 
-	if (j == NumberofPrimesFound_s) begin	//compares iterator to primes found
+	if (j == NumberofPrimesFound_s) begin	//compares j to primes found
 		$display("Correct Number of Primes found.\n");	//pass message
 	end
 	else begin
