@@ -14,7 +14,7 @@ wire Prime_s;	//defining all inputs and outputs for primenums
 primenums primetest(NumMax_s, Reset_s, SysClk_s, Prime_s, NumberChecked_s, NumberofPrimesFound_s);
 
 reg [9:0] arr [0:167];	//array with 168 10-bit indexes. will hold all prime numbers under 1000
-integer i, j; //iterator used for self-checking
+integer i, j; //integers used for self-checking
 
 //clock
 always begin
@@ -197,7 +197,7 @@ initial begin
 	arr[167] = 997;	//initializing lookup table
 	i = 0;	//i loops through the lookup table
 	j = 0;	//j is used for self-checking
-	NumMax_s <= 20;	//setting NumMax
+	NumMax_s <= 1000;	//setting NumMax
 
 	@(posedge SysClk_s);
 	@(posedge SysClk_s);	//waiting for Prime to be set

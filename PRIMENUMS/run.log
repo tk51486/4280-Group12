@@ -32,6 +32,1476 @@ Current Number:   17, Prime? 1, Clocks:          40, Primes:   7
 Self-checking: Is   19 prime?           1
 Current Number:   19, Prime? 1, Clocks:          44, Primes:   8
 
+Self-checking: Is   21 prime?           0
+Current Number:   21, Prime? 0, Clocks:          48, Primes:   8
+
+Self-checking: Is   23 prime?           1
+Current Number:   23, Prime? 1, Clocks:          52, Primes:   9
+
+Self-checking: Is   25 prime?           0
+Current Number:   25, Prime? 0, Clocks:          56, Primes:   9
+
+Self-checking: Is   27 prime?           0
+Current Number:   27, Prime? 0, Clocks:          60, Primes:   9
+
+Self-checking: Is   29 prime?           1
+Current Number:   29, Prime? 1, Clocks:          64, Primes:  10
+
+Self-checking: Is   31 prime?           1
+Current Number:   31, Prime? 1, Clocks:          68, Primes:  11
+
+Self-checking: Is   33 prime?           0
+Current Number:   33, Prime? 0, Clocks:          72, Primes:  11
+
+Self-checking: Is   35 prime?           0
+Current Number:   35, Prime? 0, Clocks:          76, Primes:  11
+
+Self-checking: Is   37 prime?           1
+Current Number:   37, Prime? 1, Clocks:          80, Primes:  12
+
+Self-checking: Is   39 prime?           0
+Current Number:   39, Prime? 0, Clocks:          84, Primes:  12
+
+Self-checking: Is   41 prime?           1
+Current Number:   41, Prime? 1, Clocks:          88, Primes:  13
+
+Self-checking: Is   43 prime?           1
+Current Number:   43, Prime? 1, Clocks:          92, Primes:  14
+
+Self-checking: Is   45 prime?           0
+Current Number:   45, Prime? 0, Clocks:          96, Primes:  14
+
+Self-checking: Is   47 prime?           1
+Current Number:   47, Prime? 1, Clocks:         100, Primes:  15
+
+Self-checking: Is   49 prime?           0
+Current Number:   49, Prime? 0, Clocks:         104, Primes:  15
+
+Self-checking: Is   51 prime?           0
+Current Number:   51, Prime? 0, Clocks:         108, Primes:  15
+
+Self-checking: Is   53 prime?           1
+Current Number:   53, Prime? 1, Clocks:         112, Primes:  16
+
+Self-checking: Is   55 prime?           0
+Current Number:   55, Prime? 0, Clocks:         116, Primes:  16
+
+Self-checking: Is   57 prime?           0
+Current Number:   57, Prime? 0, Clocks:         120, Primes:  16
+
+Self-checking: Is   59 prime?           1
+Current Number:   59, Prime? 1, Clocks:         124, Primes:  17
+
+Self-checking: Is   61 prime?           1
+Current Number:   61, Prime? 1, Clocks:         128, Primes:  18
+
+Self-checking: Is   63 prime?           0
+Current Number:   63, Prime? 0, Clocks:         132, Primes:  18
+
+Self-checking: Is   65 prime?           0
+Current Number:   65, Prime? 0, Clocks:         136, Primes:  18
+
+Self-checking: Is   67 prime?           1
+Current Number:   67, Prime? 1, Clocks:         140, Primes:  19
+
+Self-checking: Is   69 prime?           0
+Current Number:   69, Prime? 0, Clocks:         144, Primes:  19
+
+Self-checking: Is   71 prime?           1
+Current Number:   71, Prime? 1, Clocks:         148, Primes:  20
+
+Self-checking: Is   73 prime?           1
+Current Number:   73, Prime? 1, Clocks:         152, Primes:  21
+
+Self-checking: Is   75 prime?           0
+Current Number:   75, Prime? 0, Clocks:         156, Primes:  21
+
+Self-checking: Is   77 prime?           0
+Current Number:   77, Prime? 0, Clocks:         160, Primes:  21
+
+Self-checking: Is   79 prime?           1
+Current Number:   79, Prime? 1, Clocks:         164, Primes:  22
+
+Self-checking: Is   81 prime?           0
+Current Number:   81, Prime? 0, Clocks:         168, Primes:  22
+
+Self-checking: Is   83 prime?           1
+Current Number:   83, Prime? 1, Clocks:         172, Primes:  23
+
+Self-checking: Is   85 prime?           0
+Current Number:   85, Prime? 0, Clocks:         176, Primes:  23
+
+Self-checking: Is   87 prime?           0
+Current Number:   87, Prime? 0, Clocks:         180, Primes:  23
+
+Self-checking: Is   89 prime?           1
+Current Number:   89, Prime? 1, Clocks:         184, Primes:  24
+
+Self-checking: Is   91 prime?           0
+Current Number:   91, Prime? 0, Clocks:         188, Primes:  24
+
+Self-checking: Is   93 prime?           0
+Current Number:   93, Prime? 0, Clocks:         192, Primes:  24
+
+Self-checking: Is   95 prime?           0
+Current Number:   95, Prime? 0, Clocks:         196, Primes:  24
+
+Self-checking: Is   97 prime?           1
+Current Number:   97, Prime? 1, Clocks:         200, Primes:  25
+
+Self-checking: Is   99 prime?           0
+Current Number:   99, Prime? 0, Clocks:         204, Primes:  25
+
+Self-checking: Is  101 prime?           1
+Current Number:  101, Prime? 1, Clocks:         208, Primes:  26
+
+Self-checking: Is  103 prime?           1
+Current Number:  103, Prime? 1, Clocks:         212, Primes:  27
+
+Self-checking: Is  105 prime?           0
+Current Number:  105, Prime? 0, Clocks:         216, Primes:  27
+
+Self-checking: Is  107 prime?           1
+Current Number:  107, Prime? 1, Clocks:         220, Primes:  28
+
+Self-checking: Is  109 prime?           1
+Current Number:  109, Prime? 1, Clocks:         224, Primes:  29
+
+Self-checking: Is  111 prime?           0
+Current Number:  111, Prime? 0, Clocks:         228, Primes:  29
+
+Self-checking: Is  113 prime?           1
+Current Number:  113, Prime? 1, Clocks:         232, Primes:  30
+
+Self-checking: Is  115 prime?           0
+Current Number:  115, Prime? 0, Clocks:         236, Primes:  30
+
+Self-checking: Is  117 prime?           0
+Current Number:  117, Prime? 0, Clocks:         240, Primes:  30
+
+Self-checking: Is  119 prime?           0
+Current Number:  119, Prime? 0, Clocks:         244, Primes:  30
+
+Self-checking: Is  121 prime?           0
+Current Number:  121, Prime? 0, Clocks:         248, Primes:  30
+
+Self-checking: Is  123 prime?           0
+Current Number:  123, Prime? 0, Clocks:         252, Primes:  30
+
+Self-checking: Is  125 prime?           0
+Current Number:  125, Prime? 0, Clocks:         256, Primes:  30
+
+Self-checking: Is  127 prime?           1
+Current Number:  127, Prime? 1, Clocks:         260, Primes:  31
+
+Self-checking: Is  129 prime?           0
+Current Number:  129, Prime? 0, Clocks:         264, Primes:  31
+
+Self-checking: Is  131 prime?           1
+Current Number:  131, Prime? 1, Clocks:         268, Primes:  32
+
+Self-checking: Is  133 prime?           0
+Current Number:  133, Prime? 0, Clocks:         272, Primes:  32
+
+Self-checking: Is  135 prime?           0
+Current Number:  135, Prime? 0, Clocks:         276, Primes:  32
+
+Self-checking: Is  137 prime?           1
+Current Number:  137, Prime? 1, Clocks:         280, Primes:  33
+
+Self-checking: Is  139 prime?           1
+Current Number:  139, Prime? 1, Clocks:         284, Primes:  34
+
+Self-checking: Is  141 prime?           0
+Current Number:  141, Prime? 0, Clocks:         288, Primes:  34
+
+Self-checking: Is  143 prime?           0
+Current Number:  143, Prime? 0, Clocks:         292, Primes:  34
+
+Self-checking: Is  145 prime?           0
+Current Number:  145, Prime? 0, Clocks:         296, Primes:  34
+
+Self-checking: Is  147 prime?           0
+Current Number:  147, Prime? 0, Clocks:         300, Primes:  34
+
+Self-checking: Is  149 prime?           1
+Current Number:  149, Prime? 1, Clocks:         304, Primes:  35
+
+Self-checking: Is  151 prime?           1
+Current Number:  151, Prime? 1, Clocks:         308, Primes:  36
+
+Self-checking: Is  153 prime?           0
+Current Number:  153, Prime? 0, Clocks:         312, Primes:  36
+
+Self-checking: Is  155 prime?           0
+Current Number:  155, Prime? 0, Clocks:         316, Primes:  36
+
+Self-checking: Is  157 prime?           1
+Current Number:  157, Prime? 1, Clocks:         320, Primes:  37
+
+Self-checking: Is  159 prime?           0
+Current Number:  159, Prime? 0, Clocks:         324, Primes:  37
+
+Self-checking: Is  161 prime?           0
+Current Number:  161, Prime? 0, Clocks:         328, Primes:  37
+
+Self-checking: Is  163 prime?           1
+Current Number:  163, Prime? 1, Clocks:         332, Primes:  38
+
+Self-checking: Is  165 prime?           0
+Current Number:  165, Prime? 0, Clocks:         336, Primes:  38
+
+Self-checking: Is  167 prime?           1
+Current Number:  167, Prime? 1, Clocks:         340, Primes:  39
+
+Self-checking: Is  169 prime?           0
+Current Number:  169, Prime? 0, Clocks:         344, Primes:  39
+
+Self-checking: Is  171 prime?           0
+Current Number:  171, Prime? 0, Clocks:         348, Primes:  39
+
+Self-checking: Is  173 prime?           1
+Current Number:  173, Prime? 1, Clocks:         352, Primes:  40
+
+Self-checking: Is  175 prime?           0
+Current Number:  175, Prime? 0, Clocks:         356, Primes:  40
+
+Self-checking: Is  177 prime?           0
+Current Number:  177, Prime? 0, Clocks:         360, Primes:  40
+
+Self-checking: Is  179 prime?           1
+Current Number:  179, Prime? 1, Clocks:         364, Primes:  41
+
+Self-checking: Is  181 prime?           1
+Current Number:  181, Prime? 1, Clocks:         368, Primes:  42
+
+Self-checking: Is  183 prime?           0
+Current Number:  183, Prime? 0, Clocks:         372, Primes:  42
+
+Self-checking: Is  185 prime?           0
+Current Number:  185, Prime? 0, Clocks:         376, Primes:  42
+
+Self-checking: Is  187 prime?           0
+Current Number:  187, Prime? 0, Clocks:         380, Primes:  42
+
+Self-checking: Is  189 prime?           0
+Current Number:  189, Prime? 0, Clocks:         384, Primes:  42
+
+Self-checking: Is  191 prime?           1
+Current Number:  191, Prime? 1, Clocks:         388, Primes:  43
+
+Self-checking: Is  193 prime?           1
+Current Number:  193, Prime? 1, Clocks:         392, Primes:  44
+
+Self-checking: Is  195 prime?           0
+Current Number:  195, Prime? 0, Clocks:         396, Primes:  44
+
+Self-checking: Is  197 prime?           1
+Current Number:  197, Prime? 1, Clocks:         400, Primes:  45
+
+Self-checking: Is  199 prime?           1
+Current Number:  199, Prime? 1, Clocks:         404, Primes:  46
+
+Self-checking: Is  201 prime?           0
+Current Number:  201, Prime? 0, Clocks:         408, Primes:  46
+
+Self-checking: Is  203 prime?           0
+Current Number:  203, Prime? 0, Clocks:         412, Primes:  46
+
+Self-checking: Is  205 prime?           0
+Current Number:  205, Prime? 0, Clocks:         416, Primes:  46
+
+Self-checking: Is  207 prime?           0
+Current Number:  207, Prime? 0, Clocks:         420, Primes:  46
+
+Self-checking: Is  209 prime?           0
+Current Number:  209, Prime? 0, Clocks:         424, Primes:  46
+
+Self-checking: Is  211 prime?           1
+Current Number:  211, Prime? 1, Clocks:         428, Primes:  47
+
+Self-checking: Is  213 prime?           0
+Current Number:  213, Prime? 0, Clocks:         432, Primes:  47
+
+Self-checking: Is  215 prime?           0
+Current Number:  215, Prime? 0, Clocks:         436, Primes:  47
+
+Self-checking: Is  217 prime?           0
+Current Number:  217, Prime? 0, Clocks:         440, Primes:  47
+
+Self-checking: Is  219 prime?           0
+Current Number:  219, Prime? 0, Clocks:         444, Primes:  47
+
+Self-checking: Is  221 prime?           0
+Current Number:  221, Prime? 0, Clocks:         448, Primes:  47
+
+Self-checking: Is  223 prime?           1
+Current Number:  223, Prime? 1, Clocks:         452, Primes:  48
+
+Self-checking: Is  225 prime?           0
+Current Number:  225, Prime? 0, Clocks:         456, Primes:  48
+
+Self-checking: Is  227 prime?           1
+Current Number:  227, Prime? 1, Clocks:         460, Primes:  49
+
+Self-checking: Is  229 prime?           1
+Current Number:  229, Prime? 1, Clocks:         464, Primes:  50
+
+Self-checking: Is  231 prime?           0
+Current Number:  231, Prime? 0, Clocks:         468, Primes:  50
+
+Self-checking: Is  233 prime?           1
+Current Number:  233, Prime? 1, Clocks:         472, Primes:  51
+
+Self-checking: Is  235 prime?           0
+Current Number:  235, Prime? 0, Clocks:         476, Primes:  51
+
+Self-checking: Is  237 prime?           0
+Current Number:  237, Prime? 0, Clocks:         480, Primes:  51
+
+Self-checking: Is  239 prime?           1
+Current Number:  239, Prime? 1, Clocks:         484, Primes:  52
+
+Self-checking: Is  241 prime?           1
+Current Number:  241, Prime? 1, Clocks:         488, Primes:  53
+
+Self-checking: Is  243 prime?           0
+Current Number:  243, Prime? 0, Clocks:         492, Primes:  53
+
+Self-checking: Is  245 prime?           0
+Current Number:  245, Prime? 0, Clocks:         496, Primes:  53
+
+Self-checking: Is  247 prime?           0
+Current Number:  247, Prime? 0, Clocks:         500, Primes:  53
+
+Self-checking: Is  249 prime?           0
+Current Number:  249, Prime? 0, Clocks:         504, Primes:  53
+
+Self-checking: Is  251 prime?           1
+Current Number:  251, Prime? 1, Clocks:         508, Primes:  54
+
+Self-checking: Is  253 prime?           0
+Current Number:  253, Prime? 0, Clocks:         512, Primes:  54
+
+Self-checking: Is  255 prime?           0
+Current Number:  255, Prime? 0, Clocks:         516, Primes:  54
+
+Self-checking: Is  257 prime?           1
+Current Number:  257, Prime? 1, Clocks:         520, Primes:  55
+
+Self-checking: Is  259 prime?           0
+Current Number:  259, Prime? 0, Clocks:         524, Primes:  55
+
+Self-checking: Is  261 prime?           0
+Current Number:  261, Prime? 0, Clocks:         528, Primes:  55
+
+Self-checking: Is  263 prime?           1
+Current Number:  263, Prime? 1, Clocks:         532, Primes:  56
+
+Self-checking: Is  265 prime?           0
+Current Number:  265, Prime? 0, Clocks:         536, Primes:  56
+
+Self-checking: Is  267 prime?           0
+Current Number:  267, Prime? 0, Clocks:         540, Primes:  56
+
+Self-checking: Is  269 prime?           1
+Current Number:  269, Prime? 1, Clocks:         544, Primes:  57
+
+Self-checking: Is  271 prime?           1
+Current Number:  271, Prime? 1, Clocks:         548, Primes:  58
+
+Self-checking: Is  273 prime?           0
+Current Number:  273, Prime? 0, Clocks:         552, Primes:  58
+
+Self-checking: Is  275 prime?           0
+Current Number:  275, Prime? 0, Clocks:         556, Primes:  58
+
+Self-checking: Is  277 prime?           1
+Current Number:  277, Prime? 1, Clocks:         560, Primes:  59
+
+Self-checking: Is  279 prime?           0
+Current Number:  279, Prime? 0, Clocks:         564, Primes:  59
+
+Self-checking: Is  281 prime?           1
+Current Number:  281, Prime? 1, Clocks:         568, Primes:  60
+
+Self-checking: Is  283 prime?           1
+Current Number:  283, Prime? 1, Clocks:         572, Primes:  61
+
+Self-checking: Is  285 prime?           0
+Current Number:  285, Prime? 0, Clocks:         576, Primes:  61
+
+Self-checking: Is  287 prime?           0
+Current Number:  287, Prime? 0, Clocks:         580, Primes:  61
+
+Self-checking: Is  289 prime?           0
+Current Number:  289, Prime? 0, Clocks:         584, Primes:  61
+
+Self-checking: Is  291 prime?           0
+Current Number:  291, Prime? 0, Clocks:         588, Primes:  61
+
+Self-checking: Is  293 prime?           1
+Current Number:  293, Prime? 1, Clocks:         592, Primes:  62
+
+Self-checking: Is  295 prime?           0
+Current Number:  295, Prime? 0, Clocks:         596, Primes:  62
+
+Self-checking: Is  297 prime?           0
+Current Number:  297, Prime? 0, Clocks:         600, Primes:  62
+
+Self-checking: Is  299 prime?           0
+Current Number:  299, Prime? 0, Clocks:         604, Primes:  62
+
+Self-checking: Is  301 prime?           0
+Current Number:  301, Prime? 0, Clocks:         608, Primes:  62
+
+Self-checking: Is  303 prime?           0
+Current Number:  303, Prime? 0, Clocks:         612, Primes:  62
+
+Self-checking: Is  305 prime?           0
+Current Number:  305, Prime? 0, Clocks:         616, Primes:  62
+
+Self-checking: Is  307 prime?           1
+Current Number:  307, Prime? 1, Clocks:         620, Primes:  63
+
+Self-checking: Is  309 prime?           0
+Current Number:  309, Prime? 0, Clocks:         624, Primes:  63
+
+Self-checking: Is  311 prime?           1
+Current Number:  311, Prime? 1, Clocks:         628, Primes:  64
+
+Self-checking: Is  313 prime?           1
+Current Number:  313, Prime? 1, Clocks:         632, Primes:  65
+
+Self-checking: Is  315 prime?           0
+Current Number:  315, Prime? 0, Clocks:         636, Primes:  65
+
+Self-checking: Is  317 prime?           1
+Current Number:  317, Prime? 1, Clocks:         640, Primes:  66
+
+Self-checking: Is  319 prime?           0
+Current Number:  319, Prime? 0, Clocks:         644, Primes:  66
+
+Self-checking: Is  321 prime?           0
+Current Number:  321, Prime? 0, Clocks:         648, Primes:  66
+
+Self-checking: Is  323 prime?           0
+Current Number:  323, Prime? 0, Clocks:         652, Primes:  66
+
+Self-checking: Is  325 prime?           0
+Current Number:  325, Prime? 0, Clocks:         656, Primes:  66
+
+Self-checking: Is  327 prime?           0
+Current Number:  327, Prime? 0, Clocks:         660, Primes:  66
+
+Self-checking: Is  329 prime?           0
+Current Number:  329, Prime? 0, Clocks:         664, Primes:  66
+
+Self-checking: Is  331 prime?           1
+Current Number:  331, Prime? 1, Clocks:         668, Primes:  67
+
+Self-checking: Is  333 prime?           0
+Current Number:  333, Prime? 0, Clocks:         672, Primes:  67
+
+Self-checking: Is  335 prime?           0
+Current Number:  335, Prime? 0, Clocks:         676, Primes:  67
+
+Self-checking: Is  337 prime?           1
+Current Number:  337, Prime? 1, Clocks:         680, Primes:  68
+
+Self-checking: Is  339 prime?           0
+Current Number:  339, Prime? 0, Clocks:         684, Primes:  68
+
+Self-checking: Is  341 prime?           0
+Current Number:  341, Prime? 0, Clocks:         688, Primes:  68
+
+Self-checking: Is  343 prime?           0
+Current Number:  343, Prime? 0, Clocks:         692, Primes:  68
+
+Self-checking: Is  345 prime?           0
+Current Number:  345, Prime? 0, Clocks:         696, Primes:  68
+
+Self-checking: Is  347 prime?           1
+Current Number:  347, Prime? 1, Clocks:         700, Primes:  69
+
+Self-checking: Is  349 prime?           1
+Current Number:  349, Prime? 1, Clocks:         704, Primes:  70
+
+Self-checking: Is  351 prime?           0
+Current Number:  351, Prime? 0, Clocks:         708, Primes:  70
+
+Self-checking: Is  353 prime?           1
+Current Number:  353, Prime? 1, Clocks:         712, Primes:  71
+
+Self-checking: Is  355 prime?           0
+Current Number:  355, Prime? 0, Clocks:         716, Primes:  71
+
+Self-checking: Is  357 prime?           0
+Current Number:  357, Prime? 0, Clocks:         720, Primes:  71
+
+Self-checking: Is  359 prime?           1
+Current Number:  359, Prime? 1, Clocks:         724, Primes:  72
+
+Self-checking: Is  361 prime?           0
+Current Number:  361, Prime? 0, Clocks:         728, Primes:  72
+
+Self-checking: Is  363 prime?           0
+Current Number:  363, Prime? 0, Clocks:         732, Primes:  72
+
+Self-checking: Is  365 prime?           0
+Current Number:  365, Prime? 0, Clocks:         736, Primes:  72
+
+Self-checking: Is  367 prime?           1
+Current Number:  367, Prime? 1, Clocks:         740, Primes:  73
+
+Self-checking: Is  369 prime?           0
+Current Number:  369, Prime? 0, Clocks:         744, Primes:  73
+
+Self-checking: Is  371 prime?           0
+Current Number:  371, Prime? 0, Clocks:         748, Primes:  73
+
+Self-checking: Is  373 prime?           1
+Current Number:  373, Prime? 1, Clocks:         752, Primes:  74
+
+Self-checking: Is  375 prime?           0
+Current Number:  375, Prime? 0, Clocks:         756, Primes:  74
+
+Self-checking: Is  377 prime?           0
+Current Number:  377, Prime? 0, Clocks:         760, Primes:  74
+
+Self-checking: Is  379 prime?           1
+Current Number:  379, Prime? 1, Clocks:         764, Primes:  75
+
+Self-checking: Is  381 prime?           0
+Current Number:  381, Prime? 0, Clocks:         768, Primes:  75
+
+Self-checking: Is  383 prime?           1
+Current Number:  383, Prime? 1, Clocks:         772, Primes:  76
+
+Self-checking: Is  385 prime?           0
+Current Number:  385, Prime? 0, Clocks:         776, Primes:  76
+
+Self-checking: Is  387 prime?           0
+Current Number:  387, Prime? 0, Clocks:         780, Primes:  76
+
+Self-checking: Is  389 prime?           1
+Current Number:  389, Prime? 1, Clocks:         784, Primes:  77
+
+Self-checking: Is  391 prime?           0
+Current Number:  391, Prime? 0, Clocks:         788, Primes:  77
+
+Self-checking: Is  393 prime?           0
+Current Number:  393, Prime? 0, Clocks:         792, Primes:  77
+
+Self-checking: Is  395 prime?           0
+Current Number:  395, Prime? 0, Clocks:         796, Primes:  77
+
+Self-checking: Is  397 prime?           1
+Current Number:  397, Prime? 1, Clocks:         800, Primes:  78
+
+Self-checking: Is  399 prime?           0
+Current Number:  399, Prime? 0, Clocks:         804, Primes:  78
+
+Self-checking: Is  401 prime?           1
+Current Number:  401, Prime? 1, Clocks:         808, Primes:  79
+
+Self-checking: Is  403 prime?           0
+Current Number:  403, Prime? 0, Clocks:         812, Primes:  79
+
+Self-checking: Is  405 prime?           0
+Current Number:  405, Prime? 0, Clocks:         816, Primes:  79
+
+Self-checking: Is  407 prime?           0
+Current Number:  407, Prime? 0, Clocks:         820, Primes:  79
+
+Self-checking: Is  409 prime?           1
+Current Number:  409, Prime? 1, Clocks:         824, Primes:  80
+
+Self-checking: Is  411 prime?           0
+Current Number:  411, Prime? 0, Clocks:         828, Primes:  80
+
+Self-checking: Is  413 prime?           0
+Current Number:  413, Prime? 0, Clocks:         832, Primes:  80
+
+Self-checking: Is  415 prime?           0
+Current Number:  415, Prime? 0, Clocks:         836, Primes:  80
+
+Self-checking: Is  417 prime?           0
+Current Number:  417, Prime? 0, Clocks:         840, Primes:  80
+
+Self-checking: Is  419 prime?           1
+Current Number:  419, Prime? 1, Clocks:         844, Primes:  81
+
+Self-checking: Is  421 prime?           1
+Current Number:  421, Prime? 1, Clocks:         848, Primes:  82
+
+Self-checking: Is  423 prime?           0
+Current Number:  423, Prime? 0, Clocks:         852, Primes:  82
+
+Self-checking: Is  425 prime?           0
+Current Number:  425, Prime? 0, Clocks:         856, Primes:  82
+
+Self-checking: Is  427 prime?           0
+Current Number:  427, Prime? 0, Clocks:         860, Primes:  82
+
+Self-checking: Is  429 prime?           0
+Current Number:  429, Prime? 0, Clocks:         864, Primes:  82
+
+Self-checking: Is  431 prime?           1
+Current Number:  431, Prime? 1, Clocks:         868, Primes:  83
+
+Self-checking: Is  433 prime?           1
+Current Number:  433, Prime? 1, Clocks:         872, Primes:  84
+
+Self-checking: Is  435 prime?           0
+Current Number:  435, Prime? 0, Clocks:         876, Primes:  84
+
+Self-checking: Is  437 prime?           0
+Current Number:  437, Prime? 0, Clocks:         880, Primes:  84
+
+Self-checking: Is  439 prime?           1
+Current Number:  439, Prime? 1, Clocks:         884, Primes:  85
+
+Self-checking: Is  441 prime?           0
+Current Number:  441, Prime? 0, Clocks:         888, Primes:  85
+
+Self-checking: Is  443 prime?           1
+Current Number:  443, Prime? 1, Clocks:         892, Primes:  86
+
+Self-checking: Is  445 prime?           0
+Current Number:  445, Prime? 0, Clocks:         896, Primes:  86
+
+Self-checking: Is  447 prime?           0
+Current Number:  447, Prime? 0, Clocks:         900, Primes:  86
+
+Self-checking: Is  449 prime?           1
+Current Number:  449, Prime? 1, Clocks:         904, Primes:  87
+
+Self-checking: Is  451 prime?           0
+Current Number:  451, Prime? 0, Clocks:         908, Primes:  87
+
+Self-checking: Is  453 prime?           0
+Current Number:  453, Prime? 0, Clocks:         912, Primes:  87
+
+Self-checking: Is  455 prime?           0
+Current Number:  455, Prime? 0, Clocks:         916, Primes:  87
+
+Self-checking: Is  457 prime?           1
+Current Number:  457, Prime? 1, Clocks:         920, Primes:  88
+
+Self-checking: Is  459 prime?           0
+Current Number:  459, Prime? 0, Clocks:         924, Primes:  88
+
+Self-checking: Is  461 prime?           1
+Current Number:  461, Prime? 1, Clocks:         928, Primes:  89
+
+Self-checking: Is  463 prime?           1
+Current Number:  463, Prime? 1, Clocks:         932, Primes:  90
+
+Self-checking: Is  465 prime?           0
+Current Number:  465, Prime? 0, Clocks:         936, Primes:  90
+
+Self-checking: Is  467 prime?           1
+Current Number:  467, Prime? 1, Clocks:         940, Primes:  91
+
+Self-checking: Is  469 prime?           0
+Current Number:  469, Prime? 0, Clocks:         944, Primes:  91
+
+Self-checking: Is  471 prime?           0
+Current Number:  471, Prime? 0, Clocks:         948, Primes:  91
+
+Self-checking: Is  473 prime?           0
+Current Number:  473, Prime? 0, Clocks:         952, Primes:  91
+
+Self-checking: Is  475 prime?           0
+Current Number:  475, Prime? 0, Clocks:         956, Primes:  91
+
+Self-checking: Is  477 prime?           0
+Current Number:  477, Prime? 0, Clocks:         960, Primes:  91
+
+Self-checking: Is  479 prime?           1
+Current Number:  479, Prime? 1, Clocks:         964, Primes:  92
+
+Self-checking: Is  481 prime?           0
+Current Number:  481, Prime? 0, Clocks:         968, Primes:  92
+
+Self-checking: Is  483 prime?           0
+Current Number:  483, Prime? 0, Clocks:         972, Primes:  92
+
+Self-checking: Is  485 prime?           0
+Current Number:  485, Prime? 0, Clocks:         976, Primes:  92
+
+Self-checking: Is  487 prime?           1
+Current Number:  487, Prime? 1, Clocks:         980, Primes:  93
+
+Self-checking: Is  489 prime?           0
+Current Number:  489, Prime? 0, Clocks:         984, Primes:  93
+
+Self-checking: Is  491 prime?           1
+Current Number:  491, Prime? 1, Clocks:         988, Primes:  94
+
+Self-checking: Is  493 prime?           0
+Current Number:  493, Prime? 0, Clocks:         992, Primes:  94
+
+Self-checking: Is  495 prime?           0
+Current Number:  495, Prime? 0, Clocks:         996, Primes:  94
+
+Self-checking: Is  497 prime?           0
+Current Number:  497, Prime? 0, Clocks:        1000, Primes:  94
+
+Self-checking: Is  499 prime?           1
+Current Number:  499, Prime? 1, Clocks:        1004, Primes:  95
+
+Self-checking: Is  501 prime?           0
+Current Number:  501, Prime? 0, Clocks:        1008, Primes:  95
+
+Self-checking: Is  503 prime?           1
+Current Number:  503, Prime? 1, Clocks:        1012, Primes:  96
+
+Self-checking: Is  505 prime?           0
+Current Number:  505, Prime? 0, Clocks:        1016, Primes:  96
+
+Self-checking: Is  507 prime?           0
+Current Number:  507, Prime? 0, Clocks:        1020, Primes:  96
+
+Self-checking: Is  509 prime?           1
+Current Number:  509, Prime? 1, Clocks:        1024, Primes:  97
+
+Self-checking: Is  511 prime?           0
+Current Number:  511, Prime? 0, Clocks:        1028, Primes:  97
+
+Self-checking: Is  513 prime?           0
+Current Number:  513, Prime? 0, Clocks:        1032, Primes:  97
+
+Self-checking: Is  515 prime?           0
+Current Number:  515, Prime? 0, Clocks:        1036, Primes:  97
+
+Self-checking: Is  517 prime?           0
+Current Number:  517, Prime? 0, Clocks:        1040, Primes:  97
+
+Self-checking: Is  519 prime?           0
+Current Number:  519, Prime? 0, Clocks:        1044, Primes:  97
+
+Self-checking: Is  521 prime?           1
+Current Number:  521, Prime? 1, Clocks:        1048, Primes:  98
+
+Self-checking: Is  523 prime?           1
+Current Number:  523, Prime? 1, Clocks:        1052, Primes:  99
+
+Self-checking: Is  525 prime?           0
+Current Number:  525, Prime? 0, Clocks:        1056, Primes:  99
+
+Self-checking: Is  527 prime?           0
+Current Number:  527, Prime? 0, Clocks:        1060, Primes:  99
+
+Self-checking: Is  529 prime?           0
+Current Number:  529, Prime? 0, Clocks:        1064, Primes:  99
+
+Self-checking: Is  531 prime?           0
+Current Number:  531, Prime? 0, Clocks:        1068, Primes:  99
+
+Self-checking: Is  533 prime?           0
+Current Number:  533, Prime? 0, Clocks:        1072, Primes:  99
+
+Self-checking: Is  535 prime?           0
+Current Number:  535, Prime? 0, Clocks:        1076, Primes:  99
+
+Self-checking: Is  537 prime?           0
+Current Number:  537, Prime? 0, Clocks:        1080, Primes:  99
+
+Self-checking: Is  539 prime?           0
+Current Number:  539, Prime? 0, Clocks:        1084, Primes:  99
+
+Self-checking: Is  541 prime?           1
+Current Number:  541, Prime? 1, Clocks:        1088, Primes: 100
+
+Self-checking: Is  543 prime?           0
+Current Number:  543, Prime? 0, Clocks:        1092, Primes: 100
+
+Self-checking: Is  545 prime?           0
+Current Number:  545, Prime? 0, Clocks:        1096, Primes: 100
+
+Self-checking: Is  547 prime?           1
+Current Number:  547, Prime? 1, Clocks:        1100, Primes: 101
+
+Self-checking: Is  549 prime?           0
+Current Number:  549, Prime? 0, Clocks:        1104, Primes: 101
+
+Self-checking: Is  551 prime?           0
+Current Number:  551, Prime? 0, Clocks:        1108, Primes: 101
+
+Self-checking: Is  553 prime?           0
+Current Number:  553, Prime? 0, Clocks:        1112, Primes: 101
+
+Self-checking: Is  555 prime?           0
+Current Number:  555, Prime? 0, Clocks:        1116, Primes: 101
+
+Self-checking: Is  557 prime?           1
+Current Number:  557, Prime? 1, Clocks:        1120, Primes: 102
+
+Self-checking: Is  559 prime?           0
+Current Number:  559, Prime? 0, Clocks:        1124, Primes: 102
+
+Self-checking: Is  561 prime?           0
+Current Number:  561, Prime? 0, Clocks:        1128, Primes: 102
+
+Self-checking: Is  563 prime?           1
+Current Number:  563, Prime? 1, Clocks:        1132, Primes: 103
+
+Self-checking: Is  565 prime?           0
+Current Number:  565, Prime? 0, Clocks:        1136, Primes: 103
+
+Self-checking: Is  567 prime?           0
+Current Number:  567, Prime? 0, Clocks:        1140, Primes: 103
+
+Self-checking: Is  569 prime?           1
+Current Number:  569, Prime? 1, Clocks:        1144, Primes: 104
+
+Self-checking: Is  571 prime?           1
+Current Number:  571, Prime? 1, Clocks:        1148, Primes: 105
+
+Self-checking: Is  573 prime?           0
+Current Number:  573, Prime? 0, Clocks:        1152, Primes: 105
+
+Self-checking: Is  575 prime?           0
+Current Number:  575, Prime? 0, Clocks:        1156, Primes: 105
+
+Self-checking: Is  577 prime?           1
+Current Number:  577, Prime? 1, Clocks:        1160, Primes: 106
+
+Self-checking: Is  579 prime?           0
+Current Number:  579, Prime? 0, Clocks:        1164, Primes: 106
+
+Self-checking: Is  581 prime?           0
+Current Number:  581, Prime? 0, Clocks:        1168, Primes: 106
+
+Self-checking: Is  583 prime?           0
+Current Number:  583, Prime? 0, Clocks:        1172, Primes: 106
+
+Self-checking: Is  585 prime?           0
+Current Number:  585, Prime? 0, Clocks:        1176, Primes: 106
+
+Self-checking: Is  587 prime?           1
+Current Number:  587, Prime? 1, Clocks:        1180, Primes: 107
+
+Self-checking: Is  589 prime?           0
+Current Number:  589, Prime? 0, Clocks:        1184, Primes: 107
+
+Self-checking: Is  591 prime?           0
+Current Number:  591, Prime? 0, Clocks:        1188, Primes: 107
+
+Self-checking: Is  593 prime?           1
+Current Number:  593, Prime? 1, Clocks:        1192, Primes: 108
+
+Self-checking: Is  595 prime?           0
+Current Number:  595, Prime? 0, Clocks:        1196, Primes: 108
+
+Self-checking: Is  597 prime?           0
+Current Number:  597, Prime? 0, Clocks:        1200, Primes: 108
+
+Self-checking: Is  599 prime?           1
+Current Number:  599, Prime? 1, Clocks:        1204, Primes: 109
+
+Self-checking: Is  601 prime?           1
+Current Number:  601, Prime? 1, Clocks:        1208, Primes: 110
+
+Self-checking: Is  603 prime?           0
+Current Number:  603, Prime? 0, Clocks:        1212, Primes: 110
+
+Self-checking: Is  605 prime?           0
+Current Number:  605, Prime? 0, Clocks:        1216, Primes: 110
+
+Self-checking: Is  607 prime?           1
+Current Number:  607, Prime? 1, Clocks:        1220, Primes: 111
+
+Self-checking: Is  609 prime?           0
+Current Number:  609, Prime? 0, Clocks:        1224, Primes: 111
+
+Self-checking: Is  611 prime?           0
+Current Number:  611, Prime? 0, Clocks:        1228, Primes: 111
+
+Self-checking: Is  613 prime?           1
+Current Number:  613, Prime? 1, Clocks:        1232, Primes: 112
+
+Self-checking: Is  615 prime?           0
+Current Number:  615, Prime? 0, Clocks:        1236, Primes: 112
+
+Self-checking: Is  617 prime?           1
+Current Number:  617, Prime? 1, Clocks:        1240, Primes: 113
+
+Self-checking: Is  619 prime?           1
+Current Number:  619, Prime? 1, Clocks:        1244, Primes: 114
+
+Self-checking: Is  621 prime?           0
+Current Number:  621, Prime? 0, Clocks:        1248, Primes: 114
+
+Self-checking: Is  623 prime?           0
+Current Number:  623, Prime? 0, Clocks:        1252, Primes: 114
+
+Self-checking: Is  625 prime?           0
+Current Number:  625, Prime? 0, Clocks:        1256, Primes: 114
+
+Self-checking: Is  627 prime?           0
+Current Number:  627, Prime? 0, Clocks:        1260, Primes: 114
+
+Self-checking: Is  629 prime?           0
+Current Number:  629, Prime? 0, Clocks:        1264, Primes: 114
+
+Self-checking: Is  631 prime?           1
+Current Number:  631, Prime? 1, Clocks:        1268, Primes: 115
+
+Self-checking: Is  633 prime?           0
+Current Number:  633, Prime? 0, Clocks:        1272, Primes: 115
+
+Self-checking: Is  635 prime?           0
+Current Number:  635, Prime? 0, Clocks:        1276, Primes: 115
+
+Self-checking: Is  637 prime?           0
+Current Number:  637, Prime? 0, Clocks:        1280, Primes: 115
+
+Self-checking: Is  639 prime?           0
+Current Number:  639, Prime? 0, Clocks:        1284, Primes: 115
+
+Self-checking: Is  641 prime?           1
+Current Number:  641, Prime? 1, Clocks:        1288, Primes: 116
+
+Self-checking: Is  643 prime?           1
+Current Number:  643, Prime? 1, Clocks:        1292, Primes: 117
+
+Self-checking: Is  645 prime?           0
+Current Number:  645, Prime? 0, Clocks:        1296, Primes: 117
+
+Self-checking: Is  647 prime?           1
+Current Number:  647, Prime? 1, Clocks:        1300, Primes: 118
+
+Self-checking: Is  649 prime?           0
+Current Number:  649, Prime? 0, Clocks:        1304, Primes: 118
+
+Self-checking: Is  651 prime?           0
+Current Number:  651, Prime? 0, Clocks:        1308, Primes: 118
+
+Self-checking: Is  653 prime?           1
+Current Number:  653, Prime? 1, Clocks:        1312, Primes: 119
+
+Self-checking: Is  655 prime?           0
+Current Number:  655, Prime? 0, Clocks:        1316, Primes: 119
+
+Self-checking: Is  657 prime?           0
+Current Number:  657, Prime? 0, Clocks:        1320, Primes: 119
+
+Self-checking: Is  659 prime?           1
+Current Number:  659, Prime? 1, Clocks:        1324, Primes: 120
+
+Self-checking: Is  661 prime?           1
+Current Number:  661, Prime? 1, Clocks:        1328, Primes: 121
+
+Self-checking: Is  663 prime?           0
+Current Number:  663, Prime? 0, Clocks:        1332, Primes: 121
+
+Self-checking: Is  665 prime?           0
+Current Number:  665, Prime? 0, Clocks:        1336, Primes: 121
+
+Self-checking: Is  667 prime?           0
+Current Number:  667, Prime? 0, Clocks:        1340, Primes: 121
+
+Self-checking: Is  669 prime?           0
+Current Number:  669, Prime? 0, Clocks:        1344, Primes: 121
+
+Self-checking: Is  671 prime?           0
+Current Number:  671, Prime? 0, Clocks:        1348, Primes: 121
+
+Self-checking: Is  673 prime?           1
+Current Number:  673, Prime? 1, Clocks:        1352, Primes: 122
+
+Self-checking: Is  675 prime?           0
+Current Number:  675, Prime? 0, Clocks:        1356, Primes: 122
+
+Self-checking: Is  677 prime?           1
+Current Number:  677, Prime? 1, Clocks:        1360, Primes: 123
+
+Self-checking: Is  679 prime?           0
+Current Number:  679, Prime? 0, Clocks:        1364, Primes: 123
+
+Self-checking: Is  681 prime?           0
+Current Number:  681, Prime? 0, Clocks:        1368, Primes: 123
+
+Self-checking: Is  683 prime?           1
+Current Number:  683, Prime? 1, Clocks:        1372, Primes: 124
+
+Self-checking: Is  685 prime?           0
+Current Number:  685, Prime? 0, Clocks:        1376, Primes: 124
+
+Self-checking: Is  687 prime?           0
+Current Number:  687, Prime? 0, Clocks:        1380, Primes: 124
+
+Self-checking: Is  689 prime?           0
+Current Number:  689, Prime? 0, Clocks:        1384, Primes: 124
+
+Self-checking: Is  691 prime?           1
+Current Number:  691, Prime? 1, Clocks:        1388, Primes: 125
+
+Self-checking: Is  693 prime?           0
+Current Number:  693, Prime? 0, Clocks:        1392, Primes: 125
+
+Self-checking: Is  695 prime?           0
+Current Number:  695, Prime? 0, Clocks:        1396, Primes: 125
+
+Self-checking: Is  697 prime?           0
+Current Number:  697, Prime? 0, Clocks:        1400, Primes: 125
+
+Self-checking: Is  699 prime?           0
+Current Number:  699, Prime? 0, Clocks:        1404, Primes: 125
+
+Self-checking: Is  701 prime?           1
+Current Number:  701, Prime? 1, Clocks:        1408, Primes: 126
+
+Self-checking: Is  703 prime?           0
+Current Number:  703, Prime? 0, Clocks:        1412, Primes: 126
+
+Self-checking: Is  705 prime?           0
+Current Number:  705, Prime? 0, Clocks:        1416, Primes: 126
+
+Self-checking: Is  707 prime?           0
+Current Number:  707, Prime? 0, Clocks:        1420, Primes: 126
+
+Self-checking: Is  709 prime?           1
+Current Number:  709, Prime? 1, Clocks:        1424, Primes: 127
+
+Self-checking: Is  711 prime?           0
+Current Number:  711, Prime? 0, Clocks:        1428, Primes: 127
+
+Self-checking: Is  713 prime?           0
+Current Number:  713, Prime? 0, Clocks:        1432, Primes: 127
+
+Self-checking: Is  715 prime?           0
+Current Number:  715, Prime? 0, Clocks:        1436, Primes: 127
+
+Self-checking: Is  717 prime?           0
+Current Number:  717, Prime? 0, Clocks:        1440, Primes: 127
+
+Self-checking: Is  719 prime?           1
+Current Number:  719, Prime? 1, Clocks:        1444, Primes: 128
+
+Self-checking: Is  721 prime?           0
+Current Number:  721, Prime? 0, Clocks:        1448, Primes: 128
+
+Self-checking: Is  723 prime?           0
+Current Number:  723, Prime? 0, Clocks:        1452, Primes: 128
+
+Self-checking: Is  725 prime?           0
+Current Number:  725, Prime? 0, Clocks:        1456, Primes: 128
+
+Self-checking: Is  727 prime?           1
+Current Number:  727, Prime? 1, Clocks:        1460, Primes: 129
+
+Self-checking: Is  729 prime?           0
+Current Number:  729, Prime? 0, Clocks:        1464, Primes: 129
+
+Self-checking: Is  731 prime?           0
+Current Number:  731, Prime? 0, Clocks:        1468, Primes: 129
+
+Self-checking: Is  733 prime?           1
+Current Number:  733, Prime? 1, Clocks:        1472, Primes: 130
+
+Self-checking: Is  735 prime?           0
+Current Number:  735, Prime? 0, Clocks:        1476, Primes: 130
+
+Self-checking: Is  737 prime?           0
+Current Number:  737, Prime? 0, Clocks:        1480, Primes: 130
+
+Self-checking: Is  739 prime?           1
+Current Number:  739, Prime? 1, Clocks:        1484, Primes: 131
+
+Self-checking: Is  741 prime?           0
+Current Number:  741, Prime? 0, Clocks:        1488, Primes: 131
+
+Self-checking: Is  743 prime?           1
+Current Number:  743, Prime? 1, Clocks:        1492, Primes: 132
+
+Self-checking: Is  745 prime?           0
+Current Number:  745, Prime? 0, Clocks:        1496, Primes: 132
+
+Self-checking: Is  747 prime?           0
+Current Number:  747, Prime? 0, Clocks:        1500, Primes: 132
+
+Self-checking: Is  749 prime?           0
+Current Number:  749, Prime? 0, Clocks:        1504, Primes: 132
+
+Self-checking: Is  751 prime?           1
+Current Number:  751, Prime? 1, Clocks:        1508, Primes: 133
+
+Self-checking: Is  753 prime?           0
+Current Number:  753, Prime? 0, Clocks:        1512, Primes: 133
+
+Self-checking: Is  755 prime?           0
+Current Number:  755, Prime? 0, Clocks:        1516, Primes: 133
+
+Self-checking: Is  757 prime?           1
+Current Number:  757, Prime? 1, Clocks:        1520, Primes: 134
+
+Self-checking: Is  759 prime?           0
+Current Number:  759, Prime? 0, Clocks:        1524, Primes: 134
+
+Self-checking: Is  761 prime?           1
+Current Number:  761, Prime? 1, Clocks:        1528, Primes: 135
+
+Self-checking: Is  763 prime?           0
+Current Number:  763, Prime? 0, Clocks:        1532, Primes: 135
+
+Self-checking: Is  765 prime?           0
+Current Number:  765, Prime? 0, Clocks:        1536, Primes: 135
+
+Self-checking: Is  767 prime?           0
+Current Number:  767, Prime? 0, Clocks:        1540, Primes: 135
+
+Self-checking: Is  769 prime?           1
+Current Number:  769, Prime? 1, Clocks:        1544, Primes: 136
+
+Self-checking: Is  771 prime?           0
+Current Number:  771, Prime? 0, Clocks:        1548, Primes: 136
+
+Self-checking: Is  773 prime?           1
+Current Number:  773, Prime? 1, Clocks:        1552, Primes: 137
+
+Self-checking: Is  775 prime?           0
+Current Number:  775, Prime? 0, Clocks:        1556, Primes: 137
+
+Self-checking: Is  777 prime?           0
+Current Number:  777, Prime? 0, Clocks:        1560, Primes: 137
+
+Self-checking: Is  779 prime?           0
+Current Number:  779, Prime? 0, Clocks:        1564, Primes: 137
+
+Self-checking: Is  781 prime?           0
+Current Number:  781, Prime? 0, Clocks:        1568, Primes: 137
+
+Self-checking: Is  783 prime?           0
+Current Number:  783, Prime? 0, Clocks:        1572, Primes: 137
+
+Self-checking: Is  785 prime?           0
+Current Number:  785, Prime? 0, Clocks:        1576, Primes: 137
+
+Self-checking: Is  787 prime?           1
+Current Number:  787, Prime? 1, Clocks:        1580, Primes: 138
+
+Self-checking: Is  789 prime?           0
+Current Number:  789, Prime? 0, Clocks:        1584, Primes: 138
+
+Self-checking: Is  791 prime?           0
+Current Number:  791, Prime? 0, Clocks:        1588, Primes: 138
+
+Self-checking: Is  793 prime?           0
+Current Number:  793, Prime? 0, Clocks:        1592, Primes: 138
+
+Self-checking: Is  795 prime?           0
+Current Number:  795, Prime? 0, Clocks:        1596, Primes: 138
+
+Self-checking: Is  797 prime?           1
+Current Number:  797, Prime? 1, Clocks:        1600, Primes: 139
+
+Self-checking: Is  799 prime?           0
+Current Number:  799, Prime? 0, Clocks:        1604, Primes: 139
+
+Self-checking: Is  801 prime?           0
+Current Number:  801, Prime? 0, Clocks:        1608, Primes: 139
+
+Self-checking: Is  803 prime?           0
+Current Number:  803, Prime? 0, Clocks:        1612, Primes: 139
+
+Self-checking: Is  805 prime?           0
+Current Number:  805, Prime? 0, Clocks:        1616, Primes: 139
+
+Self-checking: Is  807 prime?           0
+Current Number:  807, Prime? 0, Clocks:        1620, Primes: 139
+
+Self-checking: Is  809 prime?           1
+Current Number:  809, Prime? 1, Clocks:        1624, Primes: 140
+
+Self-checking: Is  811 prime?           1
+Current Number:  811, Prime? 1, Clocks:        1628, Primes: 141
+
+Self-checking: Is  813 prime?           0
+Current Number:  813, Prime? 0, Clocks:        1632, Primes: 141
+
+Self-checking: Is  815 prime?           0
+Current Number:  815, Prime? 0, Clocks:        1636, Primes: 141
+
+Self-checking: Is  817 prime?           0
+Current Number:  817, Prime? 0, Clocks:        1640, Primes: 141
+
+Self-checking: Is  819 prime?           0
+Current Number:  819, Prime? 0, Clocks:        1644, Primes: 141
+
+Self-checking: Is  821 prime?           1
+Current Number:  821, Prime? 1, Clocks:        1648, Primes: 142
+
+Self-checking: Is  823 prime?           1
+Current Number:  823, Prime? 1, Clocks:        1652, Primes: 143
+
+Self-checking: Is  825 prime?           0
+Current Number:  825, Prime? 0, Clocks:        1656, Primes: 143
+
+Self-checking: Is  827 prime?           1
+Current Number:  827, Prime? 1, Clocks:        1660, Primes: 144
+
+Self-checking: Is  829 prime?           1
+Current Number:  829, Prime? 1, Clocks:        1664, Primes: 145
+
+Self-checking: Is  831 prime?           0
+Current Number:  831, Prime? 0, Clocks:        1668, Primes: 145
+
+Self-checking: Is  833 prime?           0
+Current Number:  833, Prime? 0, Clocks:        1672, Primes: 145
+
+Self-checking: Is  835 prime?           0
+Current Number:  835, Prime? 0, Clocks:        1676, Primes: 145
+
+Self-checking: Is  837 prime?           0
+Current Number:  837, Prime? 0, Clocks:        1680, Primes: 145
+
+Self-checking: Is  839 prime?           1
+Current Number:  839, Prime? 1, Clocks:        1684, Primes: 146
+
+Self-checking: Is  841 prime?           0
+Current Number:  841, Prime? 0, Clocks:        1688, Primes: 146
+
+Self-checking: Is  843 prime?           0
+Current Number:  843, Prime? 0, Clocks:        1692, Primes: 146
+
+Self-checking: Is  845 prime?           0
+Current Number:  845, Prime? 0, Clocks:        1696, Primes: 146
+
+Self-checking: Is  847 prime?           0
+Current Number:  847, Prime? 0, Clocks:        1700, Primes: 146
+
+Self-checking: Is  849 prime?           0
+Current Number:  849, Prime? 0, Clocks:        1704, Primes: 146
+
+Self-checking: Is  851 prime?           0
+Current Number:  851, Prime? 0, Clocks:        1708, Primes: 146
+
+Self-checking: Is  853 prime?           1
+Current Number:  853, Prime? 1, Clocks:        1712, Primes: 147
+
+Self-checking: Is  855 prime?           0
+Current Number:  855, Prime? 0, Clocks:        1716, Primes: 147
+
+Self-checking: Is  857 prime?           1
+Current Number:  857, Prime? 1, Clocks:        1720, Primes: 148
+
+Self-checking: Is  859 prime?           1
+Current Number:  859, Prime? 1, Clocks:        1724, Primes: 149
+
+Self-checking: Is  861 prime?           0
+Current Number:  861, Prime? 0, Clocks:        1728, Primes: 149
+
+Self-checking: Is  863 prime?           1
+Current Number:  863, Prime? 1, Clocks:        1732, Primes: 150
+
+Self-checking: Is  865 prime?           0
+Current Number:  865, Prime? 0, Clocks:        1736, Primes: 150
+
+Self-checking: Is  867 prime?           0
+Current Number:  867, Prime? 0, Clocks:        1740, Primes: 150
+
+Self-checking: Is  869 prime?           0
+Current Number:  869, Prime? 0, Clocks:        1744, Primes: 150
+
+Self-checking: Is  871 prime?           0
+Current Number:  871, Prime? 0, Clocks:        1748, Primes: 150
+
+Self-checking: Is  873 prime?           0
+Current Number:  873, Prime? 0, Clocks:        1752, Primes: 150
+
+Self-checking: Is  875 prime?           0
+Current Number:  875, Prime? 0, Clocks:        1756, Primes: 150
+
+Self-checking: Is  877 prime?           1
+Current Number:  877, Prime? 1, Clocks:        1760, Primes: 151
+
+Self-checking: Is  879 prime?           0
+Current Number:  879, Prime? 0, Clocks:        1764, Primes: 151
+
+Self-checking: Is  881 prime?           1
+Current Number:  881, Prime? 1, Clocks:        1768, Primes: 152
+
+Self-checking: Is  883 prime?           1
+Current Number:  883, Prime? 1, Clocks:        1772, Primes: 153
+
+Self-checking: Is  885 prime?           0
+Current Number:  885, Prime? 0, Clocks:        1776, Primes: 153
+
+Self-checking: Is  887 prime?           1
+Current Number:  887, Prime? 1, Clocks:        1780, Primes: 154
+
+Self-checking: Is  889 prime?           0
+Current Number:  889, Prime? 0, Clocks:        1784, Primes: 154
+
+Self-checking: Is  891 prime?           0
+Current Number:  891, Prime? 0, Clocks:        1788, Primes: 154
+
+Self-checking: Is  893 prime?           0
+Current Number:  893, Prime? 0, Clocks:        1792, Primes: 154
+
+Self-checking: Is  895 prime?           0
+Current Number:  895, Prime? 0, Clocks:        1796, Primes: 154
+
+Self-checking: Is  897 prime?           0
+Current Number:  897, Prime? 0, Clocks:        1800, Primes: 154
+
+Self-checking: Is  899 prime?           0
+Current Number:  899, Prime? 0, Clocks:        1804, Primes: 154
+
+Self-checking: Is  901 prime?           0
+Current Number:  901, Prime? 0, Clocks:        1808, Primes: 154
+
+Self-checking: Is  903 prime?           0
+Current Number:  903, Prime? 0, Clocks:        1812, Primes: 154
+
+Self-checking: Is  905 prime?           0
+Current Number:  905, Prime? 0, Clocks:        1816, Primes: 154
+
+Self-checking: Is  907 prime?           1
+Current Number:  907, Prime? 1, Clocks:        1820, Primes: 155
+
+Self-checking: Is  909 prime?           0
+Current Number:  909, Prime? 0, Clocks:        1824, Primes: 155
+
+Self-checking: Is  911 prime?           1
+Current Number:  911, Prime? 1, Clocks:        1828, Primes: 156
+
+Self-checking: Is  913 prime?           0
+Current Number:  913, Prime? 0, Clocks:        1832, Primes: 156
+
+Self-checking: Is  915 prime?           0
+Current Number:  915, Prime? 0, Clocks:        1836, Primes: 156
+
+Self-checking: Is  917 prime?           0
+Current Number:  917, Prime? 0, Clocks:        1840, Primes: 156
+
+Self-checking: Is  919 prime?           1
+Current Number:  919, Prime? 1, Clocks:        1844, Primes: 157
+
+Self-checking: Is  921 prime?           0
+Current Number:  921, Prime? 0, Clocks:        1848, Primes: 157
+
+Self-checking: Is  923 prime?           0
+Current Number:  923, Prime? 0, Clocks:        1852, Primes: 157
+
+Self-checking: Is  925 prime?           0
+Current Number:  925, Prime? 0, Clocks:        1856, Primes: 157
+
+Self-checking: Is  927 prime?           0
+Current Number:  927, Prime? 0, Clocks:        1860, Primes: 157
+
+Self-checking: Is  929 prime?           1
+Current Number:  929, Prime? 1, Clocks:        1864, Primes: 158
+
+Self-checking: Is  931 prime?           0
+Current Number:  931, Prime? 0, Clocks:        1868, Primes: 158
+
+Self-checking: Is  933 prime?           0
+Current Number:  933, Prime? 0, Clocks:        1872, Primes: 158
+
+Self-checking: Is  935 prime?           0
+Current Number:  935, Prime? 0, Clocks:        1876, Primes: 158
+
+Self-checking: Is  937 prime?           1
+Current Number:  937, Prime? 1, Clocks:        1880, Primes: 159
+
+Self-checking: Is  939 prime?           0
+Current Number:  939, Prime? 0, Clocks:        1884, Primes: 159
+
+Self-checking: Is  941 prime?           1
+Current Number:  941, Prime? 1, Clocks:        1888, Primes: 160
+
+Self-checking: Is  943 prime?           0
+Current Number:  943, Prime? 0, Clocks:        1892, Primes: 160
+
+Self-checking: Is  945 prime?           0
+Current Number:  945, Prime? 0, Clocks:        1896, Primes: 160
+
+Self-checking: Is  947 prime?           1
+Current Number:  947, Prime? 1, Clocks:        1900, Primes: 161
+
+Self-checking: Is  949 prime?           0
+Current Number:  949, Prime? 0, Clocks:        1904, Primes: 161
+
+Self-checking: Is  951 prime?           0
+Current Number:  951, Prime? 0, Clocks:        1908, Primes: 161
+
+Self-checking: Is  953 prime?           1
+Current Number:  953, Prime? 1, Clocks:        1912, Primes: 162
+
+Self-checking: Is  955 prime?           0
+Current Number:  955, Prime? 0, Clocks:        1916, Primes: 162
+
+Self-checking: Is  957 prime?           0
+Current Number:  957, Prime? 0, Clocks:        1920, Primes: 162
+
+Self-checking: Is  959 prime?           0
+Current Number:  959, Prime? 0, Clocks:        1924, Primes: 162
+
+Self-checking: Is  961 prime?           0
+Current Number:  961, Prime? 0, Clocks:        1928, Primes: 162
+
+Self-checking: Is  963 prime?           0
+Current Number:  963, Prime? 0, Clocks:        1932, Primes: 162
+
+Self-checking: Is  965 prime?           0
+Current Number:  965, Prime? 0, Clocks:        1936, Primes: 162
+
+Self-checking: Is  967 prime?           1
+Current Number:  967, Prime? 1, Clocks:        1940, Primes: 163
+
+Self-checking: Is  969 prime?           0
+Current Number:  969, Prime? 0, Clocks:        1944, Primes: 163
+
+Self-checking: Is  971 prime?           1
+Current Number:  971, Prime? 1, Clocks:        1948, Primes: 164
+
+Self-checking: Is  973 prime?           0
+Current Number:  973, Prime? 0, Clocks:        1952, Primes: 164
+
+Self-checking: Is  975 prime?           0
+Current Number:  975, Prime? 0, Clocks:        1956, Primes: 164
+
+Self-checking: Is  977 prime?           1
+Current Number:  977, Prime? 1, Clocks:        1960, Primes: 165
+
+Self-checking: Is  979 prime?           0
+Current Number:  979, Prime? 0, Clocks:        1964, Primes: 165
+
+Self-checking: Is  981 prime?           0
+Current Number:  981, Prime? 0, Clocks:        1968, Primes: 165
+
+Self-checking: Is  983 prime?           1
+Current Number:  983, Prime? 1, Clocks:        1972, Primes: 166
+
+Self-checking: Is  985 prime?           0
+Current Number:  985, Prime? 0, Clocks:        1976, Primes: 166
+
+Self-checking: Is  987 prime?           0
+Current Number:  987, Prime? 0, Clocks:        1980, Primes: 166
+
+Self-checking: Is  989 prime?           0
+Current Number:  989, Prime? 0, Clocks:        1984, Primes: 166
+
+Self-checking: Is  991 prime?           1
+Current Number:  991, Prime? 1, Clocks:        1988, Primes: 167
+
+Self-checking: Is  993 prime?           0
+Current Number:  993, Prime? 0, Clocks:        1992, Primes: 167
+
+Self-checking: Is  995 prime?           0
+Current Number:  995, Prime? 0, Clocks:        1996, Primes: 167
+
+Self-checking: Is  997 prime?           1
+Current Number:  997, Prime? 1, Clocks:        2000, Primes: 168
+
+Self-checking: Is  999 prime?           0
+Current Number:  999, Prime? 0, Clocks:        2004, Primes: 168
+
 Correct Number of Primes found.
 
-primenums_tb.v:230: $finish called at 910 (1ns)
+primenums_tb.v:230: $finish called at 40110 (1ns)
