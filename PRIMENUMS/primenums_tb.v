@@ -201,7 +201,7 @@ initial begin
 
 	@(posedge SysClk_s);
 	@(posedge SysClk_s);	//waiting for Prime to be set
-	while (NumberChecked_s < NumMax_s) begin	//self-checking
+	while (NumberChecked_s <= NumMax_s) begin	//self-checking
 		#5
 		j = 0;	//resetting j
 		for (i = 0; i < 168; i++) begin
