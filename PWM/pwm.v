@@ -43,9 +43,6 @@ always @ (Sreg, ClockCount) begin    //next state logic
                     end
                     Snext = OFF;    //will remain off either way
                 end
-                else if(((Period * DutyCycle)/100)/(16 + 16 * BurstType) < 2) begin //hard-coded solution for very high frequencies
-                    Snext = ON; //if the calculated time between bursts is too small, alterate every clock
-                end
                 else if (ClockCount == ((Period * DutyCycle)/100)/(16 + 16 * BurstType)) begin  //handling each burst, off time changes based on BurstType
                     ClockCount = 0; //resets clock
                     BurstCount++;   //incrementing BurstCount
@@ -62,23 +59,13 @@ always @ (Sreg, ClockCount) begin    //next state logic
                 end
                 else Snext = ON;    //if on time has not passed, remain on
             end
-            else begin //with burst
-                if (((Period * DutyCycle)/100)/(16 + 16 * BurstType) < 2) begin //hard-coded solution for very high frequencies
-                        if (BurstCount == (16 + 16 * BurstType)) begin  //once burst count hits the threshold, stop bursting
-                            BurstCount = 0; //reset BurstCount
-                            ClockCount = 0; //reset ClockCount
-                        end
-                        else BurstCount++;  //before the threshold, increment BurstCount
-                        Snext = OFF;    //turn off after one cycle
-                end
-                else if (ClockCount == ((Period * DutyCycle)/100)/(16 + 16 * BurstType)) begin  //handling bursts
+            else if (ClockCount == ((Period * DutyCycle)/100)/(16 + 16 * BurstType)) begin  //handling bursts
                     if (BurstCount == (16 + 16 * BurstType)) BurstCount = 0;    //once burst count hits the threshold, stop bursting
                     else BurstCount++;  //if not, increment burstcount
                     ClockCount = 0; //reset ClockCount
                     Snext = OFF;    //turn off
-                end
             end
-            else Snext = ON;    //if on time has not passed (no burst), remain on
+            else Snext = ON; //if on time has not passed (no burst), remain on
         end
         default Snext = OFF;    //default value
     endcase

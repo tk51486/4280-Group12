@@ -31,10 +31,10 @@ initial begin
     #0.25
     Reset_s <= 0;   //toggling reset to clear unknowns
     @(posedge SysClk_s);
-    DutyCycle_s <= 20;
+    DutyCycle_s <= 25;
     Burst_s <= 1;
     BurstType_s <= 1;
-    Period_s <= 500;    //setting input parameters
+    Period_s <= 256;    //setting input parameters
     @(posedge SysClk_s);
     
     for (i = 0; i < 100000; i++) begin
