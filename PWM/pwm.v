@@ -6,8 +6,7 @@ module pwm(SysClk, Reset, Period, DutyCycle, Burst, BurstType, PWM);
 
 input SysClk, Reset;    //clock and reset
 input [15:0] Period;    //time for one cycle in ns (1 mil for 1khz)
-input [7:0] DutyCycle;  //percent of the cycle that is high
-input Burst, BurstType; //enables burst and toggles between 8/16
+input DutyCycle, Burst, BurstType; //changes DC, enables burst, and toggles between 8/16
 output reg PWM; //square wave output
 integer ClockCount, BurstCount; //used for tracking the time within the cycle & number of bursts
 reg Sreg, Snext;  //state and next state registers
@@ -25,11 +24,12 @@ always @ (posedge SysClk) begin		//state memory
 	end
 end
 
+//ontime >> 4 + (1*dc)
 always @ (Sreg, ClockCount) begin    //next state logic
     case (Sreg)
         OFF: begin  //OFF state logic
             if (Burst == 0) begin   //no burst
-                if (ClockCount == (Period * (100 - (DutyCycle)))/100) begin //off time is based on period and dc
+                if (ClockCount == (DutyCycle ? 3 : 1) * (Period >> (1 + (1*DutyCycle)))) begin //shifting based on DC for off time
                     ClockCount = 0; //if enough time has passed, reset clock
                     Snext = ON; //turn on
                 end
@@ -37,13 +37,13 @@ always @ (Sreg, ClockCount) begin    //next state logic
             end
             else begin  //with burst
                 if (BurstCount == 0) begin  //not bursting
-                    if (ClockCount >= (Period * (100 - (DutyCycle)))/100) begin //same off time as no burst
+                    if (ClockCount >= (DutyCycle ? 3 : 1) * (Period >> (1 + (1*DutyCycle)))) begin //same off time as no burst
                         ClockCount = 0; //if it's time to burst, reset clock
                         BurstCount++;   //begin bursts (starts with PWM low)
                     end
                     Snext = OFF;    //will remain off either way
                 end
-                else if (ClockCount == ((Period * DutyCycle)/100)/(16 + 16 * BurstType)) begin  //handling each burst, off time changes based on BurstType
+                else if (ClockCount == (Period >> (1 + (1*DutyCycle))) >> (4 + 1*BurstType)) begin  //handling each burst, off time changes w/ BurstType
                     ClockCount = 0; //resets clock
                     BurstCount++;   //incrementing BurstCount
                     Snext = ON;     //turn on
@@ -51,15 +51,16 @@ always @ (Sreg, ClockCount) begin    //next state logic
                 else Snext = OFF;   //otherwise remain off, waiting for the next burst
             end
         end
+        //Period >> (1 + (1*DutyCycle))
         ON: begin   //ON state logic
             if (Burst == 0) begin   //no burst
-                if (ClockCount >= (Period * DutyCycle)/100) begin   //on time is based on period and dc
+                if (ClockCount == Period >> (1 + (1*DutyCycle))) begin   //on time is based on period and dc
                     ClockCount = 0; //reset clock
                     Snext = OFF;    //turn off
                 end
                 else Snext = ON;    //if on time has not passed, remain on
             end
-            else if (ClockCount == ((Period * DutyCycle)/100)/(16 + 16 * BurstType)) begin  //handling bursts
+            else if (ClockCount == (Period >> (1 + (1*DutyCycle))) >> (4 + 1*BurstType)) begin  //handling bursts
                     if (BurstCount == (16 + 16 * BurstType)) BurstCount = 0;    //once burst count hits the threshold, stop bursting
                     else BurstCount++;  //if not, increment burstcount
                     ClockCount = 0; //reset ClockCount

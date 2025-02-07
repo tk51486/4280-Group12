@@ -6,8 +6,7 @@ module pwm_tb();
 
 reg SysClk_s, Reset_s;
 reg [15:0] Period_s;
-reg [7:0] DutyCycle_s;
-reg Burst_s, BurstType_s;
+reg DutyCycle_s, Burst_s, BurstType_s;
 wire PWM_s;     //defining all inputs and outputs for pwm
 
 //calling module
@@ -31,10 +30,10 @@ initial begin
     #0.25
     Reset_s <= 0;   //toggling reset to clear unknowns
     @(posedge SysClk_s);
-    DutyCycle_s <= 25;
+    DutyCycle_s <= 0;
     Burst_s <= 1;
     BurstType_s <= 1;
-    Period_s <= 256;    //setting input parameters
+    Period_s <= 2048;    //setting input parameters
     @(posedge SysClk_s);
     
     for (i = 0; i < 100000; i++) begin
