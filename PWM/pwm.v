@@ -24,7 +24,6 @@ always @ (posedge SysClk) begin		//state memory
 	end
 end
 
-//ontime >> 4 + (1*dc)
 always @ (Sreg, ClockCount) begin    //next state logic
     case (Sreg)
         OFF: begin  //OFF state logic
@@ -51,7 +50,6 @@ always @ (Sreg, ClockCount) begin    //next state logic
                 else Snext = OFF;   //otherwise remain off, waiting for the next burst
             end
         end
-        //Period >> (1 + (1*DutyCycle))
         ON: begin   //ON state logic
             if (Burst == 0) begin   //no burst
                 if (ClockCount == Period >> (1 + (1*DutyCycle))) begin   //on time is based on period and dc
