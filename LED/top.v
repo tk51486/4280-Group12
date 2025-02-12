@@ -2,11 +2,12 @@
 
 `timescale 1ns/1ps
 
-module top(CLK, RST, SW, LED0, LED1);
+module top(CLK, RST, SW, LED0, LED1, CA, AN);
 
 input wire CLK, RST;    //clk and reset button
 input wire [15:0] SW;   //switches
 output wire [2:0] LED0, LED1;   //RGB LEDs. LED0 will be used, LED1 will be turned off
+output wire [7:0] CA, AN;   //cathodes and anodes for seven-segment display
 
 assign LED1[0] = 0;
 assign LED1[1] = 0;

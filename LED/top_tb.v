@@ -6,11 +6,12 @@ module top_tb();
 
 reg CLK_s, RST_s;
 reg [15:0] SW_s;
-wire [2:0] LED0_s, LED1_s;     //defining all inputs and outputs for pwm
+wire [2:0] LED0_s, LED1_s;
+wire [7:0] CA_s, AN_s;   //defining all inputs and outputs for pwm
 
 //calling module
-//module top(CLK, RST, SW, LED0, LED1);
-top toptest(CLK_s, RST_s, SW_s, LED0_s, LED1_s);
+//module top(CLK, RST, SW, LED0, LED1, CA, AN);
+top toptest(CLK_s, RST_s, SW_s, LED0_s, LED1_s, CA_s, AN_s);
 integer i;
 //clock
 always begin
@@ -28,7 +29,7 @@ initial begin
     #2.5
     RST_s <= 0;   //toggling reset to clear unknowns
     @(posedge CLK_s);
-    SW_s <= 16'b1111111111111111; //setting input parameters: red, green, blue
+    SW_s <= 16'b0011111110000011; //setting input parameters: red, green, blue. displays as BGR on the waveform
     //display 
     @(posedge CLK_s);
     for (i = 0; i < 100000; i++) begin
