@@ -29,10 +29,10 @@ initial begin
     #2.5
     RST_s <= 0;   //toggling reset to clear unknowns
     @(posedge CLK_s);
-    SW_s <= 16'b0011111110000011; //setting input parameters: red, green, blue. displays as BGR on the waveform
+    SW_s <= 16'b0000000000000001; //setting input parameters: red, green, blue. displays as BGR on the waveform
     //display 
     @(posedge CLK_s);
-    for (i = 0; i < 100000; i++) begin
+    for (i = 0; i < 500000; i++) begin
         @(posedge CLK_s);    //waiting an arbitrary amount of time
     end
     $finish;    //use GTKWave to view results
