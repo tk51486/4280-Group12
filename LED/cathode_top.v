@@ -9,11 +9,11 @@ module cathode_top
   (
    input wire         clk,
    input wire [3:0]   encoded,
-   output logic [7:0] cathode
+   output reg [7:0] cathode
    );
 
   always @(posedge clk) begin
-    cathode[7] <= 0;
+    cathode[7] <= 1;
     case (encoded)
       4'h0: cathode[6:0] <= 7'b1000000;
       4'h1: cathode[6:0] <= 7'b1111001;
