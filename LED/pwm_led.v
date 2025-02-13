@@ -7,7 +7,7 @@ module pwm_led(SysClk, Reset, DutyCycle, PWM);
 input SysClk, Reset;    //clock and reset
 input [7:0] DutyCycle; //changes DC
 output reg PWM; //square wave output
-integer ClockCount; //used for tracking the time within the cycle
+reg [7:0] ClockCount; //used for tracking the time within the cycle
 reg Sreg, Snext;  //state and next state registers
 parameter OFF = 1'b0, ON = 1'b1; //states
 
@@ -15,7 +15,7 @@ initial PWM = 0;
 initial ClockCount = 0; //assigning initial values
 
 always @ (posedge SysClk) begin //state memory
-    ClockCount++;   //increment ClockCount
+    ClockCount <= ClockCount + 1;   //increment ClockCount
     Sreg <= Snext;	//next state
 	if(Reset == 1) begin 
 		Sreg <= OFF;	//if reset = 1, stay off
