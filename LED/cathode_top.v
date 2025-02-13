@@ -30,7 +30,8 @@ module cathode_top
       4'hC: cathode[6:0] <= 7'b1000110;
       4'hD: cathode[6:0] <= 7'b0100001;
       4'hE: cathode[6:0] <= 7'b0000110;
-      4'hF: cathode[6:0] <= 7'b0001110;
+      4'hF: cathode[6:0] <= 7'b0001110; //correct code
+      //4'hF: cathode[6:0] <= 7'b1111111; //forced error
     endcase
   end
 
