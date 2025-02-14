@@ -7,4 +7,4 @@ Second 7SD displays 8e, expecting 8e
 First 7SD displays c0, expecting c0
 
 Self-checking complete.
-top_tb.v:168: $finish called at 750015000 (1ps)
+top_tb.v:170: $finish called at 750015000 (1ps)

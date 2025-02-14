@@ -1,8 +1,5 @@
-## This file is a general .xdc for the Nexys A7-100T
-## To use it in a project:
-## - uncomment the lines corresponding to used pins
-## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
-## Note: As the Nexys 4 DDR was rebranded to the Nexys A7 with no substantial changes, this XDC file will also work for the Nexys 4 DDR.
+##xdc file for LED exercise. this file uncomments the clock, all 16 switches, both RGB LEDs,
+##the seven segment displays, a button for resetting, and 4 PMOD headers for the logic analyzer
 
 ## Clock signal
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz

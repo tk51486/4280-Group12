@@ -1,4 +1,4 @@
-//PWM generator
+//PWM generator adapted from the previous exercise
 
 `timescale 1ns/1ps
 
@@ -34,7 +34,7 @@ always @ (posedge SysClk) begin //state memory
                 ClockCount <= 0; //reset clock
                 Snext = OFF;    //turn off
             end
-            else Snext = ON; //if on time has not passed (no burst), remain on
+            else Snext = ON; //if on time has not passed, remain on
         end
         default Snext = OFF;    //default value
     endcase

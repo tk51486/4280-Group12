@@ -13,8 +13,10 @@ wire [4:1] JA_s; //defining all inputs and outputs for pwm
 //calling module
 //module top(CLK, RST, SW, LED0, LED1, CA, AN);
 top toptest(CLK_s, RST_s, SW_s, LED0_s, LED1_s, CA_s, AN_s, JA_s);
-integer i;
-reg [7:0] expected;
+
+integer i;  //iterator used for looping
+reg [7:0] expected; //expected value for cathode. used for self-checking
+
 //clock
 always begin
 	CLK_s <= 0;
@@ -51,7 +53,7 @@ initial begin
       4'hC: expected = 8'b11000110;
       4'hD: expected = 8'b10100001;
       4'hE: expected = 8'b10000110;
-      4'hF: expected = 8'b10001110;
+      4'hF: expected = 8'b10001110; //finding expected encoded value
     endcase
     $display("Sixth 7SD displays %h, expecting %h", CA_s, expected);
     for (i = 0; i < 10000; i++) begin
@@ -73,7 +75,7 @@ initial begin
       4'hC: expected = 8'b11000110;
       4'hD: expected = 8'b10100001;
       4'hE: expected = 8'b10000110;
-      4'hF: expected = 8'b10001110;
+      4'hF: expected = 8'b10001110; //finding expected encoded value
     endcase
     $display("Fifth 7SD displays %h, expecting %h", CA_s, expected);
     for (i = 0; i < 10000; i++) begin
@@ -95,7 +97,7 @@ initial begin
       4'hC: expected = 8'b11000110;
       4'hD: expected = 8'b10100001;
       4'hE: expected = 8'b10000110;
-      4'hF: expected = 8'b10001110;
+      4'hF: expected = 8'b10001110; //finding expected encoded value
     endcase
     $display("Fourth 7SD displays %h, expecting %h", CA_s, expected);
     for (i = 0; i < 10000; i++) begin
@@ -117,7 +119,7 @@ initial begin
       4'hC: expected = 8'b11000110;
       4'hD: expected = 8'b10100001;
       4'hE: expected = 8'b10000110;
-      4'hF: expected = 8'b10001110;
+      4'hF: expected = 8'b10001110; //finding expected encoded value
     endcase
     $display("Third 7SD displays %h, expecting %h", CA_s, expected);
     for (i = 0; i < 10000; i++) begin
@@ -139,7 +141,7 @@ initial begin
       4'hC: expected = 8'b11000110;
       4'hD: expected = 8'b10100001;
       4'hE: expected = 8'b10000110;
-      4'hF: expected = 8'b10001110;
+      4'hF: expected = 8'b10001110; //finding expected encoded value
     endcase
     $display("Second 7SD displays %h, expecting %h", CA_s, expected);
     for (i = 0; i < 10000; i++) begin
@@ -161,7 +163,7 @@ initial begin
       4'hC: expected = 8'b11000110;
       4'hD: expected = 8'b10100001;
       4'hE: expected = 8'b10000110;
-      4'hF: expected = 8'b10001110;
+      4'hF: expected = 8'b10001110; //finding expected encoded value
     endcase
     $display("First 7SD displays %h, expecting %h\n", CA_s, expected);
     $display("Self-checking complete.");

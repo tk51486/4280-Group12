@@ -1,20 +1,15 @@
-// cathode_top.sv
-// ------------------------------------
-// Drive the cathodes of 7 segment display
-// ------------------------------------
-// Author : Frank Bruno
-// input the encoded value from 0-F and generate the cathode signals
+// adapted from cathode_top.sv by Frank Bruno
+// assigns the 8 bit-value for a 7SD based on a 4-bit
 `timescale 1ns/10ps
 module cathode_top
-  (
-   input wire         clk,
-   input wire [3:0]   encoded,
-   output reg [7:0] cathode
+  (input wire         clk,  //clock
+   input wire [3:0]   encoded, //4-bit value (from switches)
+   output reg [7:0] cathode //8-bit value (to 7SD)
    );
 
   always @(posedge clk) begin
-    cathode[7] <= 1;
-    case (encoded)
+    cathode[7] <= 1;  //digit point is low
+    case (encoded)  //assigning based on hex value
       4'h0: cathode[6:0] <= 7'b1000000;
       4'h1: cathode[6:0] <= 7'b1111001;
       4'h2: cathode[6:0] <= 7'b0100100;
