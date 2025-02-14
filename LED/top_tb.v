@@ -7,11 +7,12 @@ module top_tb();
 reg CLK_s, RST_s;
 reg [15:0] SW_s;
 wire [2:0] LED0_s, LED1_s;
-wire [7:0] CA_s, AN_s;   //defining all inputs and outputs for pwm
+wire [7:0] CA_s, AN_s;   
+wire [4:1] JA_s; //defining all inputs and outputs for pwm
 
 //calling module
 //module top(CLK, RST, SW, LED0, LED1, CA, AN);
-top toptest(CLK_s, RST_s, SW_s, LED0_s, LED1_s, CA_s, AN_s);
+top toptest(CLK_s, RST_s, SW_s, LED0_s, LED1_s, CA_s, AN_s, JA_s);
 integer i;
 reg [7:0] expected;
 //clock
