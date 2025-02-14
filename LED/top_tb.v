@@ -33,7 +33,7 @@ initial begin
     #2.5
     RST_s <= 0;   //toggling reset to clear unknowns
     @(posedge CLK_s);
-    SW_s <= 16'b0111100001000001; //setting input parameters: red, green, blue. displays as BGR on the waveform
+    SW_s <= 16'b1111111111111111; //setting input parameters: red, green, blue. displays as BGR on the waveform
     for (i = 0; i < 25000; i++) begin
         @(posedge CLK_s);    //waiting for the sixth 7SD
     end

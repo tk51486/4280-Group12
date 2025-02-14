@@ -15,7 +15,7 @@ module seven_segment
   localparam INTERVAL = 10000;
 
   reg [$clog2(INTERVAL)-1:0]        refresh_count;
-  reg [$clog2(NUM_SEGMENTS)-1:0]    anode_count;
+  reg [$clog2(NUM_SEGMENTS)-1:0]    anode_count;  //calculating counters using log base 2
   wire [NUM_SEGMENTS-1:0] segments [7:0]; //2D array that holds the 8-bit values for all 7SDs
 
   //calling cathode top once for each 7SD, setting segments

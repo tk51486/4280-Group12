@@ -24,14 +24,14 @@ always @ (posedge SysClk) begin //state memory
     case (Sreg)
         OFF: begin  //OFF state logic
             if (ClockCount == 256 - DutyCycle && DutyCycle != 0) begin  //offtime = 256 - dc
-                ClockCount <= 0; //reset clock
+                ClockCount = 0; //reset clock
                 Snext = ON; //turn on
             end
             else Snext = OFF;   //stay off
         end
         ON: begin   //ON state logic
             if (ClockCount == DutyCycle) begin  //ontime = dc
-                ClockCount <= 0; //reset clock
+                ClockCount = 0; //reset clock
                 Snext = OFF;    //turn off
             end
             else Snext = ON; //if on time has not passed, remain on

@@ -1,10 +1,10 @@
 LXT2 info: dumpfile dump.lx2 opened for output.
-Sixth 7SD displays f9, expecting f9
-Fifth 7SD displays c0, expecting c0
-Fourth 7SD displays a4, expecting a4
-Third 7SD displays c0, expecting c0
+Sixth 7SD displays 8e, expecting 8e
+Fifth 7SD displays f9, expecting f9
+Fourth 7SD displays 8e, expecting 8e
+Third 7SD displays b0, expecting b0
 Second 7SD displays 8e, expecting 8e
-First 7SD displays c0, expecting c0
+First 7SD displays f9, expecting f9
 
 Self-checking complete.
 top_tb.v:170: $finish called at 750015000 (1ps)
