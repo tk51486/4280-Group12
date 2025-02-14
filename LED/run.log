@@ -1,9 +1,9 @@
 LXT2 info: dumpfile dump.lx2 opened for output.
-Sixth 7SD displays 8e, expecting 8e
+Sixth 7SD displays ff, expecting 8e
 Fifth 7SD displays f9, expecting f9
-Fourth 7SD displays 8e, expecting 8e
+Fourth 7SD displays ff, expecting 8e
 Third 7SD displays b0, expecting b0
-Second 7SD displays 8e, expecting 8e
+Second 7SD displays ff, expecting 8e
 First 7SD displays f9, expecting f9
 
 Self-checking complete.
