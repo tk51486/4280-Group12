@@ -98,16 +98,16 @@ int main(int argc, char * argv []) {
     // Code to print out just the first 10 addresses.  You'll want to delete
     // this part once you get things going.
     
-    if(i<100){
-	    //printf("\t%c %d %lx %d\n",marker, loadstore, address, icount);
+    if(1){
+	    printf("\t%c %d %lx %d\n",marker, loadstore, address, icount);
       uint32_t mask = -1;
       mask = mask << (32 - tagWidth);
       uint32_t tag = address & mask;
-      printf("tag = %u \n", tag);
+      //printf("tag = %u \n", tag);
       mask = -1;
       mask = (mask >> (32 - indexWidth));
       uint32_t index = address & mask;
-      printf("index = %u \n", index);
+      //printf("index = %u \n", index);
 
       int associate = 0;  //line within set
       int hit = 0;
@@ -119,6 +119,7 @@ int main(int argc, char * argv []) {
           associate = j;
         }
       }
+
       if(hit){
         //loadstore ? stats[4] = stats[4] + 1 : stats[3] = stats[3] + 1;
         if(loadstore){
@@ -126,30 +127,36 @@ int main(int argc, char * argv []) {
         }else{
           stats[3] = stats[3] + 1;
         }
-      }else{
+      }else{ //on miss
         //loadstore ? stats[2] = stats[2] + 1 : stats[1] = stats[1] + 1;
         if(loadstore){
           stats[2] = stats[2] + 1;
         }else{
           stats[1] = stats[1] + 1;
         }
-      }
-      for(int j = 0; j < associativity; j++){
-        if(cache[index][j][3] > cache[index][associate][3]){
-          associate = j;
+
+        for(int j = 0; j < associativity; j++){
+          if(cache[index][j][3] > cache[index][associate][3]){
+            associate = j;
+          }
         }
-      }
-      cache[index][associate][2] = tag;
-      cache[index][associate][0] = 1;
-      if(cache[index][associate][1] == 1){
-        stats[0] += 1;  //dirty eviction
-        printf("dirty eviction\n");
-        cache[index][associate][1] = 0;
-      }
+
+        cache[index][associate][2] = tag;
+        cache[index][associate][0] = 1;
+  
+        if(cache[index][associate][1] == 1){
+          stats[0] += 1;  //dirty eviction
+          printf("dirty eviction\n");
+          cache[index][associate][1] = 0;
+        }
+      }//on miss
+
       for(int j = 0; j < associativity; j++){
         cache[index][j][3] = cache[index][j][3] + 1;
       }
       cache[index][associate][3] = 0;
+
+      //set dirty
       if(loadstore){
         cache[index][associate][1] = 1;
         printf("dirty set\n");
