@@ -9,6 +9,14 @@ int blocksize_bytes = 16;       // Cache Block size in bytes
 int cachesize_kb = 16;          // Cache size in KB
 int miss_penalty = 30;
 
+typedef struct 
+{
+    int valid;
+    int dirty;
+    int tag;
+    int LRU;
+} CacheBlock;
+
 void
 print_usage ()
 {
@@ -77,8 +85,21 @@ int main(int argc, char * argv []) {
 
   //cache is stored in a 3D array. [number of sets][number of lines][line contents]
   //line indices: [valid][dirty][tag][LRU value]
-  uint32_t cache[(cachesize_kb * 1024 / blocksize_bytes)/associativity][associativity][4];
-  for (int i = 0; i < ((cachesize_kb * 1024 / blocksize_bytes)/associativity); i++)
+  CacheBlock cache[(cachesize_kb * 1024 / blocksize_bytes)/associativity][associativity];
+
+  // Set default cache values
+  for (size_t i = 0; i < ((cachesize_kb * 1024 / blocksize_bytes)/associativity); i++)
+  {
+    for (size_t a = 0; a < associativity; a++)
+    {
+      cache[i][a].valid   = 0; // 0 is for invalid, 1 is for valid
+      cache[i][a].tag     = 0; // Tag initialized to 0
+      cache[i][a].LRU     = 0; // LRU starts at zero for all associativity
+      cache[i][a].dirty   = 0; // Block is initialized as clean
+    }
+  } 
+
+  /*for (int i = 0; i < ((cachesize_kb * 1024 / blocksize_bytes)/associativity); i++)
   {
     for (int j = 0; j < associativity; j++)
     {
@@ -87,7 +108,7 @@ int main(int argc, char * argv []) {
         cache[i][j][k] = 0;
       }
     }
-  }
+  }*/
   
   //stat array: dirty evictions, load_misses, store_misses, load_hits, store_hits
   int stats[5];
@@ -114,7 +135,7 @@ int main(int argc, char * argv []) {
       
       for(int j = 0; j < associativity; j++){
         //checks if the tag is present for the index. also checks the valid bit
-        if(tag == cache[index][j][2] && 1 == cache[index][j][0]){
+        if(tag == cache[index][j].tag && 1 == cache[index][j].valid){
           hit = 1;
           associate = j;
         }
@@ -136,29 +157,29 @@ int main(int argc, char * argv []) {
         }
 
         for(int j = 0; j < associativity; j++){
-          if(cache[index][j][3] > cache[index][associate][3]){
+          if(cache[index][j].LRU > cache[index][associate].LRU){
             associate = j;
           }
         }
 
-        cache[index][associate][2] = tag;
-        cache[index][associate][0] = 1;
+        cache[index][associate].tag = tag;
+        cache[index][associate].valid = 1;
   
-        if(cache[index][associate][1] == 1){
+        if(cache[index][associate].dirty){
           stats[0] += 1;  //dirty eviction
           printf("dirty eviction\n");
-          cache[index][associate][1] = 0;
+          cache[index][associate].dirty = 0;
         }
       }//on miss
 
       for(int j = 0; j < associativity; j++){
-        cache[index][j][3] = cache[index][j][3] + 1;
+        cache[index][j].LRU++;
       }
-      cache[index][associate][3] = 0;
+      cache[index][associate].LRU = 0;
 
       //set dirty
       if(loadstore){
-        cache[index][associate][1] = 1;
+        cache[index][associate].dirty = 1;
         printf("dirty set\n");
       }
       i++;
