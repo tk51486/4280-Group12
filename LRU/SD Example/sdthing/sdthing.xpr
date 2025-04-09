@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="C:/Users/Amr/Downloads/Wang/sdcard/ex/sdthing/sdthing.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing/sdthing.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="72dceb4c6b6b4c9b8f551d1fd46d6c70"/>
@@ -89,14 +89,14 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../RTL/sd_file_reader.v">
+      <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/RTL/sd_file_reader.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../RTL/sd_reader.v">
+      <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/RTL/sd_reader.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -110,21 +110,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../RTL/sdcmd_ctrl.v">
+      <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/RTL/sdcmd_ctrl.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../RTL/fpga_top.v">
+      <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/ex/RTL/fpga_top.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../RTL/uart_tx.v">
+      <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/ex/RTL/uart_tx.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -139,14 +139,14 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../example-vivado-readfile/Nexys-4-DDR-pins.xdc">
+      <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/ex/example-vivado-readfile/Nexys-4-DDR-pins.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PPRDIR/../example-vivado-readfile/Nexys-4-DDR-pins.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PPRDIR/../../../../../../Downloads/Wang/sdcard/ex/example-vivado-readfile/Nexys-4-DDR-pins.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -177,7 +177,7 @@
       </Config>
     </FileSet>
     <FileSet Name="clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0" RelGenDir="$PGENDIR/clk_wiz_0">
-      <File Path="$PPRDIR/../IP/clk_wiz_0/clk_wiz_0.xci">
+      <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/ex/IP/clk_wiz_0/clk_wiz_0.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

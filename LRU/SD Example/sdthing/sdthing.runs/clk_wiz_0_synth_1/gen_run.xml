@@ -7,7 +7,7 @@
   <File Type="RDS-RDS" Name="clk_wiz_0.vds"/>
   <File Type="RDS-DCP" Name="clk_wiz_0.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0" RelGenDir="$PGENDIR/clk_wiz_0">
-    <File Path="$PPRDIR/../IP/clk_wiz_0/clk_wiz_0.xci">
+    <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/ex/IP/clk_wiz_0/clk_wiz_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,7 +20,7 @@
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0" RelGenDir="$PGENDIR/clk_wiz_0">
-    <File Path="$PPRDIR/../IP/clk_wiz_0/clk_wiz_0.xci">
+    <File Path="$PPRDIR/../../../../../../Downloads/Wang/sdcard/ex/IP/clk_wiz_0/clk_wiz_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Wed Apr  9 18:45:32 2025
-# Process ID         : 2228
-# Current directory  : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Example/mig_example-master
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent22072 C:\Users\Amr\Documents\GitHub\4280-Group12\LRU\DDR2 Example\mig_example-master\mig_example.xpr
-# Log file           : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Example/mig_example-master/vivado.log
-# Journal file       : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Example/mig_example-master\vivado.jou
+# Start of session at: Wed Apr  9 18:56:21 2025
+# Process ID         : 18940
+# Current directory  : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent20276 C:\Users\Amr\Documents\GitHub\4280-Group12\LRU\SD Example\sdthing\sdthing.xpr
+# Log file           : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing/vivado.log
+# Journal file       : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing\vivado.jou
 # Running On         : DESKTOP-O22QL9I
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
@@ -19,15 +19,15 @@
 # Host memory        : 34081 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36229 MB
-# Available Virtual  : 23464 MB
+# Available Virtual  : 22476 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Example/mig_example-master/mig_example.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/Amr/Downloads/mig_example-master/mig_example-master' since last save.
+open_project {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing/sdthing.xpr}
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing/sdthing.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
-open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:23 . Memory (MB): peak = 1221.270 ; gain = 137.758
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.844 ; gain = 112.199
 update_compile_order -fileset sources_1

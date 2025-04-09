@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Apr  9 18:45:47 2025
+# Process ID         : 17932
+# Current directory  : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent1436 C:\Users\Amr\Documents\GitHub\4280-Group12\LRU\SD Example\sdthing\sdthing.xpr
+# Log file           : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing/vivado.log
+# Journal file       : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing\vivado.jou
+# Running On         : DESKTOP-O22QL9I
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 2803 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 34081 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36229 MB
+# Available Virtual  : 22588 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing/sdthing.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Amr/Downloads/Wang/sdcard/ex/sdthing' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/sdthing/sdthing.gen/sources_1'.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sd_file_reader.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sd_file_reader.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sd_reader.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sd_reader.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sdcmd_ctrl.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sdcmd_ctrl.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/RTL/fpga_top.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/RTL/fpga_top.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/RTL/uart_tx.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/RTL/uart_tx.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/example-vivado-readfile/Nexys-4-DDR-pins.xdc'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/example-vivado-readfile/Nexys-4-DDR-pins.xdc' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/IP/clk_wiz_0/clk_wiz_0.xci'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/IP/clk_wiz_0/clk_wiz_0.xci' instead.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sd_file_reader.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sd_file_reader.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sd_reader.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sd_reader.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sdcmd_ctrl.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sdcmd_ctrl.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/RTL/fpga_top.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/RTL/fpga_top.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/RTL/uart_tx.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/RTL/uart_tx.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/example-vivado-readfile/Nexys-4-DDR-pins.xdc'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/example-vivado-readfile/Nexys-4-DDR-pins.xdc' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/IP/clk_wiz_0/clk_wiz_0.xci'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/IP/clk_wiz_0/clk_wiz_0.xci' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/IP/clk_wiz_0/clk_wiz_0.xci'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/IP/clk_wiz_0/clk_wiz_0.xci' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sd_file_reader.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sd_file_reader.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sd_reader.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sd_reader.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/RTL/sdcmd_ctrl.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/RTL/sdcmd_ctrl.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/RTL/fpga_top.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/RTL/fpga_top.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/RTL/uart_tx.v'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/RTL/uart_tx.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/SD Example/example-vivado-readfile/Nexys-4-DDR-pins.xdc'; using path 'C:/Users/Amr/Downloads/Wang/sdcard/ex/example-vivado-readfile/Nexys-4-DDR-pins.xdc' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 1169.898 ; gain = 95.215
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  9 18:55:19 2025...
