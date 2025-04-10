@@ -23,7 +23,7 @@
 module sd_test(
         input wire [7:0] currentNum,
         input wire clk,
-        output wire [15:9] led
+        output wire [15:8] led
     );
 reg [7:0] testVals [8:0];
 reg [7:0] buff [0:50000];
@@ -31,7 +31,7 @@ reg [32:0] bufco;
 reg [32:0] finalco;
 reg [38:0] counter;
 reg [16:0] nintcount;
-reg [3:0] extra;
+reg [7:0] extra;
 reg test;
 reg ter;
 reg on;
@@ -50,8 +50,8 @@ initial begin
     testVals[8] = 8'b00001010;
     counter = 0;
     bufco = 0;
-    finalco = 49000;
-    extra = 4'b0000;
+    finalco = 0;
+    extra = 8'b00000000;
     test = 1;
     ter = 0;
     nintcount = 0;
@@ -59,7 +59,7 @@ initial begin
     inc = 0;
     on = 1;
 end
-assign led[15:12] = extra[3:0];
+assign led[15:8] = extra[7:0];
 always @(posedge clk) begin
     if(currentNum != 0) begin
         wai <= 1;
@@ -67,7 +67,7 @@ always @(posedge clk) begin
     if(wai == 1) begin
         if(counter > 1000000) begin
             //extra[3:0] <= check;
-            extra[3:0] <= buff[finalco][3:0];
+            extra[7:0] <= buff[finalco][7:0];
             finalco <= finalco + 1;
             counter = 0;
         end

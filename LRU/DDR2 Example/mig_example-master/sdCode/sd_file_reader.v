@@ -10,8 +10,8 @@
 //--------------------------------------------------------------------------------------------------------
 
 module sd_file_reader #(
-    parameter            FILE_NAME_LEN = 11           , // length of FILE_NAME (in bytes). Since the length of "example.txt" is 11, so here is 11.
-    parameter [52*8-1:0] FILE_NAME     = "example.txt", // file name to read, ignore upper and lower case
+    parameter            FILE_NAME_LEN = 9           , // length of FILE_NAME (in bytes). Since the length of "example.txt" is 11, so here is 11.
+    parameter [52*8-1:0] FILE_NAME     = "art.trace", // file name to read, ignore upper and lower case
                                                         // For example, if you want to read a file named "HeLLo123.txt", this parameter can be "hello123.TXT", "HELLO123.txt" or "HEllo123.Txt"
     parameter      [2:0] CLK_DIV       = 3'd2,          // when clk =   0~ 25MHz , set CLK_DIV = 3'd1,
                                                         // when clk =  25~ 50MHz , set CLK_DIV = 3'd2,

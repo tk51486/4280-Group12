@@ -39,7 +39,7 @@ assign {sddat1, sddat2, sddat3} = 3'b111;    // Must set sddat1~3 to 1 to avoid 
 //----------------------------------------------------------------------------------------------------
 wire       clk;
 wire       rstn;
-
+wire nothing;
 clk_wiz_0 u_clk_wiz_0 (
     .resetn      ( resetn       ),
     .clk_in1     ( clk100mhz    ),
@@ -56,8 +56,8 @@ wire       outen;     // when outen=1, a byte of file content is read out from o
 wire [7:0] outbyte;   // a byte of file content
 
 sd_file_reader #(
-    .FILE_NAME_LEN    ( 11             ),  // the length of "example.txt" (in bytes)
-    .FILE_NAME        ( "example.txt"  ),  // file name to read
+    .FILE_NAME_LEN    ( 9             ),  // the length of "example.txt" (in bytes)
+    .FILE_NAME        ( "art.trace"  ),  // file name to read
     .CLK_DIV          ( 2              )   // because clk=50MHz, CLK_DIV must ≥2
 ) u_sd_file_reader (
     .rstn             ( rstn           ),
@@ -68,7 +68,7 @@ sd_file_reader #(
     .card_stat        ( led[3:0]       ),  // show the sdcard initialize status
     .card_type        ( led[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
     .filesystem_type  ( led[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
-    .file_found       ( led[  8]       ),  // 0=file not found, 1=file found
+    .file_found       ( nothing       ),  // 0=file not found, 1=file found
     .outen            ( outen          ),
     .outbyte          ( outbyte        )
 );
@@ -101,7 +101,7 @@ sd_file_reader #(
 sd_test(
     .currentNum(outbyte),
     .clk(clk),
-    .led(led[15:9])
+    .led(led[15:8])
 );
 
 
