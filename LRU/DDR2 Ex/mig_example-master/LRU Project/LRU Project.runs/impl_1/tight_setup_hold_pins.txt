@@ -1,0 +1,13 @@
++====================+===================+=================+
+| Launch Setup Clock | Launch Hold Clock | Pin             |
++====================+===================+=================+
+| sys_clk_pin        | clk_sd_pll        | count_reg[32]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[33]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[34]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[31]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[30]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[29]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[27]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[28]/D |
+| sys_clk_pin        | clk_sd_pll        | count_reg[26]/D |
++--------------------+-------------------+-----------------+
