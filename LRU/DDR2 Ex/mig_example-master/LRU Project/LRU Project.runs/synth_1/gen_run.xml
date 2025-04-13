@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744528502" LaunchWriteIncrSynthDcp="true">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744575566" LaunchWriteIncrSynthDcp="true">
   <File Type="PA-TCL" Name="supertop.tcl"/>
   <File Type="REPORTS-TCL" Name="supertop_reports.tcl"/>
   <File Type="RDS-RDS" Name="supertop.vds"/>
@@ -180,9 +180,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="pll"/>

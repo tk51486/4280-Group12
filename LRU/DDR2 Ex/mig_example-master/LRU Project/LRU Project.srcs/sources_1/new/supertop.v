@@ -47,16 +47,10 @@ module supertop(
     );
     wire [63:0] CurrNum;
     wire CurrFlag;
-    wire [63:0] SendMem;
-    wire memFlag;
+    reg [63:0] SendMem;
+    reg memFlag;
     reg [10:0] bufIt;
     initial bufIt = 0;
-    reg [63:0] memS;
-    reg memF;
-    assign SendMem = memS;
-    assign memFlag = memF;
-    initial memF = 0;
-    initial memS = 0;
     wire clk_cpu, clk_mem, clk_sd;
     wire pll_locked;
     wire resetn;
@@ -121,12 +115,11 @@ always@(posedge clk100mhz) begin
             if(CurrFlag == 1)begin
                 enables = CurrNum[7:0];
                 count = 0;
-                memS = SendMem + (CurrNum << bufIt*8);
+                SendMem = SendMem + (CurrNum << bufIt*8);
                 bufIt = bufIt + 1;
                
                 if(bufIt == 8)begin
-                    memF = 1;
-                    enables = 8'b11111111;
+                    memFlag = 1;
                     bufIt = 111;
                     start = 2;
                 end

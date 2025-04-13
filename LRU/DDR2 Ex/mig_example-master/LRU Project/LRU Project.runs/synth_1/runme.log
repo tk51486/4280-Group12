@@ -8,7 +8,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Sun Apr 13 03:15:05 2025
+  **** Start of session at: Sun Apr 13 16:19:30 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -20,15 +20,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6684
+INFO: [Synth 8-7075] Helper process launched with PID 9132
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1042.824 ; gain = 469.812
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1039.699 ; gain = 466.852
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:62]
-INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:100]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:56]
+INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:94]
 INFO: [Synth 8-6157] synthesizing module 'supertop' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'fpga_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/fpga_top.v:11]
 INFO: [Synth 8-6157] synthesizing module 'sd_file_reader' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/sd_file_reader.v:12]
 	Parameter FILE_NAME_LEN bound to: 9 - type: integer 
@@ -47,20 +47,19 @@ INFO: [Synth 8-6155] done synthesizing module 'sd_reader' (0#1) [C:/Users/Amr/Do
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/sd_file_reader.v:429]
 INFO: [Synth 8-6155] done synthesizing module 'sd_file_reader' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/sd_file_reader.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'fpga_top' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/fpga_top.v:11]
-WARNING: [Synth 8-689] width (64) of port connection 'CurrNum' does not match port width (8) of module 'fpga_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:79]
+WARNING: [Synth 8-689] width (64) of port connection 'CurrNum' does not match port width (8) of module 'fpga_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:73]
 INFO: [Synth 8-6157] synthesizing module 'mig_example_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mem_example' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/mem_example.v:16]
-INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'flag_sync' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/flag_sync.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'flag_sync' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/flag_sync.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ff_sync' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/ff_sync.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'ff_sync' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/ff_sync.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/mem_example.v:208]
 INFO: [Synth 8-6155] done synthesizing module 'mem_example' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/mem_example.v:16]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:130]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:136]
 INFO: [Synth 8-6155] done synthesizing module 'mig_example_top' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:1]
-WARNING: [Synth 8-689] width (64) of port connection 'SendMem' does not match port width (1) of module 'mig_example_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:95]
 INFO: [Synth 8-6155] done synthesizing module 'supertop' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
 WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[1] was removed.  [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/sd_file_reader.v:138]
 WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[2] was removed.  [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/sd_file_reader.v:138]
@@ -165,10 +164,7 @@ WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[119] was re
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3848] Net led in module/entity fpga_top does not have driver. [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/fpga_top.v:27]
 WARNING: [Synth 8-3848] Net uart_tx in module/entity fpga_top does not have driver. [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/fpga_top.v:29]
-WARNING: [Synth 8-7137] Register waitCounter_reg in module mig_example_top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:163]
-WARNING: [Synth 8-7137] Register lights_reg in module mig_example_top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:168]
-WARNING: [Synth 8-7137] Register lightCounter_reg in module mig_example_top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:169]
-WARNING: [Synth 8-3848] Net CPU_RESETN in module/entity supertop does not have driver. [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:100]
+WARNING: [Synth 8-3848] Net CPU_RESETN in module/entity supertop does not have driver. [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:94]
 WARNING: [Synth 8-7129] Port LED[7] in module mig_example_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[6] in module mig_example_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[5] in module mig_example_top is either unconnected or has no load
@@ -196,24 +192,24 @@ WARNING: [Synth 8-7129] Port led[0] in module fpga_top is either unconnected or 
 WARNING: [Synth 8-7129] Port uart_tx in module fpga_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port resetn in module fpga_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1194.000 ; gain = 620.988
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.051 ; gain = 620.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1194.000 ; gain = 620.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.051 ; gain = 620.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1194.000 ; gain = 620.988
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.051 ; gain = 620.203
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1194.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1196.457 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
-Finished Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Finished Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
 Parsing XDC File [c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_mig_example_top/mem_ex/mig1'
 Finished Parsing XDC File [c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_mig_example_top/mem_ex/mig1'
 Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
@@ -224,34 +220,32 @@ WARNING: [Vivado 12-508] No pins matched 'mem_ex/mig1/u_mig_mig/u_ddr2_infrastru
 WARNING: [Vivado 12-508] No pins matched 'pll1/inst/mmcm_adv_inst/CLKOUT1'. [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
 Finished Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/supertop_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/supertop_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/supertop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/Nexys-4-DDR-pins.xdc]
 Finished Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/Nexys-4-DDR-pins.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/Nexys-4-DDR-pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/supertop_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/supertop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1282.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1306.848 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1282.105 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1306.848 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1282.105 ; gain = 709.094
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.848 ; gain = 734.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1282.105 ; gain = 709.094
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.848 ; gain = 734.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17832-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 6).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 2).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 3).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  {c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 4).
@@ -347,7 +341,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  {
 Applied set_property KEEP_HIERARCHY = SOFT for pll1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for u_mig_example_top/mem_ex/mig1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1282.105 ; gain = 709.094
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.848 ; gain = 734.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sddat_stat_reg' in module 'sd_reader'
 INFO: [Synth 8-802] inferred FSM for state register 'filesystem_state_reg' in module 'sd_file_reader'
@@ -386,7 +380,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'tgen_state_reg' using encoding 'one-hot' in module 'mig_example_top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1282.105 ; gain = 709.094
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.848 ; gain = 734.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -418,7 +412,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 34    
+	                1 Bit    Registers := 35    
 +---Multipliers : 
 	               8x32  Multipliers := 5     
 +---Muxes : 
@@ -442,13 +436,13 @@ Detailed RTL Component Info :
 	   2 Input    8 Bit        Muxes := 99    
 	   4 Input    8 Bit        Muxes := 11    
 	   8 Input    8 Bit        Muxes := 2     
-	   6 Input    8 Bit        Muxes := 2     
-	   2 Input    7 Bit        Muxes := 2     
+	   6 Input    8 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 3     
 	   2 Input    6 Bit        Muxes := 9     
 	   6 Input    5 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 4     
 	   8 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 4     
 	   8 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 3     
 	  12 Input    3 Bit        Muxes := 1     
@@ -520,12 +514,8 @@ WARNING: [Synth 8-3917] design supertop has port sddat2 driven by constant 1
 WARNING: [Synth 8-3917] design supertop has port sddat3 driven by constant 1
 WARNING: [Synth 8-7129] Port uart_tx in module supertop is either unconnected or has no load
 WARNING: [Synth 8-3332] Sequential element (u_mig_example_top/FSM_onehot_tgen_state_reg[5]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_mig_example_top/FSM_onehot_tgen_state_reg[4]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_mig_example_top/FSM_onehot_tgen_state_reg[2]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_mig_example_top/FSM_onehot_tgen_state_reg[1]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_mig_example_top/FSM_onehot_tgen_state_reg[0]) is unused and will be removed from module supertop.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1358.352 ; gain = 785.340
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1360.145 ; gain = 787.297
 ---------------------------------------------------------------------------------
  Sort Area is  read_sector_no1_0 : 0 0 : 1632 3217 : Used 1 time 0
  Sort Area is  read_sector_no1_0 : 0 1 : 1585 3217 : Used 1 time 0
@@ -567,19 +557,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1438.699 ; gain = 865.688
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1433.633 ; gain = 860.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1445.336 ; gain = 872.324
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1458.594 ; gain = 885.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1494.457 ; gain = 921.445
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1490.152 ; gain = 917.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -597,37 +587,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -665,49 +655,49 @@ Report Cell Usage:
 +------+--------+------+
 |1     |mig     |     1|
 |2     |pll     |     1|
-|3     |CARRY4  |   151|
+|3     |CARRY4  |   187|
 |4     |DSP48E1 |    11|
-|7     |LUT1    |     6|
-|8     |LUT2    |   441|
-|9     |LUT3    |   326|
-|10    |LUT4    |   340|
+|7     |LUT1    |     9|
+|8     |LUT2    |   567|
+|9     |LUT3    |   308|
+|10    |LUT4    |   367|
 |11    |LUT5    |   283|
-|12    |LUT6    |   647|
+|12    |LUT6    |   717|
 |13    |MUXF7   |    37|
 |14    |FDCE    |   916|
 |15    |FDPE    |    21|
-|16    |FDRE    |   247|
-|17    |FDSE    |    14|
+|16    |FDRE    |   520|
+|17    |FDSE    |    11|
 |18    |IBUF    |     2|
 |19    |IOBUF   |     1|
 |20    |OBUF    |    21|
 |21    |OBUFT   |     1|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1667.016 ; gain = 1005.898
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1667.016 ; gain = 1094.004
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.363 ; gain = 975.719
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1662.363 ; gain = 1089.516
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1676.211 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 200 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1671.523 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 236 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1679.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1675.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
-Synth Design complete | Checksum: a6203660
+Synth Design complete | Checksum: ae9ffcc3
 INFO: [Common 17-83] Releasing license: Synthesis
-56 Infos, 150 Warnings, 1 Critical Warnings and 0 Errors encountered.
+55 Infos, 142 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1679.855 ; gain = 1311.793
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1675.168 ; gain = 1308.117
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1679.855 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1675.168 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/supertop.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file supertop_utilization_synth.rpt -pb supertop_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 13 03:16:00 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 13 16:20:25 2025...

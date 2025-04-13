@@ -1,12 +1,12 @@
 module mig_example_top(
-    input SendMem,
+    input [63:0] SendMem,
     input memFlag,
     input clk_mem,
     input clk_cpu,
     input pll_locked,
     input CPU_RESETN,
     
-    output[15:0] LED,
+    output wire [15:0] LED,
 
     //RAM Interface
     inout[15:0] ddr2_dq,
@@ -27,6 +27,8 @@ module mig_example_top(
 
         
     reg [7:0] lights;
+    reg start;
+    initial start = 1;
     integer waitCounter;
     integer lightCounter;
     initial lights = 8'b00000000;
@@ -34,7 +36,9 @@ module mig_example_top(
     initial lightCounter = 0;
     //////////  Clock Generation  //////////
     
-
+    assign LED[15:8] = lights;
+    reg flag;
+    initial flag = 0;
     //////////  Reset Sync/Stretch  //////////
     reg[31:0] rst_stretch = 32'hFFFFFFFF;
     wire reset_req_n, rst_n;
@@ -117,8 +121,10 @@ module mig_example_top(
     reg[2:0] tgen_state;
     reg dequ; //Data read from RAM equals data written
         
-    always @(posedge clk_cpu or negedge rst_n) begin
-        if(~rst_n) begin
+    always @(posedge clk_cpu) begin //or negedge rst_n
+        if(start == 1) begin//rst_n~
+            start = 0;
+            lights <= 8'b11001100;
             tgen_state <= TGEN_GEN_AD;
             mem_rstrobe <= 1'b0;
             mem_wstrobe <= 1'b0;
@@ -129,14 +135,18 @@ module mig_example_top(
         end else begin
             case(tgen_state)
             TGEN_GEN_AD: begin
-                    if (memFlag == 1) begin
+                    flag = memFlag;
+                    if (flag == 1) begin
+                        lights <= 8'b11110000;
                         mem_addr <= 28'h1010101;
                         mem_d_to_ram <= SendMem;
                         tgen_state <= TGEN_WRITE;
                     end 
                 end
             TGEN_WRITE: begin
+            lights <= 8'b11111000;
                     if(mem_ready) begin
+                        lights <= 8'b11111100;
                         mem_wstrobe <= 1;
                         //Write the entire 64-bit word
                         mem_transaction_width <= `RAM_WIDTH64;
@@ -144,13 +154,17 @@ module mig_example_top(
                     end
                 end
             TGEN_WWAIT: begin
+                    lights <= 8'b11111110;
                     mem_wstrobe <= 0;
                     if(mem_transaction_complete) begin
+                        lights <= 8'b11111111;
                         tgen_state <= TGEN_READ;
                     end
                 end
             TGEN_READ: begin
+                    lights <= 8'b01111111;
                     if(mem_ready) begin
+                        lights <= 8'b00111111;
                         mem_rstrobe <= 1;
                         //Load only the single byte at that address
                         mem_transaction_width <= `RAM_WIDTH16;
@@ -159,13 +173,14 @@ module mig_example_top(
                 end
             TGEN_RWAIT: begin
                     mem_rstrobe <= 0;
+                    lights <= 8'b00011111;
                     if(mem_transaction_complete) begin
                         waitCounter <= waitCounter + 1;
+                        lights <= 8'b00001111;
                         if(waitCounter >= 200000000) begin
                             waitCounter <= 0;
-                            //64b'11111111111111101111110011111000111100001110000011000000100000000000000
                             //mem_d_from_ram >> (8*lightCounter)
-                            lights <= 8'b11111111;
+                            lights <= 8'b00000111;
                             lightCounter <= lightCounter + 1;
                             if (lightCounter == 7) begin
                                 tgen_state <= TGEN_STOP;
@@ -178,6 +193,5 @@ module mig_example_top(
             endcase
         end
     end 
-    assign LED[15:8] = lights;
 
 endmodule
