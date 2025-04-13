@@ -1,5 +1,9 @@
 module mig_example_top(
-    input CLK100MHZ,
+    input SendMem,
+    input memFlag,
+    input clk_mem,
+    input clk_cpu,
+    input pll_locked,
     input CPU_RESETN,
     
     output[15:0] LED,
@@ -21,16 +25,15 @@ module mig_example_top(
     output ddr2_odt
     );
 
+        
+    reg [7:0] lights;
+    integer waitCounter;
+    integer lightCounter;
+    initial lights = 8'b00000000;
+    initial waitCounter = 0;
+    initial lightCounter = 0;
     //////////  Clock Generation  //////////
-    wire clk_cpu, clk_mem;
-    wire pll_locked;
-
-    pll pll1(
-        .locked(pll_locked),
-        .clk_in(CLK100MHZ),
-        .clk_mem(clk_mem), //200MHz Memory Reference Clock
-        .clk_cpu(clk_cpu)  //Clock used for traffic generator
-        );
+    
 
     //////////  Reset Sync/Stretch  //////////
     reg[31:0] rst_stretch = 32'hFFFFFFFF;
@@ -109,7 +112,8 @@ module mig_example_top(
     localparam TGEN_WWAIT  = 3'h2;
     localparam TGEN_READ   = 3'h3;
     localparam TGEN_RWAIT  = 3'h4;
-    
+    localparam TGEN_STOP   = 3'h5;
+        
     reg[2:0] tgen_state;
     reg dequ; //Data read from RAM equals data written
         
@@ -118,16 +122,18 @@ module mig_example_top(
             tgen_state <= TGEN_GEN_AD;
             mem_rstrobe <= 1'b0;
             mem_wstrobe <= 1'b0;
-            mem_addr <= 64'h0;
+            mem_addr <= 28'h1010101;
             mem_d_to_ram <= 28'h0;
             mem_transaction_width <= 3'h0;
             dequ <= 1'b0;
         end else begin
             case(tgen_state)
             TGEN_GEN_AD: begin
-                    mem_addr <= lfsr[27:0];
-                    mem_d_to_ram <= {~lfsr,lfsr};
-                    tgen_state <= TGEN_WRITE;
+                    if (memFlag == 1) begin
+                        mem_addr <= 28'h1010101;
+                        mem_d_to_ram <= SendMem;
+                        tgen_state <= TGEN_WRITE;
+                    end 
                 end
             TGEN_WRITE: begin
                     if(mem_ready) begin
@@ -154,15 +160,22 @@ module mig_example_top(
             TGEN_RWAIT: begin
                     mem_rstrobe <= 0;
                     if(mem_transaction_complete) begin
-                        tgen_state <= TGEN_GEN_AD; 
-                        if(mem_d_from_ram[63:48] == mem_d_to_ram[63:48]) dequ <= 1;
-                        else dequ <= 0;
+                        waitCounter <= waitCounter + 1;
+                        if(waitCounter >= 200000000) begin
+                            waitCounter <= 0;
+                            lights <= mem_d_from_ram >> (8*lightCounter);
+                            lightCounter = lightCounter + 1;
+                            if (lightCounter == 7) begin
+                                tgen_state <= TGEN_STOP;
+                            end
+                        end
                     end
+                end
+            TGEN_STOP: begin
                 end
             endcase
         end
-    end
-    
-    assign LED[0] = dequ;
+    end 
+    assign LED[15:8] = lights;
 
 endmodule

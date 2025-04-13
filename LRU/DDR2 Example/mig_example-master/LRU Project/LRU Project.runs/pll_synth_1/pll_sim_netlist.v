@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Fri Mar 21 15:57:15 2025
+// Date        : Sat Apr 12 19:38:34 2025
 // Host        : DESKTOP-O22QL9I running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/Amr/Downloads/mig_example-master/mig_example-master/mig_example.runs/pll_synth_1/pll_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2
+//               Example/mig_example-master/LRU Project/LRU Project.runs/pll_synth_1/pll_sim_netlist.v}
 // Design      : pll
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,32 +17,44 @@
 module pll
    (clk_mem,
     clk_cpu,
+    clk_sd,
+    resetn,
     locked,
     clk_in);
   output clk_mem;
   output clk_cpu;
+  output clk_sd;
+  input resetn;
   output locked;
   input clk_in;
 
   wire clk_cpu;
   (* IBUF_LOW_PWR *) wire clk_in;
   wire clk_mem;
+  wire clk_sd;
   wire locked;
+  wire resetn;
 
   pll_clk_wiz inst
        (.clk_cpu(clk_cpu),
         .clk_in(clk_in),
         .clk_mem(clk_mem),
-        .locked(locked));
+        .clk_sd(clk_sd),
+        .locked(locked),
+        .resetn(resetn));
 endmodule
 
 module pll_clk_wiz
    (clk_mem,
     clk_cpu,
+    clk_sd,
+    resetn,
     locked,
     clk_in);
   output clk_mem;
   output clk_cpu;
+  output clk_sd;
+  input resetn;
   output locked;
   input clk_in;
 
@@ -52,14 +64,18 @@ module pll_clk_wiz
   wire clk_in_pll;
   wire clk_mem;
   wire clk_mem_pll;
+  wire clk_sd;
+  wire clk_sd_pll;
+  wire clkfbout_buf_pll;
   wire clkfbout_pll;
   wire locked;
+  wire reset_high;
+  wire resetn;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
@@ -70,6 +86,10 @@ module pll_clk_wiz
   wire NLW_mmcm_adv_inst_PSDONE_UNCONNECTED;
   wire [15:0]NLW_mmcm_adv_inst_DO_UNCONNECTED;
 
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkf_buf
+       (.I(clkfbout_pll),
+        .O(clkfbout_buf_pll));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
@@ -88,22 +108,26 @@ module pll_clk_wiz
        (.I(clk_cpu_pll),
         .O(clk_cpu));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout3_buf
+       (.I(clk_sd_pll),
+        .O(clk_sd));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(9.250000),
+    .CLKFBOUT_MULT_F(10.500000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(4.625000),
+    .CLKOUT0_DIVIDE_F(5.250000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(14),
+    .CLKOUT1_DIVIDE(16),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(21),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
@@ -124,7 +148,7 @@ module pll_clk_wiz
     .CLKOUT6_DUTY_CYCLE(0.500000),
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
-    .COMPENSATION("INTERNAL"),
+    .COMPENSATION("ZHOLD"),
     .DIVCLK_DIVIDE(1),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
@@ -138,7 +162,7 @@ module pll_clk_wiz
     .SS_MOD_PERIOD(10000),
     .STARTUP_WAIT("FALSE")) 
     mmcm_adv_inst
-       (.CLKFBIN(clkfbout_pll),
+       (.CLKFBIN(clkfbout_buf_pll),
         .CLKFBOUT(clkfbout_pll),
         .CLKFBOUTB(NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED),
         .CLKFBSTOPPED(NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED),
@@ -150,7 +174,7 @@ module pll_clk_wiz
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
         .CLKOUT1(clk_cpu_pll),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_sd_pll),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
         .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
@@ -170,7 +194,12 @@ module pll_clk_wiz
         .PSEN(1'b0),
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
-        .RST(1'b0));
+        .RST(reset_high));
+  LUT1 #(
+    .INIT(2'h1)) 
+    mmcm_adv_inst_i_1
+       (.I0(resetn),
+        .O(reset_high));
 endmodule
 `ifndef GLBL
 `define GLBL

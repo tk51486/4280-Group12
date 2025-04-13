@@ -9,8 +9,11 @@
 //--------------------------------------------------------------------------------------------------------
 
 module fpga_top (
+    output wire [7:0] CurrNum,
+    output wire CurrFlag,
+    input wire rstn,
     // clock = 100MHz
-    input  wire         clk100mhz,
+    input  wire         clk_sd,
     // rstn active-low, You can re-read SDcard by pushing the reset button.
     input  wire         resetn,
     // when sdcard_pwr_n = 0, SDcard power on
@@ -37,23 +40,16 @@ assign {sddat1, sddat2, sddat3} = 3'b111;    // Must set sddat1~3 to 1 to avoid 
 //----------------------------------------------------------------------------------------------------
 // generate 50MHz clk from 100MHz clk
 //----------------------------------------------------------------------------------------------------
-wire       clk;
-wire       rstn;
-wire nothing;
-clk_wiz_0 u_clk_wiz_0 (
-    .resetn      ( resetn       ),
-    .clk_in1     ( clk100mhz    ),
-    .locked      ( rstn         ),
-    .clk_out1    ( clk          )        // 50MHz
-);
+wire [8:0] nothing;
+
 
 
 
 //----------------------------------------------------------------------------------------------------
 // sd_file_reader
 //----------------------------------------------------------------------------------------------------
-wire       outen;     // when outen=1, a byte of file content is read out from outbyte
-wire [7:0] outbyte;   // a byte of file content
+//wire       outen;     // when outen=1, a byte of file content is read out from outbyte
+//wire [7:0] outbyte;   // a byte of file content
 
 sd_file_reader #(
     .FILE_NAME_LEN    ( 9             ),  // the length of "example.txt" (in bytes)
@@ -61,16 +57,16 @@ sd_file_reader #(
     .CLK_DIV          ( 2              )   // because clk=50MHz, CLK_DIV must ≥2
 ) u_sd_file_reader (
     .rstn             ( rstn           ),
-    .clk              ( clk            ),
+    .clk              ( clk_sd            ),
     .sdclk            ( sdclk          ),
     .sdcmd            ( sdcmd          ),
     .sddat0           ( sddat0         ),
-    .card_stat        ( led[3:0]       ),  // show the sdcard initialize status
-    .card_type        ( led[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
-    .filesystem_type  ( led[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
-    .file_found       ( nothing       ),  // 0=file not found, 1=file found
-    .outen            ( outen          ),
-    .outbyte          ( outbyte        )
+    .card_stat        ( nothing[3:0]       ),  // show the sdcard initialize status
+    .card_type        ( nothing[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
+    .filesystem_type  ( nothing[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
+    .file_found       ( nothing[8]       ),  // 0=file not found, 1=file found
+    .outen            (CurrNum         ),
+    .outbyte          (CurrFlag       )
 );
 
 //assign led[15:11] = outbyte[3:0];
@@ -98,11 +94,11 @@ sd_file_reader #(
     .o_uart_tx                 ( uart_tx              )
 );
 */
-sd_test(
-    .currentNum(outbyte),
-    .clk(clk),
-    .led(led[15:8])
-);
+//sd_test(
+    //.SendAway (CurrNum),
+    //.currentNum(outbyte),
+    //.clk(clk)
+//);
 
 
 endmodule

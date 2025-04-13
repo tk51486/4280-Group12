@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Example/mig_example-master/mig_example.runs/synth_1'
+HD_PWD='C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Example/mig_example-master/LRU Project/LRU Project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log fpga_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_top.tcl
+EAStep vivado -log supertop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source supertop.tcl
