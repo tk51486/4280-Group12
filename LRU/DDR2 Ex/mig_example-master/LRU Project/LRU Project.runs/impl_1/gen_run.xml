@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744575567">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744671532">
+  <File Type="PA-DCP" Name="supertop.dcp"/>
   <File Type="PA-TCL" Name="supertop.tcl"/>
   <File Type="REPORTS-TCL" Name="supertop_reports.tcl"/>
   <File Type="INIT-TIMING" Name="supertop_timing_summary_init.rpt"/>

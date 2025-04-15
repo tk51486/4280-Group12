@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Sun Apr 13 16:22:45 2025
+| Date             : Mon Apr 14 19:09:24 2025
 | Host             : DESKTOP-O22QL9I running 64-bit major release  (build 9200)
 | Command          : report_power -file supertop_power_routed.rpt -pb supertop_power_summary_routed.pb -rpx supertop_power_routed.rpx
 | Design           : supertop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.037        |
+| Total On-Chip Power (W)  | 1.049        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.930        |
-| Device Static (W)        | 0.107        |
+| Dynamic (W)              | 0.942        |
+| Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 80.3         |
-| Junction Temperature (C) | 29.7         |
+| Max Ambient (C)          | 80.2         |
+| Junction Temperature (C) | 29.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,24 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.032 |       27 |       --- |             --- |
-| Slice Logic              |     0.004 |    10481 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     4370 |     63400 |            6.89 |
-|   LUT as Distributed RAM |    <0.001 |      256 |     19000 |            1.35 |
-|   CARRY4                 |    <0.001 |      288 |     15850 |            1.82 |
-|   Register               |    <0.001 |     4004 |    126800 |            3.16 |
-|   F7/F8 Muxes            |    <0.001 |       39 |     63400 |            0.06 |
-|   LUT as Shift Register  |    <0.001 |       11 |     19000 |            0.06 |
-|   Others                 |     0.000 |      134 |       --- |             --- |
-| Signals                  |     0.006 |     8568 |       --- |             --- |
+| Clocks                   |     0.041 |       28 |       --- |             --- |
+| Slice Logic              |     0.005 |    16357 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     6018 |     63400 |            9.49 |
+|   LUT as Distributed RAM |    <0.001 |      280 |     19000 |            1.47 |
+|   CARRY4                 |    <0.001 |      335 |     15850 |            2.11 |
+|   Register               |    <0.001 |     7172 |    126800 |            5.66 |
+|   LUT as Shift Register  |    <0.001 |      195 |     19000 |            1.03 |
+|   F7/F8 Muxes            |    <0.001 |       45 |     63400 |            0.07 |
+|   Others                 |     0.000 |      477 |       --- |             --- |
+| Signals                  |     0.007 |    12958 |       --- |             --- |
+| Block RAM                |    <0.001 |        2 |       135 |            1.48 |
 | MMCM                     |     0.235 |        2 |         6 |           33.33 |
 | PLL                      |     0.000 |        1 |         6 |           16.67 |
 | DSPs                     |    <0.001 |       11 |       240 |            4.58 |
 | I/O                      |     0.542 |       72 |       210 |           34.29 |
 | PHASER                   |     0.106 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
-| Static Power             |     0.107 |          |           |                 |
-| Total                    |     1.037 |          |           |                 |
+| Static Power             |     0.108 |          |           |                 |
+| Total                    |     1.049 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +80,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.094 |       0.076 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.106 |       0.088 |      0.018 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.249 |       0.230 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,6 +141,7 @@ Table of Contents
 | clk_pll_i                                                                                                                                                 | u_mig_example_top/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/clk_pll_i                                                                                                                                         |             6.7 |
 | clk_sd_pll                                                                                                                                                | pll1/inst/clk_sd_pll                                                                                                                                                                                            |            20.0 |
 | clkfbout_pll                                                                                                                                              | pll1/inst/clkfbout_pll                                                                                                                                                                                          |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                                                                | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK                                                                                                                                               |            33.0 |
 | freq_refclk                                                                                                                                               | u_mig_example_top/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/freq_refclk                                                                                                                                       |             1.7 |
 | iserdes_clkdiv                                                                                                                                            | u_mig_example_top/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clkdiv            |            13.3 |
 | iserdes_clkdiv_1                                                                                                                                          | u_mig_example_top/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv            |            13.3 |
@@ -168,17 +170,26 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------+-----------+
-| Name                 | Power (W) |
-+----------------------+-----------+
-| supertop             |     0.930 |
-|   pll1               |     0.128 |
-|     inst             |     0.128 |
-|   u_fpga_top         |     0.005 |
-|     u_sd_file_reader |     0.005 |
-|   u_mig_example_top  |     0.795 |
-|     mem_ex           |     0.795 |
-|       mig1           |     0.794 |
-+----------------------+-----------+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| supertop                 |     0.942 |
+|   dbg_hub                |     0.002 |
+|     inst                 |     0.002 |
+|       BSCANID.u_xsdbm_id |     0.002 |
+|   pll1                   |     0.128 |
+|     inst                 |     0.128 |
+|   u_fpga_top             |     0.005 |
+|     u_sd_file_reader     |     0.005 |
+|   u_ila_0                |     0.005 |
+|     inst                 |     0.005 |
+|       ila_core_inst      |     0.005 |
+|   u_ila_1                |     0.005 |
+|     inst                 |     0.005 |
+|       ila_core_inst      |     0.005 |
+|   u_mig_example_top      |     0.795 |
+|     mem_ex               |     0.795 |
+|       mig1               |     0.794 |
++--------------------------+-----------+
 
 

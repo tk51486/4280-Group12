@@ -1,70 +1,15 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="7372" HostCore="8" HostMemory="034081640448">
+    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="3516" HostCore="8" HostMemory="034081640448">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="15520" HostCore="8" HostMemory="034081640448">
+    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="20076" HostCore="8" HostMemory="034081640448">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="2996" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="9356" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="22536" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="18752" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="23592" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="13140" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="10784" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="20268" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="15764" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="6252" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="24052" HostCore="8" HostMemory="034081640448">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="19340" HostCore="8" HostMemory="034081640448">
+    <Process Command="vivado.bat" Owner="Amr" Host="DESKTOP-O22QL9I" Pid="15568" HostCore="8" HostMemory="034081640448">
     </Process>
 </ProcessHandle>

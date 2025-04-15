@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Sun Apr 13 16:20:33 2025
-# Process ID         : 20592
+# Start of session at: Mon Apr 14 19:09:57 2025
+# Process ID         : 16956
 # Current directory  : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/impl_1
 # Command line       : vivado.exe -log supertop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source supertop.tcl -notrace
 # Log file           : C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/impl_1/supertop.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 34081 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36229 MB
-# Available Virtual  : 20368 MB
+# Available Virtual  : 22657 MB
 #-----------------------------------------------------------
 source supertop.tcl -notrace

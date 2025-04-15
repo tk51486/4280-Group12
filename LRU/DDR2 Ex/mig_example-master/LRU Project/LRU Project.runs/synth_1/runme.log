@@ -8,7 +8,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Sun Apr 13 16:19:30 2025
+  **** Start of session at: Mon Apr 14 18:51:42 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -20,15 +20,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9132
+INFO: [Synth 8-7075] Helper process launched with PID 2888
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1039.699 ; gain = 466.852
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1040.176 ; gain = 467.398
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:56]
 INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:94]
 INFO: [Synth 8-6157] synthesizing module 'supertop' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/realtime/pll_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'fpga_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/fpga_top.v:11]
 INFO: [Synth 8-6157] synthesizing module 'sd_file_reader' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/sdCode/sd_file_reader.v:12]
 	Parameter FILE_NAME_LEN bound to: 9 - type: integer 
@@ -50,8 +50,8 @@ INFO: [Synth 8-6155] done synthesizing module 'fpga_top' (0#1) [C:/Users/Amr/Doc
 WARNING: [Synth 8-689] width (64) of port connection 'CurrNum' does not match port width (8) of module 'fpga_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:73]
 INFO: [Synth 8-6157] synthesizing module 'mig_example_top' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/mig_example.srcs/mig_example_top.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mem_example' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/mem_example.v:16]
-INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/realtime/mig_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'flag_sync' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/flag_sync.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'flag_sync' (0#1) [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/flag_sync.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ff_sync' [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/sources_1/new/ff_sync.v:1]
@@ -192,24 +192,24 @@ WARNING: [Synth 8-7129] Port led[0] in module fpga_top is either unconnected or 
 WARNING: [Synth 8-7129] Port uart_tx in module fpga_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port resetn in module fpga_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.051 ; gain = 620.203
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1193.238 ; gain = 620.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.051 ; gain = 620.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1193.238 ; gain = 620.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.051 ; gain = 620.203
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1193.238 ; gain = 620.461
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1196.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1193.238 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
-Finished Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Finished Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc] for cell 'pll1'
 Parsing XDC File [c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_mig_example_top/mem_ex/mig1'
 Finished Parsing XDC File [c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_mig_example_top/mem_ex/mig1'
 Parsing XDC File [C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
@@ -226,26 +226,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/supertop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1306.848 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1282.496 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1306.848 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1282.496 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.848 ; gain = 734.000
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1282.496 ; gain = 709.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.848 ; gain = 734.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1282.496 ; gain = 709.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-17756-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-21064-DESKTOP-O22QL9I/pll/pll/pll_in_context.xdc}, line 6).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 2).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 3).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  {c:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 4).
@@ -341,7 +341,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  {
 Applied set_property KEEP_HIERARCHY = SOFT for pll1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for u_mig_example_top/mem_ex/mig1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.848 ; gain = 734.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1282.496 ; gain = 709.719
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sddat_stat_reg' in module 'sd_reader'
 INFO: [Synth 8-802] inferred FSM for state register 'filesystem_state_reg' in module 'sd_file_reader'
@@ -380,7 +380,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'tgen_state_reg' using encoding 'one-hot' in module 'mig_example_top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.848 ; gain = 734.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1282.496 ; gain = 709.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -515,7 +515,7 @@ WARNING: [Synth 8-3917] design supertop has port sddat3 driven by constant 1
 WARNING: [Synth 8-7129] Port uart_tx in module supertop is either unconnected or has no load
 WARNING: [Synth 8-3332] Sequential element (u_mig_example_top/FSM_onehot_tgen_state_reg[5]) is unused and will be removed from module supertop.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1360.145 ; gain = 787.297
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1361.395 ; gain = 788.617
 ---------------------------------------------------------------------------------
  Sort Area is  read_sector_no1_0 : 0 0 : 1632 3217 : Used 1 time 0
  Sort Area is  read_sector_no1_0 : 0 1 : 1585 3217 : Used 1 time 0
@@ -557,19 +557,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1433.633 ; gain = 860.785
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 1438.609 ; gain = 865.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1458.594 ; gain = 885.746
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1463.062 ; gain = 890.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1490.152 ; gain = 917.305
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 1494.691 ; gain = 921.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -587,37 +587,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -674,19 +674,19 @@ Report Cell Usage:
 |21    |OBUFT   |     1|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.363 ; gain = 975.719
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1662.363 ; gain = 1089.516
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:04 . Memory (MB): peak = 1666.453 ; gain = 1004.418
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1666.453 ; gain = 1093.676
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1671.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1675.613 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 236 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1675.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1679.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
@@ -695,9 +695,9 @@ Synth Design complete | Checksum: ae9ffcc3
 INFO: [Common 17-83] Releasing license: Synthesis
 55 Infos, 142 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1675.168 ; gain = 1308.117
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:40 . Memory (MB): peak = 1679.293 ; gain = 1312.145
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1675.168 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1679.293 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Amr/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.runs/synth_1/supertop.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file supertop_utilization_synth.rpt -pb supertop_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 13 16:20:25 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 14 18:53:32 2025...
