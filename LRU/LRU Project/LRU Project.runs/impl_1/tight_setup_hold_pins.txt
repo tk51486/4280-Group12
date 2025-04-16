@@ -1,0 +1,23 @@
++====================+===================+======================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                  |
++====================+===================+======================================================+
+| sys_clk_pin        | clk_cpu_pll       | u_mig_example_top/FSM_sequential_tgen_state_reg[0]/D |
+| sys_clk_pin        | clk_cpu_pll       | u_mig_example_top/mem_d_to_ram_reg[57]/D             |
+| sys_clk_pin        | clk_cpu_pll       | u_mig_example_top/lights_reg[3]/D                    |
+| sys_clk_pin        | clk_cpu_pll       | u_mig_example_top/lights_reg[11]/D                   |
+| clk_pll_i          | clk_cpu_pll       | u_mig_example_top/lights_reg[4]/D                    |
+| clk_pll_i          | clk_cpu_pll       | u_mig_example_top/lights_reg[8]/D                    |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/mem_wdf_data_reg[62]/D      |
+| clk_pll_i          | clk_cpu_pll       | u_mig_example_top/lights_reg[9]/D                    |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/rs_sync/flag_sync_reg[0]/D  |
+| clk_pll_i          | clk_cpu_pll       | u_mig_example_top/lights_reg[7]/D                    |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/mem_wdf_data_reg[19]/D      |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/data_out_reg[45]/D          |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/data_out_reg[47]/D          |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/data_out_reg[46]/D          |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/data_out_reg[44]/D          |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/ws_sync/flag_sync_reg[0]/D  |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/mem_wdf_mask_reg[7]/D       |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/mem_wdf_data_reg[22]/D      |
+| clk_cpu_pll        | clk_cpu_pll       | u_mig_example_top/mem_ex/mem_wdf_data_reg[6]/D       |
++--------------------+-------------------+------------------------------------------------------+
