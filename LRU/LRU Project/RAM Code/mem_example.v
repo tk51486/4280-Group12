@@ -168,9 +168,9 @@ module mem_example(
                                                    mem_rd_data[23:16],mem_rd_data[31:24],
                                                    mem_rd_data[39:32],mem_rd_data[47:40],
                                                    mem_rd_data[55:48],mem_rd_data[63:56]};
-                        `RAM_WIDTH32: data_out[63:0] <= {mem_rd_data[7:0],mem_rd_data[15:8],
-                                                   mem_rd_data[23:16],mem_rd_data[31:24],32'h0};
-                        `RAM_WIDTH16: data_out[63:0] <= {mem_rd_data[7:0],mem_rd_data[15:8],48'h0};
+                        `RAM_WIDTH32: data_out[63:0] <= {mem_rd_data[7:0], mem_rd_data[15:8], 
+                                                    mem_rd_data[23:16], mem_rd_data[31:24], 32'h0};
+                        `RAM_WIDTH16: data_out[63:0] <= {mem_rd_data[7:0], mem_rd_data[15:8], 48'h0};
                         `RAM_WIDTH8: data_out[63:0] <= {mem_rd_data[7:0],56'h0};
                     endcase
                 end else begin
@@ -181,9 +181,9 @@ module mem_example(
                                                          mem_rd_data[31:24],mem_rd_data[39:32],
                                                          mem_rd_data[47:40],mem_rd_data[55:48],
                                                          mem_rd_data[63:56]};
-                        `RAM_WIDTH32: data_out[63:0] <= {mem_rd_data[15:8],mem_rd_data[23:16],
+                        `RAM_WIDTH32: data_out[63:0] <= {mem_rd_data[15:8],mem_rd_data[23:16], 
                                                          mem_rd_data[31:24],mem_rd_data[39:32],32'h0};
-                        `RAM_WIDTH16: data_out[63:0] <= {mem_rd_data[15:8],mem_rd_data[23:16],48'h0};
+                        `RAM_WIDTH16: data_out[63:0] <= {mem_rd_data[23:16], mem_rd_data[15:8], 48'h0};
                         `RAM_WIDTH8: data_out[63:0]  <= {mem_rd_data[15:8],56'h0};
                     endcase
                 end

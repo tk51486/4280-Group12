@@ -34,7 +34,7 @@ module mig_example_top(
     initial lightCounter = 0;
     //////////  Clock Generation  //////////
     
-    assign LED[15:0] = lights;
+    //assign LED[15:0] = lights;
     //////////  Reset Sync/Stretch  //////////
     reg[31:0] rst_stretch = 32'hFFFFFFFF;
     wire reset_req_n, rst_n;
@@ -123,7 +123,7 @@ module mig_example_top(
             tgen_state <= TGEN_GEN_AD;
             mem_rstrobe <= 1'b0;
             mem_wstrobe <= 1'b0;
-            mem_addr <= 28'h1010101;
+            mem_addr <= 28'h0101010;
             mem_d_to_ram <= 28'h0;
             mem_transaction_width <= 3'h0;
             dequ <= 1'b0;
@@ -133,7 +133,7 @@ module mig_example_top(
                     if (memFlag == 1) begin
                         lights <= SendMem[15:0];
                         //lights <= 16'b1100110011001100;
-                        mem_addr <= 28'h1010101;
+                        mem_addr <= 28'h0101010;
                         mem_d_to_ram <= SendMem;
                         tgen_state <= TGEN_WRITE;
                     end 
@@ -142,7 +142,7 @@ module mig_example_top(
                     if(mem_ready) begin
                         mem_wstrobe <= 1;
                         //Write the entire 64-bit word
-                        mem_transaction_width <= `RAM_WIDTH64;
+                        mem_transaction_width <= `RAM_WIDTH32;
                         tgen_state <= TGEN_WWAIT;
                     end
                 end
@@ -156,7 +156,7 @@ module mig_example_top(
                     if(mem_ready) begin
                         mem_rstrobe <= 1;
                         //Load only the single byte at that address
-                        mem_transaction_width <= `RAM_WIDTH16;
+                        mem_transaction_width <= `RAM_WIDTH32;
                         tgen_state <= TGEN_RWAIT;
                     end
                 end
@@ -173,16 +173,3 @@ module mig_example_top(
         end
     end 
 endmodule
-
-/*
-waitCounter <= waitCounter + 1;
-if(waitCounter >= 200000000) begin
-    waitCounter <= 0;
-    mem_d_from_ram >> (8*lightCounter)
-    lights <= 8'b;
-    lightCounter <= lightCounter + 1;
-    if (lightCounter == 7) begin
-        tgen_state <= TGEN_STOP;
-    end
-end
- */

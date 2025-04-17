@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{c:/Users/amr21/Documents/GitHub/4280-Group12/LRU/DDR2 Ex/mig_example-master/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} rfile:{../../../LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} id:1 order:EARLY} [current_design]
+set_property SRC_FILE_INFO {cfile:{c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} rfile:{../../../LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} id:1 order:EARLY} [current_design]
 set_property src_info {type:XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R7 [get_ports {ddr2_dq[0]}]
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]

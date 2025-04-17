@@ -46,8 +46,24 @@ module supertop(
         output[1:0] ddr2_dm,
         output ddr2_odt
     );
-    wire [63:0] CurrNum;
+    wire [7:0] CurrNum;
     wire CurrFlag;
+    reg [16:0] LRUTag; //pars
+    initial LRUTag = 0;
+    reg [10:0] LRUIndex;
+    initial LRUIndex = 0;
+    reg LRULoadStore;
+    initial LRULoadStore = 0;
+    reg [20:0] LRUInst;
+    initial LRUInst = 0;
+    reg [127:0] LRUParse;
+    initial LRUParse = 0; 
+    reg LRULineReady;
+    initial LRULineReady = 0;
+    reg [60:0] ParseIT;
+    initial ParseIT = 0;
+    reg [28:0] LRUAddr;
+    initial LRUAddr = 0;//endpars
     reg [63:0] SendMem;
     reg memFlag;
     initial memFlag = 0;
@@ -57,12 +73,13 @@ module supertop(
     wire clk_cpu, clk_mem, clk_sd;
     wire pll_locked;
     wire resetn;
-    reg [15:0] enables;
-    //assign led[15:0] = enables;
+    reg [15:0] debugLED;
+    wire [15:0] emptyLED;
+    assign led[15:0] = debugLED;
     reg [60:0] count;
     initial count = 0;
-    reg [10:0] bufIt;
-    initial bufIt = 0;
+    reg [10:0] reads;
+    initial reads = 0;
     
     pll pll1(
         .resetn(resetn),
@@ -96,7 +113,7 @@ fpga_top u_fpga_top(
         .clk_cpu(clk_cpu),
         .pll_locked(pll_locked),
         .CPU_RESETN(CPU_RESETN),
-        .LED(led),
+        .LED(emptyLED),
         .ddr2_dq(ddr2_dq),
         .ddr2_dqs_n(ddr2_dqs_n),
         .ddr2_dqs_p(ddr2_dqs_p),
@@ -112,33 +129,49 @@ fpga_top u_fpga_top(
         .ddr2_dm(ddr2_dm),
         .ddr2_odt(ddr2_odt)
     );
-/*always@(posedge CurrFlag) begin
-    if(bufIt < 8)begin
-        SendMem = SendMem + (CurrNum << bufIt*8);
-        bufIt = bufIt + 1;
-    end
-    else begin
-        memFlag = 1;
-    end
-end */    
-
-always@(posedge clk100mhz) begin
-//   if(start == 1)begin
-        if(bufIt < 8)begin
-            if(count < 100000000)begin
-                count = count + 1;    
-            end else begin
-                count = 0;
-                bufIt = bufIt + 1;
+always@(posedge CurrFlag) begin
+    if(CurrNum != 8'h0a && LRULineReady != 1) begin
+        LRUParse = LRUParse << 8;
+        LRUParse = LRUParse + CurrNum;
+        
+        //debugLED[15:0] = LRUParse[31:16];
+        
+    end else begin
+        LRULoadStore = LRUParse[104]; //parsing loadstore
+        
+        
+        
+        if(ParseIT < 7) begin  //parsing address
+            LRUAddr = LRUAddr + LRUParse[83:80];
+            if (LRUParse[87:84] == 4'b0110) begin //adjusting if it's a letter (hex char)
+                LRUAddr = LRUParse[83:80] + 9;
             end
-         end else begin
-            SendMem = 64'ha2f3459780437c6b;
-            memFlag = 1;
-         end
+            LRUParse = LRUParse << 8;
+            LRUAddr = LRUAddr << 4;
+            ParseIT = ParseIT + 1; 
+        end
+        
+        LRUTag = LRUAddr[27:11];
+        LRUIndex = LRUAddr[10:0];
+        
+        if (~LRULoadStore) begin
+            debugLED[15] = 1;
+        end
+        if (LRUTag == 20'h18033) begin
+            debugLED[14] = 1;
+        end
+        if (LRUIndex == 12'h36c) begin
+            debugLED[13] = 1;
+        end
+        debugLED[10:0] = LRUIndex;
+        LRULineReady = 1;
     end
+    
+end
+
 //    if(BTNL == 1)begin
 //      start = 1;
 //    end
-//end
+
 
 endmodule
