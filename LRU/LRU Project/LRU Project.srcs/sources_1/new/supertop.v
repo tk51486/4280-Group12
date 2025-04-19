@@ -58,11 +58,13 @@ module supertop(
     initial LRUInst = 0;
     reg [127:0] LRUParse;
     initial LRUParse = 0; 
+    reg [127:0] CurrentLine;
+    initial CurrentLine = 0; 
     reg LRULineReady;
     initial LRULineReady = 0;
     reg [60:0] ParseIT;
     initial ParseIT = 0;
-    reg [28:0] LRUAddr;
+    reg [27:0] LRUAddr;
     initial LRUAddr = 0;//endpars
     reg [63:0] SendMem;
     reg memFlag;
@@ -130,48 +132,70 @@ fpga_top u_fpga_top(
         .ddr2_odt(ddr2_odt)
     );
 always@(posedge CurrFlag) begin
-    if(CurrNum != 8'h0a && LRULineReady != 1) begin
-        LRUParse = LRUParse << 8;
-        LRUParse = LRUParse + CurrNum;
-        
-        //debugLED[15:0] = LRUParse[31:16];
-        
-    end else begin
-        LRULoadStore = LRUParse[104]; //parsing loadstore
-        
-        
-        
-        if(ParseIT < 7) begin  //parsing address
-            LRUAddr = LRUAddr + LRUParse[83:80];
-            if (LRUParse[87:84] == 4'b0110) begin //adjusting if it's a letter (hex char)
-                LRUAddr = LRUParse[83:80] + 9;
-            end
-            LRUParse = LRUParse << 8;
-            LRUAddr = LRUAddr << 4;
-            ParseIT = ParseIT + 1; 
+    if(~LRULineReady) begin
+        if(CurrNum != 8'h0a) begin
+                LRUParse = LRUParse << 8;
+                LRUParse = LRUParse + CurrNum;
         end
-        
-        LRUTag = LRUAddr[27:11];
-        LRUIndex = LRUAddr[10:0];
-        
-        if (~LRULoadStore) begin
-            debugLED[15] = 1;
+        else begin
+            LRULineReady = 1;
+            //debugLED[15:8] = LRUParse[111:104];
+            //debugLED[7:0] = LRUParse[7:0];
         end
-        if (LRUTag == 20'h18033) begin
-            debugLED[14] = 1;
-        end
-        if (LRUIndex == 12'h36c) begin
-            debugLED[13] = 1;
-        end
-        debugLED[10:0] = LRUIndex;
-        LRULineReady = 1;
     end
+ end
     
+
+always@(posedge clk100mhz) begin
+    
+    if(LRULineReady) begin
+        
+        if (count < 8) begin
+            if(count == 0)begin
+                CurrentLine = LRUParse;
+                LRUInst = CurrentLine[3:0];    //parsing instruction count
+                
+                if(CurrentLine[119:112] !=  8'b0)begin
+                    if(CurrentLine[127:120] != 8'b0) begin //three digit instruction count
+                        LRUInst = LRUInst + (CurrentLine[19:16] * 100 + CurrentLine[11:8] * 10);
+                        CurrentLine = CurrentLine >> 16;
+                    end else begin                           //two digit instruction count
+                        LRUInst = LRUInst + (CurrentLine[11:8] * 10);
+                        CurrentLine = CurrentLine >> 8;
+                    end
+                end           
+                
+                LRULoadStore = CurrentLine[88]; //parsing loadstore
+            end
+            
+            if(ParseIT < 7) begin  //parsing address
+                LRUAddr = LRUAddr + CurrentLine[75:72];
+                if (CurrentLine[79:76] == 4'b0110) begin //adjusting if it's a letter (hex char)
+                    LRUAddr = LRUAddr + 9;
+                end
+                CurrentLine = CurrentLine << 8;
+                LRUAddr = LRUAddr << 4;
+                ParseIT = ParseIT + 1; 
+            end
+            if(count == 7)begin
+                LRUTag = LRUAddr[27:11];
+                LRUIndex = LRUAddr[10:0];
+                
+                if (~LRULoadStore) begin
+                    debugLED[15] = 1;
+                end
+                if (LRUTag == 20'h18031) begin
+                    debugLED[14] = 1;
+                end
+                if (LRUIndex == 12'h361) begin
+                    debugLED[13] = 1;
+                end
+                
+                debugLED[10:0] = LRUIndex;
+            end
+            count = count + 1;
+        end
+    end
 end
-
-//    if(BTNL == 1)begin
-//      start = 1;
-//    end
-
 
 endmodule

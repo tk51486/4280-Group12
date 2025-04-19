@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Wed Apr 16 20:54:26 2025
+| Date         : Sat Apr 19 02:10:47 2025
 | Host         : engr-d1409-010 running 64-bit major release  (build 9200)
 | Command      : report_drc -file supertop_drc_routed.rpt -pb supertop_drc_routed.pb -rpx supertop_drc_routed.rpx
 | Design       : supertop
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 46
+             Checks found: 44
 +-----------+----------+-----------------------------------------------------+--------+
 | Rule      | Severity | Description                                         | Checks |
 +-----------+----------+-----------------------------------------------------+--------+
@@ -34,8 +34,6 @@ Table of Contents
 | DPOP-2    | Warning  | MREG Output pipelining                              | 11     |
 | PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
 | PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
-| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
-| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
 | REQP-1709 | Warning  | Clock output buffering                              | 1      |
 +-----------+----------+-----------------------------------------------------+--------+
 
@@ -256,22 +254,12 @@ Related violations: <none>
 
 PDRC-136#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X75Y71 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X67Y105 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X75Y71 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#1 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X70Y82 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#1 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X70Y82 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X67Y105 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 REQP-1709#1 Warning

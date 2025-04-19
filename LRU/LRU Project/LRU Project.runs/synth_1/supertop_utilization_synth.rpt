@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Wed Apr 16 20:53:12 2025
+| Date         : Sat Apr 19 02:09:34 2025
 | Host         : engr-d1409-010 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file supertop_utilization_synth.rpt -pb supertop_utilization_synth.pb
 | Design       : supertop
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1676 |     0 |          0 |     63400 |  2.64 |
-|   LUT as Logic             | 1668 |     0 |          0 |     63400 |  2.63 |
+| Slice LUTs*                | 1920 |     0 |          0 |     63400 |  3.03 |
+|   LUT as Logic             | 1912 |     0 |          0 |     63400 |  3.02 |
 |   LUT as Memory            |    8 |     0 |          0 |     19000 |  0.04 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |    8 |     0 |            |           |       |
-| Slice Registers            | 1216 |     0 |          0 |    126800 |  0.96 |
-|   Register as Flip Flop    | 1216 |     0 |          0 |    126800 |  0.96 |
+| Slice Registers            | 1396 |     0 |          0 |    126800 |  1.10 |
+|   Register as Flip Flop    | 1396 |     0 |          0 |    126800 |  1.10 |
 |   Register as Latch        |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                   |   37 |     0 |          0 |     31700 |  0.12 |
 | F8 Muxes                   |    0 |     0 |          0 |     15850 |  0.00 |
@@ -62,7 +62,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 21    |          Yes |           - |          Set |
 | 919   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 276   |          Yes |       Reset |            - |
+| 456   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -96,7 +96,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   25 |     0 |          0 |       210 | 11.90 |
+| Bonded IOB                  |   26 |     0 |          0 |       210 | 12.38 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -153,12 +153,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDCE     |  919 |        Flop & Latch |
-| LUT6     |  650 |                 LUT |
-| LUT2     |  454 |                 LUT |
-| LUT4     |  336 |                 LUT |
-| LUT3     |  289 |                 LUT |
-| LUT5     |  281 |                 LUT |
-| FDRE     |  276 |        Flop & Latch |
+| LUT6     |  738 |                 LUT |
+| FDRE     |  456 |        Flop & Latch |
+| LUT5     |  450 |                 LUT |
+| LUT2     |  446 |                 LUT |
+| LUT4     |  325 |                 LUT |
+| LUT3     |  286 |                 LUT |
 | CARRY4   |  144 |          CarryLogic |
 | MUXF7    |   37 |               MuxFx |
 | FDPE     |   21 |        Flop & Latch |
@@ -167,7 +167,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | SRL16E   |    8 |  Distributed Memory |
 | LUT1     |    7 |                 LUT |
 | OBUFT    |    4 |                  IO |
-| IBUF     |    3 |                  IO |
+| IBUF     |    4 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
