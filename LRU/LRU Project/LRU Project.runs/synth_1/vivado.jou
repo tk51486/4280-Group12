@@ -3,8 +3,8 @@
 # SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Sat Apr 19 02:08:48 2025
-# Process ID         : 15900
+# Start of session at: Sat Apr 19 20:21:14 2025
+# Process ID         : 22008
 # Current directory  : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1
 # Command line       : vivado.exe -log supertop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source supertop.tcl
 # Log file           : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/supertop.vds
@@ -19,6 +19,6 @@
 # Host memory        : 34033 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36180 MB
-# Available Virtual  : 22507 MB
+# Available Virtual  : 19568 MB
 #-----------------------------------------------------------
 source supertop.tcl -notrace

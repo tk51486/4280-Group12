@@ -126,7 +126,7 @@ OPTRACE "add files" START { }
   read_ip -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/mig/mig.xci}}
 OPTRACE "read constraints: implementation" START { }
   read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc}}
-  read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/Nexys-4-DDR-pins.xdc}}
+  read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

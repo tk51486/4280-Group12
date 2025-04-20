@@ -3,7 +3,7 @@
 
 # XDC: new/mfp_nexys4_ddr.xdc
 
-# XDC: C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/Nexys-4-DDR-pins.xdc
+# XDC: imports/SD Code/Nexys-4-DDR-pins.xdc
 
 # IP: ip/clk_wiz_0/clk_wiz_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] -quiet

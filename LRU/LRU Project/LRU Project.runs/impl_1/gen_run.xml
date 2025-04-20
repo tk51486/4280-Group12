@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745042925">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745108472">
   <File Type="PA-TCL" Name="supertop.tcl"/>
   <File Type="REPORTS-TCL" Name="supertop_reports.tcl"/>
   <File Type="INIT-TIMING" Name="supertop_timing_summary_init.rpt"/>
@@ -95,13 +95,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Array_Manipulation.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/DirectLRU.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -109,99 +102,73 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/RAM Code/checkddr.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/RAM Code/ddr2_model_parameters.vh">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/RAM Code/ddr2_model_parameters.vh">
-      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/RAM Code/ddr2_model_parameters.vh"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
         <Attr Name="IsVisible" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/RAM Code/ddr2_model.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/RAM Code/ff_sync.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/RAM Code/ff_sync.v"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/RAM Code/ff_sync.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/RAM Code/flag_sync.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/RAM Code/flag_sync.v"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/RAM Code/flag_sync.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/RAM Code/io_def.vh">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/SD Code/fpga_top.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/RAM Code/io_def.vh">
-      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/RAM Code/io_def.vh"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
         <Attr Name="IsVisible" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/RAM Code/mem_example.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/RAM Code/mem_example.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/RAM Code/mem_example.v"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/RAM Code/mig_example_tb.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/SD Code/sd_file_reader.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/SD Code/sd_file_reader.v"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/RAM Code/mig_example_top.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/SD Code/sd_reader.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/SD Code/sd_reader.v"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/SD Code/sd_file_reader.v">
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/SD Code/sdcmd_ctrl.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/SD Code/sd_reader.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/SD Code/sdcmd_ctrl.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/SD Code/uart_tx.v">
-      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/SD Code/sdcmd_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -214,11 +181,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../mig_example.srcs/ddr2_model.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/mig_example_tb.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -228,6 +190,38 @@
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="ScopedToCell" Val="mig"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/SD Code/IO_Management.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/SD Code/IO_Management.v"/>
+        <Attr Name="ImportTime" Val="1745095993"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SD_Data_Decoder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/StatTracker.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/LRU Project/RAM Code/MemController.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/RAM Code/MemController.v"/>
+        <Attr Name="ImportTime" Val="1745107991"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
@@ -243,8 +237,10 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/SD Code/Nexys-4-DDR-pins.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/SD Code/Nexys-4-DDR-pins.xdc"/>
+        <Attr Name="ImportTime" Val="1745090000"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -261,7 +257,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

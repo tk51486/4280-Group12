@@ -75,27 +75,24 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog {
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/ddr2_model_parameters.vh}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/io_def.vh}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ddr2_model_parameters.vh}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/io_def.vh}
 }
-set_property file_type "Verilog Header" [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/ddr2_model_parameters.vh}}]
-set_property file_type "Verilog Header" [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/io_def.vh}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ddr2_model_parameters.vh}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/io_def.vh}}]
 read_verilog -library xil_defaultlib {
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/Array_Manipulation.v}
   {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/checkddr.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/ddr2_model.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/ff_sync.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/flag_sync.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/fpga_top.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/mem_example.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/mig_example_tb.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/RAM Code/mig_example_top.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/sd_file_reader.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/sd_reader.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/sdcmd_ctrl.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/uart_tx.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ff_sync.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/flag_sync.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/mem_example.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_reader.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sdcmd_ctrl.v}
   {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/IO_Management.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/StatTracker.v}
+  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v}
 }
 read_ip -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc}}]
@@ -123,8 +120,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc}}
 set_property used_in_implementation false [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc}}]
 
-read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/Nexys-4-DDR-pins.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/Nexys-4-DDR-pins.xdc}}]
+read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
@@ -145,7 +142,6 @@ set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef supertop.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-generate_parallel_reports -reports { "report_utilization -file supertop_utilization_synth.rpt -pb supertop_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

@@ -1,5 +1,5 @@
 set_property SRC_FILE_INFO {cfile:{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc} rfile:{../../../LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc} id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/SD Code/Nexys-4-DDR-pins.xdc} rfile:{../../../SD Code/Nexys-4-DDR-pins.xdc} id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc} rfile:{../../../LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc} id:2} [current_design]
 set_property src_info {type:XDC file:1 line:64 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN N17   IOSTANDARD LVCMOS33} [get_ports CPU_RESETN] #center button
 set_property src_info {type:XDC file:1 line:68 export:INPUT save:INPUT read:READ} [current_design]
