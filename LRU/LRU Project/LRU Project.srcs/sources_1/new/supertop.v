@@ -67,7 +67,6 @@ module supertop(
     wire resetn;
     
     reg [15:0] debugLED;
-    wire [15:0] emptyLED;
     
     assign sdcard_pwr_n = 1'b0;                  // keep SDcard power-on
     assign {sddat1, sddat2, sddat3} = 3'b111;    // Must set sddat1~3 to 1 to avoid SD card from entering SPI mode
@@ -88,7 +87,7 @@ module supertop(
     IO_Management u_IO_Management(
         //.start(start),
         .clk(clk100mhz),
-        .led(emptyLED),
+        //.led(led),
         
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),

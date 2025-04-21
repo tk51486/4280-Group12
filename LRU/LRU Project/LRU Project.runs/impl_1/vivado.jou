@@ -1,24 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2024.2 (64-bit)
-# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
-# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
-# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Apr 21 06:55:35 2025
-# Process ID         : 36488
-# Current directory  : C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1
-# Command line       : vivado.exe -log vga_demo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vga_demo.tcl -notrace
-# Log file           : C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1/vga_demo.vdi
-# Journal file       : C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1\vivado.jou
-# Running On         : DESKTOP-AAIHOTM
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Mon Apr 21 17:35:47 2025
+# Process ID         : 6048
+# Current directory  : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1
+# Command line       : vivado.exe -log supertop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source supertop.tcl -notrace
+# Log file           : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1/supertop.vdi
+# Journal file       : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1\vivado.jou
+# Running On         : engr-d1450-023
 # Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 26100
-# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
-# CPU Frequency      : 3600 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 16
-# Host memory        : 68544 MB
-# Swap memory        : 55029 MB
-# Total Virtual      : 123574 MB
-# Available Virtual  : 102693 MB
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34033 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36180 MB
+# Available Virtual  : 22002 MB
 #-----------------------------------------------------------
-source vga_demo.tcl -notrace
+source supertop.tcl -notrace

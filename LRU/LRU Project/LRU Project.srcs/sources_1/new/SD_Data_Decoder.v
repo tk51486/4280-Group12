@@ -31,8 +31,6 @@ module SD_Data_Decoder(
     output reg [20:0] LRUInst,
 
 
-
-
     output reg LRULineReady,
     //SD Ports
     input wire          rstn,
@@ -42,13 +40,7 @@ module SD_Data_Decoder(
     inout               sdcmd,
     input  wire         sddat0,
     output wire         uart_tx // UART tx signal, connected to host-PC's UART-RXD, baud=115200
-
-
-
 );
-
-
-
 wire [7:0] CurrNum;
 wire CurrFlag;
 
@@ -63,20 +55,7 @@ wire [15:0] sd_emptyLED;
 
 //assign led = debugLED;
 
-initial begin
-    LRUTag = 0;
-    LRUIndex = 0;
-    LRULoadStore = 0;
-    LRUInst = 0;
-    LRULineReady = 0;
 
-    CurrentLine = 0;
-    LRUParse = 0;
-    ParseIT = 0;
-    LRUAddr = 0;
-    count = 0; 
-    debugLED = 0;
-end
 
 sd_file_reader #(
     .FILE_NAME_LEN    ( 9             ),  // the length of "example.txt" (in bytes)
@@ -97,8 +76,24 @@ sd_file_reader #(
     .outbyte          (CurrNum       )
 );
 
-localparam [2:0] READLINE = 3'b000, PARSE = 3'b001, PARSEADDR = 3'b010, WAIT = 3'b011, DISPLAY = 3'b110;
+localparam [2:0] READLINE = 3'b000, PARSE = 3'b001, PARSEADDR = 3'b010, WAIT = 3'b011, DISPLAY = 3'b100, STOP = 3'b101;
 reg [2:0] current_state, next_state;
+
+initial begin
+    LRUTag = 0;
+    LRUIndex = 0;
+    LRULoadStore = 0;
+    LRUInst = 0;
+    LRULineReady = 0;
+
+    CurrentLine = 0;
+    LRUParse = 0;
+    ParseIT = 0;
+    LRUAddr = 0;
+    count = 0; 
+    debugLED = 0;
+    //current_state = READLINE;
+end
 
 always@(posedge clk_sd) begin
     current_state <= next_state;
@@ -155,8 +150,11 @@ always@(posedge clk_sd) begin
             LRUIndex = LRUAddr[10:0];
             //debugLED[15:0] = LRUAddr[15:0]; //should be 9b6c
             LRULineReady = 1;
-            next_state = WAIT;
+            next_state = STOP;
         end 
+        STOP: begin
+            LRULineReady = 0;
+        end
         default: next_state = READLINE;
     endcase
 end

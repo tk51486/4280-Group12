@@ -102,46 +102,49 @@ module MemController(
         end else begin
             case(tgen_state)
             TGEN_IDLE: begin
-                lights[0] = 1;
-                    if(start) begin
-                        if(loadstore) begin
-                            next_state = TGEN_WRITE;
-                        end else begin
-                            next_state = TGEN_READ;
-                        end
+                //lights[0] = 1;
+                if(start) begin
+                    if(loadstore) begin
+                        next_state = TGEN_WRITE;
+                    end else begin
+                        next_state = TGEN_READ;
                     end
                 end
+            end
             TGEN_WRITE: begin
-                    if(mem_ready) begin
-                        lights[1] = 1;
-                        mem_wstrobe = 1;
-                        next_state = TGEN_WWAIT;
-                    end
+                if(mem_ready) begin
+                    //lights[1] = 1;
+                    mem_wstrobe = 1;
+                    next_state = TGEN_WWAIT;
                 end
+            end
             TGEN_WWAIT: begin
-                    mem_wstrobe = 0;
-                    if(mem_transaction_complete) begin
-                        lights[2] = 1;
-                        next_state = TGEN_IDLE;
-                    end
+                //lights[2] = 1;
+                mem_wstrobe = 0;
+                //update address here
+                if(mem_transaction_complete) begin
+                    //lights = mem_d_from_ram[63:48];
+                    next_state = TGEN_STOP;
                 end
+            end
             TGEN_READ: begin
-                    if(mem_ready) begin
-                        lights[3] = 1;
-                        mem_rstrobe = 1;
-                        next_state = TGEN_RWAIT;
-                    end
+                if(mem_ready) begin
+                    //lights[3] = 1;
+                    mem_rstrobe = 1;
+                    next_state = TGEN_RWAIT;
                 end
+            end
             TGEN_RWAIT: begin
-                    mem_rstrobe = 0;
-                    if(mem_transaction_complete) begin
-                       lights[4] = 1;
-                       next_state = TGEN_IDLE;
-                    end
+                mem_rstrobe = 0;
+                if(mem_transaction_complete) begin
+                   //lights[4] = 1;
+                   lights = mem_d_from_ram[63:48];
+                   next_state = TGEN_STOP;
                 end
+            end
             TGEN_STOP: begin
-                    lights[5] = 1;
-                end
+                //lights[5] = 1;
+            end
             default next_state = TGEN_IDLE;
             endcase
         end

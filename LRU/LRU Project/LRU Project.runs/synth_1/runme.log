@@ -1,430 +1,562 @@
 
 *** Running vivado
-    with args -log vga_demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_demo.tcl
+    with args -log supertop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source supertop.tcl
 
 
 
-****** Vivado v2024.2 (64-bit)
-  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
-  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
-  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Mon Apr 21 06:52:32 2025
+****** Vivado v2024.2.1 (64-bit)
+  **** SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+  **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+  **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+  **** Start of session at: Mon Apr 21 17:34:58 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source vga_demo.tcl -notrace
-Command: synth_design -top vga_demo -part xc7a100tcsg324-1
+Sourcing tcl script 'C:/Users/aam08331/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source supertop.tcl -notrace
+WARNING: [Board 49-91] Board repository path 'C:ivado-boards-master
+ewoard_files' does not exist, it will not be used to search board files.
+Command: synth_design -top supertop -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17004
+INFO: [Synth 8-7075] Helper process launched with PID 22132
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1042.457 ; gain = 467.855
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1114.066 ; gain = 467.082
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:67]
-INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:121]
-INFO: [Synth 8-11241] undeclared symbol 'mem_transaction_width', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:68]
-INFO: [Synth 8-11241] undeclared symbol 'mem_rstrobe', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:71]
-INFO: [Synth 8-11241] undeclared symbol 'mem_wstrobe', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:72]
-WARNING: [Synth 8-8895] 'mem_transaction_width' is already implicitly declared on line 68 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:85]
-WARNING: [Synth 8-8895] 'mem_wstrobe' is already implicitly declared on line 72 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
-WARNING: [Synth 8-8895] 'mem_rstrobe' is already implicitly declared on line 71 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
-INFO: [Synth 8-6157] synthesizing module 'vga_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_demo.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'square_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:122]
-INFO: [Synth 8-6155] done synthesizing module 'square_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'vga_sync_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_sync_demo.sv:1]
-	Parameter CD bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'frame_counter' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/frame_counter.sv:1]
-	Parameter HMAX bound to: 800 - type: integer 
-	Parameter VMAX bound to: 525 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'frame_counter' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/frame_counter.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_sync_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_sync_demo.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_demo.sv:1]
-WARNING: [Synth 8-6014] Unused sequential element fullBuf_reg was removed.  [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:81]
-WARNING: [Synth 8-3848] Net words[2][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
-WARNING: [Synth 8-3848] Net words[1][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
-WARNING: [Synth 8-3848] Net words[0][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:67]
+INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:120]
+INFO: [Synth 8-11241] undeclared symbol 'mem_transaction_width', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:68]
+INFO: [Synth 8-11241] undeclared symbol 'mem_rstrobe', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:71]
+INFO: [Synth 8-11241] undeclared symbol 'mem_wstrobe', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:72]
+WARNING: [Synth 8-8895] 'mem_transaction_width' is already implicitly declared on line 68 [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:85]
+WARNING: [Synth 8-8895] 'mem_wstrobe' is already implicitly declared on line 72 [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
+WARNING: [Synth 8-8895] 'mem_rstrobe' is already implicitly declared on line 71 [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
+INFO: [Synth 8-6157] synthesizing module 'supertop' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/realtime/pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/realtime/pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'IO_Management' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/IO_Management.v:11]
+INFO: [Synth 8-6157] synthesizing module 'SD_Data_Decoder' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sd_file_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:12]
+	Parameter FILE_NAME_LEN bound to: 9 - type: integer 
+	Parameter FILE_NAME bound to: art.trace - type: string 
+	Parameter CLK_DIV bound to: 3'b010 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:203]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:307]
+INFO: [Synth 8-6157] synthesizing module 'sd_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_reader.v:10]
+	Parameter CLK_DIV bound to: 3'b010 
+	Parameter SIMULATE bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sdcmd_ctrl' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sdcmd_ctrl.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'sdcmd_ctrl' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sdcmd_ctrl.v:10]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_reader.v:154]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_reader.v:227]
+INFO: [Synth 8-6155] done synthesizing module 'sd_reader' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_reader.v:10]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:430]
+INFO: [Synth 8-6155] done synthesizing module 'sd_file_reader' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:12]
+WARNING: [Synth 8-7071] port 'card_stat' of module 'sd_file_reader' is unconnected for instance 'u_sd_file_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:64]
+WARNING: [Synth 8-7071] port 'card_type' of module 'sd_file_reader' is unconnected for instance 'u_sd_file_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:64]
+WARNING: [Synth 8-7071] port 'filesystem_type' of module 'sd_file_reader' is unconnected for instance 'u_sd_file_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:64]
+WARNING: [Synth 8-7071] port 'file_found' of module 'sd_file_reader' is unconnected for instance 'u_sd_file_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:64]
+WARNING: [Synth 8-7023] instance 'u_sd_file_reader' of module 'sd_file_reader' has 11 connections declared, but only 7 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'SD_Data_Decoder' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IO_Management' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/IO_Management.v:11]
+WARNING: [Synth 8-7071] port 'led' of module 'IO_Management' is unconnected for instance 'u_IO_Management' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:87]
+WARNING: [Synth 8-7023] instance 'u_IO_Management' of module 'IO_Management' has 14 connections declared, but only 13 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:87]
+INFO: [Synth 8-6157] synthesizing module 'StatTracker' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/StatTracker.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DirectLRU' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MemController' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mem_example' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/mem_example.v:16]
+INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/realtime/mig_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/realtime/mig_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'flag_sync' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/flag_sync.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flag_sync' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/flag_sync.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ff_sync' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ff_sync.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ff_sync' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ff_sync.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/mem_example.v:208]
+INFO: [Synth 8-6155] done synthesizing module 'mem_example' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/mem_example.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'MemController' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:1]
+WARNING: [Synth 8-7071] port 'LED' of module 'MemController' is unconnected for instance 'u_MemController' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:45]
+WARNING: [Synth 8-7023] instance 'u_MemController' of module 'MemController' has 26 connections declared, but only 25 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'DirectLRU' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'StatTracker' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/StatTracker.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'supertop' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[1] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[2] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[3] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[4] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[5] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[6] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[7] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[8] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[9] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[10] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[19] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[20] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[21] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[24] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[25] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[26] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[27] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[28] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[29] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[30] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[31] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[32] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[33] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[34] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[35] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[40] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[41] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[42] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[43] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[48] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[49] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[50] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[51] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[52] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[53] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[54] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[55] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[56] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[57] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[58] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[59] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[60] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[61] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[62] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[63] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[64] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[65] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[66] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[67] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[68] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[69] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[70] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[71] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[72] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[73] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[74] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[75] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[76] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[77] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[78] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[79] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[80] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[81] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[82] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[83] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[84] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[85] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[87] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[88] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[89] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[90] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[91] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[92] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[93] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[94] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[95] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[96] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[97] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[98] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[99] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[100] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[101] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[102] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[103] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[104] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[105] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[106] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[107] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[108] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[109] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[110] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[111] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[112] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[113] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[114] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[115] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[116] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[117] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[118] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[119] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:139]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3848] Net led in module/entity SD_Data_Decoder does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:26]
+WARNING: [Synth 8-3848] Net uart_tx in module/entity SD_Data_Decoder does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:42]
+WARNING: [Synth 8-3848] Net CPU_RESETN in module/entity supertop does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:120]
+WARNING: [Synth 8-3917] design supertop has port sdcard_pwr_n driven by constant 0
+WARNING: [Synth 8-3917] design supertop has port sddat1 driven by constant 1
+WARNING: [Synth 8-3917] design supertop has port sddat2 driven by constant 1
+WARNING: [Synth 8-3917] design supertop has port sddat3 driven by constant 1
+WARNING: [Synth 8-7129] Port LRUTag[16] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[15] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[14] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[13] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[12] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[11] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[10] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[9] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[8] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[7] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[6] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[5] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[4] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[3] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[2] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[1] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[0] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[10] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[9] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[8] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[7] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[6] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[5] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[4] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[3] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[2] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[1] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[0] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRULoadStore in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[20] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[19] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[18] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[17] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[16] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[15] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[14] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[13] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[12] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[11] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[10] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[9] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[8] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[7] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[6] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[5] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[4] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[3] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[2] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[1] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUInst[0] in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRULineReady in module DirectLRU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[15] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[14] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[13] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[12] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[11] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[10] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[9] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[8] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[7] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[6] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[5] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[4] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[3] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[2] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[1] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[0] in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_tx in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resetn in module SD_Data_Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTNL in module supertop is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.898 ; gain = 577.297
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.301 ; gain = 620.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.898 ; gain = 577.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.301 ; gain = 620.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.898 ; gain = 577.297
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.301 ; gain = 620.316
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1151.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1267.301 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
-WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
-CRITICAL WARNING: [Common 17-161] Invalid option value '#center' specified for 'objects'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
-WARNING: [Vivado 12-584] No ports matched 'BTNL'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'tck' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:266]
-WARNING: [Vivado 12-508] No pins matched 'mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
-CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'pll1/inst/mmcm_adv_inst/CLKOUT1'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
-CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins pll1/inst/mmcm_adv_inst/CLKOUT1]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_demo_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/vga_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk100mhz'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:3]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk100mhz'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:4]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk100mhz]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:4]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'resetn'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:7]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'uart_tx'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdcard_pwr_n'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdclk'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdcmd'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat0'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat1'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat2'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat3'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
-Parsing XDC File [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_demo_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/vga_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Parsing XDC File [c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1'
+Finished Parsing XDC File [c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1'
+Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#center' specified for 'objects'. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'tck' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:266]
+WARNING: [Vivado 12-508] No pins matched 'mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT'. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
+WARNING: [Vivado 12-508] No pins matched 'pll1/inst/mmcm_adv_inst/CLKOUT1'. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
+Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/supertop_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/supertop_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/supertop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
+Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/supertop_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/supertop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1238.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1342.750 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1238.430 ; gain = 0.000
-
-*** Running vivado
-    with args -log vga_demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_demo.tcl
-
-
-
-****** Vivado v2024.2 (64-bit)
-  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
-  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
-  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Mon Apr 21 06:54:52 2025
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source vga_demo.tcl -notrace
-Command: synth_design -top vga_demo -part xc7a100tcsg324-1
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 38404
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1342.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1041.945 ; gain = 468.086
----------------------------------------------------------------------------------
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:67]
-INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:121]
-INFO: [Synth 8-11241] undeclared symbol 'mem_transaction_width', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:68]
-INFO: [Synth 8-11241] undeclared symbol 'mem_rstrobe', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:71]
-INFO: [Synth 8-11241] undeclared symbol 'mem_wstrobe', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:72]
-WARNING: [Synth 8-8895] 'mem_transaction_width' is already implicitly declared on line 68 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:85]
-WARNING: [Synth 8-8895] 'mem_wstrobe' is already implicitly declared on line 72 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
-WARNING: [Synth 8-8895] 'mem_rstrobe' is already implicitly declared on line 71 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
-INFO: [Synth 8-6157] synthesizing module 'vga_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_demo.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'square_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:122]
-INFO: [Synth 8-6155] done synthesizing module 'square_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'vga_sync_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_sync_demo.sv:1]
-	Parameter CD bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'frame_counter' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/frame_counter.sv:1]
-	Parameter HMAX bound to: 800 - type: integer 
-	Parameter VMAX bound to: 525 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'frame_counter' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/frame_counter.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_sync_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_sync_demo.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_demo.sv:1]
-WARNING: [Synth 8-6014] Unused sequential element fullBuf_reg was removed.  [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:81]
-WARNING: [Synth 8-3848] Net words[2][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
-WARNING: [Synth 8-3848] Net words[1][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
-WARNING: [Synth 8-3848] Net words[0][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.168 ; gain = 578.309
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.168 ; gain = 578.309
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.168 ; gain = 578.309
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1152.168 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
-WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
-CRITICAL WARNING: [Common 17-161] Invalid option value '#center' specified for 'objects'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
-WARNING: [Vivado 12-584] No ports matched 'BTNL'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'tck' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:266]
-WARNING: [Vivado 12-508] No pins matched 'mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
-CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'pll1/inst/mmcm_adv_inst/CLKOUT1'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
-CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins pll1/inst/mmcm_adv_inst/CLKOUT1]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_demo_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/vga_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk100mhz'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:3]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk100mhz'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:4]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk100mhz]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:4]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'resetn'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:7]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'uart_tx'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdcard_pwr_n'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdclk'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdcmd'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat0'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat1'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat2'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sddat3'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
-Parsing XDC File [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_demo_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/vga_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1242.285 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1242.285 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1342.750 ; gain = 695.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1342.750 ; gain = 695.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/pll/pll/pll_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-23572-engr-d1450-023/pll/pll/pll_in_context.xdc}, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[11]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[11]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[12]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[12]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[2]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[2]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[3]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[3]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[4]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[4]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[5]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[5]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[6]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[6]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[7]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[7]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[8]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[8]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[9]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[9]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[2]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[2]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cas_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cas_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ck_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_p. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ck_p. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cke. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cke. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cs_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cs_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dm[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dm[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dm[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dm[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[10]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[10]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[11]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[11]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[12]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[12]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[13]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[13]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[14]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[14]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[15]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[15]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[2]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[2]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[3]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[3]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[4]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[4]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[5]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[5]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[6]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[6]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[7]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[7]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[8]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[8]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[9]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[9]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_n[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_n[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_n[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_n[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_p[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_p[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_p[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_p[1]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_odt. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_odt. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ras_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ras_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 93).
+Applied set_property KEEP_HIERARCHY = SOFT for pll1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1342.750 ; gain = 695.766
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'sddat_stat_reg' in module 'sd_reader'
+INFO: [Synth 8-802] inferred FSM for state register 'filesystem_state_reg' in module 'sd_file_reader'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SD_Data_Decoder'
+DSP Debug: swapped A/B pins for adder 0000021D309EEA20
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mem_example'
+INFO: [Synth 8-802] inferred FSM for state register 'lru_state_reg' in module 'DirectLRU'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   RWAIT |                            00001 |                              000
+                 RDURING |                            00010 |                              001
+                   RTAIL |                            00100 |                              010
+                  iSTATE |                            01000 |                              011
+                 iSTATE0 |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sddat_stat_reg' using encoding 'one-hot' in module 'sd_reader'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                READLINE |                              000 |                              000
+                   PARSE |                              001 |                              001
+               PARSEADDR |                              010 |                              010
+                 DISPLAY |                              011 |                              100
+                    STOP |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SD_Data_Decoder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                              000 |                              000
+             STATE_WRITE |                              001 |                              100
+       STATE_WRITEDATA_H |                              010 |                              101
+       STATE_WRITEDATA_L |                              011 |                              110
+           STATE_PREREAD |                              100 |                              001
+              STATE_READ |                              101 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mem_example'
+WARNING: [Synth 8-327] inferring latch for variable 'debugLED_reg' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:43]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                LRU_INIT |                             0001 |                              000
+                LRU_IDLE |                             0010 |                              001
+           LRU_UPDATERAM |                             0100 |                              100
+                LRU_WAIT |                             1000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lru_state_reg' using encoding 'one-hot' in module 'DirectLRU'
+WARNING: [Synth 8-327] inferring latch for variable 'initializing_reg' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:112]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_loadstore_reg' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:51]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_start_reg' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:52]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1342.750 ; gain = 695.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   11 Bit       Adders := 6     
-	   2 Input    4 Bit       Adders := 1     
-	   3 Input    3 Bit       Adders := 1     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input  128 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 11    
+	   3 Input   32 Bit       Adders := 2     
+	   4 Input   32 Bit       Adders := 1     
+	   3 Input   28 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 6     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      7 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 7     
 +---Registers : 
-	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 9     
-	                8 Bit    Registers := 9     
+	              128 Bit    Registers := 2     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 16    
+	               28 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 8     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 57    
 	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                6 Bit    Registers := 5     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 35    
++---Multipliers : 
+	               8x32  Multipliers := 5     
 +---Muxes : 
-	   2 Input   49 Bit        Muxes := 8     
-	   2 Input   12 Bit        Muxes := 1     
-	   2 Input   11 Bit        Muxes := 3     
-	   3 Input    8 Bit        Muxes := 1     
-	   3 Input    7 Bit        Muxes := 6     
+	   2 Input  128 Bit        Muxes := 2     
+	   5 Input  128 Bit        Muxes := 1     
+	   4 Input   64 Bit        Muxes := 4     
+	   2 Input   64 Bit        Muxes := 5     
+	   6 Input   64 Bit        Muxes := 1     
+	   5 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 32    
+	   4 Input   32 Bit        Muxes := 2     
+	  10 Input   32 Bit        Muxes := 1     
+	   8 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 2     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 8     
+	  10 Input   16 Bit        Muxes := 1     
+	   7 Input   16 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 3     
+	   2 Input   13 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 3     
+	   4 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 100   
+	   4 Input    8 Bit        Muxes := 11    
+	   8 Input    8 Bit        Muxes := 2     
+	   6 Input    8 Bit        Muxes := 2     
 	   2 Input    7 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 9     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 3     
+	   8 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	   8 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	  12 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 125   
+	   8 Input    1 Bit        Muxes := 7     
+	  10 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 2     
+	   7 Input    1 Bit        Muxes := 8     
+	   6 Input    1 Bit        Muxes := 18    
+	   5 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -441,29 +573,119 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-6040] Register char_reg_rep_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: A*B2.
+DSP Report: register read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: A*B2.
+DSP Report: register read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: A*B.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no2, operation Mode is: A*B.
+DSP Report: operator read_sector_no2 is absorbed into DSP read_sector_no2.
+DSP Report: operator read_sector_no2 is absorbed into DSP read_sector_no2.
+DSP Report: Generating DSP read_sector_no2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator read_sector_no2 is absorbed into DSP read_sector_no2.
+DSP Report: operator read_sector_no2 is absorbed into DSP read_sector_no2.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: A*B.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no1.
+DSP Report: Generating DSP read_sector_no0, operation Mode is: C+A*B.
+DSP Report: operator read_sector_no0 is absorbed into DSP read_sector_no0.
+DSP Report: operator read_sector_no1 is absorbed into DSP read_sector_no0.
+WARNING: [Synth 8-3917] design supertop has port sdcard_pwr_n driven by constant 0
+WARNING: [Synth 8-3917] design supertop has port sddat1 driven by constant 1
+WARNING: [Synth 8-3917] design supertop has port sddat2 driven by constant 1
+WARNING: [Synth 8-3917] design supertop has port sddat3 driven by constant 1
+WARNING: [Synth 8-7129] Port LRUTag[16] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[15] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[14] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[13] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[12] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[11] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[10] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[9] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[8] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[7] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[6] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[5] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[4] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[3] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[2] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[1] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUTag[0] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[10] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[9] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[8] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[7] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[6] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[5] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[4] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[3] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[2] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[1] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRUIndex[0] in module StatTracker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LRULoadStore in module StatTracker is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (u_IO_Management/u_SD_Data_Decoder/FSM_sequential_current_state_reg[2]) is unused and will be removed from module supertop.
+WARNING: [Synth 8-3332] Sequential element (u_IO_Management/u_SD_Data_Decoder/FSM_sequential_current_state_reg[1]) is unused and will be removed from module supertop.
+WARNING: [Synth 8-3332] Sequential element (u_IO_Management/u_SD_Data_Decoder/FSM_sequential_current_state_reg[0]) is unused and will be removed from module supertop.
+WARNING: [Synth 8-3332] Sequential element (u_IO_Management/u_SD_Data_Decoder/FSM_sequential_next_state_reg[2]) is unused and will be removed from module supertop.
+WARNING: [Synth 8-3332] Sequential element (u_IO_Management/u_SD_Data_Decoder/FSM_sequential_next_state_reg[1]) is unused and will be removed from module supertop.
+WARNING: [Synth 8-3332] Sequential element (u_IO_Management/u_SD_Data_Decoder/FSM_sequential_next_state_reg[0]) is unused and will be removed from module supertop.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1242.285 ; gain = 668.426
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1438.090 ; gain = 791.105
 ---------------------------------------------------------------------------------
+ Sort Area is  read_sector_no1_0 : 0 0 : 1632 3217 : Used 1 time 0
+ Sort Area is  read_sector_no1_0 : 0 1 : 1585 3217 : Used 1 time 0
+ Sort Area is  read_sector_no1_a : 0 0 : 1632 3217 : Used 1 time 0
+ Sort Area is  read_sector_no1_a : 0 1 : 1585 3217 : Used 1 time 0
+ Sort Area is  read_sector_no1_8 : 0 0 : 1623 3199 : Used 1 time 0
+ Sort Area is  read_sector_no1_8 : 0 1 : 1576 3199 : Used 1 time 0
+ Sort Area is  read_sector_no1_9 : 0 0 : 1623 3199 : Used 1 time 0
+ Sort Area is  read_sector_no1_9 : 0 1 : 1576 3199 : Used 1 time 0
+ Sort Area is  read_sector_no2_3 : 0 0 : 1623 3199 : Used 1 time 0
+ Sort Area is  read_sector_no2_3 : 0 1 : 1576 3199 : Used 1 time 0
+ Sort Area is  read_sector_no0_6 : 0 0 : 973 973 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-ROM: Preliminary Mapping Report
-+------------+------------+---------------+----------------+
-|Module Name | RTL Object | Depth x Width | Implemented As | 
-+------------+------------+---------------+----------------+
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-|square_demo | fullBuf    | 128x48        | LUT            | 
-+------------+------------+---------------+----------------+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|sd_file_reader | A*B2            | 18     | 9      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | (PCIN>>17)+A*B2 | 16     | 9      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B2            | 18     | 9      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | (PCIN>>17)+A*B2 | 16     | 9      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B             | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | (PCIN>>17)+A*B  | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B             | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | (PCIN>>17)+A*B  | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B             | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | (PCIN>>17)+A*B  | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | C+A*B           | 16     | 8      | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -471,19 +693,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1341.871 ; gain = 768.012
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1503.145 ; gain = 856.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1342.094 ; gain = 768.234
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1536.992 ; gain = 890.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1361.219 ; gain = 787.359
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1557.336 ; gain = 910.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -501,89 +723,117 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|sd_file_reader | A*B'          | 17     | 8      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | PCIN>>17+A*B' | 15     | 8      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B'          | 17     | 8      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | PCIN>>17+A*B' | 15     | 8      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B           | 16     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | PCIN>>17+A*B  | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B           | 17     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | PCIN>>17+A*B  | 15     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | A*B           | 17     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | PCIN>>17+A*B  | 15     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sd_file_reader | C+A*B         | 16     | 8      | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++---------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |pll           |         1|
+|2     |mig           |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     3|
-|3     |LUT1   |     4|
-|4     |LUT2   |    24|
-|5     |LUT3   |    17|
-|6     |LUT4   |    36|
-|7     |LUT5   |    42|
-|8     |LUT6   |   149|
-|9     |MUXF7  |    21|
-|10    |MUXF8  |     6|
-|11    |FDRE   |   111|
-|12    |FDSE   |     4|
-|13    |IBUF   |     1|
-|14    |OBUF   |    14|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |mig     |     1|
+|2     |pll     |     1|
+|3     |CARRY4  |   137|
+|4     |DSP48E1 |    11|
+|7     |LUT1    |     7|
+|8     |LUT2    |   427|
+|9     |LUT3    |   288|
+|10    |LUT4    |   306|
+|11    |LUT5    |   283|
+|12    |LUT6    |   579|
+|13    |MUXF7   |    37|
+|14    |FDCE    |   790|
+|15    |FDPE    |    21|
+|16    |FDRE    |   284|
+|17    |LD      |    16|
+|18    |IBUF    |     2|
+|19    |IOBUF   |     1|
+|20    |OBUF    |    21|
+|21    |OBUFT   |     1|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1567.633 ; gain = 903.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+Synthesis finished with 0 errors, 0 critical warnings and 86 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1730.879 ; gain = 1008.445
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1730.879 ; gain = 1083.895
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1576.828 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1740.055 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 202 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1580.508 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.688 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 17 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+  LD => LDCE: 16 instances
 
-Synth Design complete | Checksum: 77e530eb
+Synth Design complete | Checksum: b1c993f0
 INFO: [Common 17-83] Releasing license: Synthesis
-30 Infos, 45 Warnings, 35 Critical Warnings and 0 Errors encountered.
+67 Infos, 240 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1580.508 ; gain = 1210.883
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1743.688 ; gain = 1301.008
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1580.508 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/vga_demo.dcp' has been generated.
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 21 06:55:23 2025...
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1743.688 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/supertop.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 21 17:35:39 2025...

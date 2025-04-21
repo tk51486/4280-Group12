@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1'
+HD_PWD='C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log vga_demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_demo.tcl
+EAStep vivado -log supertop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source supertop.tcl
