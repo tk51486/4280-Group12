@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1'
+HD_PWD='C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

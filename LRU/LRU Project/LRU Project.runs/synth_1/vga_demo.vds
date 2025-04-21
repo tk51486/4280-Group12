@@ -1,0 +1,407 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Apr 21 06:54:52 2025
+# Process ID         : 25748
+# Current directory  : C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1
+# Command line       : vivado.exe -log vga_demo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_demo.tcl
+# Log file           : C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/vga_demo.vds
+# Journal file       : C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-AAIHOTM
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+# CPU Frequency      : 3600 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 68544 MB
+# Swap memory        : 55029 MB
+# Total Virtual      : 123574 MB
+# Available Virtual  : 102692 MB
+#-----------------------------------------------------------
+source vga_demo.tcl -notrace
+Command: synth_design -top vga_demo -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 38404
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1041.945 ; gain = 468.086
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:67]
+INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:121]
+INFO: [Synth 8-11241] undeclared symbol 'mem_transaction_width', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:68]
+INFO: [Synth 8-11241] undeclared symbol 'mem_rstrobe', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:71]
+INFO: [Synth 8-11241] undeclared symbol 'mem_wstrobe', assumed default net type 'wire' [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:72]
+WARNING: [Synth 8-8895] 'mem_transaction_width' is already implicitly declared on line 68 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:85]
+WARNING: [Synth 8-8895] 'mem_wstrobe' is already implicitly declared on line 72 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
+WARNING: [Synth 8-8895] 'mem_rstrobe' is already implicitly declared on line 71 [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:86]
+INFO: [Synth 8-6157] synthesizing module 'vga_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_demo.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'square_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:122]
+INFO: [Synth 8-6155] done synthesizing module 'square_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync_demo' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_sync_demo.sv:1]
+	Parameter CD bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'frame_counter' [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/frame_counter.sv:1]
+	Parameter HMAX bound to: 800 - type: integer 
+	Parameter VMAX bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'frame_counter' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/frame_counter.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_sync_demo.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_demo' (0#1) [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_demo.sv:1]
+WARNING: [Synth 8-6014] Unused sequential element fullBuf_reg was removed.  [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:81]
+WARNING: [Synth 8-3848] Net words[2][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
+WARNING: [Synth 8-3848] Net words[1][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
+WARNING: [Synth 8-3848] Net words[0][8] in module/entity square_demo does not have driver. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.168 ; gain = 578.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.168 ; gain = 578.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.168 ; gain = 578.309
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1152.168 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#center' specified for 'objects'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'tck' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:266]
+WARNING: [Vivado 12-508] No pins matched 'mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
+CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'pll1/inst/mmcm_adv_inst/CLKOUT1'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
+CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins pll1/inst/mmcm_adv_inst/CLKOUT1]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk100mhz'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk100mhz'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:4]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk100mhz]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:4]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'resetn'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_tx'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sdcard_pwr_n'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sdclk'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sdcmd'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sddat0'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sddat1'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sddat2'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sddat3'. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc]
+Parsing XDC File [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/amr21/Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1242.285 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1242.285 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.285 ; gain = 668.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 1     
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 9     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   49 Bit        Muxes := 8     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   3 Input    7 Bit        Muxes := 6     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-6040] Register char_reg_rep_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1242.285 ; gain = 668.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
+|square_demo | fullBuf    | 128x48        | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1341.871 ; gain = 768.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1342.094 ; gain = 768.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1361.219 ; gain = 787.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     3|
+|3     |LUT1   |     4|
+|4     |LUT2   |    24|
+|5     |LUT3   |    17|
+|6     |LUT4   |    36|
+|7     |LUT5   |    42|
+|8     |LUT6   |   149|
+|9     |MUXF7  |    21|
+|10    |MUXF8  |     6|
+|11    |FDRE   |   111|
+|12    |FDSE   |     4|
+|13    |IBUF   |     1|
+|14    |OBUF   |    14|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1567.633 ; gain = 903.656
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1567.633 ; gain = 993.773
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1576.828 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1580.508 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 77e530eb
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 45 Warnings, 35 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1580.508 ; gain = 1210.883
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1580.508 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/amr21/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/vga_demo.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 21 06:55:23 2025...

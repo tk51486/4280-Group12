@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745206807" LaunchWriteIncrSynthDcp="true">
-  <File Type="PA-TCL" Name="supertop.tcl"/>
-  <File Type="REPORTS-TCL" Name="supertop_reports.tcl"/>
-  <File Type="RDS-RDS" Name="supertop.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="supertop_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="supertop_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="supertop_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="supertop.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="supertop_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="supertop_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745232884" LaunchWriteIncrSynthDcp="true">
+  <File Type="PA-TCL" Name="vga_demo.tcl"/>
+  <File Type="REPORTS-TCL" Name="vga_demo_reports.tcl"/>
+  <File Type="RDS-RDS" Name="vga_demo.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="vga_demo_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="vga_demo_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="vga_demo_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="vga_demo.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="vga_demo_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="vga_demo_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
@@ -149,9 +149,44 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../../Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/rgb2gray.sv">
+      <FileInfo SFType="Verilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/frame_counter.sv">
+      <FileInfo SFType="Verilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/square_demo.sv">
+      <FileInfo SFType="Verilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_sync_demo.sv">
+      <FileInfo SFType="Verilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Source Files/vga_demo.sv">
+      <FileInfo SFType="Verilog">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="supertop"/>
+      <Option Name="TopModule" Val="vga_demo"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -166,6 +201,12 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/SD Code/Nexys-4-DDR-pins.xdc"/>
         <Attr Name="ImportTime" Val="1745090000"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../Downloads/FPGA_Projects_SaifAlomari-main/FPGA_Projects_SaifAlomari-main/SystemVerilog_FPGA_Projects/13- Vga Demo Square Generator/Constraints/Nexys4DDR_VGA.xdc">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
