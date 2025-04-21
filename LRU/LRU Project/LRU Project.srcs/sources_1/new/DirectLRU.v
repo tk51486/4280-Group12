@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/16/2025 05:38:37 PM
-// Design Name: 
-// Module Name: DirectLRU
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module DirectLRU(
     
@@ -54,23 +34,28 @@ module DirectLRU(
     output ddr2_odt
     );
     
-    wire [19:0] SendMem;
-    wire memFlag;
-    
+    reg [27:0] ram_addr;
+    reg [63:0] line_to_ram;
+    wire [63:0] line_from_ram;
+    wire ram_transaction_complete, ram_ready;
     wire [15:0] mem_emptyLED;
-    
-    reg [15:0] debugLed;
-    
-    assign led = debugLed;
+    reg ram_loadstore, ram_start;  //sent to ram
+    reg [15:0] debugLED;
+    //assign led = debugLED;
     
     MemController u_MemController(
-        .SendMem(SendMem),
-        .memFlag(memFlag),
         .clk_mem(clk_mem),
         .clk_cpu(clk_cpu),
         .pll_locked(pll_locked),
         .CPU_RESETN(CPU_RESETN),
-        .LED(mem_emptyLED),
+        .LED(led),
+        .loadstore(ram_loadstore),
+        .start(ram_start),
+        .mem_addr(ram_addr),
+        .mem_d_to_ram(line_to_ram),
+        .mem_d_from_ram(line_from_ram),
+        .mem_transaction_complete(ram_transaction_complete),
+        .mem_ready(ram_ready),
         .ddr2_dq(ddr2_dq),
         .ddr2_dqs_n(ddr2_dqs_n),
         .ddr2_dqs_p(ddr2_dqs_p),
@@ -87,8 +72,13 @@ module DirectLRU(
         .ddr2_odt(ddr2_odt)
     );
     
-    always@(posedge clk) begin
-        debugLed = 16'hffff;
+    initial begin
+        ram_loadstore = 0;
+        ram_start = 1;
+        ram_addr = 28'h0101010;
+        line_to_ram = 64'hc6c6ffff;//a7a7
+        debugLED = 0;
     end
+    
     
 endmodule

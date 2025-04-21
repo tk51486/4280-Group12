@@ -3,12 +3,12 @@
 # SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Sat Apr 19 16:12:54 2025
-# Process ID         : 22872
-# Current directory  : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1
+# Start of session at: Sun Apr 20 19:50:57 2025
+# Process ID         : 19156
+# Current directory  : C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1
 # Command line       : vivado.exe -log mig.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig.tcl
-# Log file           : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1/mig.vds
-# Journal file       : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1\vivado.jou
+# Log file           : C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1/mig.vds
+# Journal file       : C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1\vivado.jou
 # Running On         : engr-d1409-010
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 19045
@@ -19,6 +19,6 @@
 # Host memory        : 34033 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36180 MB
-# Available Virtual  : 22315 MB
+# Available Virtual  : 16631 MB
 #-----------------------------------------------------------
 source mig.tcl -notrace
