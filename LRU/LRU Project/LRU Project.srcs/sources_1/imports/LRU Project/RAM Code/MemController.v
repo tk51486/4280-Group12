@@ -121,10 +121,9 @@ module MemController(
             TGEN_WWAIT: begin
                 //lights[2] = 1;
                 mem_wstrobe = 0;
-                //update address here
                 if(mem_transaction_complete) begin
-                    //lights = mem_d_from_ram[63:48];
-                    next_state = TGEN_STOP;
+                    //lights = mem_d_to_ram[31:16];
+                    next_state = TGEN_IDLE;
                 end
             end
             TGEN_READ: begin
@@ -138,12 +137,12 @@ module MemController(
                 mem_rstrobe = 0;
                 if(mem_transaction_complete) begin
                    //lights[4] = 1;
-                   lights = mem_d_from_ram[63:48];
                    next_state = TGEN_STOP;
                 end
             end
             TGEN_STOP: begin
                 //lights[5] = 1;
+                lights = mem_d_from_ram[63:48];
             end
             default next_state = TGEN_IDLE;
             endcase

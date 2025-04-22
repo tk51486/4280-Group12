@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date                      : Mon Apr 21 17:36:22 2025
-| Host                      : engr-d1450-023 running 64-bit major release  (build 9200)
+| Date                      : Tue Apr 22 19:30:54 2025
+| Host                      : engr-d1409-008 running 64-bit major release  (build 9200)
 | Command                   : report_io -file supertop_io_placed.rpt
 | Design                    : supertop
 | Device                    : xc7a100t

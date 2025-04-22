@@ -78,45 +78,46 @@ module DirectLRU(
     localparam LRU_UPDATERAM = 3'h4;
     localparam LRU_WAIT = 3'h5;
     reg [2:0] lru_state, next_state;
-    reg [10:0] counter; //used to initialize RAM
-    reg initializing;
+    reg initializing, init_next; //used to initialize RAM
     
     initial begin
         ram_loadstore = 0;
         ram_start = 0;
         ram_addr = 28'h0;
         ram_addr_next = 28'h0;
-        line_to_ram = 64'hababffff;//a7a7
-        debugLED = 0;
-        counter = 0;
+        line_to_ram = 64'h49c1ffff;//a7a7
+        debugLED = 16'h0000;
         initializing = 1;
-        //lru_state = LRU_INIT;
+        init_next = 1;
     end
     
     //state register
     always @(posedge clk) begin
         lru_state <= next_state;
         ram_addr <= ram_addr_next;
+        initializing <= init_next;
     end
     
     //next-state logic
     always @(*) begin
-        debugLED[15:13] = lru_state;
+    
+        //debugLED[15:13] = lru_state;
         next_state = lru_state;
         ram_addr_next = ram_addr;
+        init_next = initializing;
         
         case(lru_state)
             LRU_INIT: begin
-                ram_start = 0;
-                if (ram_addr == 1) begin //RAM has been cleared
-                    initializing = 0;
-                    next_state = LRU_IDLE;  //waiting for first line
-                end else begin
-                    next_state = LRU_UPDATERAM; //clear current address
+                if (ram_ready) begin
+                    if (initializing == 0) begin //initialization done
+                        next_state = LRU_IDLE;  //wait for first cache instruction
+                    end else begin
+                        next_state = LRU_UPDATERAM; //clear current address
+                    end
                 end
             end
             LRU_IDLE: begin
-                debugLED[10:0] = ram_addr[10:0];
+                debugLED[15:0] = ram_addr[15:0];
             end
             LRU_READRAM: begin
                 
@@ -125,21 +126,27 @@ module DirectLRU(
                 
             end
             LRU_UPDATERAM: begin
-                ram_start = 1;
-                ram_loadstore = 1;
-                if (initializing) begin
-                    ram_addr_next = ram_addr + 1;   //increment address
+                if (~ram_transaction_complete ) begin //start write
+                    ram_start = 1;
+                    ram_loadstore = 1;
+                end else begin
+                    ram_start = 0;
+                    next_state = LRU_WAIT;  //wait for write to finish
                 end
-                next_state = LRU_WAIT;  //wait for write to finish
             end
             LRU_WAIT: begin
-                if (ram_ready) begin
-                    debugLED[11] = 1;
+                if (initializing) begin 
+                    if (ram_addr[27:17] == 2047) begin    //RAM has been cleared
+                        init_next = 0;
+                    end else begin  //if not, increment address
+                        ram_addr_next = ram_addr + {11'b00000000001, 17'b0};   
+                    end
                     next_state = LRU_INIT;
+                end else if (ram_loadstore) begin //just updated cache
+                    next_state = LRU_IDLE;
+                end else begin                    //just read a line
+                    next_state = LRU_PROCESS;
                 end
-                if (ram_transaction_complete) begin
-                    debugLED[12] = 1;
-                end 
             end
             default: next_state = LRU_INIT;
     endcase

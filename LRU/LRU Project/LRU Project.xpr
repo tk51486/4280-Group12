@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="d463232d18464c11a8e60d42ec698aa5"/>

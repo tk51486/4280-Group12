@@ -153,7 +153,7 @@ always@(posedge clk_sd) begin
             next_state = STOP;
         end 
         STOP: begin
-            LRULineReady = 0;
+            //LRULineReady = 0;
         end
         default: next_state = READLINE;
     endcase

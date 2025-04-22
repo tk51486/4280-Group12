@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Mon Apr 21 17:36:55 2025
-| Host         : engr-d1450-023 running 64-bit major release  (build 9200)
+| Date         : Tue Apr 22 19:31:34 2025
+| Host         : engr-d1409-008 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file supertop_clock_utilization_routed.rpt
 | Design       : supertop
 | Device       : 7a100t-csg324
@@ -28,9 +28,10 @@ Table of Contents
 12. Device Cell Placement Summary for Global Clock g5
 13. Device Cell Placement Summary for Global Clock g6
 14. Clock Region Cell Placement per Global Clock: Region X0Y0
-15. Clock Region Cell Placement per Global Clock: Region X1Y1
-16. Clock Region Cell Placement per Global Clock: Region X0Y2
-17. Clock Region Cell Placement per Global Clock: Region X1Y2
+15. Clock Region Cell Placement per Global Clock: Region X1Y0
+16. Clock Region Cell Placement per Global Clock: Region X1Y1
+17. Clock Region Cell Placement per Global Clock: Region X0Y2
+18. Clock Region Cell Placement per Global Clock: Region X1Y2
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -54,11 +55,11 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------+---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock        | Driver Pin                                                                                              | Net                                                                                            |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------+---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 3 |        2717 |               0 |        6.667 | clk_pll_i    | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/u_bufg_clkdiv0/O  | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK      |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 2 |         996 |               0 |       20.000 | clk_sd_pll   | pll1/inst/clkout3_buf/O                                                                                 | pll1/inst/clk_sd                                                                               |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |        2716 |               0 |        6.667 | clk_pll_i    | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/u_bufg_clkdiv0/O  | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK      |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 2 |        1260 |               0 |       20.000 | clk_sd_pll   | pll1/inst/clkout3_buf/O                                                                                 | pll1/inst/clk_sd                                                                               |
 | g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |          63 |               0 |        5.000 | clk_mem_pll  | pll1/inst/clkout1_buf/O                                                                                 | pll1/inst/clk_mem                                                                              |
 | g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 1 |          47 |               0 |       15.238 | clk_cpu_pll  | pll1/inst/clkout2_buf/O                                                                                 | pll1/inst/clk_cpu                                                                              |
-| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |          33 |               0 |       10.000 | sys_clk_pin  | clk100mhz_IBUF_BUFG_inst/O                                                                              | clk100mhz_IBUF_BUFG                                                                            |
+| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |          34 |               0 |       10.000 | sys_clk_pin  | clk100mhz_IBUF_BUFG_inst/O                                                                              | clk100mhz_IBUF_BUFG                                                                            |
 | g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_pll | pll1/inst/clkf_buf/O                                                                                    | pll1/inst/clkfbout_buf_pll                                                                     |
 | g6        | src6      | BUFH/O          | None       | BUFHCE_X1Y12   | X1Y1         |                 1 |           1 |               0 |        6.667 | pll_clk3_out | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/u_bufh_pll_clk3/O | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/pll_clk3 |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------+---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
@@ -90,11 +91,11 @@ Table of Contents
 +----------+----------------------------+---------------------+------------------------------------+--------------+-------------+-----------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Local Id | Driver Type/Pin            | Constraint          | Site/BEL                           | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock         | Driver Pin                                                                                                                                                                                                                           | Net                                                                                                                                                                                                                               |
 +----------+----------------------------+---------------------+------------------------------------+--------------+-------------+-----------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 0        | FDRE/Q                     | None                | SLICE_X58Y66/BFF                   | X1Y1         |          11 |              12 |              |               | u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[1]/Q                                                                                                                                                                              | u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg_n_0_[1]                                                                                                                                                                        |
+| 0        | FDRE/Q                     | None                | SLICE_X70Y67/AFF                   | X1Y1         |          16 |               0 |              |               | u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[1]/Q                                                                                                                                                                              | u_StatTracker/u_DirectLRU/debugLED                                                                                                                                                                                                |
 | 1        | PLLE2_ADV/CLKOUT0          | PLLE2_ADV_X1Y1      | PLLE2_ADV_X1Y1/PLLE2_ADV           | X1Y1         |           5 |               2 |        1.667 | freq_refclk   | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/plle2_i/CLKOUT0                                                                                                                                | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/freq_refclk                                                                                                                                 |
 | 2        | PHASER_OUT_PHY/OCLKDELAYED | PHASER_OUT_PHY_X1Y4 | PHASER_OUT_PHY_X1Y4/PHASER_OUT_PHY | X1Y1         |           2 |               0 |        3.333 | oserdes_clk   | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLKDELAYED | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk_delayed |
 | 3        | PHASER_OUT_PHY/OCLKDELAYED | PHASER_OUT_PHY_X1Y6 | PHASER_OUT_PHY_X1Y6/PHASER_OUT_PHY | X1Y1         |           2 |               0 |        3.333 | oserdes_clk_2 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLKDELAYED | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk_delayed |
-| 4        | FDRE/Q                     | None                | SLICE_X58Y66/CFF                   | X1Y1         |           1 |               6 |              |               | u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[2]/Q                                                                                                                                                                              | u_StatTracker/u_DirectLRU/ram_loadstore__0                                                                                                                                                                                        |
+| 4        | FDRE/Q                     | None                | SLICE_X70Y67/A5FF                  | X1Y1         |           1 |               3 |              |               | u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[2]/Q                                                                                                                                                                              | u_StatTracker/u_DirectLRU/ram_start__0                                                                                                                                                                                            |
 | 5        | PLLE2_ADV/CLKOUT1          | PLLE2_ADV_X1Y1      | PLLE2_ADV_X1Y1/PLLE2_ADV           | X1Y1         |           1 |               6 |        3.333 | mem_refclk    | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/plle2_i/CLKOUT1                                                                                                                                | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/mem_refclk                                                                                                                                  |
 +----------+----------------------------+---------------------+------------------------------------+--------------+-------------+-----------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Local Clocks in this context represents only clocks driven by non-global buffers
@@ -111,11 +112,11 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1500 |    0 |   550 |    0 |    40 |    0 |    20 |    0 |    40 |
+| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1500 |    1 |   550 |    0 |    40 |    0 |    20 |    0 |    40 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2000 |    0 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    4 |    50 | 2866 |  1900 |  961 |   650 |    0 |    60 |    0 |    30 |    4 |    40 |
-| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  351 |  2000 |   74 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  526 |  1900 |  167 |   650 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X1Y1              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    4 |    50 | 2828 |  1900 |  927 |   650 |    0 |    60 |    0 |    30 |    2 |    40 |
+| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  341 |  2000 |   94 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  838 |  1900 |  337 |   650 |    0 |    60 |    0 |    30 |    2 |    40 |
 | X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |  1350 |    0 |   500 |    0 |    30 |    0 |    15 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
@@ -142,7 +143,7 @@ All Modules
 +-----------+-----------------+-------------------+-----------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock     | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                       |
 +-----------+-----------------+-------------------+-----------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_pll_i |       6.667 | {0.000 3.333} |        2652 |        0 |              1 |        0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK |
+| g0        | BUFG/O          | n/a               | clk_pll_i |       6.667 | {0.000 3.333} |        2651 |        0 |              1 |        0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK |
 +-----------+-----------------+-------------------+-----------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -154,9 +155,9 @@ All Modules
 |    | X0   | X1    | HORIZONTAL PROG DELAY |
 +----+------+-------+-----------------------+
 | Y3 |    0 |     0 |                     - |
-| Y2 |  306 |    10 |                     0 |
-| Y1 |    0 |  2337 |                     0 |
-| Y0 |    0 |     0 |                     - |
+| Y2 |  296 |    13 |                     0 |
+| Y1 |    0 |  2342 |                     0 |
+| Y0 |    0 |     1 |                     0 |
 +----+------+-------+-----------------------+
 
 
@@ -166,7 +167,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net              |
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+------------------+
-| g1        | BUFG/O          | n/a               | clk_sd_pll |      20.000 | {0.000 10.000} |         996 |        0 |              0 |        0 | pll1/inst/clk_sd |
+| g1        | BUFG/O          | n/a               | clk_sd_pll |      20.000 | {0.000 10.000} |        1260 |        0 |              0 |        0 | pll1/inst/clk_sd |
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -178,8 +179,8 @@ All Modules
 |    | X0 | X1   | HORIZONTAL PROG DELAY |
 +----+----+------+-----------------------+
 | Y3 |  0 |    0 |                     - |
-| Y2 |  0 |  516 |                     0 |
-| Y1 |  0 |  480 |                     0 |
+| Y2 |  0 |  827 |                     0 |
+| Y1 |  0 |  433 |                     0 |
 | Y0 |  0 |    0 |                     - |
 +----+----+------+-----------------------+
 
@@ -238,7 +239,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock       | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                 |
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------+
-| g4        | BUFG/O          | n/a               | sys_clk_pin |      10.000 | {0.000 5.000} |          32 |        0 |              1 |        0 | clk100mhz_IBUF_BUFG |
+| g4        | BUFG/O          | n/a               | sys_clk_pin |      10.000 | {0.000 5.000} |          33 |        0 |              1 |        0 | clk100mhz_IBUF_BUFG |
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -251,7 +252,7 @@ All Modules
 +----+----+-----+-----------------------+
 | Y3 |  0 |   0 |                     - |
 | Y2 |  0 |   0 |                     - |
-| Y1 |  0 |  32 |                     0 |
+| Y1 |  0 |  33 |                     0 |
 | Y0 |  1 |   0 |                     0 |
 +----+----+-----+-----------------------+
 
@@ -318,17 +319,30 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-15. Clock Region Cell Placement per Global Clock: Region X1Y1
+15. Clock Region Cell Placement per Global Clock: Region X1Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK |
++-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+16. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        2337 |               0 | 2296 |          11 |    0 |   0 |  0 |    1 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK      |
-| g1        | n/a   | BUFG/O          | None       |         480 |               0 |  476 |           0 |    0 |   4 |  0 |    0 |   0 |       0 | pll1/inst/clk_sd                                                                               |
+| g0        | n/a   | BUFG/O          | None       |        2342 |               0 | 2302 |          10 |    0 |   0 |  0 |    1 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK      |
+| g1        | n/a   | BUFG/O          | None       |         433 |               0 |  431 |           0 |    0 |   2 |  0 |    0 |   0 |       0 | pll1/inst/clk_sd                                                                               |
 | g2        | n/a   | BUFG/O          | None       |          17 |               0 |   15 |           0 |    0 |   0 |  0 |    0 |   1 |       0 | pll1/inst/clk_mem                                                                              |
 | g3        | n/a   | BUFG/O          | None       |          47 |               0 |   47 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | pll1/inst/clk_cpu                                                                              |
-| g4        | n/a   | BUFG/O          | None       |          32 |               0 |   32 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk100mhz_IBUF_BUFG                                                                            |
+| g4        | n/a   | BUFG/O          | None       |          33 |               0 |   33 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk100mhz_IBUF_BUFG                                                                            |
 | g6        | n/a   | BUFH/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/pll_clk3 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -336,13 +350,13 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-16. Clock Region Cell Placement per Global Clock: Region X0Y2
+17. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         306 |               0 | 306 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK |
+| g0        | n/a   | BUFG/O          | None       |         296 |               0 | 296 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK |
 | g2        | n/a   | BUFG/O          | None       |          46 |               0 |  45 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | pll1/inst/clk_mem                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -350,14 +364,14 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-17. Clock Region Cell Placement per Global Clock: Region X1Y2
+18. Clock Region Cell Placement per Global Clock: Region X1Y2
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          10 |               0 |  10 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK |
-| g1        | n/a   | BUFG/O          | None       |         516 |               0 | 516 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | pll1/inst/clk_sd                                                                          |
+| g0        | n/a   | BUFG/O          | None       |          13 |               0 |  13 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK |
+| g1        | n/a   | BUFG/O          | None       |         827 |               0 | 825 |           0 |    0 |   2 |  0 |    0 |   0 |       0 | pll1/inst/clk_sd                                                                          |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -385,7 +399,7 @@ set_property LOC IOB_X1Y126 [get_ports clk100mhz]
 #startgroup
 create_pblock {CLKAG_u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK}
 add_cells_to_pblock [get_pblocks  {CLKAG_u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK"}]]]
-resize_pblock [get_pblocks {CLKAG_u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/CLK}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "pll1/inst/clk_sd" driven by instance "pll1/inst/clkout3_buf" located at site "BUFGCTRL_X0Y2"

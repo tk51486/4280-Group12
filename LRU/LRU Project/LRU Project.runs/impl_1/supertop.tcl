@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1/supertop.tcl"
+  variable script "C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/impl_1/supertop.tcl"
   variable category "vivado_impl"
 }
 
@@ -114,20 +114,20 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.cache/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/supertop.dcp}}
-  read_ip -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
-  read_ip -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/pll/pll.xci}}
-  read_ip -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/mig/mig.xci}}
+  add_files -quiet {{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/supertop.dcp}}
+  read_ip -quiet {{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+  read_ip -quiet {{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/pll/pll.xci}}
+  read_ip -quiet {{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/mig/mig.xci}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc}}
-  read_xdc {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc}}
+  read_xdc {{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc}}
+  read_xdc {{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/imports/SD Code/Nexys-4-DDR-pins.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

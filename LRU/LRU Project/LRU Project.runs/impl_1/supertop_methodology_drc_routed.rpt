@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Mon Apr 21 17:36:53 2025
-| Host         : engr-d1450-023 running 64-bit major release  (build 9200)
+| Date         : Tue Apr 22 19:31:31 2025
+| Host         : engr-d1409-008 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file supertop_methodology_drc_routed.rpt -pb supertop_methodology_drc_routed.pb -rpx supertop_methodology_drc_routed.rpx
 | Design       : supertop
 | Device       : xc7a100tcsg324-1
@@ -23,21 +23,21 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 267
+             Checks found: 255
 +-----------+------------------+----------------------------------------------------+--------+
 | Rule      | Severity         | Description                                        | Checks |
 +-----------+------------------+----------------------------------------------------+--------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1      |
-| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 2      |
-| TIMING-7  | Critical Warning | No common node between related clocks              | 2      |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 3      |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 3      |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1      |
 | DPIR-1    | Warning          | Asynchronous driver check                          | 184    |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 2      |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 12     |
 | TIMING-10 | Warning          | Missing property on synchronizer                   | 1      |
 | TIMING-16 | Warning          | Large setup violation                              | 8      |
-| TIMING-18 | Warning          | Missing input or output delay                      | 20     |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 16     |
+| TIMING-18 | Warning          | Missing input or output delay                      | 4      |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 18     |
 | XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1      |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1      |
 | REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF                  | 16     |
@@ -57,6 +57,11 @@ Related violations: <none>
 
 TIMING-6#2 Critical Warning
 No common primary clock between related clocks  
+The clocks clk_sd_pll and sys_clk_pin are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_sd_pll] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-6#3 Critical Warning
+No common primary clock between related clocks  
 The clocks sys_clk_pin and clk_pll_i are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks clk_pll_i]
 Related violations: <none>
 
@@ -66,6 +71,11 @@ The clocks clk_cpu_pll and sys_clk_pin are related (timed together) but they hav
 Related violations: <none>
 
 TIMING-7#2 Critical Warning
+No common node between related clocks  
+The clocks clk_sd_pll and sys_clk_pin are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_sd_pll] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-7#3 Critical Warning
 No common node between related clocks  
 The clocks sys_clk_pin and clk_pll_i are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks clk_pll_i]
 Related violations: <none>
@@ -1028,62 +1038,62 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X33Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X37Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X29Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X34Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X30Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X30Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X29Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X35Y124 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X29Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X32Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X28Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X36Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X31Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X35Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X31Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X34Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X31Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X36Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X28Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X31Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X32Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X33Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X29Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X37Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-10#1 Warning
@@ -1093,42 +1103,42 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.076 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_reg/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.585 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_reg/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.204 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_reg/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.754 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_reg/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.835 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.369 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[2]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.835 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[1]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.369 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[2]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[1]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.835 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[2]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.369 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[2]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[2]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.835 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[3]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.369 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[2]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_onehot_lru_state_reg[3]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -2.580 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep/C (clocked by clk_pll_i) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/sync_reg_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.539 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep/C (clocked by clk_pll_i) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/sync_reg_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_reg/C (clocked by clk_pll_i) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.691 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_reg/C (clocked by clk_pll_i) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -1143,90 +1153,10 @@ Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on led[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#4 Warning
-Missing input or output delay  
-An output delay is missing on led[10] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#5 Warning
-Missing input or output delay  
-An output delay is missing on led[11] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#6 Warning
-Missing input or output delay  
-An output delay is missing on led[12] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#7 Warning
-Missing input or output delay  
-An output delay is missing on led[13] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#8 Warning
-Missing input or output delay  
-An output delay is missing on led[14] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#9 Warning
-Missing input or output delay  
-An output delay is missing on led[15] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#10 Warning
-Missing input or output delay  
-An output delay is missing on led[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#11 Warning
-Missing input or output delay  
-An output delay is missing on led[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#12 Warning
-Missing input or output delay  
-An output delay is missing on led[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#13 Warning
-Missing input or output delay  
-An output delay is missing on led[4] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#14 Warning
-Missing input or output delay  
-An output delay is missing on led[5] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#15 Warning
-Missing input or output delay  
-An output delay is missing on led[6] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#16 Warning
-Missing input or output delay  
-An output delay is missing on led[7] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#17 Warning
-Missing input or output delay  
-An output delay is missing on led[8] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#18 Warning
-Missing input or output delay  
-An output delay is missing on led[9] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#19 Warning
-Missing input or output delay  
 An output delay is missing on sdclk relative to the rising and/or falling clock edge(s) of tck.
 Related violations: <none>
 
-TIMING-18#20 Warning
+TIMING-18#4 Warning
 Missing input or output delay  
 An output delay is missing on sdcmd relative to the rising and/or falling clock edge(s) of tck.
 Related violations: <none>
@@ -1253,60 +1183,70 @@ Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[1] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[1]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[13] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[2] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[2]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[14] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[3] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[3]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[15] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[4] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[4]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[1] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[5] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[5]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[2] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[6] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[6]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[3] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[7] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[7]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[4] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[8] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[8]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[5] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/debugLED_reg[9] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[9]/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[6] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/initializing_reg cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/initializing_reg/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[7] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch u_StatTracker/u_DirectLRU/ram_loadstore_reg cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/ram_loadstore_reg/G is not reached by a timing clock
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[8] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
+Non-clocked latch  
+The latch u_StatTracker/u_DirectLRU/debugLED_reg[9] cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/debugLED_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch u_StatTracker/u_DirectLRU/ram_loadstore_reg cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/ram_loadstore_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
 Non-clocked latch  
 The latch u_StatTracker/u_DirectLRU/ram_start_reg cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/ram_start_reg/G is not reached by a timing clock
 Related violations: <none>
@@ -1314,12 +1254,12 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '8' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc (Line: 344)
+Current XDC: c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc (Line: 344)
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 16 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 18 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 REQP-1959#1 Advisory

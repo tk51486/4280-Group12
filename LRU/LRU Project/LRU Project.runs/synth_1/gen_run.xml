@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745271295" LaunchWriteIncrSynthDcp="true">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745364562" LaunchWriteIncrSynthDcp="true">
   <File Type="PA-TCL" Name="supertop.tcl"/>
   <File Type="REPORTS-TCL" Name="supertop_reports.tcl"/>
   <File Type="RDS-RDS" Name="supertop.vds"/>
