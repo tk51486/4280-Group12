@@ -13,6 +13,17 @@ module IO_Management (
     input wire clk,
     //input wire start,
     output wire [15:0]  led, // 16 bit led
+    //Stats Tracked
+    input wire [32:0] accessesTotal,
+    input wire [32:0] evictionTotal,
+    input wire [32:0] writeHitTotal,
+    input wire [32:0] readHitTotal,
+    input wire [32:0] writeMissTotal,
+    input wire [32:0] readMissTotal,
+    input wire [32:0] instTotal,
+    input wire [32:0] hitTotal,
+    input wire [32:0] missTotal,
+
     //Parsed Values
     output wire [16:0] LRUTag,
     output wire [10:0] LRUIndex,
@@ -50,10 +61,6 @@ SD_Data_Decoder u_SD_Data_Decoder(
     .sddat0(sddat0),
     .uart_tx(uart_tx)
 );
-
-
-
-
 
 
 endmodule

@@ -8,6 +8,7 @@ module MemController(
     input wire loadstore, 
     input wire start,
     
+    //from LRU
     input [27:0] mem_addr,
     input [63:0] mem_d_to_ram,
     output[63:0] mem_d_from_ram,
@@ -122,7 +123,7 @@ module MemController(
                 //lights[2] = 1;
                 mem_wstrobe = 0;
                 if(mem_transaction_complete) begin
-                    //lights = mem_d_to_ram[31:16];
+                    //lights = mem_addr[27:17];
                     next_state = TGEN_IDLE;
                 end
             end

@@ -52,6 +52,18 @@ module supertop(
         //VGA
     );
     
+    
+    //States to Track
+    wire [32:0] accessesTotal;
+    wire [32:0] evictionTotal;
+    wire [32:0] writeHitTotal;
+    wire [32:0] readHitTotal;
+    wire [32:0] writeMissTotal;
+    wire [32:0] readMissTotal;
+    wire [32:0] instTotal;
+    wire [32:0] hitTotal;
+    wire [32:0] missTotal;
+    
     //from SD_Data_Decoder
     wire [16:0] LRUTag;
     wire [10:0] LRUIndex;
@@ -89,6 +101,16 @@ module supertop(
         .clk(clk100mhz),
         //.led(led),
         
+        .accessesTotal(accessesTotal),
+        .evictionTotal(evictionTotal),
+        .writeHitTotal(writeHitTotal),
+        .readHitTotal(readHitTotal),
+        .writeMissTotal(writeMissTotal),
+        .readMissTotal(readMissTotal),
+        .instTotal(instTotal),
+        .hitTotal(hitTotal),
+        .missTotal(missTotal),
+        
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),
         .LRULoadStore(LRULoadStore),
@@ -113,7 +135,18 @@ module supertop(
         .LRULoadStore(LRULoadStore),
         .LRUInst(LRUInst),
         .LRULineReady(LRULineReady),
-    
+        
+        .accessesTotal(accessesTotal),
+        .evictionTotal(evictionTotal),
+        .writeHitTotal(writeHitTotal),
+        .readHitTotal(readHitTotal),
+        .writeMissTotal(writeMissTotal),
+        .readMissTotal(readMissTotal),
+        .instTotal(instTotal),
+        .hitTotal(hitTotal),
+        .missTotal(missTotal),
+        
+        
         .clk_mem(clk_mem),
         .clk_cpu(clk_cpu),
         .pll_locked(pll_locked),

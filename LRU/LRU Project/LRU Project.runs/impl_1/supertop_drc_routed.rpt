@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Tue Apr 22 19:31:28 2025
+| Date         : Wed Apr 23 00:30:50 2025
 | Host         : engr-d1409-008 running 64-bit major release  (build 9200)
 | Command      : report_drc -file supertop_drc_routed.rpt -pb supertop_drc_routed.pb -rpx supertop_drc_routed.rpx
 | Design       : supertop
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 47
+             Checks found: 54
 +-----------+----------+-----------------------------------------------------+--------+
 | Rule      | Severity | Description                                         | Checks |
 +-----------+----------+-----------------------------------------------------+--------+
@@ -32,11 +32,13 @@ Table of Contents
 | DPIP-1    | Warning  | Input pipelining                                    | 18     |
 | DPOP-1    | Warning  | PREG Output pipelining                              | 11     |
 | DPOP-2    | Warning  | MREG Output pipelining                              | 11     |
+| PDRC-132  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 3      |
+| PDRC-134  | Warning  | SLICE_PairEqSame_B6B5_WARN                          | 1      |
 | PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
-| PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
-| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
-| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
-| PDRC-153  | Warning  | Gated clock check                                   | 1      |
+| PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 2      |
+| PDRC-140  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 1      |
+| PDRC-142  | Warning  | SLICE_PairEqSame_B6B5_WARN                          | 1      |
+| PDRC-153  | Warning  | Gated clock check                                   | 3      |
 | REQP-1709 | Warning  | Clock output buffering                              | 1      |
 +-----------+----------+-----------------------------------------------------+--------+
 
@@ -255,29 +257,64 @@ MREG Output pipelining
 DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 multiplier stage u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
+PDRC-132#1 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X68Y63 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-132#2 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X69Y62 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-132#3 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X69Y65 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-134#1 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X69Y62 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
 PDRC-136#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X71Y89 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X59Y112 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X71Y89 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X59Y112 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
-PDRC-144#1 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X70Y106 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#1 Warning
+PDRC-138#2 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X70Y106 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X77Y119 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-140#1 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X70Y63 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-142#1 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X70Y63 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/FSM_onehot_lru_state_reg[2] is a gated clock net sourced by a combinational pin u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_1/O, cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net u_StatTracker/u_DirectLRU/ram_start__0 is a gated clock net sourced by a combinational pin u_StatTracker/u_DirectLRU/ram_start_reg_i_2/O, cell u_StatTracker/u_DirectLRU/ram_start_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/FSM_onehot_lru_state_reg[3] is a gated clock net sourced by a combinational pin u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_2/O, cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[2]_1[0] is a gated clock net sourced by a combinational pin u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/debugLED_reg[15]_i_1/O, cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/debugLED_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1709#1 Warning
