@@ -98,6 +98,7 @@ module MemController(
     end    
     
     always @(posedge clk_cpu) begin //or negedge rst_n
+        //lights = tgen_state;
         if(~rst_n == 1) begin
             next_state = TGEN_IDLE;
         end else begin

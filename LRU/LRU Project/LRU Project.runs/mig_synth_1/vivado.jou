@@ -3,8 +3,8 @@
 # SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Thu Apr 24 13:29:56 2025
-# Process ID         : 22928
+# Start of session at: Thu Apr 24 17:03:13 2025
+# Process ID         : 23528
 # Current directory  : C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1
 # Command line       : vivado.exe -log mig.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig.tcl
 # Log file           : C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/mig_synth_1/mig.vds
@@ -19,6 +19,6 @@
 # Host memory        : 34033 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36180 MB
-# Available Virtual  : 23559 MB
+# Available Virtual  : 22849 MB
 #-----------------------------------------------------------
 source mig.tcl -notrace

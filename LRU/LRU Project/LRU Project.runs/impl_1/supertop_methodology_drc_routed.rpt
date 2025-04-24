@@ -1,0 +1,1401 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Thu Apr 24 17:39:49 2025
+| Host         : engr-d1409-008 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file supertop_methodology_drc_routed.rpt -pb supertop_methodology_drc_routed.pb -rpx supertop_methodology_drc_routed.rpx
+| Design       : supertop
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 266
++-----------+------------------+------------------------------------------------------------------+--------+
+| Rule      | Severity         | Description                                                      | Checks |
++-----------+------------------+------------------------------------------------------------------+--------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree               | 1      |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks                   | 3      |
+| TIMING-7  | Critical Warning | No common node between related clocks                            | 3      |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1      |
+| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1      |
+| DPIR-1    | Warning          | Asynchronous driver check                                        | 184    |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 2      |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain                  | 12     |
+| TIMING-10 | Warning          | Missing property on synchronizer                                 | 1      |
+| TIMING-16 | Warning          | Large setup violation                                            | 18     |
+| TIMING-18 | Warning          | Missing input or output delay                                    | 20     |
+| TIMING-20 | Warning          | Non-clocked latch                                                | 2      |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects                      | 1      |
+| LATCH-1   | Advisory         | Existing latches in the design                                   | 1      |
+| REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF                                | 16     |
++-----------+------------------+------------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock pll1/inst/clk_in is defined downstream of clock sys_clk_pin and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_cpu_pll and sys_clk_pin are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_cpu_pll] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_sd_pll and sys_clk_pin are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_sd_pll] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-6#3 Critical Warning
+No common primary clock between related clocks  
+The clocks sys_clk_pin and clk_pll_i are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks clk_pll_i]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_cpu_pll and sys_clk_pin are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_cpu_pll] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-7#2 Critical Warning
+No common node between related clocks  
+The clocks clk_sd_pll and sys_clk_pin are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_sd_pll] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-7#3 Critical Warning
+No common node between related clocks  
+The clocks sys_clk_pin and clk_pll_i are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks clk_pll_i]
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock pll1/inst/clk_in is created on an inappropriate internal pin pll1/inst/clk_in. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net clk100mhz_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk100mhz_IBUF_inst/O, pll1/clk_in, u_StatTracker/clk100mhz
+Related violations: <none>
+
+DPIR-1#1 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#2 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#3 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#4 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#5 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#6 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#7 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#8 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#9 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#10 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#11 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#12 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#13 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#14 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#15 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#16 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#17 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#18 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#19 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#20 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#21 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#22 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#23 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#24 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#25 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#26 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#27 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#28 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#29 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#30 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#31 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#32 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#33 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#34 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#35 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#36 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#37 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#38 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#39 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#40 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[23] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#41 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[24] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#42 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[25] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#43 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[26] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#44 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[27] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#45 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[28] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#46 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[29] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#47 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#48 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[30] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#49 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[31] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#50 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#51 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#52 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#53 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#54 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#55 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#56 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no0/C[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#57 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#58 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#59 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#60 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#61 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#62 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#63 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#64 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#65 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#66 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#67 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#68 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#69 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#70 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#71 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#72 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#73 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#74 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#75 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#76 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#77 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#78 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#79 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#80 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__3/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#81 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#82 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#83 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#84 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#85 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#86 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#87 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#88 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__4/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#89 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#90 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#91 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#92 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#93 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#94 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#95 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#96 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#97 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#98 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#99 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#100 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#101 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#102 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#103 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#104 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#105 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#106 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#107 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#108 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#109 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#110 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#111 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#112 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#113 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__5/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#114 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#115 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#116 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#117 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#118 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#119 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#120 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#121 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#122 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#123 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#124 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#125 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#126 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#127 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#128 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#129 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#130 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#131 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#132 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#133 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#134 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#135 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#136 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no1__6/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#137 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#138 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#139 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#140 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#141 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#142 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#143 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#144 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#145 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#146 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#147 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#148 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#149 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#150 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#151 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#152 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#153 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#154 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#155 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#156 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#157 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#158 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#159 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#160 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#161 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#162 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#163 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#164 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#165 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#166 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#167 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#168 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#169 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#170 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#171 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#172 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#173 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#174 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#175 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#176 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#177 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#178 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#179 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#180 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#181 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#182 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#183 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#184 Warning
+Asynchronous driver check  
+DSP u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0 input pin u_IO_Management/u_SD_Data_Decoder/u_sd_file_reader/read_sector_no2__0/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[0]/CLR,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[1]/CLR,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[2]/CLR,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/CLR,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/sync_reg_reg[0]/CLR,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_reg/CLR
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_iodelay_ctrl/rstdiv2_sync_r[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep__7/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep__8/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep__9/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[0]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[10]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[11]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[1]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[2]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[3]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[4]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[5]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[6]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[7]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[8]/PRE,
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r_reg[9]/PRE
+ (the first 15 of 29 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X37Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X35Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X37Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X34Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X37Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X35Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X36Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X36Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X39Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X34Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X35Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X38Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.052 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_reg/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -2.607 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep/C (clocked by clk_pll_i) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/sync_reg_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.644 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_reg/C (clocked by clk_pll_i) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.726 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_reg/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -3.419 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[17]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[16]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -3.434 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[19]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[18]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -3.444 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[16]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[15]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -3.453 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[18]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[17]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -3.908 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[21]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[20]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -3.954 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[23]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[22]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -4.020 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_sequential_lru_state_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -4.125 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[20]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[19]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -4.142 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[25]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[24]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -4.166 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_sequential_lru_state_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -4.180 ns between u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_StatTracker/u_DirectLRU/FSM_sequential_lru_state_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -4.242 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[26]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[25]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -4.250 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[22]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[21]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -4.357 ns between u_StatTracker/u_DirectLRU/ram_addr_reg[24]/C (clocked by sys_clk_pin) and u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/u_ui_top/ui_cmd0/app_addr_r1_reg[23]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on sdcmd relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on sddat0 relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on led[0] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on led[10] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on led[11] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on led[12] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on led[13] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on led[14] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on led[15] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on led[1] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on led[2] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on led[3] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on led[4] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on led[5] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on led[6] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on led[7] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on led[8] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on led[9] relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on sdclk relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on sdcmd relative to the rising and/or falling clock edge(s) of tck.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch u_StatTracker/u_DirectLRU/ram_loadstore_reg cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/ram_loadstore_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch u_StatTracker/u_DirectLRU/ram_start_reg cannot be properly analyzed as its control pin u_StatTracker/u_DirectLRU/ram_start_reg/G is not reached by a timing clock
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '8' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc (Line: 344)
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 2 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#2 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#3 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#4 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#5 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#6 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#7 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#8 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#9 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#10 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#11 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#12 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#13 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#14 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#15 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#16 Advisory
+connects_SERDES_RST_driver_not_FF  
+u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+

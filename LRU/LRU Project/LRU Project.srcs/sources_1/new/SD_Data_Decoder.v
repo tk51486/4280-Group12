@@ -96,7 +96,7 @@ always@(posedge clk_sd) begin
 end
 
 always@(posedge clk_sd) begin
-    debugLED[2:0] = current_state;
+    //debugLED[15:13] = current_state;
     case(current_state)
         READLINE: begin
             if(CurrFlag) begin
@@ -152,6 +152,7 @@ always@(posedge clk_sd) begin
         end 
         STOP: begin
             LRULineReady = 0;
+            next_state = READLINE;
         end
         default: next_state = READLINE;
     endcase

@@ -48,7 +48,7 @@ module DirectLRU(
     reg ram_loadstore, ram_start;  //sent to ram
     
     reg [15:0] debugLED;
-    assign led = debugLED;
+    assign led[15:0] = debugLED;
     reg walloc;
     
     MemController u_MemController(
@@ -110,8 +110,8 @@ module DirectLRU(
     
     //next-state logic
     always @(*) begin
-    
-        //debugLED[15:13] = lru_state;
+        //debugLED = lru_state;
+        debugLED[15:0] = LRUIndex;
         next_state = lru_state;
         ram_addr_next = ram_addr;
         init_next = initializing;
