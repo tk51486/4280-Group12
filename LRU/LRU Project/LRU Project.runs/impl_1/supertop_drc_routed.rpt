@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Thu Apr 24 17:39:46 2025
+| Date         : Thu Apr 24 18:27:27 2025
 | Host         : engr-d1409-008 running 64-bit major release  (build 9200)
 | Command      : report_drc -file supertop_drc_routed.rpt -pb supertop_drc_routed.pb -rpx supertop_drc_routed.rpx
 | Design       : supertop
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 52
+             Checks found: 53
 +-----------+----------+-----------------------------------------------------+--------+
 | Rule      | Severity | Description                                         | Checks |
 +-----------+----------+-----------------------------------------------------+--------+
@@ -32,11 +32,14 @@ Table of Contents
 | DPIP-1    | Warning  | Input pipelining                                    | 18     |
 | DPOP-1    | Warning  | PREG Output pipelining                              | 11     |
 | DPOP-2    | Warning  | MREG Output pipelining                              | 11     |
-| PDRC-132  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 4      |
-| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 2      |
-| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 2      |
+| PDRC-132  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 3      |
+| PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
+| PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
+| PDRC-140  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 2      |
+| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
 | PDRC-153  | Warning  | Gated clock check                                   | 2      |
 | REQP-1709 | Warning  | Clock output buffering                              | 1      |
+| RTSTAT-10 | Warning  | No routable loads                                   | 1      |
 +-----------+----------+-----------------------------------------------------+--------+
 
 2. REPORT DETAILS
@@ -256,42 +259,42 @@ Related violations: <none>
 
 PDRC-132#1 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X67Y63 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X64Y54 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-132#2 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X68Y64 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X67Y73 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-132#3 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X69Y63 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X68Y74 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
-PDRC-132#4 Warning
+PDRC-136#1 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X55Y27 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#1 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X55Y27 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-140#1 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X71Y64 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X70Y74 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-140#2 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X70Y76 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X60Y84 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#2 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X76Y16 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#1 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X60Y84 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#2 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X76Y16 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X74Y90 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-153#1 Warning
@@ -307,6 +310,11 @@ Related violations: <none>
 REQP-1709#1 Warning
 Clock output buffering  
 PLLE2_ADV connectivity violation. The signal u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/pll_clk3_out on the u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/plle2_i/CLKOUT3 pin of u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+32 net(s) have no routable loads. The problem bus(es) and/or net(s) are u_IO_Management/u_SD_Data_Decoder/instTotal_next[31:0].
 Related violations: <none>
 
 

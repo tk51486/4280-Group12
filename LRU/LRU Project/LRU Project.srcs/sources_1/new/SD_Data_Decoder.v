@@ -49,6 +49,7 @@ reg [127:0] CurrentLine;
 reg [127:0] LRUParse;
 reg [60:0] ParseIT;
 reg [27:0] LRUAddr;
+(* DONT_TOUCH = "yes" *) reg [31:0] instTotal, instTotal_next;
 
 reg [15:0] debugLED;
 assign led = debugLED;
@@ -82,7 +83,8 @@ initial begin
     LRUInst = 0;
     LRULineReady = 0;
     instTotal = 0;
-
+    instTotal_next = 0;
+    
     CurrentLine = 0;
     LRUParse = 0;
     ParseIT = 0;
@@ -97,6 +99,9 @@ end
 
 always@(posedge clk_sd) begin
     //debugLED[15:13] = current_state;
+    debugLED = instTotal[15:0];
+    //debugLED[3:2] = instTotal[1:0];
+    
     case(current_state)
         READLINE: begin
             if(CurrFlag) begin
@@ -126,6 +131,7 @@ always@(posedge clk_sd) begin
             next_state = PARSEADDR;
         end 
         PARSEADDR: begin
+            instTotal = instTotal + LRUInst;
             if (LRUParse[71:64] != 8'h20) begin //checking position of the space          
                
                 if(LRUParse[87:80] != 8'h20) begin //don't shift for first addr byte
@@ -145,7 +151,6 @@ always@(posedge clk_sd) begin
         DISPLAY: begin
             LRUTag = LRUAddr[27:11];
             LRUIndex = LRUAddr[10:0];
-            instTotal = instTotal + LRUInst;
             //debugLED[15:0] = LRUAddr[15:0]; //should be 9b6c
             LRULineReady = 1;
             next_state = STOP;

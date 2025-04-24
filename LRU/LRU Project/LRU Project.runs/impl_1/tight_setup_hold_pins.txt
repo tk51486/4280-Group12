@@ -1,9 +1,9 @@
 +====================+===================+=============================================================================+
 | Launch Setup Clock | Launch Hold Clock | Pin                                                                         |
 +====================+===================+=============================================================================+
-| clk_cpu_pll        | clk_cpu_pll       | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_sync_reg[0]/D |
 | clk_cpu_pll        | clk_cpu_pll       | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_sync_reg[0]/D |
-| clk_cpu_pll        | clk_cpu_pll       | u_StatTracker/u_DirectLRU/FSM_sequential_lru_state_reg[0]/D                 |
+| clk_cpu_pll        | clk_cpu_pll       | u_StatTracker/u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_sync_reg[0]/D |
 | clk_cpu_pll        | clk_cpu_pll       | u_StatTracker/u_DirectLRU/FSM_sequential_lru_state_reg[2]/D                 |
 | clk_cpu_pll        | clk_cpu_pll       | u_StatTracker/u_DirectLRU/FSM_sequential_lru_state_reg[1]/D                 |
+| clk_cpu_pll        | clk_cpu_pll       | u_StatTracker/u_DirectLRU/FSM_sequential_lru_state_reg[0]/D                 |
 +--------------------+-------------------+-----------------------------------------------------------------------------+
