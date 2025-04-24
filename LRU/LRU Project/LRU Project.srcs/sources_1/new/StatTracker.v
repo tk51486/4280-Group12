@@ -30,7 +30,7 @@ module StatTracker(
     input [20:0] LRUInst,
     input LRULineReady,
 
-    output reg [32:0] accessesTotal,
+    /*output reg [32:0] accessesTotal,
     output reg [32:0] evictionTotal,
     output reg [32:0] writeHitTotal,
     output reg [32:0] readHitTotal,
@@ -38,7 +38,7 @@ module StatTracker(
     output reg [32:0] readMissTotal,
     output reg [32:0] instTotal,
     output reg [32:0] hitTotal,
-    output reg [32:0] missTotal,
+    output reg [32:0] missTotal,*/
 
     input clk_mem,
     input clk_cpu,
@@ -64,11 +64,11 @@ module StatTracker(
     output ddr2_odt
     );
     
-    wire [1:0] accesses;
+    /*wire [1:0] accesses;
     wire eviction;
     wire write;
     wire hit;
-    wire processed;
+    wire processed;*/
     
     DirectLRU u_DirectLRU(
         
@@ -80,11 +80,11 @@ module StatTracker(
         .LRUInst(LRUInst),
         .LRULineReady(LRULineReady),
     
-        .accesses(accesses),
+        /*.accesses(accesses),
         .eviction(eviction),
         .write(write),
         .hit(hit),
-        .processed(processed),
+        .processed(processed),*/
     
         .clk_mem(clk_mem),
         .clk_cpu(clk_cpu),
@@ -109,7 +109,7 @@ module StatTracker(
         .ddr2_odt(ddr2_odt)
     );
     
-    always @(posedge processed) begin
+    /*always @(posedge processed) begin
         accessesTotal = accessesTotal + accesses;
         evictionTotal = evictionTotal + 1;
         if(write) begin
@@ -134,5 +134,5 @@ module StatTracker(
     
     always @(posedge LRULineReady) begin
         instTotal = instTotal + LRUInst;
-    end
+    end*/
 endmodule

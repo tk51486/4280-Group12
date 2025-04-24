@@ -29,6 +29,7 @@ module SD_Data_Decoder(
     output reg [10:0] LRUIndex,
     output reg LRULoadStore,
     output reg [20:0] LRUInst,
+    output reg [32:0] instTotal,
 
 
     output reg LRULineReady,
@@ -50,12 +51,7 @@ reg [60:0] ParseIT;
 reg [27:0] LRUAddr;
 
 reg [15:0] debugLED;
-reg [60:0] count;
-wire [15:0] sd_emptyLED;
-
-//assign led = debugLED;
-
-
+assign led = debugLED;
 
 sd_file_reader #(
     .FILE_NAME_LEN    ( 9             ),  // the length of "example.txt" (in bytes)
@@ -68,10 +64,10 @@ sd_file_reader #(
     .sdclk            ( sdclk          ),
     .sdcmd            ( sdcmd          ),
     .sddat0           ( sddat0         ),
-    //.card_stat        ( sd_emptyLED[3:0]       ),  // show the sdcard initialize status
-    //.card_type        ( sd_emptyLED[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
-    //.filesystem_type  ( sd_emptyLED[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
-    //.file_found       ( sd_emptyLED[8]       ),  // 0=file not found, 1=file found
+    //.card_stat        ( led[3:0]       ),  // show the sdcard initialize status
+    //.card_type        ( led[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
+    //.filesystem_type  ( led[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
+    //.file_found       ( led[8]       ),  // 0=file not found, 1=file found
     .outen            (CurrFlag         ),
     .outbyte          (CurrNum       )
 );
@@ -85,12 +81,12 @@ initial begin
     LRULoadStore = 0;
     LRUInst = 0;
     LRULineReady = 0;
+    instTotal = 0;
 
     CurrentLine = 0;
     LRUParse = 0;
     ParseIT = 0;
     LRUAddr = 0;
-    count = 0; 
     debugLED = 0;
     //current_state = READLINE;
 end
@@ -100,6 +96,7 @@ always@(posedge clk_sd) begin
 end
 
 always@(posedge clk_sd) begin
+    debugLED[2:0] = current_state;
     case(current_state)
         READLINE: begin
             if(CurrFlag) begin
@@ -148,6 +145,7 @@ always@(posedge clk_sd) begin
         DISPLAY: begin
             LRUTag = LRUAddr[27:11];
             LRUIndex = LRUAddr[10:0];
+            instTotal = instTotal + LRUInst;
             //debugLED[15:0] = LRUAddr[15:0]; //should be 9b6c
             LRULineReady = 1;
             next_state = STOP;

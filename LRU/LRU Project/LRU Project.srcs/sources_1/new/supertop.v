@@ -53,7 +53,7 @@ module supertop(
     );
     
     
-    //States to Track
+    /*//Stats to Track
     wire [32:0] accessesTotal;
     wire [32:0] evictionTotal;
     wire [32:0] writeHitTotal;
@@ -62,7 +62,7 @@ module supertop(
     wire [32:0] readMissTotal;
     wire [32:0] instTotal;
     wire [32:0] hitTotal;
-    wire [32:0] missTotal;
+    wire [32:0] missTotal;*/
     
     //from SD_Data_Decoder
     wire [16:0] LRUTag;
@@ -101,7 +101,7 @@ module supertop(
         .clk(clk100mhz),
         //.led(led),
         
-        .accessesTotal(accessesTotal),
+        /*.accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
         .writeHitTotal(writeHitTotal),
         .readHitTotal(readHitTotal),
@@ -109,7 +109,7 @@ module supertop(
         .readMissTotal(readMissTotal),
         .instTotal(instTotal),
         .hitTotal(hitTotal),
-        .missTotal(missTotal),
+        .missTotal(missTotal),*/
         
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),
@@ -136,7 +136,7 @@ module supertop(
         .LRUInst(LRUInst),
         .LRULineReady(LRULineReady),
         
-        .accessesTotal(accessesTotal),
+        /*.accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
         .writeHitTotal(writeHitTotal),
         .readHitTotal(readHitTotal),
@@ -144,7 +144,7 @@ module supertop(
         .readMissTotal(readMissTotal),
         .instTotal(instTotal),
         .hitTotal(hitTotal),
-        .missTotal(missTotal),
+        .missTotal(missTotal),*/
         
         
         .clk_mem(clk_mem),

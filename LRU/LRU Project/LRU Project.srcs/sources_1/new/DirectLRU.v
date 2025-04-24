@@ -90,11 +90,11 @@ module DirectLRU(
     reg initializing, init_next; //used to initialize RAM
     
     initial begin
-        ram_loadstore = 1;
-        ram_start = 1;
+        ram_loadstore = 0;
+        ram_start = 0;
         ram_addr = {11'b0, 17'b0};
         ram_addr_next = 28'h0;
-        line_to_ram = 64'h9393ffff;//a5a5
+        line_to_ram = 64'hcdcdffff;//a5a5
         debugLED = 16'h0000;
         initializing = 1;
         init_next = 1;
@@ -120,59 +120,61 @@ module DirectLRU(
             LRU_INIT: begin
                 if (ram_ready) begin
                     if (initializing == 0) begin //initialization done
-                        //next_state = LRU_IDLE;  //wait for first cache instruction
+                        next_state = LRU_READRAM;  //wait for first cache instruction
                     end else begin
                         next_state = LRU_UPDATERAM; //clear current address
                     end
                 end
             end
             LRU_IDLE: begin
-                /*if (LRULineReady) begin
+                //debugLED = line_from_ram[63:48];
+                if (LRULineReady) begin
                     ram_addr_next = {LRUIndex, 17'b0};
                     next_state = LRU_READRAM;
-                end*/
+                end
             end
             LRU_READRAM: begin
-                if (~ram_transaction_complete ) begin //start read
+                if (~ram_transaction_complete) begin //start read
                     ram_start = 1;
                     ram_loadstore = 0;
                 end else begin
                     ram_start = 0;
-                    debugLED = line_from_ram[63:48];
-                    next_state = LRU_IDLE;  //wait for read to finish
+                    next_state = LRU_PROCESS;  //wait for read to finish
                 end
             end
             LRU_PROCESS: begin
-                next_state = LRU_UPDATERAM;
-                line_to_ram[63:45] = {1'b1, LRULoadStore, LRUTag}; //will be written to RAM (maybe)
-                processed = 1;
-                if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
-                    if(LRULoadStore) begin   //write miss
-                        accesses = 1;
-                        if (~walloc) begin
-                            next_state = LRU_WAIT;
-                        end else if (line_from_ram[62]) begin //dirty eviction (write)
-                            eviction = 1;
-                            accesses = 2;
+                if (~ram_transaction_complete) begin //wait until flag is cleared
+                    next_state = LRU_UPDATERAM;
+                    line_to_ram[63:45] = {1'b1, LRULoadStore, LRUTag}; //will be written to RAM (maybe)
+                    processed = 1;
+                    if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
+                        if(LRULoadStore) begin   //write miss
+                            accesses = 1;
+                            if (~walloc) begin
+                                next_state = LRU_WAIT;
+                            end else if (line_from_ram[62]) begin //dirty eviction (write)
+                                eviction = 1;
+                                accesses = 2;
+                            end
+                            write = 1;
+                        end else begin  //read miss
+                            accesses = 1;
+                            if (line_from_ram[62]) begin //dirty eviction (read)
+                                eviction = 1;
+                                accesses = 2;
+                            end
+                            write = 0;
                         end
-                        write = 1;
-                    end else begin  //read miss
-                        accesses = 1;
-                        if (line_from_ram[62]) begin //dirty eviction (read)
-                            eviction = 1;
-                            accesses = 2;
+                        hit = 0;
+                    end else begin //hit
+                        if (LRULoadStore) begin //write hit
+                            write = 1;
+                        end else begin  //read hit
+                            write = 0;
                         end
-                        write = 0;
+                        hit = 1;
+                        accesses = 0;
                     end
-                    hit = 0;
-                end else begin //hit
-                    if (LRULoadStore) begin //write hit
-                        write = 1;
-                    end else begin  //read hit
-                        write = 0;
-                    end
-                    hit = 1;
-                    accesses = 0;
                 end
             end
             LRU_UPDATERAM: begin
@@ -185,15 +187,13 @@ module DirectLRU(
                 end
             end
             LRU_WAIT: begin
-                processed = 0;
                 if (initializing) begin 
                     if (ram_addr[27:17] == 2047) begin    //RAM has been cleared
                         init_next = 0;
-                        next_state = LRU_READRAM;
                     end else begin  //if not, increment address
                         ram_addr_next = ram_addr + {11'b1, 17'b0};
-                        next_state = LRU_INIT;   
                     end
+                    next_state = LRU_INIT;
                 end else begin //just updated cache
                     next_state = LRU_IDLE;
                 end

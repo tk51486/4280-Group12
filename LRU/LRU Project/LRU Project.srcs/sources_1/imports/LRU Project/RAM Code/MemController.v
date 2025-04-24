@@ -138,7 +138,7 @@ module MemController(
                 mem_rstrobe = 0;
                 if(mem_transaction_complete) begin
                    //lights[4] = 1;
-                   next_state = TGEN_STOP;
+                   next_state = TGEN_IDLE;
                 end
             end
             TGEN_STOP: begin
