@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745566634" LaunchWriteIncrSynthDcp="true">
-  <File Type="PA-TCL" Name="vga_demo.tcl"/>
-  <File Type="REPORTS-TCL" Name="vga_demo_reports.tcl"/>
-  <File Type="RDS-RDS" Name="vga_demo.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="vga_demo_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="vga_demo_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="vga_demo_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="vga_demo.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="vga_demo_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="vga_demo_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745576563" LaunchWriteIncrSynthDcp="true">
+  <File Type="PA-TCL" Name="supertop.tcl"/>
+  <File Type="REPORTS-TCL" Name="supertop_reports.tcl"/>
+  <File Type="RDS-RDS" Name="supertop.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="supertop_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="supertop_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="supertop_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="supertop.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="supertop_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="supertop_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
@@ -179,7 +179,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="vga_demo"/>
+      <Option Name="TopModule" Val="supertop"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -205,7 +205,7 @@
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PPRDIR/VGA Code/Nexys4DDR_VGA.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/mfp_nexys4_ddr.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

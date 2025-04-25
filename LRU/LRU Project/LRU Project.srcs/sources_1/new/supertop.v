@@ -35,7 +35,7 @@ module supertop(
         output wire         sddat1, sddat2, sddat3,
         output wire         uart_tx,
         //RAM
-        inout[15:0] ddr2_dq,
+        /*inout[15:0] ddr2_dq,
         inout[1:0] ddr2_dqs_n,
         inout[1:0] ddr2_dqs_p,
         output[12:0] ddr2_addr,
@@ -48,21 +48,23 @@ module supertop(
         output ddr2_cke,
         output ddr2_cs_n,
         output[1:0] ddr2_dm,
-        output ddr2_odt
+        output ddr2_odt, */
         //VGA
+        output hsync, vsync,           // Horizontal and vertical sync
+        output [11:0] rgb 
     );
     
     
-    /*//Stats to Track
-    wire [32:0] accessesTotal;
-    wire [32:0] evictionTotal;
-    wire [32:0] writeHitTotal;
-    wire [32:0] readHitTotal;
-    wire [32:0] writeMissTotal;
-    wire [32:0] readMissTotal;
-    wire [32:0] instTotal;
-    wire [32:0] hitTotal;
-    wire [32:0] missTotal;*/
+    //Stats to Track
+    wire [31:0] accessesTotal;
+    wire [31:0] evictionTotal;
+    wire [31:0] writeHitTotal;
+    wire [31:0] readHitTotal;
+    wire [31:0] writeMissTotal;
+    wire [31:0] readMissTotal;
+    wire [31:0] instTotal;
+    wire [31:0] hitTotal;
+    wire [31:0] missTotal;
     
     //from SD_Data_Decoder
     wire [16:0] LRUTag;
@@ -99,17 +101,17 @@ module supertop(
     IO_Management u_IO_Management(
         //.start(start),
         .clk(clk100mhz),
-        //.led(led),
+        .led(led),
         
-        /*.accessesTotal(accessesTotal),
+        .accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
         .writeHitTotal(writeHitTotal),
         .readHitTotal(readHitTotal),
         .writeMissTotal(writeMissTotal),
         .readMissTotal(readMissTotal),
-        .instTotal(instTotal),
+        //.instTotal(instTotal),
         .hitTotal(hitTotal),
-        .missTotal(missTotal),*/
+        .missTotal(missTotal),
         
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),
@@ -123,10 +125,14 @@ module supertop(
         .sdclk(sdclk),
         .sdcmd(sdcmd),
         .sddat0(sddat0),
-        .uart_tx(uart_tx)
+        .uart_tx(uart_tx),
+        
+        .hsync(hsync),
+        .vsync(vsync),
+        .rgb(rgb)
     );
-    
-    StatTracker u_StatTracker(
+    /*
+    DirectLRU u_DirectLRU(
         
         .clk(clk100mhz),
         
@@ -136,15 +142,15 @@ module supertop(
         .LRUInst(LRUInst),
         .LRULineReady(LRULineReady),
         
-        /*.accessesTotal(accessesTotal),
+        .accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
         .writeHitTotal(writeHitTotal),
         .readHitTotal(readHitTotal),
         .writeMissTotal(writeMissTotal),
         .readMissTotal(readMissTotal),
-        .instTotal(instTotal),
+        //.instTotal(instTotal),
         .hitTotal(hitTotal),
-        .missTotal(missTotal),*/
+        .missTotal(missTotal),
         
         
         .clk_mem(clk_mem),
@@ -152,7 +158,7 @@ module supertop(
         .pll_locked(pll_locked),
         .CPU_RESETN(CPU_RESETN),
         
-        .led(led),
+        //.led(led),
         
         .ddr2_dq(ddr2_dq),
         .ddr2_dqs_n(ddr2_dqs_n),
@@ -169,5 +175,5 @@ module supertop(
         .ddr2_dm(ddr2_dm),
         .ddr2_odt(ddr2_odt)
     );
-
+*/
 endmodule

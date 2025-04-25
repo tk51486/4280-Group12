@@ -14,15 +14,15 @@ module IO_Management (
     //input wire start,
     output wire [15:0]  led, // 16 bit led
     //Stats Tracked
-    /*input wire [32:0] accessesTotal,
-    input wire [32:0] evictionTotal,
-    input wire [32:0] writeHitTotal,
-    input wire [32:0] readHitTotal,
-    input wire [32:0] writeMissTotal,
-    input wire [32:0] readMissTotal,
-    input wire [32:0] instTotal,
-    input wire [32:0] hitTotal,
-    input wire [32:0] missTotal,*/
+    input wire [31:0] accessesTotal,
+    input wire [31:0] evictionTotal,
+    input wire [31:0] writeHitTotal,
+    input wire [31:0] readHitTotal,
+    input wire [31:0] writeMissTotal,
+    input wire [31:0] readMissTotal,
+    //input wire [31:0] instTotal,
+    input wire [31:0] hitTotal,
+    input wire [31:0] missTotal,
 
     //Parsed Values
     output wire [16:0] LRUTag,
@@ -37,11 +37,14 @@ module IO_Management (
     output wire         sdclk, // signals connect to SD bus
     inout               sdcmd,
     input  wire         sddat0,
-    output wire         uart_tx // UART tx signal, connected to host-PC's UART-RXD, baud=115200
+    output wire         uart_tx, // UART tx signal, connected to host-PC's UART-RXD, baud=115200
     //VGA    
-    
+    output hsync, vsync,           // Horizontal and vertical sync
+    output [11:0] rgb 
     
 );
+
+wire [31:0] instTotal;
 
 SD_Data_Decoder u_SD_Data_Decoder(
     .clk(clk),
@@ -52,6 +55,7 @@ SD_Data_Decoder u_SD_Data_Decoder(
     .LRULoadStore(LRULoadStore),
     .LRUInst(LRUInst),
     .LRULineReady(LRULineReady),
+    .instTotal(instTotal),
     
     .clk_sd(clk_sd),
     .rstn(rstn),
@@ -61,6 +65,21 @@ SD_Data_Decoder u_SD_Data_Decoder(
     .sddat0(sddat0),
     .uart_tx(uart_tx)
 );
-
-
+/*
+vga_demo u_vga_demo(
+    .clk(clk),
+    .hsync(hsync),
+    .vsync(vsync),
+    .rgb(rgb),
+    .instTotal(instTotal),
+    .accessesTotal(accessesTotal),
+    .evictionTotal(evictionTotal),
+    .writeHitTotal(writeHitTotal),
+    .readHitTotal(readHitTotal),
+    .writeMissTotal(writeMissTotal),
+    .readMissTotal(readMissTotal),
+    .hitTotal(hitTotal),
+    .missTotal(missTotal)
+);
+*/
 endmodule

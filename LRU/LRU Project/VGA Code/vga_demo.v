@@ -5,7 +5,16 @@ module vga_demo
 
     // VGA output signals
     output hsync, vsync,           // Horizontal and vertical sync
-    output [CD-1:0] rgb            // RGB pixel output
+    output [CD-1:0] rgb,            // RGB pixel output
+    input wire [31:0] accessesTotal,
+    input wire [31:0] evictionTotal,
+    input wire [31:0] writeHitTotal,
+    input wire [31:0] readHitTotal,
+    input wire [31:0] writeMissTotal,
+    input wire [31:0] readMissTotal,
+    input wire [31:0] instTotal,
+    input wire [31:0] hitTotal,
+    input wire [31:0] missTotal
    );
 
    // Internal wires for synchronization and RGB data
@@ -20,7 +29,16 @@ module vga_demo
       .clk(clk),
       .x(hc), 
       .y(vc),
-      .vga_rgb(vga_rgb)
+      .vga_rgb(vga_rgb),
+      .accessesTotal(accessesTotal),
+      .evictionTotal(evictionTotal),
+      .writeHitTotal(writeHitTotal),
+      .readHitTotal(readHitTotal),
+      .writeMissTotal(writeMissTotal),
+      .readMissTotal(readMissTotal),
+      .instTotal(instTotal),
+      .hitTotal(hitTotal),
+      .missTotal(missTotal)
    );
 
 

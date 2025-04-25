@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log vga_demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_demo.tcl
+EAStep vivado -log supertop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source supertop.tcl

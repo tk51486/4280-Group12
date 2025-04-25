@@ -1,11 +1,12 @@
-set_property SRC_FILE_INFO {cfile:{c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/pll/pll.xdc} rfile:{../LRU Project.srcs/sources_1/ip/pll/pll.xdc} id:1 order:EARLY scoped_inst:pll1/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:{c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} rfile:{../LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} id:2 order:EARLY scoped_inst:u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1} [current_design]
-set_property SRC_FILE_INFO {cfile:{C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc} rfile:{../LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc} id:3} [current_design]
+set_property SRC_FILE_INFO {cfile:{c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/pll/pll.xdc} rfile:{../LRU Project.srcs/sources_1/ip/pll/pll.xdc} id:1 order:EARLY scoped_inst:pll1/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:{c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} rfile:{../LRU Project.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc} id:2 order:EARLY scoped_inst:u_DirectLRU/u_MemController/mem_ex/mig1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc} rfile:{../LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc} id:3} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/Nexys4DDR_VGA.xdc} rfile:{../VGA Code/Nexys4DDR_VGA.xdc} id:4} [current_design]
 current_instance pll1/inst
 set_property src_info {type:SCOPED_XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in]] 0.100
 current_instance
-current_instance u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1
+current_instance u_DirectLRU/u_MemController/mem_ex/mig1
 set_property src_info {type:SCOPED_XDC file:2 line:289 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC PHASER_OUT_PHY_X1Y7 [get_cells  -hier -filter {NAME =~ */ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out}]
 set_property src_info {type:SCOPED_XDC file:2 line:290 export:INPUT save:INPUT read:READ} [current_design]
@@ -65,3 +66,13 @@ set_property src_info {type:XDC file:3 line:354 export:INPUT save:INPUT read:REA
 connect_debug_port u_ila_0/probe2 [get_nets [list {CurrNum[0]} {CurrNum[1]} {CurrNum[2]} {CurrNum[3]} {CurrNum[4]} {CurrNum[5]} {CurrNum[6]} {CurrNum[7]}]]
 set_property src_info {type:XDC file:3 line:355 export:INPUT save:INPUT read:READ} [current_design]
 connect_debug_port u_ila_1/probe0 [get_nets [list {count_reg[0]} {count_reg[1]} {count_reg[2]} {count_reg[3]} {count_reg[4]} {count_reg[5]} {count_reg[6]} {count_reg[7]} {count_reg[8]} {count_reg[9]} {count_reg[10]} {count_reg[11]} {count_reg[12]} {count_reg[13]} {count_reg[14]} {count_reg[15]} {count_reg[16]} {count_reg[17]} {count_reg[18]} {count_reg[19]} {count_reg[20]} {count_reg[21]} {count_reg[22]} {count_reg[23]} {count_reg[24]} {count_reg[25]} {count_reg[26]} {count_reg[27]} {count_reg[28]} {count_reg[29]} {count_reg[30]} {count_reg[31]} {count_reg[32]} {count_reg[33]} {count_reg[34]}]]
+set_property src_info {type:XDC file:4 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+set_property src_info {type:XDC file:4 line:25 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN H6    IOSTANDARD LVCMOS33 } [get_ports { sw[12] }]; #IO_L24P_T3_35 Sch=sw[12]
+set_property src_info {type:XDC file:4 line:26 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { sw[13] }]; #IO_L20P_T3_A08_D24_14 Sch=sw[13]
+set_property src_info {type:XDC file:4 line:28 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { sw[14] }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=sw[14]
+set_property src_info {type:XDC file:4 line:29 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { sw[15] }]; #IO_L21P_T3_DQS_14 Sch=sw[15]

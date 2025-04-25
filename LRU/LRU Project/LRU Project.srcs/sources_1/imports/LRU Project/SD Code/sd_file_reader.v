@@ -569,7 +569,7 @@ always @ (posedge clk or negedge rstn)
             fptr <= fptr + 1;
             {outen,outbyte} <= {1'b1,rdata};
         end else
-            {outen,outbyte} <= 0;
+            {outen,outbyte} <= {1'b0,outbyte};
     end
 //end
 

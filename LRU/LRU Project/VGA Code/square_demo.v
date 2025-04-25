@@ -3,7 +3,16 @@
 module square_demo (
     input clk,
     input [10:0] x, y,                // Current pixel coordinates (x and y)
-    output [11:0] vga_rgb
+    output [11:0] vga_rgb,
+    input wire [31:0] accessesTotal,
+    input wire [31:0] evictionTotal,
+    input wire [31:0] writeHitTotal,
+    input wire [31:0] readHitTotal,
+    input wire [31:0] writeMissTotal,
+    input wire [31:0] readMissTotal,
+    input wire [31:0] instTotal,
+    input wire [31:0] hitTotal,
+    input wire [31:0] missTotal
 );
 
 // Internal signals
@@ -17,12 +26,12 @@ initial  use_rgb = 0;
 reg [3:0] r, g, b;                    // Individual RGB color channels
 
 reg start;
-reg [30:154] rowBuffer [30:110];
-reg [155:346] numBuffer [30:110];
+reg [30:154] rowBuffer [30:120];
+reg [155:346] numBuffer [30:120];
 reg [15:0] numIt;
 reg [15:0] statIt;
 reg [15:0] thingIt;
-reg [23:0] stats [7:0];
+reg [23:0] stats [8:0];
 reg [10:0] currStat;
 reg [40:0] count;
 reg valid;
@@ -37,6 +46,7 @@ initial begin
     stats[5] = 24'hfd;
     stats[6] = 24'hce;
     stats[7] = 24'hdf;
+    stats[8] = 24'hca;
     currStat = 0;
     thingIt = 0;
     valid = 0;
@@ -129,6 +139,17 @@ initial begin
     rowBuffer[107] = 125'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
     rowBuffer[108] = 125'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
     rowBuffer[109] = 125'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+    
+    rowBuffer[110] = 125'b0111110010001001111100001110011111000000000011111000111000111110001110001000000000000000000000000000000000000000000000;
+    rowBuffer[111] = 125'b0100000010001000010000010000000100000000000000100001000100001000010001001000000011100000000000000000000000000000000000;
+    rowBuffer[112] = 125'b0100000010001000010000100000000100000000000000100001000100001000010001001000000011100000000000000000000000000000000000;
+    rowBuffer[113] = 125'b0111110010001000010000100000000100000000000000100001000100001000011111001000000000000000000000000000000000000000000000;
+    rowBuffer[114] = 125'b0100000001010000010000100000000100000000000000100001000100001000010001001000000011100000000000000000000000000000000000;
+    rowBuffer[115] = 125'b0100000001010000010000010000000100000000000000100001000100001000010001001000000011100000000000000000000000000000000000;
+    rowBuffer[116] = 125'b0111110000100001111100001110000100000000000000100000111000001000010001001111100000000000000000000000000000000000000000;
+    rowBuffer[117] = 125'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+    rowBuffer[118] = 125'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+    rowBuffer[119] = 125'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 
     numBuffer[30] = 192'b0;
     numBuffer[31] = 192'b0;
@@ -210,17 +231,37 @@ initial begin
     numBuffer[107] = 192'b0;
     numBuffer[108] = 192'b0;
     numBuffer[109] = 192'b0;
+    numBuffer[110] = 192'b0;
+    numBuffer[111] = 192'b0;
+    numBuffer[112] = 192'b0;
+    numBuffer[113] = 192'b0;
+    numBuffer[114] = 192'b0;
+    numBuffer[115] = 192'b0;
+    numBuffer[116] = 192'b0;
+    numBuffer[117] = 192'b0;
+    numBuffer[118] = 192'b0;
+    numBuffer[119] = 192'b0;
 end
 
 
 
-
+always @(*)begin
+    stats[0] = accessesTotal[23:0];
+    stats[1] = writeHitTotal[23:0];
+    stats[2] = readHitTotal[23:0];
+    stats[3] = writeMissTotal[23:0];
+    stats[4] = readMissTotal[23:0];
+    stats[5] = instTotal[23:0];
+    stats[6] = hitTotal[23:0];
+    stats[7] = missTotal[23:0];
+    stats[8] = evictionTotal[23:0];
+end
 // Combinational logic to set color based on pixel position
 always @(posedge clk) begin
         r = use_rgb[3:0];
         g = use_rgb[7:4];
         b = use_rgb[11:8];
-        if(y > 29 && y < 110) begin
+        if(y > 29 && y < 120) begin
             if(x > 29 && x < 155)begin
                if(rowBuffer[y][x])begin
                     r = 4'b1111 - use_rgb[3:0];
@@ -240,8 +281,8 @@ end
 
 always @(posedge clk)begin
     //count = count + 1;
-    if(numIt < 110)begin
-        if(statIt < 8)begin
+    if( 29 < numIt < 120)begin
+        if(statIt < 9)begin
                     case (stats[statIt][3:0])
                         4'b0000: begin
                             numBuffer[numIt][340:346] = 7'b0011100;
@@ -1183,11 +1224,14 @@ always @(posedge clk)begin
                     numIt = numIt + 10;
             end 
             else begin 
-                //statIt = 0;
+                statIt = 0;
             end
     end
-    else begin 
-       //numIt = 30;
+    else if(numIt > 119) begin 
+       numIt = 30;
+    end 
+    else if(numIt < 30) begin
+       numIt = numIt + 1;
     end
 end
 

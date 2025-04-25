@@ -29,7 +29,7 @@ module SD_Data_Decoder(
     output reg [10:0] LRUIndex,
     output reg LRULoadStore,
     output reg [20:0] LRUInst,
-    output reg [32:0] instTotal,
+    output reg [31:0] instTotal,
 
 
     output reg LRULineReady,
@@ -44,7 +44,7 @@ module SD_Data_Decoder(
 );
 wire [7:0] CurrNum;
 wire CurrFlag;
-
+assign led[7:0] = CurrNum[7:0];
 reg [127:0] CurrentLine;
 reg [127:0] LRUParse;
 reg [60:0] ParseIT;
@@ -52,7 +52,7 @@ reg [27:0] LRUAddr;
 reg [31:0] instTotal;
 
 reg [15:0] debugLED;
-assign led = debugLED;
+//assign led = debugLED;
 
 sd_file_reader #(
     .FILE_NAME_LEN    ( 9             ),  // the length of "example.txt" (in bytes)
