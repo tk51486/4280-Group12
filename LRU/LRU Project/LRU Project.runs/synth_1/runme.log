@@ -8,7 +8,7 @@
   **** SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
   **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
   **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-  **** Start of session at: Thu Apr 24 20:09:37 2025
+  **** Start of session at: Thu Apr 24 21:31:42 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -23,9 +23,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21664
+INFO: [Synth 8-7075] Helper process launched with PID 24156
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1113.781 ; gain = 468.152
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1113.332 ; gain = 467.250
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:79]
 INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:153]
@@ -37,8 +37,8 @@ WARNING: [Synth 8-8895] 'mem_transaction_width' is already implicitly declared o
 WARNING: [Synth 8-8895] 'mem_wstrobe' is already implicitly declared on line 73 [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:87]
 WARNING: [Synth 8-8895] 'mem_rstrobe' is already implicitly declared on line 72 [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:87]
 INFO: [Synth 8-6157] synthesizing module 'supertop' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/realtime/pll_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/realtime/pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/realtime/pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/realtime/pll_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'IO_Management' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/IO_Management.v:11]
 INFO: [Synth 8-6157] synthesizing module 'SD_Data_Decoder' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:23]
 INFO: [Synth 8-6157] synthesizing module 'sd_file_reader' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:12]
@@ -72,8 +72,8 @@ INFO: [Synth 8-6157] synthesizing module 'StatTracker' [C:/Users/tk51486/Documen
 INFO: [Synth 8-6157] synthesizing module 'DirectLRU' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MemController' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mem_example' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/mem_example.v:16]
-INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/realtime/mig_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/realtime/mig_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/realtime/mig_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/realtime/mig_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'flag_sync' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/flag_sync.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'flag_sync' (0#1) [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/flag_sync.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ff_sync' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ff_sync.v:1]
@@ -234,24 +234,24 @@ WARNING: [Synth 8-7129] Port clk in module SD_Data_Decoder is either unconnected
 WARNING: [Synth 8-7129] Port resetn in module SD_Data_Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port BTNL in module supertop is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1268.480 ; gain = 622.852
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.922 ; gain = 621.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1268.480 ; gain = 622.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.922 ; gain = 621.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1268.480 ; gain = 622.852
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.922 ; gain = 621.840
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1268.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1267.922 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/pll/pll/pll_in_context.xdc] for cell 'pll1'
-Finished Parsing XDC File [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Parsing XDC File [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Finished Parsing XDC File [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/pll/pll/pll_in_context.xdc] for cell 'pll1'
 Parsing XDC File [c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1'
 Finished Parsing XDC File [c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1'
 Parsing XDC File [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
@@ -272,26 +272,26 @@ Parsing XDC File [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project
 Finished Parsing XDC File [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1353.988 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1348.223 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1353.988 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1348.223 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1353.988 ; gain = 708.359
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1348.223 ; gain = 702.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1353.988 ; gain = 708.359
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1348.223 ; gain = 702.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/pll/pll/pll_in_context.xdc}, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-9120-engr-d1409-008/pll/pll/pll_in_context.xdc}, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/pll/pll/pll_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15372-engr-d1409-008/pll/pll/pll_in_context.xdc}, line 6).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 2).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 3).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  {c:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 4).
@@ -387,12 +387,12 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  {
 Applied set_property KEEP_HIERARCHY = SOFT for pll1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for u_StatTracker/u_DirectLRU/u_MemController/mem_ex/mig1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1353.988 ; gain = 708.359
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1348.223 ; gain = 702.141
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sddat_stat_reg' in module 'sd_reader'
 INFO: [Synth 8-802] inferred FSM for state register 'filesystem_state_reg' in module 'sd_file_reader'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SD_Data_Decoder'
-DSP Debug: swapped A/B pins for adder 000001DF1CC51E20
+DSP Debug: swapped A/B pins for adder 000002709A63A6A0
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mem_example'
 INFO: [Synth 8-802] inferred FSM for state register 'lru_state_reg' in module 'DirectLRU'
 ---------------------------------------------------------------------------------------------------
@@ -426,7 +426,6 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
               STATE_READ |                              101 |                              010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mem_example'
-WARNING: [Synth 8-327] inferring latch for variable 'writeHitTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:120]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -438,18 +437,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'writeHitTotal_reg' [C:/User
              LRU_PROCESS |                              101 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'lru_state_reg' using encoding 'sequential' in module 'DirectLRU'
-WARNING: [Synth 8-327] inferring latch for variable 'accessesTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:159]
-WARNING: [Synth 8-327] inferring latch for variable 'evictionTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:163]
-WARNING: [Synth 8-327] inferring latch for variable 'readHitTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:181]
-WARNING: [Synth 8-327] inferring latch for variable 'writeMissTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:166]
-WARNING: [Synth 8-327] inferring latch for variable 'readMissTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:174]
-WARNING: [Synth 8-327] inferring latch for variable 'hitTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:183]
-WARNING: [Synth 8-327] inferring latch for variable 'missTotal_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:176]
 WARNING: [Synth 8-327] inferring latch for variable 'ram_loadstore_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:65]
 WARNING: [Synth 8-327] inferring latch for variable 'ram_start_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:66]
 WARNING: [Synth 8-327] inferring latch for variable 'line_to_ram_reg' [C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:68]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1353.988 ; gain = 708.359
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1348.223 ; gain = 702.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -457,7 +449,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input  128 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 19    
+	   2 Input   32 Bit       Adders := 11    
 	   3 Input   32 Bit       Adders := 2     
 	   4 Input   32 Bit       Adders := 1     
 	   3 Input   28 Bit       Adders := 1     
@@ -524,20 +516,21 @@ Detailed RTL Component Info :
 	   8 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 4     
 	   8 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 15    
 	  12 Input    3 Bit        Muxes := 1     
 	   5 Input    3 Bit        Muxes := 2     
-	   6 Input    3 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 4     
 	   7 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 125   
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 126   
 	   8 Input    1 Bit        Muxes := 7     
 	  10 Input    1 Bit        Muxes := 2     
 	   4 Input    1 Bit        Muxes := 4     
 	   3 Input    1 Bit        Muxes := 2     
 	   7 Input    1 Bit        Muxes := 8     
-	   6 Input    1 Bit        Muxes := 31    
+	   6 Input    1 Bit        Muxes := 23    
 	   5 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -621,109 +614,8 @@ WARNING: [Synth 8-7129] Port uart_tx in module IO_Management is either unconnect
 WARNING: [Synth 8-7129] Port clk in module IO_Management is either unconnected or has no load
 WARNING: [Synth 8-7129] Port resetn in module IO_Management is either unconnected or has no load
 WARNING: [Synth 8-7129] Port BTNL in module supertop is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[31]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[30]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[29]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[28]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[27]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[26]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[25]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[24]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[23]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[22]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[21]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[20]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[19]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[18]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[17]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[16]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[15]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[14]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[13]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[12]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[11]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[10]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[9]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[8]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[7]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[6]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[5]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[4]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[3]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[2]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[1]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/accessesTotal_reg[0]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[31]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[30]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[29]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[28]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[27]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[26]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[25]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[24]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[23]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[22]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[21]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[20]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[19]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[18]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[17]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[16]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[15]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[14]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[13]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[12]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[11]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[10]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[9]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[8]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[7]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[6]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[5]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[4]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[3]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[2]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[1]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/evictionTotal_reg[0]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[31]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[30]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[29]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[28]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[27]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[26]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[25]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[24]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[23]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[22]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[21]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[20]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[19]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[18]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[17]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[16]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[15]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[14]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[13]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[12]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[11]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[10]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[9]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[8]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[7]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[6]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[5]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[4]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[3]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[2]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[1]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/readHitTotal_reg[0]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/writeMissTotal_reg[31]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/writeMissTotal_reg[30]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/writeMissTotal_reg[29]) is unused and will be removed from module supertop.
-WARNING: [Synth 8-3332] Sequential element (u_StatTracker/u_DirectLRU/writeMissTotal_reg[28]) is unused and will be removed from module supertop.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1437.371 ; gain = 791.742
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1437.812 ; gain = 791.730
 ---------------------------------------------------------------------------------
  Sort Area is  read_sector_no1_0 : 0 0 : 1632 3217 : Used 1 time 0
  Sort Area is  read_sector_no1_0 : 0 1 : 1585 3217 : Used 1 time 0
@@ -765,19 +657,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1510.098 ; gain = 864.469
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1507.043 ; gain = 860.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1546.465 ; gain = 900.836
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1543.680 ; gain = 897.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1576.180 ; gain = 930.551
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1576.926 ; gain = 930.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -795,37 +687,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -863,50 +755,49 @@ Report Cell Usage:
 +------+--------+------+
 |1     |mig     |     1|
 |2     |pll     |     1|
-|3     |BUFG    |     1|
-|4     |CARRY4  |   162|
-|5     |DSP48E1 |    11|
-|8     |LUT1    |     7|
-|9     |LUT2    |   463|
-|10    |LUT3    |   326|
-|11    |LUT4    |   361|
-|12    |LUT5    |   422|
-|13    |LUT6    |   762|
-|14    |MUXF7   |    37|
-|15    |FDCE    |   919|
-|16    |FDPE    |    21|
-|17    |FDRE    |   490|
-|18    |LD      |    53|
-|19    |IBUF    |     2|
-|20    |IOBUF   |     1|
-|21    |OBUF    |    21|
-|22    |OBUFT   |     1|
+|3     |CARRY4  |   158|
+|4     |DSP48E1 |    11|
+|7     |LUT1    |     7|
+|8     |LUT2    |   465|
+|9     |LUT3    |   315|
+|10    |LUT4    |   332|
+|11    |LUT5    |   413|
+|12    |LUT6    |   808|
+|13    |MUXF7   |    37|
+|14    |FDCE    |   919|
+|15    |FDPE    |    21|
+|16    |FDRE    |   507|
+|17    |LD      |    21|
+|18    |IBUF    |     2|
+|19    |IOBUF   |     1|
+|20    |OBUF    |    21|
+|21    |OBUFT   |     1|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 265 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1738.941 ; gain = 1007.805
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.941 ; gain = 1093.312
+Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1737.113 ; gain = 1010.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1737.113 ; gain = 1091.031
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1748.160 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 264 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1746.297 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 228 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1751.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1749.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 54 instances were transformed.
+  A total of 22 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
-  LD => LDCE: 53 instances
+  LD => LDCE: 21 instances
 
-Synth Design complete | Checksum: 4146ddca
+Synth Design complete | Checksum: d1505bf9
 INFO: [Common 17-83] Releasing license: Synthesis
-67 Infos, 308 Warnings, 1 Critical Warnings and 0 Errors encountered.
+66 Infos, 200 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1751.816 ; gain = 1310.062
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1749.938 ; gain = 1308.125
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1751.816 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1749.938 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/supertop.dcp' has been generated.
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 24 20:10:20 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 24 21:32:31 2025...

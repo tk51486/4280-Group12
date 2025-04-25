@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Thu Apr 24 20:11:44 2025
+| Date         : Thu Apr 24 21:33:57 2025
 | Host         : engr-d1409-008 running 64-bit major release  (build 9200)
 | Command      : report_drc -file supertop_drc_routed.rpt -pb supertop_drc_routed.pb -rpx supertop_drc_routed.rpx
 | Design       : supertop
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 55
+             Checks found: 52
 +-----------+----------+-----------------------------------------------------+--------+
 | Rule      | Severity | Description                                         | Checks |
 +-----------+----------+-----------------------------------------------------+--------+
@@ -36,8 +36,7 @@ Table of Contents
 | PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
 | PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
 | PDRC-140  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 1      |
-| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 2      |
-| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 2      |
+| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
 | PDRC-153  | Warning  | Gated clock check                                   | 3      |
 | REQP-1709 | Warning  | Clock output buffering                              | 1      |
 +-----------+----------+-----------------------------------------------------+--------+
@@ -259,52 +258,37 @@ Related violations: <none>
 
 PDRC-132#1 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X65Y66 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X75Y55 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-132#2 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X68Y66 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X75Y58 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-132#3 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X69Y66 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X77Y55 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X72Y6 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X81Y68 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X72Y6 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X81Y68 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-140#1 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X66Y65 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X74Y56 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X66Y93 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#2 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X78Y68 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#1 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X66Y93 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#2 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X78Y68 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X66Y95 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-153#1 Warning
@@ -319,7 +303,7 @@ Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/FSM_sequential_lru_state_reg[2] is a gated clock net sourced by a combinational pin u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_2/O, cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore__0 is a gated clock net sourced by a combinational pin u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_2/O, cell u_StatTracker/u_DirectLRU/u_MemController/mem_ex/complete_sync/ram_loadstore_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1709#1 Warning
