@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date             : Fri Apr 25 03:17:57 2025
+| Date             : Fri Apr 25 03:43:00 2025
 | Host             : engr-d1409-009 running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_demo_power_routed.rpt -pb vga_demo_power_summary_routed.pb -rpx vga_demo_power_routed.rpx
 | Design           : vga_demo
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.098        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.000        |
+| Dynamic (W)              | 0.001        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.6         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.000 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |     4975 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     2922 |     63400 |            4.61 |
+| Slice Logic    |    <0.001 |     5852 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     3329 |     63400 |            5.25 |
 |   CARRY4       |    <0.001 |        8 |     15850 |            0.05 |
-|   F7/F8 Muxes  |    <0.001 |      300 |     63400 |            0.47 |
+|   F7/F8 Muxes  |    <0.001 |      383 |     63400 |            0.60 |
+|   Register     |    <0.001 |     1585 |    126800 |            1.25 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Register     |    <0.001 |     1210 |    126800 |            0.95 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |     3382 |       --- |             --- |
+| Signals        |    <0.001 |     3696 |       --- |             --- |
 | I/O            |    <0.001 |       15 |       210 |            7.14 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.098 |          |           |                 |

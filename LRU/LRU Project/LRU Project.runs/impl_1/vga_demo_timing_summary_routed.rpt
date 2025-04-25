@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Fri Apr 25 03:17:56 2025
+| Date         : Fri Apr 25 03:42:59 2025
 | Host         : engr-d1409-009 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file vga_demo_timing_summary_routed.rpt -pb vga_demo_timing_summary_routed.pb -rpx vga_demo_timing_summary_routed.rpx -warn_on_violation
 | Design       : vga_demo
@@ -53,10 +53,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (1210)
+1. checking no_clock (1585)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (2105)
+4. checking unconstrained_internal_endpoints (2482)
 5. checking no_input_delay (0)
 6. checking no_output_delay (14)
 7. checking multiple_clock (0)
@@ -66,9 +66,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (1210)
+1. checking no_clock (1585)
 ---------------------------
- There are 1210 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 1585 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock (0)
@@ -81,9 +81,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (2105)
+4. checking unconstrained_internal_endpoints (2482)
 ---------------------------------------------------
- There are 2105 pins that are not constrained for maximum delay. (HIGH)
+ There are 2482 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

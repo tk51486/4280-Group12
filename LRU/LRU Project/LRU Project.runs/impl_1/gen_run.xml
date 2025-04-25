@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745565425">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745566927">
   <File Type="PA-TCL" Name="vga_demo.tcl"/>
   <File Type="REPORTS-TCL" Name="vga_demo_reports.tcl"/>
   <File Type="INIT-TIMING" Name="vga_demo_timing_summary_init.rpt"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745565155" LaunchWriteIncrSynthDcp="true">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745566634" LaunchWriteIncrSynthDcp="true">
   <File Type="PA-TCL" Name="vga_demo.tcl"/>
   <File Type="REPORTS-TCL" Name="vga_demo_reports.tcl"/>
   <File Type="RDS-RDS" Name="vga_demo.vds"/>

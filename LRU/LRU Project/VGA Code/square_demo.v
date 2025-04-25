@@ -1172,13 +1172,23 @@ always @(posedge clk)begin
                             numBuffer[numIt+6][305:311] = 7'b0000000;
                         end
                     endcase
+                    numBuffer[numIt+0][290:304] = 14'b00111000000000;
+                    numBuffer[numIt+1][290:304] = 14'b01000100100010;
+                    numBuffer[numIt+2][290:304] = 14'b01000100010100;
+                    numBuffer[numIt+3][290:304] = 14'b01000100001000;
+                    numBuffer[numIt+4][290:304] = 14'b01000100010100;
+                    numBuffer[numIt+5][290:304] = 14'b01000100100010;
+                    numBuffer[numIt+6][290:304] = 14'b00111000000000;
                     statIt = statIt + 1;
                     numIt = numIt + 10;
+            end 
+            else begin 
+                //statIt = 0;
             end
-        //statIt = 0;
-        
     end
-    //numIt = 0;
+    else begin 
+       //numIt = 30;
+    end
 end
 
 // Output the final RGB value (reordered from {r,g,b} to {b,g,r})

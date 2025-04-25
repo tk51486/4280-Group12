@@ -3,8 +3,8 @@
 # SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Fri Apr 25 03:12:38 2025
-# Process ID         : 26188
+# Start of session at: Fri Apr 25 03:37:16 2025
+# Process ID         : 12324
 # Current directory  : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1
 # Command line       : vivado.exe -log vga_demo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_demo.tcl
 # Log file           : C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/vga_demo.vds
@@ -19,7 +19,7 @@
 # Host memory        : 34033 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36180 MB
-# Available Virtual  : 21657 MB
+# Available Virtual  : 21670 MB
 #-----------------------------------------------------------
 Sourcing tcl script 'C:/Users/aam08331/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 source vga_demo.tcl -notrace
@@ -32,9 +32,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14996
+INFO: [Synth 8-7075] Helper process launched with PID 24388
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1113.766 ; gain = 466.848
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1113.094 ; gain = 467.227
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:79]
 INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:153]
@@ -62,20 +62,19 @@ INFO: [Synth 8-6157] synthesizing module 'frame_counter' [C:/Users/aam08331/Docu
 INFO: [Synth 8-6155] done synthesizing module 'frame_counter' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/frame_counter.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'vga_sync_demo' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_sync_demo.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'vga_demo' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_demo.v:1]
-WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:242]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 4634.676 ; gain = 3987.758
+Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 4721.973 ; gain = 4076.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 4634.676 ; gain = 3987.758
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 4721.973 ; gain = 4076.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 4634.676 ; gain = 3987.758
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 4721.973 ; gain = 4076.105
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 4634.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 4721.973 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -199,29 +198,29 @@ Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Projec
 Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 4957.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 5037.336 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.251 . Memory (MB): peak = 4957.469 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.258 . Memory (MB): peak = 5037.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:39 ; elapsed = 00:01:36 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Constraint Validation : Time (s): cpu = 00:01:39 ; elapsed = 00:01:37 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:39 ; elapsed = 00:01:36 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:39 ; elapsed = 00:01:37 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:01:36 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:01:37 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:32 ; elapsed = 00:03:32 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:55 ; elapsed = 00:03:54 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -240,20 +239,24 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input  192 Bit        Muxes := 162   
+	   2 Input  192 Bit        Muxes := 324   
 	  16 Input  192 Bit        Muxes := 162   
 	  81 Input  125 Bit        Muxes := 1     
 	   9 Input   24 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 243   
+	   7 Input   15 Bit        Muxes := 66    
+	   8 Input   15 Bit        Muxes := 75    
+	   6 Input   15 Bit        Muxes := 81    
 	   2 Input   12 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 2     
 	   2 Input    7 Bit        Muxes := 486   
 	   7 Input    7 Bit        Muxes := 396   
 	   2 Input    6 Bit        Muxes := 1789  
-	   4 Input    6 Bit        Muxes := 785   
-	   6 Input    6 Bit        Muxes := 207   
 	   5 Input    6 Bit        Muxes := 261   
-	   3 Input    6 Bit        Muxes := 110   
+	   4 Input    6 Bit        Muxes := 785   
 	   7 Input    6 Bit        Muxes := 76    
+	   3 Input    6 Bit        Muxes := 110   
+	   6 Input    6 Bit        Muxes := 207   
 	   2 Input    4 Bit        Muxes := 3     
 	   2 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -271,15 +274,242 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[107][290]' (FDRE) to 'numBuffer_reg[107][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[106][290]' (FDRE) to 'numBuffer_reg[106][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[105][290]' (FDRE) to 'numBuffer_reg[105][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[104][290]' (FDRE) to 'numBuffer_reg[104][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[110][290]' (FDRE) to 'numBuffer_reg[110][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[109][290]' (FDRE) to 'numBuffer_reg[109][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[108][290]' (FDRE) to 'numBuffer_reg[108][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[103][290]' (FDRE) to 'numBuffer_reg[103][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[102][290]' (FDRE) to 'numBuffer_reg[102][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[101][290]' (FDRE) to 'numBuffer_reg[101][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[100][290]' (FDRE) to 'numBuffer_reg[100][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[99][290]' (FDRE) to 'numBuffer_reg[99][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[98][290]' (FDRE) to 'numBuffer_reg[98][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[97][290]' (FDRE) to 'numBuffer_reg[97][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[96][290]' (FDRE) to 'numBuffer_reg[96][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[95][290]' (FDRE) to 'numBuffer_reg[95][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[94][290]' (FDRE) to 'numBuffer_reg[94][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[93][290]' (FDRE) to 'numBuffer_reg[93][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[92][290]' (FDRE) to 'numBuffer_reg[92][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[91][290]' (FDRE) to 'numBuffer_reg[91][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[90][290]' (FDRE) to 'numBuffer_reg[90][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[89][290]' (FDRE) to 'numBuffer_reg[89][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[88][290]' (FDRE) to 'numBuffer_reg[88][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][290]' (FDRE) to 'numBuffer_reg[87][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[86][290]' (FDRE) to 'numBuffer_reg[86][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[85][290]' (FDRE) to 'numBuffer_reg[85][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[84][290]' (FDRE) to 'numBuffer_reg[84][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[83][290]' (FDRE) to 'numBuffer_reg[83][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[82][290]' (FDRE) to 'numBuffer_reg[82][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[81][290]' (FDRE) to 'numBuffer_reg[81][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[80][290]' (FDRE) to 'numBuffer_reg[80][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[79][290]' (FDRE) to 'numBuffer_reg[79][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[78][290]' (FDRE) to 'numBuffer_reg[78][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[77][290]' (FDRE) to 'numBuffer_reg[77][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[76][290]' (FDRE) to 'numBuffer_reg[76][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[75][290]' (FDRE) to 'numBuffer_reg[75][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[74][290]' (FDRE) to 'numBuffer_reg[74][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[73][290]' (FDRE) to 'numBuffer_reg[73][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[72][290]' (FDRE) to 'numBuffer_reg[72][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[71][290]' (FDRE) to 'numBuffer_reg[71][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[70][290]' (FDRE) to 'numBuffer_reg[70][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[69][290]' (FDRE) to 'numBuffer_reg[69][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[68][290]' (FDRE) to 'numBuffer_reg[68][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[67][290]' (FDRE) to 'numBuffer_reg[67][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[66][290]' (FDRE) to 'numBuffer_reg[66][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[65][290]' (FDRE) to 'numBuffer_reg[65][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[64][290]' (FDRE) to 'numBuffer_reg[64][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[63][290]' (FDRE) to 'numBuffer_reg[63][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[62][290]' (FDRE) to 'numBuffer_reg[62][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][290]' (FDRE) to 'numBuffer_reg[61][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[60][290]' (FDRE) to 'numBuffer_reg[60][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[59][290]' (FDRE) to 'numBuffer_reg[59][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[58][290]' (FDRE) to 'numBuffer_reg[58][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[57][290]' (FDRE) to 'numBuffer_reg[57][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[56][290]' (FDRE) to 'numBuffer_reg[56][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[55][290]' (FDRE) to 'numBuffer_reg[55][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[54][290]' (FDRE) to 'numBuffer_reg[54][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[53][290]' (FDRE) to 'numBuffer_reg[53][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[52][290]' (FDRE) to 'numBuffer_reg[52][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[51][290]' (FDRE) to 'numBuffer_reg[51][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[50][290]' (FDRE) to 'numBuffer_reg[50][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[49][290]' (FDRE) to 'numBuffer_reg[49][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[48][290]' (FDRE) to 'numBuffer_reg[48][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[47][290]' (FDRE) to 'numBuffer_reg[47][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[46][290]' (FDRE) to 'numBuffer_reg[46][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[45][290]' (FDRE) to 'numBuffer_reg[45][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[44][290]' (FDRE) to 'numBuffer_reg[44][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[43][290]' (FDRE) to 'numBuffer_reg[43][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[42][290]' (FDRE) to 'numBuffer_reg[42][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[41][290]' (FDRE) to 'numBuffer_reg[41][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[40][290]' (FDRE) to 'numBuffer_reg[40][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[39][290]' (FDRE) to 'numBuffer_reg[39][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[38][290]' (FDRE) to 'numBuffer_reg[38][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[37][290]' (FDRE) to 'numBuffer_reg[37][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[36][290]' (FDRE) to 'numBuffer_reg[36][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][290]' (FDRE) to 'numBuffer_reg[35][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[34][290]' (FDRE) to 'numBuffer_reg[34][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[33][290]' (FDRE) to 'numBuffer_reg[33][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[32][290]' (FDRE) to 'numBuffer_reg[32][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[31][290]' (FDRE) to 'numBuffer_reg[31][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[30][290]' (FDRE) to 'numBuffer_reg[30][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[107][291]' (FDRE) to 'numBuffer_reg[107][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[106][291]' (FDRE) to 'numBuffer_reg[106][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[105][291]' (FDRE) to 'numBuffer_reg[105][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[104][291]' (FDRE) to 'numBuffer_reg[104][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[110][291]' (FDRE) to 'numBuffer_reg[110][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[109][291]' (FDRE) to 'numBuffer_reg[109][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[108][291]' (FDRE) to 'numBuffer_reg[108][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[103][291]' (FDRE) to 'numBuffer_reg[103][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[102][291]' (FDRE) to 'numBuffer_reg[102][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[101][291]' (FDRE) to 'numBuffer_reg[101][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[100][291]' (FDRE) to 'numBuffer_reg[100][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[99][291]' (FDRE) to 'numBuffer_reg[99][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[98][291]' (FDRE) to 'numBuffer_reg[98][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[97][291]' (FDRE) to 'numBuffer_reg[97][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[96][291]' (FDRE) to 'numBuffer_reg[96][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[95][291]' (FDRE) to 'numBuffer_reg[95][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[94][291]' (FDRE) to 'numBuffer_reg[94][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[93][291]' (FDRE) to 'numBuffer_reg[93][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[92][291]' (FDRE) to 'numBuffer_reg[92][297]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[107][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[106][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[105][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[104][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[110][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[109][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[108][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[103][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[102][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[101][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[100][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[99][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[98][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[97][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[96][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[95][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[94][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[93][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[92][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[91][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[90][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[89][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[88][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[87][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[86][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[85][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[84][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[83][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[82][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[81][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[80][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[79][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[78][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[77][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[76][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[75][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[74][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[73][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[72][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[71][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[70][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[69][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[68][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[67][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[66][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[65][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[64][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[63][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[62][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[61][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[60][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[59][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[58][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[57][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[56][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[55][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[54][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[53][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[52][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[51][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[50][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[49][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[48][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[47][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[46][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[45][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[44][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[43][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[42][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[41][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[40][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[39][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[38][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[37][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[36][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[35][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[34][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[33][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[32][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[31][304] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[30][304] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[107][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[106][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[105][305]' (FDE) to 'numBuffer_reg[105][311]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[105][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[104][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[110][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[109][305] )
@@ -288,145 +518,22 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffe
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[102][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[101][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[100][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[99][305]' (FDE) to 'numBuffer_reg[99][311]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[99][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[98][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[97][305]' (FDE) to 'numBuffer_reg[97][311]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[97][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[96][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[95][305]' (FDE) to 'numBuffer_reg[95][311]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[95][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[94][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[93][305] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[92][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[91][305]' (FDE) to 'numBuffer_reg[91][311]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[90][305]' (FDE) to 'numBuffer_reg[90][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[89][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[88][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][305]' (FDE) to 'numBuffer_reg[87][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[86][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[85][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[84][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[83][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[82][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[81][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[80][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[79][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[78][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[77][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[76][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[75][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[74][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[73][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[72][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[71][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[70][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[69][305]' (FDE) to 'numBuffer_reg[69][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[68][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[67][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[66][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[65][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[64][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[63][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[62][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[61][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[60][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[59][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[58][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[57][305]' (FDE) to 'numBuffer_reg[57][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[56][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[55][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[54][305]' (FDE) to 'numBuffer_reg[54][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[53][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[52][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[51][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[50][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[49][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[48][305]' (FDE) to 'numBuffer_reg[48][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[47][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[46][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[45][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[44][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[43][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[42][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[41][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[40][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[39][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[38][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[37][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[36][305]' (FDE) to 'numBuffer_reg[36][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[35][305] )
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[34][305]' (FDE) to 'numBuffer_reg[34][311]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[33][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[32][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[31][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[30][305] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[107][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[106][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[105][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[104][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[110][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[109][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[108][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[103][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[102][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[101][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[100][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[99][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[98][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[97][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[96][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[95][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[94][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[93][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[92][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[91][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[90][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[89][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[88][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[87][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[86][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[85][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[84][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[83][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[82][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[81][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[80][311] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[79][311] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[104][312]' (FDE) to 'numBuffer_reg[104][318]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[97][312]' (FDE) to 'numBuffer_reg[97][318]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[86][312]' (FDE) to 'numBuffer_reg[86][318]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[71][312]' (FDE) to 'numBuffer_reg[71][318]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[65][312]' (FDE) to 'numBuffer_reg[65][318]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][312]' (FDE) to 'numBuffer_reg[61][318]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[48][312]' (FDE) to 'numBuffer_reg[48][318]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[96][319]' (FDE) to 'numBuffer_reg[96][325]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][319]' (FDE) to 'numBuffer_reg[87][325]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[69][319]' (FDE) to 'numBuffer_reg[69][325]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[68][319]' (FDE) to 'numBuffer_reg[68][325]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][319]' (FDE) to 'numBuffer_reg[61][325]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[54][319]' (FDE) to 'numBuffer_reg[54][325]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[48][319]' (FDE) to 'numBuffer_reg[48][325]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[97][326]' (FDE) to 'numBuffer_reg[97][332]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][326]' (FDE) to 'numBuffer_reg[87][332]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[54][326]' (FDE) to 'numBuffer_reg[54][332]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[44][326]' (FDE) to 'numBuffer_reg[44][332]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[38][326]' (FDE) to 'numBuffer_reg[38][332]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][326]' (FDE) to 'numBuffer_reg[35][332]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[96][333]' (FDE) to 'numBuffer_reg[96][339]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[81][333]' (FDE) to 'numBuffer_reg[81][339]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[48][333]' (FDE) to 'numBuffer_reg[48][339]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[38][333]' (FDE) to 'numBuffer_reg[38][339]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[38][340]' (FDE) to 'numBuffer_reg[38][346]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][306]' (FDE) to 'numBuffer_reg[87][320]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][307]' (FDE) to 'numBuffer_reg[87][321]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][308]' (FDE) to 'numBuffer_reg[87][322]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][309]' (FDE) to 'numBuffer_reg[87][323]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[87][310]' (FDE) to 'numBuffer_reg[87][324]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][313]' (FDE) to 'numBuffer_reg[61][320]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][314]' (FDE) to 'numBuffer_reg[61][321]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][315]' (FDE) to 'numBuffer_reg[61][322]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][316]' (FDE) to 'numBuffer_reg[61][323]'
-INFO: [Synth 8-3886] merging instance 'numBuffer_reg[61][317]' (FDE) to 'numBuffer_reg[61][324]'
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
@@ -448,26 +555,26 @@ INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:51 ; elapsed = 00:03:58 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:14 ; elapsed = 00:04:22 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:54 ; elapsed = 00:04:02 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:18 ; elapsed = 00:04:26 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:55 ; elapsed = 00:04:03 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Timing Optimization : Time (s): cpu = 00:04:19 ; elapsed = 00:04:27 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:57 ; elapsed = 00:04:04 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Technology Mapping : Time (s): cpu = 00:04:20 ; elapsed = 00:04:28 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -485,37 +592,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:59 ; elapsed = 00:04:06 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished IO Insertion : Time (s): cpu = 00:04:22 ; elapsed = 00:04:31 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:59 ; elapsed = 00:04:06 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:22 ; elapsed = 00:04:31 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:59 ; elapsed = 00:04:06 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:23 ; elapsed = 00:04:31 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:59 ; elapsed = 00:04:06 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:23 ; elapsed = 00:04:31 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:00 ; elapsed = 00:04:07 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:23 ; elapsed = 00:04:31 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:00 ; elapsed = 00:04:07 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:23 ; elapsed = 00:04:31 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -533,41 +640,42 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     8|
-|3     |LUT1   |    10|
-|4     |LUT2   |   201|
-|5     |LUT3   |   355|
-|6     |LUT4   |   269|
-|7     |LUT5   |   592|
-|8     |LUT6   |  2025|
-|9     |MUXF7  |   240|
-|10    |MUXF8  |    60|
-|11    |FDRE   |  1199|
-|12    |IBUF   |     1|
-|13    |OBUF   |    14|
+|3     |LUT1   |     5|
+|4     |LUT2   |   170|
+|5     |LUT3   |   329|
+|6     |LUT4   |   533|
+|7     |LUT5   |   688|
+|8     |LUT6   |  2145|
+|9     |MUXF7  |   296|
+|10    |MUXF8  |    87|
+|11    |FDRE   |  1544|
+|12    |FDSE   |    30|
+|13    |IBUF   |     1|
+|14    |OBUF   |    14|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:00 ; elapsed = 00:04:07 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:23 ; elapsed = 00:04:31 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:33 ; elapsed = 00:03:23 . Memory (MB): peak = 4957.469 ; gain = 3987.758
-Synthesis Optimization Complete : Time (s): cpu = 00:04:00 ; elapsed = 00:04:07 . Memory (MB): peak = 4957.469 ; gain = 4310.551
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:56 ; elapsed = 00:03:47 . Memory (MB): peak = 5037.336 ; gain = 4076.105
+Synthesis Optimization Complete : Time (s): cpu = 00:04:23 ; elapsed = 00:04:32 . Memory (MB): peak = 5037.336 ; gain = 4391.469
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 4957.469 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 308 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 5037.336 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 391 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'vga_demo' is not ideal for floorplanning, since the cellview 'square_demo' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4957.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5037.336 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 78fa9a3c
+Synth Design complete | Checksum: a28c3ea
 INFO: [Common 17-83] Releasing license: Synthesis
-211 Infos, 44 Warnings, 35 Critical Warnings and 0 Errors encountered.
+315 Infos, 43 Warnings, 35 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:02 ; elapsed = 00:04:13 . Memory (MB): peak = 4957.469 ; gain = 4514.609
+synth_design: Time (s): cpu = 00:04:26 ; elapsed = 00:04:37 . Memory (MB): peak = 5037.336 ; gain = 4596.008
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4957.469 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 5037.336 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/vga_demo.dcp' has been generated.
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 25 03:16:57 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 25 03:42:00 2025...
