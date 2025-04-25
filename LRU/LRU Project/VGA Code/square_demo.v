@@ -12,7 +12,8 @@ module square_demo (
     input wire [31:0] readMissTotal,
     input wire [31:0] instTotal,
     input wire [31:0] hitTotal,
-    input wire [31:0] missTotal
+    input wire [31:0] missTotal,
+    input wire endFile
 );
 
 // Internal signals
@@ -281,957 +282,961 @@ end
 
 always @(posedge clk)begin
     //count = count + 1;
-    if( 29 < numIt < 120)begin
-        if(statIt < 9)begin
-                    case (stats[statIt][3:0])
-                        4'b0000: begin
-                            numBuffer[numIt][340:346] = 7'b0011100;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100010;
-                            numBuffer[numIt+3][340:346] = 7'b0100010;
-                            numBuffer[numIt+4][340:346] = 7'b0100010;
-                            numBuffer[numIt+5][340:346] = 7'b0100010;
-                            numBuffer[numIt+6][340:346] = 7'b0011100;
-                        end
-                        4'b0001: begin
-                            numBuffer[numIt][340:346] = 7'b0011100;
-                            numBuffer[numIt+1][340:346] = 7'b0011100;
-                            numBuffer[numIt+2][340:346] = 7'b0011100;
-                            numBuffer[numIt+3][340:346] = 7'b0011100;
-                            numBuffer[numIt+4][340:346] = 7'b0011100;
-                            numBuffer[numIt+5][340:346] = 7'b0011100;
-                            numBuffer[numIt+6][340:346] = 7'b0011100;
-                        end
-                        4'b0010: begin
-                            numBuffer[numIt][340:346] = 7'b0011100;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100110;
-                            numBuffer[numIt+3][340:346] = 7'b0001100;
-                            numBuffer[numIt+4][340:346] = 7'b0011000;
-                            numBuffer[numIt+5][340:346] = 7'b0110000;
-                            numBuffer[numIt+6][340:346] = 7'b0111110;
-                        end
-                        4'b0011: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt + 1][340:346] = 7'b0000010;
-                            numBuffer[numIt + 2][340:346] = 7'b0000010;
-                            numBuffer[numIt + 3][340:346] = 7'b0111110;
-                            numBuffer[numIt + 4][340:346] = 7'b0000010;
-                            numBuffer[numIt + 5][340:346] = 7'b0000010;
-                            numBuffer[numIt + 6][340:346] = 7'b0111110;
-                        end
-                        4'b0100: begin
-                            numBuffer[numIt][340:346] = 7'b0100010;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100010;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0000010;
-                            numBuffer[numIt+5][340:346] = 7'b0000010;
-                            numBuffer[numIt+6][340:346] = 7'b0000010;
-                        end
-                        4'b0101: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt+1][340:346] = 7'b0100000;
-                            numBuffer[numIt+2][340:346] = 7'b0100000;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0000010;
-                            numBuffer[numIt+5][340:346] = 7'b0000010;
-                            numBuffer[numIt+6][340:346] = 7'b0111110;
-                        end
-                        4'b0110: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt+1][340:346] = 7'b0100000;
-                            numBuffer[numIt+2][340:346] = 7'b0100000;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0100010;
-                            numBuffer[numIt+5][340:346] = 7'b0100010;
-                            numBuffer[numIt+6][340:346] = 7'b0111110;
-                        end
-                        4'b0111: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt+1][340:346] = 7'b0000010;
-                            numBuffer[numIt+2][340:346] = 7'b0000100;
-                            numBuffer[numIt+3][340:346] = 7'b0001000;
-                            numBuffer[numIt+4][340:346] = 7'b0010000;
-                            numBuffer[numIt+5][340:346] = 7'b0100000;
-                            numBuffer[numIt+6][340:346] = 7'b0100000;
-                        end
-                        4'b1000: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100010;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0100010;
-                            numBuffer[numIt+5][340:346] = 7'b0100010;
-                            numBuffer[numIt+6][340:346] = 7'b0111110;
-                        end
-                        4'b1001: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100010;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0000010;
-                            numBuffer[numIt+5][340:346] = 7'b0000010;
-                            numBuffer[numIt+6][340:346] = 7'b0111110;
-                        end
-                        4'b1010: begin
-                            numBuffer[numIt][340:346] = 7'b0011100;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100010;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0100010;
-                            numBuffer[numIt+5][340:346] = 7'b0100010;
-                            numBuffer[numIt+6][340:346] = 7'b0100010;
-                        end
-                        4'b1011: begin
-                            numBuffer[numIt][340:346] = 7'b0111100;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100010;
-                            numBuffer[numIt+3][340:346] = 7'b0111100;
-                            numBuffer[numIt+4][340:346] = 7'b0100010;
-                            numBuffer[numIt+5][340:346] = 7'b0100010;
-                            numBuffer[numIt+6][340:346] = 7'b0111100;
-                        end
-                        4'b1100: begin
-                            numBuffer[numIt][340:346] = 7'b0001110;
-                            numBuffer[numIt+1][340:346] = 7'b0010000;
-                            numBuffer[numIt+2][340:346] = 7'b0100000;
-                            numBuffer[numIt+3][340:346] = 7'b0100000;
-                            numBuffer[numIt+4][340:346] = 7'b0100000;
-                            numBuffer[numIt+5][340:346] = 7'b0010000;
-                            numBuffer[numIt+6][340:346] = 7'b0001110;
-                        end
-                        4'b1101: begin
-                            numBuffer[numIt][340:346] = 7'b0111100;
-                            numBuffer[numIt+1][340:346] = 7'b0100010;
-                            numBuffer[numIt+2][340:346] = 7'b0100010;
-                            numBuffer[numIt+3][340:346] = 7'b0100010;
-                            numBuffer[numIt+4][340:346] = 7'b0100010;
-                            numBuffer[numIt+5][340:346] = 7'b0100010;
-                            numBuffer[numIt+6][340:346] = 7'b0111100;
-                        end
-                        4'b1110: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt+1][340:346] = 7'b0100000;
-                            numBuffer[numIt+2][340:346] = 7'b0100000;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0100000;
-                            numBuffer[numIt+5][340:346] = 7'b0100000;
-                            numBuffer[numIt+6][340:346] = 7'b0111110;
-                        end
-                        4'b1111: begin
-                            numBuffer[numIt][340:346] = 7'b0111110;
-                            numBuffer[numIt+1][340:346] = 7'b0100000;
-                            numBuffer[numIt+2][340:346] = 7'b0100000;
-                            numBuffer[numIt+3][340:346] = 7'b0111110;
-                            numBuffer[numIt+4][340:346] = 7'b0100000;
-                            numBuffer[numIt+5][340:346] = 7'b0100000;
-                            numBuffer[numIt+6][340:346] = 7'b0100000;
-                        end
-                        default: begin
-                            numBuffer[numIt][340:346] = 7'b0000000;
-                            numBuffer[numIt+1][340:346] = 7'b0000000;
-                            numBuffer[numIt+2][340:346] = 7'b0000000;
-                            numBuffer[numIt+3][340:346] = 7'b0000000;
-                            numBuffer[numIt+4][340:346] = 7'b0000000;
-                            numBuffer[numIt+5][340:346] = 7'b0000000;
-                            numBuffer[numIt+6][340:346] = 7'b0000000;
-                        end
-                    endcase
-                    case (stats[statIt][7:4]) 
-                        4'b0000: begin
-                            numBuffer[numIt][333:339] = 7'b0011100;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100010;
-                            numBuffer[numIt+3][333:339] = 7'b0100010;
-                            numBuffer[numIt+4][333:339] = 7'b0100010;
-                            numBuffer[numIt+5][333:339] = 7'b0100010;
-                            numBuffer[numIt+6][333:339] = 7'b0011100;
-                        end
-                        4'b0001: begin
-                            numBuffer[numIt][333:339] = 7'b0011100;
-                            numBuffer[numIt+1][333:339] = 7'b0011100;
-                            numBuffer[numIt+2][333:339] = 7'b0011100;
-                            numBuffer[numIt+3][333:339] = 7'b0011100;
-                            numBuffer[numIt+4][333:339] = 7'b0011100;
-                            numBuffer[numIt+5][333:339] = 7'b0011100;
-                            numBuffer[numIt+6][333:339] = 7'b0011100;
-                        end
-                        4'b0010: begin
-                            numBuffer[numIt][333:339] = 7'b0011100;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100110;
-                            numBuffer[numIt+3][333:339] = 7'b0001100;
-                            numBuffer[numIt+4][333:339] = 7'b0011000;
-                            numBuffer[numIt+5][333:339] = 7'b0110000;
-                            numBuffer[numIt+6][333:339] = 7'b0111110;
-                        end
-                        4'b0011: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt + 1][333:339] = 7'b0000010;
-                            numBuffer[numIt + 2][333:339] = 7'b0000010;
-                            numBuffer[numIt + 3][333:339] = 7'b0111110;
-                            numBuffer[numIt + 4][333:339] = 7'b0000010;
-                            numBuffer[numIt + 5][333:339] = 7'b0000010;
-                            numBuffer[numIt + 6][333:339] = 7'b0111110;
-                        end
-                        4'b0100: begin
-                            numBuffer[numIt][333:339] = 7'b0100010;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100010;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0000010;
-                            numBuffer[numIt+5][333:339] = 7'b0000010;
-                            numBuffer[numIt+6][333:339] = 7'b0000010;
-                        end
-                        4'b0101: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt+1][333:339] = 7'b0100000;
-                            numBuffer[numIt+2][333:339] = 7'b0100000;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0000010;
-                            numBuffer[numIt+5][333:339] = 7'b0000010;
-                            numBuffer[numIt+6][333:339] = 7'b0111110;
-                        end
-                        4'b0110: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt+1][333:339] = 7'b0100000;
-                            numBuffer[numIt+2][333:339] = 7'b0100000;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0100010;
-                            numBuffer[numIt+5][333:339] = 7'b0100010;
-                            numBuffer[numIt+6][333:339] = 7'b0111110;
-                        end
-                        4'b0111: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt+1][333:339] = 7'b0000010;
-                            numBuffer[numIt+2][333:339] = 7'b0000100;
-                            numBuffer[numIt+3][333:339] = 7'b0001000;
-                            numBuffer[numIt+4][333:339] = 7'b0010000;
-                            numBuffer[numIt+5][333:339] = 7'b0100000;
-                            numBuffer[numIt+6][333:339] = 7'b0100000;
-                        end
-                        4'b1000: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100010;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0100010;
-                            numBuffer[numIt+5][333:339] = 7'b0100010;
-                            numBuffer[numIt+6][333:339] = 7'b0111110;
-                        end
-                        4'b1001: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100010;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0000010;
-                            numBuffer[numIt+5][333:339] = 7'b0000010;
-                            numBuffer[numIt+6][333:339] = 7'b0111110;
-                        end
-                        4'b1010: begin
-                            numBuffer[numIt][333:339] = 7'b0011100;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100010;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0100010;
-                            numBuffer[numIt+5][333:339] = 7'b0100010;
-                            numBuffer[numIt+6][333:339] = 7'b0100010;
-                        end
-                        4'b1011: begin
-                            numBuffer[numIt][333:339] = 7'b0111100;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100010;
-                            numBuffer[numIt+3][333:339] = 7'b0111100;
-                            numBuffer[numIt+4][333:339] = 7'b0100010;
-                            numBuffer[numIt+5][333:339] = 7'b0100010;
-                            numBuffer[numIt+6][333:339] = 7'b0111100;
-                        end
-                        4'b1100: begin
-                            numBuffer[numIt][333:339] = 7'b0001110;
-                            numBuffer[numIt+1][333:339] = 7'b0010000;
-                            numBuffer[numIt+2][333:339] = 7'b0100000;
-                            numBuffer[numIt+3][333:339] = 7'b0100000;
-                            numBuffer[numIt+4][333:339] = 7'b0100000;
-                            numBuffer[numIt+5][333:339] = 7'b0010000;
-                            numBuffer[numIt+6][333:339] = 7'b0001110;
-                        end
-                        4'b1101: begin
-                            numBuffer[numIt][333:339] = 7'b0111100;
-                            numBuffer[numIt+1][333:339] = 7'b0100010;
-                            numBuffer[numIt+2][333:339] = 7'b0100010;
-                            numBuffer[numIt+3][333:339] = 7'b0100010;
-                            numBuffer[numIt+4][333:339] = 7'b0100010;
-                            numBuffer[numIt+5][333:339] = 7'b0100010;
-                            numBuffer[numIt+6][333:339] = 7'b0111100;
-                        end
-                        4'b1110: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt+1][333:339] = 7'b0100000;
-                            numBuffer[numIt+2][333:339] = 7'b0100000;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0100000;
-                            numBuffer[numIt+5][333:339] = 7'b0100000;
-                            numBuffer[numIt+6][333:339] = 7'b0111110;
-                        end
-                        4'b1111: begin
-                            numBuffer[numIt][333:339] = 7'b0111110;
-                            numBuffer[numIt+1][333:339] = 7'b0100000;
-                            numBuffer[numIt+2][333:339] = 7'b0100000;
-                            numBuffer[numIt+3][333:339] = 7'b0111110;
-                            numBuffer[numIt+4][333:339] = 7'b0100000;
-                            numBuffer[numIt+5][333:339] = 7'b0100000;
-                            numBuffer[numIt+6][333:339] = 7'b0100000;
-                        end
-                        default: begin
-                            numBuffer[numIt][333:339] = 7'b0000000;
-                            numBuffer[numIt+1][333:339] = 7'b0000000;
-                            numBuffer[numIt+2][333:339] = 7'b0000000;
-                            numBuffer[numIt+3][333:339] = 7'b0000000;
-                            numBuffer[numIt+4][333:339] = 7'b0000000;
-                            numBuffer[numIt+5][333:339] = 7'b0000000;
-                            numBuffer[numIt+6][333:339] = 7'b0000000;
-                        end
-                    endcase
-                    case (stats[statIt][11:8]) 
-                        4'b0000: begin
-                            numBuffer[numIt][326:332] = 7'b0011100;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100010;
-                            numBuffer[numIt+3][326:332] = 7'b0100010;
-                            numBuffer[numIt+4][326:332] = 7'b0100010;
-                            numBuffer[numIt+5][326:332] = 7'b0100010;
-                            numBuffer[numIt+6][326:332] = 7'b0011100;
-                        end
-                        4'b0001: begin
-                            numBuffer[numIt][326:332] = 7'b0011100;
-                            numBuffer[numIt+1][326:332] = 7'b0011100;
-                            numBuffer[numIt+2][326:332] = 7'b0011100;
-                            numBuffer[numIt+3][326:332] = 7'b0011100;
-                            numBuffer[numIt+4][326:332] = 7'b0011100;
-                            numBuffer[numIt+5][326:332] = 7'b0011100;
-                            numBuffer[numIt+6][326:332] = 7'b0011100;
-                        end
-                        4'b0010: begin
-                            numBuffer[numIt][326:332] = 7'b0011100;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100110;
-                            numBuffer[numIt+3][326:332] = 7'b0001100;
-                            numBuffer[numIt+4][326:332] = 7'b0011000;
-                            numBuffer[numIt+5][326:332] = 7'b0110000;
-                            numBuffer[numIt+6][326:332] = 7'b0111110;
-                        end
-                        4'b0011: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt + 1][326:332] = 7'b0000010;
-                            numBuffer[numIt + 2][326:332] = 7'b0000010;
-                            numBuffer[numIt + 3][326:332] = 7'b0111110;
-                            numBuffer[numIt + 4][326:332] = 7'b0000010;
-                            numBuffer[numIt + 5][326:332] = 7'b0000010;
-                            numBuffer[numIt + 6][326:332] = 7'b0111110;
-                        end
-                        4'b0100: begin
-                            numBuffer[numIt][326:332] = 7'b0100010;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100010;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0000010;
-                            numBuffer[numIt+5][326:332] = 7'b0000010;
-                            numBuffer[numIt+6][326:332] = 7'b0000010;
-                        end
-                        4'b0101: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt+1][326:332] = 7'b0100000;
-                            numBuffer[numIt+2][326:332] = 7'b0100000;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0000010;
-                            numBuffer[numIt+5][326:332] = 7'b0000010;
-                            numBuffer[numIt+6][326:332] = 7'b0111110;
-                        end
-                        4'b0110: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt+1][326:332] = 7'b0100000;
-                            numBuffer[numIt+2][326:332] = 7'b0100000;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0100010;
-                            numBuffer[numIt+5][326:332] = 7'b0100010;
-                            numBuffer[numIt+6][326:332] = 7'b0111110;
-                        end
-                        4'b0111: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt+1][326:332] = 7'b0000010;
-                            numBuffer[numIt+2][326:332] = 7'b0000100;
-                            numBuffer[numIt+3][326:332] = 7'b0001000;
-                            numBuffer[numIt+4][326:332] = 7'b0010000;
-                            numBuffer[numIt+5][326:332] = 7'b0100000;
-                            numBuffer[numIt+6][326:332] = 7'b0100000;
-                        end
-                        4'b1000: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100010;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0100010;
-                            numBuffer[numIt+5][326:332] = 7'b0100010;
-                            numBuffer[numIt+6][326:332] = 7'b0111110;
-                        end
-                        4'b1001: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100010;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0000010;
-                            numBuffer[numIt+5][326:332] = 7'b0000010;
-                            numBuffer[numIt+6][326:332] = 7'b0111110;
-                        end
-                        4'b1010: begin
-                            numBuffer[numIt][326:332] = 7'b0011100;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100010;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0100010;
-                            numBuffer[numIt+5][326:332] = 7'b0100010;
-                            numBuffer[numIt+6][326:332] = 7'b0100010;
-                        end
-                        4'b1011: begin
-                            numBuffer[numIt][326:332] = 7'b0111100;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100010;
-                            numBuffer[numIt+3][326:332] = 7'b0111100;
-                            numBuffer[numIt+4][326:332] = 7'b0100010;
-                            numBuffer[numIt+5][326:332] = 7'b0100010;
-                            numBuffer[numIt+6][326:332] = 7'b0111100;
-                        end
-                        4'b1100: begin
-                            numBuffer[numIt][326:332] = 7'b0001110;
-                            numBuffer[numIt+1][326:332] = 7'b0010000;
-                            numBuffer[numIt+2][326:332] = 7'b0100000;
-                            numBuffer[numIt+3][326:332] = 7'b0100000;
-                            numBuffer[numIt+4][326:332] = 7'b0100000;
-                            numBuffer[numIt+5][326:332] = 7'b0010000;
-                            numBuffer[numIt+6][326:332] = 7'b0001110;
-                        end
-                        4'b1101: begin
-                            numBuffer[numIt][326:332] = 7'b0111100;
-                            numBuffer[numIt+1][326:332] = 7'b0100010;
-                            numBuffer[numIt+2][326:332] = 7'b0100010;
-                            numBuffer[numIt+3][326:332] = 7'b0100010;
-                            numBuffer[numIt+4][326:332] = 7'b0100010;
-                            numBuffer[numIt+5][326:332] = 7'b0100010;
-                            numBuffer[numIt+6][326:332] = 7'b0111100;
-                        end
-                        4'b1110: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt+1][326:332] = 7'b0100000;
-                            numBuffer[numIt+2][326:332] = 7'b0100000;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0100000;
-                            numBuffer[numIt+5][326:332] = 7'b0100000;
-                            numBuffer[numIt+6][326:332] = 7'b0111110;
-                        end
-                        4'b1111: begin
-                            numBuffer[numIt][326:332] = 7'b0111110;
-                            numBuffer[numIt+1][326:332] = 7'b0100000;
-                            numBuffer[numIt+2][326:332] = 7'b0100000;
-                            numBuffer[numIt+3][326:332] = 7'b0111110;
-                            numBuffer[numIt+4][326:332] = 7'b0100000;
-                            numBuffer[numIt+5][326:332] = 7'b0100000;
-                            numBuffer[numIt+6][326:332] = 7'b0100000;
-                        end
-                        default: begin
-                            numBuffer[numIt][326:332] = 7'b0000000;
-                            numBuffer[numIt+1][326:332] = 7'b0000000;
-                            numBuffer[numIt+2][326:332] = 7'b0000000;
-                            numBuffer[numIt+3][326:332] = 7'b0000000;
-                            numBuffer[numIt+4][326:332] = 7'b0000000;
-                            numBuffer[numIt+5][326:332] = 7'b0000000;
-                            numBuffer[numIt+6][326:332] = 7'b0000000;
-                        end
-                    endcase
-                    case (stats[statIt][15:12]) 
-                        4'b0000: begin
-                            numBuffer[numIt][319:325] = 7'b0011100;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100010;
-                            numBuffer[numIt+3][319:325] = 7'b0100010;
-                            numBuffer[numIt+4][319:325] = 7'b0100010;
-                            numBuffer[numIt+5][319:325] = 7'b0100010;
-                            numBuffer[numIt+6][319:325] = 7'b0011100;
-                        end
-                        4'b0001: begin
-                            numBuffer[numIt][319:325] = 7'b0011100;
-                            numBuffer[numIt+1][319:325] = 7'b0011100;
-                            numBuffer[numIt+2][319:325] = 7'b0011100;
-                            numBuffer[numIt+3][319:325] = 7'b0011100;
-                            numBuffer[numIt+4][319:325] = 7'b0011100;
-                            numBuffer[numIt+5][319:325] = 7'b0011100;
-                            numBuffer[numIt+6][319:325] = 7'b0011100;
-                        end
-                        4'b0010: begin
-                            numBuffer[numIt][319:325] = 7'b0011100;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100110;
-                            numBuffer[numIt+3][319:325] = 7'b0001100;
-                            numBuffer[numIt+4][319:325] = 7'b0011000;
-                            numBuffer[numIt+5][319:325] = 7'b0110000;
-                            numBuffer[numIt+6][319:325] = 7'b0111110;
-                        end
-                        4'b0011: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt + 1][319:325] = 7'b0000010;
-                            numBuffer[numIt + 2][319:325] = 7'b0000010;
-                            numBuffer[numIt + 3][319:325] = 7'b0111110;
-                            numBuffer[numIt + 4][319:325] = 7'b0000010;
-                            numBuffer[numIt + 5][319:325] = 7'b0000010;
-                            numBuffer[numIt + 6][319:325] = 7'b0111110;
-                        end
-                        4'b0100: begin
-                            numBuffer[numIt][319:325] = 7'b0100010;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100010;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0000010;
-                            numBuffer[numIt+5][319:325] = 7'b0000010;
-                            numBuffer[numIt+6][319:325] = 7'b0000010;
-                        end
-                        4'b0101: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt+1][319:325] = 7'b0100000;
-                            numBuffer[numIt+2][319:325] = 7'b0100000;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0000010;
-                            numBuffer[numIt+5][319:325] = 7'b0000010;
-                            numBuffer[numIt+6][319:325] = 7'b0111110;
-                        end
-                        4'b0110: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt+1][319:325] = 7'b0100000;
-                            numBuffer[numIt+2][319:325] = 7'b0100000;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0100010;
-                            numBuffer[numIt+5][319:325] = 7'b0100010;
-                            numBuffer[numIt+6][319:325] = 7'b0111110;
-                        end
-                        4'b0111: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt+1][319:325] = 7'b0000010;
-                            numBuffer[numIt+2][319:325] = 7'b0000100;
-                            numBuffer[numIt+3][319:325] = 7'b0001000;
-                            numBuffer[numIt+4][319:325] = 7'b0010000;
-                            numBuffer[numIt+5][319:325] = 7'b0100000;
-                            numBuffer[numIt+6][319:325] = 7'b0100000;
-                        end
-                        4'b1000: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100010;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0100010;
-                            numBuffer[numIt+5][319:325] = 7'b0100010;
-                            numBuffer[numIt+6][319:325] = 7'b0111110;
-                        end
-                        4'b1001: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100010;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0000010;
-                            numBuffer[numIt+5][319:325] = 7'b0000010;
-                            numBuffer[numIt+6][319:325] = 7'b0111110;
-                        end
-                        4'b1010: begin
-                            numBuffer[numIt][319:325] = 7'b0011100;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100010;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0100010;
-                            numBuffer[numIt+5][319:325] = 7'b0100010;
-                            numBuffer[numIt+6][319:325] = 7'b0100010;
-                        end
-                        4'b1011: begin
-                            numBuffer[numIt][319:325] = 7'b0111100;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100010;
-                            numBuffer[numIt+3][319:325] = 7'b0111100;
-                            numBuffer[numIt+4][319:325] = 7'b0100010;
-                            numBuffer[numIt+5][319:325] = 7'b0100010;
-                            numBuffer[numIt+6][319:325] = 7'b0111100;
-                        end
-                        4'b1100: begin
-                            numBuffer[numIt][319:325] = 7'b0001110;
-                            numBuffer[numIt+1][319:325] = 7'b0010000;
-                            numBuffer[numIt+2][319:325] = 7'b0100000;
-                            numBuffer[numIt+3][319:325] = 7'b0100000;
-                            numBuffer[numIt+4][319:325] = 7'b0100000;
-                            numBuffer[numIt+5][319:325] = 7'b0010000;
-                            numBuffer[numIt+6][319:325] = 7'b0001110;
-                        end
-                        4'b1101: begin
-                            numBuffer[numIt][319:325] = 7'b0111100;
-                            numBuffer[numIt+1][319:325] = 7'b0100010;
-                            numBuffer[numIt+2][319:325] = 7'b0100010;
-                            numBuffer[numIt+3][319:325] = 7'b0100010;
-                            numBuffer[numIt+4][319:325] = 7'b0100010;
-                            numBuffer[numIt+5][319:325] = 7'b0100010;
-                            numBuffer[numIt+6][319:325] = 7'b0111100;
-                        end
-                        4'b1110: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt+1][319:325] = 7'b0100000;
-                            numBuffer[numIt+2][319:325] = 7'b0100000;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0100000;
-                            numBuffer[numIt+5][319:325] = 7'b0100000;
-                            numBuffer[numIt+6][319:325] = 7'b0111110;
-                        end
-                        4'b1111: begin
-                            numBuffer[numIt][319:325] = 7'b0111110;
-                            numBuffer[numIt+1][319:325] = 7'b0100000;
-                            numBuffer[numIt+2][319:325] = 7'b0100000;
-                            numBuffer[numIt+3][319:325] = 7'b0111110;
-                            numBuffer[numIt+4][319:325] = 7'b0100000;
-                            numBuffer[numIt+5][319:325] = 7'b0100000;
-                            numBuffer[numIt+6][319:325] = 7'b0100000;
-                        end
-                        default: begin
-                            numBuffer[numIt][319:325] = 7'b0000000;
-                            numBuffer[numIt+1][319:325] = 7'b0000000;
-                            numBuffer[numIt+2][319:325] = 7'b0000000;
-                            numBuffer[numIt+3][319:325] = 7'b0000000;
-                            numBuffer[numIt+4][319:325] = 7'b0000000;
-                            numBuffer[numIt+5][319:325] = 7'b0000000;
-                            numBuffer[numIt+6][319:325] = 7'b0000000;
-                        end
-                    endcase
-                    case (stats[statIt][19:16]) 
-                        4'b0000: begin
-                            numBuffer[numIt][312:318] = 7'b0011100;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100010;
-                            numBuffer[numIt+3][312:318] = 7'b0100010;
-                            numBuffer[numIt+4][312:318] = 7'b0100010;
-                            numBuffer[numIt+5][312:318] = 7'b0100010;
-                            numBuffer[numIt+6][312:318] = 7'b0011100;
-                        end
-                        4'b0001: begin
-                            numBuffer[numIt][312:318] = 7'b0011100;
-                            numBuffer[numIt+1][312:318] = 7'b0011100;
-                            numBuffer[numIt+2][312:318] = 7'b0011100;
-                            numBuffer[numIt+3][312:318] = 7'b0011100;
-                            numBuffer[numIt+4][312:318] = 7'b0011100;
-                            numBuffer[numIt+5][312:318] = 7'b0011100;
-                            numBuffer[numIt+6][312:318] = 7'b0011100;
-                        end
-                        4'b0010: begin
-                            numBuffer[numIt][312:318] = 7'b0011100;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100110;
-                            numBuffer[numIt+3][312:318] = 7'b0001100;
-                            numBuffer[numIt+4][312:318] = 7'b0011000;
-                            numBuffer[numIt+5][312:318] = 7'b0110000;
-                            numBuffer[numIt+6][312:318] = 7'b0111110;
-                        end
-                        4'b0011: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt + 1][312:318] = 7'b0000010;
-                            numBuffer[numIt + 2][312:318] = 7'b0000010;
-                            numBuffer[numIt + 3][312:318] = 7'b0111110;
-                            numBuffer[numIt + 4][312:318] = 7'b0000010;
-                            numBuffer[numIt + 5][312:318] = 7'b0000010;
-                            numBuffer[numIt + 6][312:318] = 7'b0111110;
-                        end
-                        4'b0100: begin
-                            numBuffer[numIt][312:318] = 7'b0100010;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100010;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0000010;
-                            numBuffer[numIt+5][312:318] = 7'b0000010;
-                            numBuffer[numIt+6][312:318] = 7'b0000010;
-                        end
-                        4'b0101: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt+1][312:318] = 7'b0100000;
-                            numBuffer[numIt+2][312:318] = 7'b0100000;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0000010;
-                            numBuffer[numIt+5][312:318] = 7'b0000010;
-                            numBuffer[numIt+6][312:318] = 7'b0111110;
-                        end
-                        4'b0110: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt+1][312:318] = 7'b0100000;
-                            numBuffer[numIt+2][312:318] = 7'b0100000;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0100010;
-                            numBuffer[numIt+5][312:318] = 7'b0100010;
-                            numBuffer[numIt+6][312:318] = 7'b0111110;
-                        end
-                        4'b0111: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt+1][312:318] = 7'b0000010;
-                            numBuffer[numIt+2][312:318] = 7'b0000100;
-                            numBuffer[numIt+3][312:318] = 7'b0001000;
-                            numBuffer[numIt+4][312:318] = 7'b0010000;
-                            numBuffer[numIt+5][312:318] = 7'b0100000;
-                            numBuffer[numIt+6][312:318] = 7'b0100000;
-                        end
-                        4'b1000: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100010;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0100010;
-                            numBuffer[numIt+5][312:318] = 7'b0100010;
-                            numBuffer[numIt+6][312:318] = 7'b0111110;
-                        end
-                        4'b1001: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100010;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0000010;
-                            numBuffer[numIt+5][312:318] = 7'b0000010;
-                            numBuffer[numIt+6][312:318] = 7'b0111110;
-                        end
-                        4'b1010: begin
-                            numBuffer[numIt][312:318] = 7'b0011100;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100010;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0100010;
-                            numBuffer[numIt+5][312:318] = 7'b0100010;
-                            numBuffer[numIt+6][312:318] = 7'b0100010;
-                        end
-                        4'b1011: begin
-                            numBuffer[numIt][312:318] = 7'b0111100;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100010;
-                            numBuffer[numIt+3][312:318] = 7'b0111100;
-                            numBuffer[numIt+4][312:318] = 7'b0100010;
-                            numBuffer[numIt+5][312:318] = 7'b0100010;
-                            numBuffer[numIt+6][312:318] = 7'b0111100;
-                        end
-                        4'b1100: begin
-                            numBuffer[numIt][312:318] = 7'b0001110;
-                            numBuffer[numIt+1][312:318] = 7'b0010000;
-                            numBuffer[numIt+2][312:318] = 7'b0100000;
-                            numBuffer[numIt+3][312:318] = 7'b0100000;
-                            numBuffer[numIt+4][312:318] = 7'b0100000;
-                            numBuffer[numIt+5][312:318] = 7'b0010000;
-                            numBuffer[numIt+6][312:318] = 7'b0001110;
-                        end
-                        4'b1101: begin
-                            numBuffer[numIt][312:318] = 7'b0111100;
-                            numBuffer[numIt+1][312:318] = 7'b0100010;
-                            numBuffer[numIt+2][312:318] = 7'b0100010;
-                            numBuffer[numIt+3][312:318] = 7'b0100010;
-                            numBuffer[numIt+4][312:318] = 7'b0100010;
-                            numBuffer[numIt+5][312:318] = 7'b0100010;
-                            numBuffer[numIt+6][312:318] = 7'b0111100;
-                        end
-                        4'b1110: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt+1][312:318] = 7'b0100000;
-                            numBuffer[numIt+2][312:318] = 7'b0100000;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0100000;
-                            numBuffer[numIt+5][312:318] = 7'b0100000;
-                            numBuffer[numIt+6][312:318] = 7'b0111110;
-                        end
-                        4'b1111: begin
-                            numBuffer[numIt][312:318] = 7'b0111110;
-                            numBuffer[numIt+1][312:318] = 7'b0100000;
-                            numBuffer[numIt+2][312:318] = 7'b0100000;
-                            numBuffer[numIt+3][312:318] = 7'b0111110;
-                            numBuffer[numIt+4][312:318] = 7'b0100000;
-                            numBuffer[numIt+5][312:318] = 7'b0100000;
-                            numBuffer[numIt+6][312:318] = 7'b0100000;
-                        end
-                        default: begin
-                            numBuffer[numIt][312:318] = 7'b0000000;
-                            numBuffer[numIt+1][312:318] = 7'b0000000;
-                            numBuffer[numIt+2][312:318] = 7'b0000000;
-                            numBuffer[numIt+3][312:318] = 7'b0000000;
-                            numBuffer[numIt+4][312:318] = 7'b0000000;
-                            numBuffer[numIt+5][312:318] = 7'b0000000;
-                            numBuffer[numIt+6][312:318] = 7'b0000000;
-                        end
-                    endcase
-                    case (stats[statIt][23:20]) 
-                        4'b0000: begin
-                            numBuffer[numIt][305:311] = 7'b0011100;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100010;
-                            numBuffer[numIt+3][305:311] = 7'b0100010;
-                            numBuffer[numIt+4][305:311] = 7'b0100010;
-                            numBuffer[numIt+5][305:311] = 7'b0100010;
-                            numBuffer[numIt+6][305:311] = 7'b0011100;
-                        end
-                        4'b0001: begin
-                            numBuffer[numIt][305:311] = 7'b0011100;
-                            numBuffer[numIt+1][305:311] = 7'b0011100;
-                            numBuffer[numIt+2][305:311] = 7'b0011100;
-                            numBuffer[numIt+3][305:311] = 7'b0011100;
-                            numBuffer[numIt+4][305:311] = 7'b0011100;
-                            numBuffer[numIt+5][305:311] = 7'b0011100;
-                            numBuffer[numIt+6][305:311] = 7'b0011100;
-                        end
-                        4'b0010: begin
-                            numBuffer[numIt][305:311] = 7'b0011100;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100110;
-                            numBuffer[numIt+3][305:311] = 7'b0001100;
-                            numBuffer[numIt+4][305:311] = 7'b0011000;
-                            numBuffer[numIt+5][305:311] = 7'b0110000;
-                            numBuffer[numIt+6][305:311] = 7'b0111110;
-                        end
-                        4'b0011: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt + 1][305:311] = 7'b0000010;
-                            numBuffer[numIt + 2][305:311] = 7'b0000010;
-                            numBuffer[numIt + 3][305:311] = 7'b0111110;
-                            numBuffer[numIt + 4][305:311] = 7'b0000010;
-                            numBuffer[numIt + 5][305:311] = 7'b0000010;
-                            numBuffer[numIt + 6][305:311] = 7'b0111110;
-                        end
-                        4'b0100: begin
-                            numBuffer[numIt][305:311] = 7'b0100010;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100010;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0000010;
-                            numBuffer[numIt+5][305:311] = 7'b0000010;
-                            numBuffer[numIt+6][305:311] = 7'b0000010;
-                        end
-                        4'b0101: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt+1][305:311] = 7'b0100000;
-                            numBuffer[numIt+2][305:311] = 7'b0100000;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0000010;
-                            numBuffer[numIt+5][305:311] = 7'b0000010;
-                            numBuffer[numIt+6][305:311] = 7'b0111110;
-                        end
-                        4'b0110: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt+1][305:311] = 7'b0100000;
-                            numBuffer[numIt+2][305:311] = 7'b0100000;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0100010;
-                            numBuffer[numIt+5][305:311] = 7'b0100010;
-                            numBuffer[numIt+6][305:311] = 7'b0111110;
-                        end
-                        4'b0111: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt+1][305:311] = 7'b0000010;
-                            numBuffer[numIt+2][305:311] = 7'b0000100;
-                            numBuffer[numIt+3][305:311] = 7'b0001000;
-                            numBuffer[numIt+4][305:311] = 7'b0010000;
-                            numBuffer[numIt+5][305:311] = 7'b0100000;
-                            numBuffer[numIt+6][305:311] = 7'b0100000;
-                        end
-                        4'b1000: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100010;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0100010;
-                            numBuffer[numIt+5][305:311] = 7'b0100010;
-                            numBuffer[numIt+6][305:311] = 7'b0111110;
-                        end
-                        4'b1001: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100010;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0000010;
-                            numBuffer[numIt+5][305:311] = 7'b0000010;
-                            numBuffer[numIt+6][305:311] = 7'b0111110;
-                        end
-                        4'b1010: begin
-                            numBuffer[numIt][305:311] = 7'b0011100;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100010;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0100010;
-                            numBuffer[numIt+5][305:311] = 7'b0100010;
-                            numBuffer[numIt+6][305:311] = 7'b0100010;
-                        end
-                        4'b1011: begin
-                            numBuffer[numIt][305:311] = 7'b0111100;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100010;
-                            numBuffer[numIt+3][305:311] = 7'b0111100;
-                            numBuffer[numIt+4][305:311] = 7'b0100010;
-                            numBuffer[numIt+5][305:311] = 7'b0100010;
-                            numBuffer[numIt+6][305:311] = 7'b0111100;
-                        end
-                        4'b1100: begin
-                            numBuffer[numIt][305:311] = 7'b0001110;
-                            numBuffer[numIt+1][305:311] = 7'b0010000;
-                            numBuffer[numIt+2][305:311] = 7'b0100000;
-                            numBuffer[numIt+3][305:311] = 7'b0100000;
-                            numBuffer[numIt+4][305:311] = 7'b0100000;
-                            numBuffer[numIt+5][305:311] = 7'b0010000;
-                            numBuffer[numIt+6][305:311] = 7'b0001110;
-                        end
-                        4'b1101: begin
-                            numBuffer[numIt][305:311] = 7'b0111100;
-                            numBuffer[numIt+1][305:311] = 7'b0100010;
-                            numBuffer[numIt+2][305:311] = 7'b0100010;
-                            numBuffer[numIt+3][305:311] = 7'b0100010;
-                            numBuffer[numIt+4][305:311] = 7'b0100010;
-                            numBuffer[numIt+5][305:311] = 7'b0100010;
-                            numBuffer[numIt+6][305:311] = 7'b0111100;
-                        end
-                        4'b1110: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt+1][305:311] = 7'b0100000;
-                            numBuffer[numIt+2][305:311] = 7'b0100000;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0100000;
-                            numBuffer[numIt+5][305:311] = 7'b0100000;
-                            numBuffer[numIt+6][305:311] = 7'b0111110;
-                        end
-                        4'b1111: begin
-                            numBuffer[numIt][305:311] = 7'b0111110;
-                            numBuffer[numIt+1][305:311] = 7'b0100000;
-                            numBuffer[numIt+2][305:311] = 7'b0100000;
-                            numBuffer[numIt+3][305:311] = 7'b0111110;
-                            numBuffer[numIt+4][305:311] = 7'b0100000;
-                            numBuffer[numIt+5][305:311] = 7'b0100000;
-                            numBuffer[numIt+6][305:311] = 7'b0100000;
-                        end
-                        default: begin
-                            numBuffer[numIt][305:311] = 7'b0000000;
-                            numBuffer[numIt+1][305:311] = 7'b0000000;
-                            numBuffer[numIt+2][305:311] = 7'b0000000;
-                            numBuffer[numIt+3][305:311] = 7'b0000000;
-                            numBuffer[numIt+4][305:311] = 7'b0000000;
-                            numBuffer[numIt+5][305:311] = 7'b0000000;
-                            numBuffer[numIt+6][305:311] = 7'b0000000;
-                        end
-                    endcase
-                    numBuffer[numIt+0][290:304] = 14'b00111000000000;
-                    numBuffer[numIt+1][290:304] = 14'b01000100100010;
-                    numBuffer[numIt+2][290:304] = 14'b01000100010100;
-                    numBuffer[numIt+3][290:304] = 14'b01000100001000;
-                    numBuffer[numIt+4][290:304] = 14'b01000100010100;
-                    numBuffer[numIt+5][290:304] = 14'b01000100100010;
-                    numBuffer[numIt+6][290:304] = 14'b00111000000000;
-                    statIt = statIt + 1;
-                    numIt = numIt + 10;
-            end 
-            else begin 
-                statIt = 0;
+    if(endFile)begin
+        if(count < 1000000)begin
+            count = count + 1;
+        end
+        else begin
+            if( 29 < numIt < 120)begin
+                if(statIt < 9)begin
+                            case (stats[statIt][3:0])
+                                4'b0000: begin
+                                    numBuffer[numIt][340:346] = 7'b0011100;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100010;
+                                    numBuffer[numIt+3][340:346] = 7'b0100010;
+                                    numBuffer[numIt+4][340:346] = 7'b0100010;
+                                    numBuffer[numIt+5][340:346] = 7'b0100010;
+                                    numBuffer[numIt+6][340:346] = 7'b0011100;
+                                end
+                                4'b0001: begin
+                                    numBuffer[numIt][340:346] = 7'b0001000;
+                                    numBuffer[numIt+1][340:346] = 7'b0001000;
+                                    numBuffer[numIt+2][340:346] = 7'b0001000;
+                                    numBuffer[numIt+3][340:346] = 7'b0001000;
+                                    numBuffer[numIt+4][340:346] = 7'b0001000;
+                                    numBuffer[numIt+5][340:346] = 7'b0001000;
+                                    numBuffer[numIt+6][340:346] = 7'b0001000;
+                                end
+                                4'b0010: begin
+                                    numBuffer[numIt][340:346] = 7'b0011100;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100110;
+                                    numBuffer[numIt+3][340:346] = 7'b0001100;
+                                    numBuffer[numIt+4][340:346] = 7'b0011000;
+                                    numBuffer[numIt+5][340:346] = 7'b0110000;
+                                    numBuffer[numIt+6][340:346] = 7'b0111110;
+                                end
+                                4'b0011: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt + 1][340:346] = 7'b0000010;
+                                    numBuffer[numIt + 2][340:346] = 7'b0000010;
+                                    numBuffer[numIt + 3][340:346] = 7'b0111110;
+                                    numBuffer[numIt + 4][340:346] = 7'b0000010;
+                                    numBuffer[numIt + 5][340:346] = 7'b0000010;
+                                    numBuffer[numIt + 6][340:346] = 7'b0111110;
+                                end
+                                4'b0100: begin
+                                    numBuffer[numIt][340:346] = 7'b0100010;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100010;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0000010;
+                                    numBuffer[numIt+5][340:346] = 7'b0000010;
+                                    numBuffer[numIt+6][340:346] = 7'b0000010;
+                                end
+                                4'b0101: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt+1][340:346] = 7'b0100000;
+                                    numBuffer[numIt+2][340:346] = 7'b0100000;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0000010;
+                                    numBuffer[numIt+5][340:346] = 7'b0000010;
+                                    numBuffer[numIt+6][340:346] = 7'b0111110;
+                                end
+                                4'b0110: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt+1][340:346] = 7'b0100000;
+                                    numBuffer[numIt+2][340:346] = 7'b0100000;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0100010;
+                                    numBuffer[numIt+5][340:346] = 7'b0100010;
+                                    numBuffer[numIt+6][340:346] = 7'b0111110;
+                                end
+                                4'b0111: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt+1][340:346] = 7'b0000010;
+                                    numBuffer[numIt+2][340:346] = 7'b0000100;
+                                    numBuffer[numIt+3][340:346] = 7'b0001000;
+                                    numBuffer[numIt+4][340:346] = 7'b0010000;
+                                    numBuffer[numIt+5][340:346] = 7'b0100000;
+                                    numBuffer[numIt+6][340:346] = 7'b0100000;
+                                end
+                                4'b1000: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100010;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0100010;
+                                    numBuffer[numIt+5][340:346] = 7'b0100010;
+                                    numBuffer[numIt+6][340:346] = 7'b0111110;
+                                end
+                                4'b1001: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100010;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0000010;
+                                    numBuffer[numIt+5][340:346] = 7'b0000010;
+                                    numBuffer[numIt+6][340:346] = 7'b0111110;
+                                end
+                                4'b1010: begin
+                                    numBuffer[numIt][340:346] = 7'b0011100;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100010;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0100010;
+                                    numBuffer[numIt+5][340:346] = 7'b0100010;
+                                    numBuffer[numIt+6][340:346] = 7'b0100010;
+                                end
+                                4'b1011: begin
+                                    numBuffer[numIt][340:346] = 7'b0111100;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100010;
+                                    numBuffer[numIt+3][340:346] = 7'b0111100;
+                                    numBuffer[numIt+4][340:346] = 7'b0100010;
+                                    numBuffer[numIt+5][340:346] = 7'b0100010;
+                                    numBuffer[numIt+6][340:346] = 7'b0111100;
+                                end
+                                4'b1100: begin
+                                    numBuffer[numIt][340:346] = 7'b0001110;
+                                    numBuffer[numIt+1][340:346] = 7'b0010000;
+                                    numBuffer[numIt+2][340:346] = 7'b0100000;
+                                    numBuffer[numIt+3][340:346] = 7'b0100000;
+                                    numBuffer[numIt+4][340:346] = 7'b0100000;
+                                    numBuffer[numIt+5][340:346] = 7'b0010000;
+                                    numBuffer[numIt+6][340:346] = 7'b0001110;
+                                end
+                                4'b1101: begin
+                                    numBuffer[numIt][340:346] = 7'b0111100;
+                                    numBuffer[numIt+1][340:346] = 7'b0100010;
+                                    numBuffer[numIt+2][340:346] = 7'b0100010;
+                                    numBuffer[numIt+3][340:346] = 7'b0100010;
+                                    numBuffer[numIt+4][340:346] = 7'b0100010;
+                                    numBuffer[numIt+5][340:346] = 7'b0100010;
+                                    numBuffer[numIt+6][340:346] = 7'b0111100;
+                                end
+                                4'b1110: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt+1][340:346] = 7'b0100000;
+                                    numBuffer[numIt+2][340:346] = 7'b0100000;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0100000;
+                                    numBuffer[numIt+5][340:346] = 7'b0100000;
+                                    numBuffer[numIt+6][340:346] = 7'b0111110;
+                                end
+                                4'b1111: begin
+                                    numBuffer[numIt][340:346] = 7'b0111110;
+                                    numBuffer[numIt+1][340:346] = 7'b0100000;
+                                    numBuffer[numIt+2][340:346] = 7'b0100000;
+                                    numBuffer[numIt+3][340:346] = 7'b0111110;
+                                    numBuffer[numIt+4][340:346] = 7'b0100000;
+                                    numBuffer[numIt+5][340:346] = 7'b0100000;
+                                    numBuffer[numIt+6][340:346] = 7'b0100000;
+                                end
+                                default: begin
+                                    numBuffer[numIt][340:346] = 7'b0000000;
+                                    numBuffer[numIt+1][340:346] = 7'b0000000;
+                                    numBuffer[numIt+2][340:346] = 7'b0000000;
+                                    numBuffer[numIt+3][340:346] = 7'b0000000;
+                                    numBuffer[numIt+4][340:346] = 7'b0000000;
+                                    numBuffer[numIt+5][340:346] = 7'b0000000;
+                                    numBuffer[numIt+6][340:346] = 7'b0000000;
+                                end
+                            endcase
+                            case (stats[statIt][7:4]) 
+                                4'b0000: begin
+                                    numBuffer[numIt][333:339] = 7'b0011100;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100010;
+                                    numBuffer[numIt+3][333:339] = 7'b0100010;
+                                    numBuffer[numIt+4][333:339] = 7'b0100010;
+                                    numBuffer[numIt+5][333:339] = 7'b0100010;
+                                    numBuffer[numIt+6][333:339] = 7'b0011100;
+                                end
+                                4'b0001: begin
+                                    numBuffer[numIt][333:339] = 7'b0001000;
+                                    numBuffer[numIt+1][333:339] = 7'b0001000;
+                                    numBuffer[numIt+2][333:339] = 7'b0001000;
+                                    numBuffer[numIt+3][333:339] = 7'b0001000;
+                                    numBuffer[numIt+4][333:339] = 7'b0001000;
+                                    numBuffer[numIt+5][333:339] = 7'b0001000;
+                                    numBuffer[numIt+6][333:339] = 7'b0001000;
+                                end
+                                4'b0010: begin
+                                    numBuffer[numIt][333:339] = 7'b0011100;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100110;
+                                    numBuffer[numIt+3][333:339] = 7'b0001100;
+                                    numBuffer[numIt+4][333:339] = 7'b0011000;
+                                    numBuffer[numIt+5][333:339] = 7'b0110000;
+                                    numBuffer[numIt+6][333:339] = 7'b0111110;
+                                end
+                                4'b0011: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt + 1][333:339] = 7'b0000010;
+                                    numBuffer[numIt + 2][333:339] = 7'b0000010;
+                                    numBuffer[numIt + 3][333:339] = 7'b0111110;
+                                    numBuffer[numIt + 4][333:339] = 7'b0000010;
+                                    numBuffer[numIt + 5][333:339] = 7'b0000010;
+                                    numBuffer[numIt + 6][333:339] = 7'b0111110;
+                                end
+                                4'b0100: begin
+                                    numBuffer[numIt][333:339] = 7'b0100010;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100010;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0000010;
+                                    numBuffer[numIt+5][333:339] = 7'b0000010;
+                                    numBuffer[numIt+6][333:339] = 7'b0000010;
+                                end
+                                4'b0101: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt+1][333:339] = 7'b0100000;
+                                    numBuffer[numIt+2][333:339] = 7'b0100000;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0000010;
+                                    numBuffer[numIt+5][333:339] = 7'b0000010;
+                                    numBuffer[numIt+6][333:339] = 7'b0111110;
+                                end
+                                4'b0110: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt+1][333:339] = 7'b0100000;
+                                    numBuffer[numIt+2][333:339] = 7'b0100000;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0100010;
+                                    numBuffer[numIt+5][333:339] = 7'b0100010;
+                                    numBuffer[numIt+6][333:339] = 7'b0111110;
+                                end
+                                4'b0111: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt+1][333:339] = 7'b0000010;
+                                    numBuffer[numIt+2][333:339] = 7'b0000100;
+                                    numBuffer[numIt+3][333:339] = 7'b0001000;
+                                    numBuffer[numIt+4][333:339] = 7'b0010000;
+                                    numBuffer[numIt+5][333:339] = 7'b0100000;
+                                    numBuffer[numIt+6][333:339] = 7'b0100000;
+                                end
+                                4'b1000: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100010;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0100010;
+                                    numBuffer[numIt+5][333:339] = 7'b0100010;
+                                    numBuffer[numIt+6][333:339] = 7'b0111110;
+                                end
+                                4'b1001: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100010;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0000010;
+                                    numBuffer[numIt+5][333:339] = 7'b0000010;
+                                    numBuffer[numIt+6][333:339] = 7'b0111110;
+                                end
+                                4'b1010: begin
+                                    numBuffer[numIt][333:339] = 7'b0011100;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100010;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0100010;
+                                    numBuffer[numIt+5][333:339] = 7'b0100010;
+                                    numBuffer[numIt+6][333:339] = 7'b0100010;
+                                end
+                                4'b1011: begin
+                                    numBuffer[numIt][333:339] = 7'b0111100;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100010;
+                                    numBuffer[numIt+3][333:339] = 7'b0111100;
+                                    numBuffer[numIt+4][333:339] = 7'b0100010;
+                                    numBuffer[numIt+5][333:339] = 7'b0100010;
+                                    numBuffer[numIt+6][333:339] = 7'b0111100;
+                                end
+                                4'b1100: begin
+                                    numBuffer[numIt][333:339] = 7'b0001110;
+                                    numBuffer[numIt+1][333:339] = 7'b0010000;
+                                    numBuffer[numIt+2][333:339] = 7'b0100000;
+                                    numBuffer[numIt+3][333:339] = 7'b0100000;
+                                    numBuffer[numIt+4][333:339] = 7'b0100000;
+                                    numBuffer[numIt+5][333:339] = 7'b0010000;
+                                    numBuffer[numIt+6][333:339] = 7'b0001110;
+                                end
+                                4'b1101: begin
+                                    numBuffer[numIt][333:339] = 7'b0111100;
+                                    numBuffer[numIt+1][333:339] = 7'b0100010;
+                                    numBuffer[numIt+2][333:339] = 7'b0100010;
+                                    numBuffer[numIt+3][333:339] = 7'b0100010;
+                                    numBuffer[numIt+4][333:339] = 7'b0100010;
+                                    numBuffer[numIt+5][333:339] = 7'b0100010;
+                                    numBuffer[numIt+6][333:339] = 7'b0111100;
+                                end
+                                4'b1110: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt+1][333:339] = 7'b0100000;
+                                    numBuffer[numIt+2][333:339] = 7'b0100000;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0100000;
+                                    numBuffer[numIt+5][333:339] = 7'b0100000;
+                                    numBuffer[numIt+6][333:339] = 7'b0111110;
+                                end
+                                4'b1111: begin
+                                    numBuffer[numIt][333:339] = 7'b0111110;
+                                    numBuffer[numIt+1][333:339] = 7'b0100000;
+                                    numBuffer[numIt+2][333:339] = 7'b0100000;
+                                    numBuffer[numIt+3][333:339] = 7'b0111110;
+                                    numBuffer[numIt+4][333:339] = 7'b0100000;
+                                    numBuffer[numIt+5][333:339] = 7'b0100000;
+                                    numBuffer[numIt+6][333:339] = 7'b0100000;
+                                end
+                                default: begin
+                                    numBuffer[numIt][333:339] = 7'b0000000;
+                                    numBuffer[numIt+1][333:339] = 7'b0000000;
+                                    numBuffer[numIt+2][333:339] = 7'b0000000;
+                                    numBuffer[numIt+3][333:339] = 7'b0000000;
+                                    numBuffer[numIt+4][333:339] = 7'b0000000;
+                                    numBuffer[numIt+5][333:339] = 7'b0000000;
+                                    numBuffer[numIt+6][333:339] = 7'b0000000;
+                                end
+                            endcase
+                            case (stats[statIt][11:8]) 
+                                4'b0000: begin
+                                    numBuffer[numIt][326:332] = 7'b0011100;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100010;
+                                    numBuffer[numIt+3][326:332] = 7'b0100010;
+                                    numBuffer[numIt+4][326:332] = 7'b0100010;
+                                    numBuffer[numIt+5][326:332] = 7'b0100010;
+                                    numBuffer[numIt+6][326:332] = 7'b0011100;
+                                end
+                                4'b0001: begin
+                                    numBuffer[numIt][326:332] = 7'b0001000;
+                                    numBuffer[numIt+1][326:332] = 7'b0001000;
+                                    numBuffer[numIt+2][326:332] = 7'b0001000;
+                                    numBuffer[numIt+3][326:332] = 7'b0001000;
+                                    numBuffer[numIt+4][326:332] = 7'b0001000;
+                                    numBuffer[numIt+5][326:332] = 7'b0001000;
+                                    numBuffer[numIt+6][326:332] = 7'b0001000;
+                                end
+                                4'b0010: begin
+                                    numBuffer[numIt][326:332] = 7'b0011100;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100110;
+                                    numBuffer[numIt+3][326:332] = 7'b0001100;
+                                    numBuffer[numIt+4][326:332] = 7'b0011000;
+                                    numBuffer[numIt+5][326:332] = 7'b0110000;
+                                    numBuffer[numIt+6][326:332] = 7'b0111110;
+                                end
+                                4'b0011: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt + 1][326:332] = 7'b0000010;
+                                    numBuffer[numIt + 2][326:332] = 7'b0000010;
+                                    numBuffer[numIt + 3][326:332] = 7'b0111110;
+                                    numBuffer[numIt + 4][326:332] = 7'b0000010;
+                                    numBuffer[numIt + 5][326:332] = 7'b0000010;
+                                    numBuffer[numIt + 6][326:332] = 7'b0111110;
+                                end
+                                4'b0100: begin
+                                    numBuffer[numIt][326:332] = 7'b0100010;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100010;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0000010;
+                                    numBuffer[numIt+5][326:332] = 7'b0000010;
+                                    numBuffer[numIt+6][326:332] = 7'b0000010;
+                                end
+                                4'b0101: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt+1][326:332] = 7'b0100000;
+                                    numBuffer[numIt+2][326:332] = 7'b0100000;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0000010;
+                                    numBuffer[numIt+5][326:332] = 7'b0000010;
+                                    numBuffer[numIt+6][326:332] = 7'b0111110;
+                                end
+                                4'b0110: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt+1][326:332] = 7'b0100000;
+                                    numBuffer[numIt+2][326:332] = 7'b0100000;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0100010;
+                                    numBuffer[numIt+5][326:332] = 7'b0100010;
+                                    numBuffer[numIt+6][326:332] = 7'b0111110;
+                                end
+                                4'b0111: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt+1][326:332] = 7'b0000010;
+                                    numBuffer[numIt+2][326:332] = 7'b0000100;
+                                    numBuffer[numIt+3][326:332] = 7'b0001000;
+                                    numBuffer[numIt+4][326:332] = 7'b0010000;
+                                    numBuffer[numIt+5][326:332] = 7'b0100000;
+                                    numBuffer[numIt+6][326:332] = 7'b0100000;
+                                end
+                                4'b1000: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100010;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0100010;
+                                    numBuffer[numIt+5][326:332] = 7'b0100010;
+                                    numBuffer[numIt+6][326:332] = 7'b0111110;
+                                end
+                                4'b1001: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100010;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0000010;
+                                    numBuffer[numIt+5][326:332] = 7'b0000010;
+                                    numBuffer[numIt+6][326:332] = 7'b0111110;
+                                end
+                                4'b1010: begin
+                                    numBuffer[numIt][326:332] = 7'b0011100;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100010;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0100010;
+                                    numBuffer[numIt+5][326:332] = 7'b0100010;
+                                    numBuffer[numIt+6][326:332] = 7'b0100010;
+                                end
+                                4'b1011: begin
+                                    numBuffer[numIt][326:332] = 7'b0111100;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100010;
+                                    numBuffer[numIt+3][326:332] = 7'b0111100;
+                                    numBuffer[numIt+4][326:332] = 7'b0100010;
+                                    numBuffer[numIt+5][326:332] = 7'b0100010;
+                                    numBuffer[numIt+6][326:332] = 7'b0111100;
+                                end
+                                4'b1100: begin
+                                    numBuffer[numIt][326:332] = 7'b0001110;
+                                    numBuffer[numIt+1][326:332] = 7'b0010000;
+                                    numBuffer[numIt+2][326:332] = 7'b0100000;
+                                    numBuffer[numIt+3][326:332] = 7'b0100000;
+                                    numBuffer[numIt+4][326:332] = 7'b0100000;
+                                    numBuffer[numIt+5][326:332] = 7'b0010000;
+                                    numBuffer[numIt+6][326:332] = 7'b0001110;
+                                end
+                                4'b1101: begin
+                                    numBuffer[numIt][326:332] = 7'b0111100;
+                                    numBuffer[numIt+1][326:332] = 7'b0100010;
+                                    numBuffer[numIt+2][326:332] = 7'b0100010;
+                                    numBuffer[numIt+3][326:332] = 7'b0100010;
+                                    numBuffer[numIt+4][326:332] = 7'b0100010;
+                                    numBuffer[numIt+5][326:332] = 7'b0100010;
+                                    numBuffer[numIt+6][326:332] = 7'b0111100;
+                                end
+                                4'b1110: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt+1][326:332] = 7'b0100000;
+                                    numBuffer[numIt+2][326:332] = 7'b0100000;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0100000;
+                                    numBuffer[numIt+5][326:332] = 7'b0100000;
+                                    numBuffer[numIt+6][326:332] = 7'b0111110;
+                                end
+                                4'b1111: begin
+                                    numBuffer[numIt][326:332] = 7'b0111110;
+                                    numBuffer[numIt+1][326:332] = 7'b0100000;
+                                    numBuffer[numIt+2][326:332] = 7'b0100000;
+                                    numBuffer[numIt+3][326:332] = 7'b0111110;
+                                    numBuffer[numIt+4][326:332] = 7'b0100000;
+                                    numBuffer[numIt+5][326:332] = 7'b0100000;
+                                    numBuffer[numIt+6][326:332] = 7'b0100000;
+                                end
+                                default: begin
+                                    numBuffer[numIt][326:332] = 7'b0000000;
+                                    numBuffer[numIt+1][326:332] = 7'b0000000;
+                                    numBuffer[numIt+2][326:332] = 7'b0000000;
+                                    numBuffer[numIt+3][326:332] = 7'b0000000;
+                                    numBuffer[numIt+4][326:332] = 7'b0000000;
+                                    numBuffer[numIt+5][326:332] = 7'b0000000;
+                                    numBuffer[numIt+6][326:332] = 7'b0000000;
+                                end
+                            endcase
+                            case (stats[statIt][15:12]) 
+                                4'b0000: begin
+                                    numBuffer[numIt][319:325] = 7'b0011100;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100010;
+                                    numBuffer[numIt+3][319:325] = 7'b0100010;
+                                    numBuffer[numIt+4][319:325] = 7'b0100010;
+                                    numBuffer[numIt+5][319:325] = 7'b0100010;
+                                    numBuffer[numIt+6][319:325] = 7'b0011100;
+                                end
+                                4'b0001: begin
+                                    numBuffer[numIt][319:325] = 7'b0001000;
+                                    numBuffer[numIt+1][319:325] = 7'b0001000;
+                                    numBuffer[numIt+2][319:325] = 7'b0001000;
+                                    numBuffer[numIt+3][319:325] = 7'b0001000;
+                                    numBuffer[numIt+4][319:325] = 7'b0001000;
+                                    numBuffer[numIt+5][319:325] = 7'b0001000;
+                                    numBuffer[numIt+6][319:325] = 7'b0001000;
+                                end
+                                4'b0010: begin
+                                    numBuffer[numIt][319:325] = 7'b0011100;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100110;
+                                    numBuffer[numIt+3][319:325] = 7'b0001100;
+                                    numBuffer[numIt+4][319:325] = 7'b0011000;
+                                    numBuffer[numIt+5][319:325] = 7'b0110000;
+                                    numBuffer[numIt+6][319:325] = 7'b0111110;
+                                end
+                                4'b0011: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt + 1][319:325] = 7'b0000010;
+                                    numBuffer[numIt + 2][319:325] = 7'b0000010;
+                                    numBuffer[numIt + 3][319:325] = 7'b0111110;
+                                    numBuffer[numIt + 4][319:325] = 7'b0000010;
+                                    numBuffer[numIt + 5][319:325] = 7'b0000010;
+                                    numBuffer[numIt + 6][319:325] = 7'b0111110;
+                                end
+                                4'b0100: begin
+                                    numBuffer[numIt][319:325] = 7'b0100010;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100010;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0000010;
+                                    numBuffer[numIt+5][319:325] = 7'b0000010;
+                                    numBuffer[numIt+6][319:325] = 7'b0000010;
+                                end
+                                4'b0101: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt+1][319:325] = 7'b0100000;
+                                    numBuffer[numIt+2][319:325] = 7'b0100000;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0000010;
+                                    numBuffer[numIt+5][319:325] = 7'b0000010;
+                                    numBuffer[numIt+6][319:325] = 7'b0111110;
+                                end
+                                4'b0110: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt+1][319:325] = 7'b0100000;
+                                    numBuffer[numIt+2][319:325] = 7'b0100000;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0100010;
+                                    numBuffer[numIt+5][319:325] = 7'b0100010;
+                                    numBuffer[numIt+6][319:325] = 7'b0111110;
+                                end
+                                4'b0111: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt+1][319:325] = 7'b0000010;
+                                    numBuffer[numIt+2][319:325] = 7'b0000100;
+                                    numBuffer[numIt+3][319:325] = 7'b0001000;
+                                    numBuffer[numIt+4][319:325] = 7'b0010000;
+                                    numBuffer[numIt+5][319:325] = 7'b0100000;
+                                    numBuffer[numIt+6][319:325] = 7'b0100000;
+                                end
+                                4'b1000: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100010;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0100010;
+                                    numBuffer[numIt+5][319:325] = 7'b0100010;
+                                    numBuffer[numIt+6][319:325] = 7'b0111110;
+                                end
+                                4'b1001: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100010;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0000010;
+                                    numBuffer[numIt+5][319:325] = 7'b0000010;
+                                    numBuffer[numIt+6][319:325] = 7'b0111110;
+                                end
+                                4'b1010: begin
+                                    numBuffer[numIt][319:325] = 7'b0011100;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100010;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0100010;
+                                    numBuffer[numIt+5][319:325] = 7'b0100010;
+                                    numBuffer[numIt+6][319:325] = 7'b0100010;
+                                end
+                                4'b1011: begin
+                                    numBuffer[numIt][319:325] = 7'b0111100;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100010;
+                                    numBuffer[numIt+3][319:325] = 7'b0111100;
+                                    numBuffer[numIt+4][319:325] = 7'b0100010;
+                                    numBuffer[numIt+5][319:325] = 7'b0100010;
+                                    numBuffer[numIt+6][319:325] = 7'b0111100;
+                                end
+                                4'b1100: begin
+                                    numBuffer[numIt][319:325] = 7'b0001110;
+                                    numBuffer[numIt+1][319:325] = 7'b0010000;
+                                    numBuffer[numIt+2][319:325] = 7'b0100000;
+                                    numBuffer[numIt+3][319:325] = 7'b0100000;
+                                    numBuffer[numIt+4][319:325] = 7'b0100000;
+                                    numBuffer[numIt+5][319:325] = 7'b0010000;
+                                    numBuffer[numIt+6][319:325] = 7'b0001110;
+                                end
+                                4'b1101: begin
+                                    numBuffer[numIt][319:325] = 7'b0111100;
+                                    numBuffer[numIt+1][319:325] = 7'b0100010;
+                                    numBuffer[numIt+2][319:325] = 7'b0100010;
+                                    numBuffer[numIt+3][319:325] = 7'b0100010;
+                                    numBuffer[numIt+4][319:325] = 7'b0100010;
+                                    numBuffer[numIt+5][319:325] = 7'b0100010;
+                                    numBuffer[numIt+6][319:325] = 7'b0111100;
+                                end
+                                4'b1110: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt+1][319:325] = 7'b0100000;
+                                    numBuffer[numIt+2][319:325] = 7'b0100000;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0100000;
+                                    numBuffer[numIt+5][319:325] = 7'b0100000;
+                                    numBuffer[numIt+6][319:325] = 7'b0111110;
+                                end
+                                4'b1111: begin
+                                    numBuffer[numIt][319:325] = 7'b0111110;
+                                    numBuffer[numIt+1][319:325] = 7'b0100000;
+                                    numBuffer[numIt+2][319:325] = 7'b0100000;
+                                    numBuffer[numIt+3][319:325] = 7'b0111110;
+                                    numBuffer[numIt+4][319:325] = 7'b0100000;
+                                    numBuffer[numIt+5][319:325] = 7'b0100000;
+                                    numBuffer[numIt+6][319:325] = 7'b0100000;
+                                end
+                                default: begin
+                                    numBuffer[numIt][319:325] = 7'b0000000;
+                                    numBuffer[numIt+1][319:325] = 7'b0000000;
+                                    numBuffer[numIt+2][319:325] = 7'b0000000;
+                                    numBuffer[numIt+3][319:325] = 7'b0000000;
+                                    numBuffer[numIt+4][319:325] = 7'b0000000;
+                                    numBuffer[numIt+5][319:325] = 7'b0000000;
+                                    numBuffer[numIt+6][319:325] = 7'b0000000;
+                                end
+                            endcase
+                            case (stats[statIt][19:16]) 
+                                4'b0000: begin
+                                    numBuffer[numIt][312:318] = 7'b0011100;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100010;
+                                    numBuffer[numIt+3][312:318] = 7'b0100010;
+                                    numBuffer[numIt+4][312:318] = 7'b0100010;
+                                    numBuffer[numIt+5][312:318] = 7'b0100010;
+                                    numBuffer[numIt+6][312:318] = 7'b0011100;
+                                end
+                                4'b0001: begin
+                                    numBuffer[numIt][312:318] = 7'b0001000;
+                                    numBuffer[numIt+1][312:318] = 7'b0001000;
+                                    numBuffer[numIt+2][312:318] = 7'b0001000;
+                                    numBuffer[numIt+3][312:318] = 7'b0001000;
+                                    numBuffer[numIt+4][312:318] = 7'b0001000;
+                                    numBuffer[numIt+5][312:318] = 7'b0001000;
+                                    numBuffer[numIt+6][312:318] = 7'b0001000;
+                                end
+                                4'b0010: begin
+                                    numBuffer[numIt][312:318] = 7'b0011100;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100110;
+                                    numBuffer[numIt+3][312:318] = 7'b0001100;
+                                    numBuffer[numIt+4][312:318] = 7'b0011000;
+                                    numBuffer[numIt+5][312:318] = 7'b0110000;
+                                    numBuffer[numIt+6][312:318] = 7'b0111110;
+                                end
+                                4'b0011: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt + 1][312:318] = 7'b0000010;
+                                    numBuffer[numIt + 2][312:318] = 7'b0000010;
+                                    numBuffer[numIt + 3][312:318] = 7'b0111110;
+                                    numBuffer[numIt + 4][312:318] = 7'b0000010;
+                                    numBuffer[numIt + 5][312:318] = 7'b0000010;
+                                    numBuffer[numIt + 6][312:318] = 7'b0111110;
+                                end
+                                4'b0100: begin
+                                    numBuffer[numIt][312:318] = 7'b0100010;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100010;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0000010;
+                                    numBuffer[numIt+5][312:318] = 7'b0000010;
+                                    numBuffer[numIt+6][312:318] = 7'b0000010;
+                                end
+                                4'b0101: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt+1][312:318] = 7'b0100000;
+                                    numBuffer[numIt+2][312:318] = 7'b0100000;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0000010;
+                                    numBuffer[numIt+5][312:318] = 7'b0000010;
+                                    numBuffer[numIt+6][312:318] = 7'b0111110;
+                                end
+                                4'b0110: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt+1][312:318] = 7'b0100000;
+                                    numBuffer[numIt+2][312:318] = 7'b0100000;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0100010;
+                                    numBuffer[numIt+5][312:318] = 7'b0100010;
+                                    numBuffer[numIt+6][312:318] = 7'b0111110;
+                                end
+                                4'b0111: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt+1][312:318] = 7'b0000010;
+                                    numBuffer[numIt+2][312:318] = 7'b0000100;
+                                    numBuffer[numIt+3][312:318] = 7'b0001000;
+                                    numBuffer[numIt+4][312:318] = 7'b0010000;
+                                    numBuffer[numIt+5][312:318] = 7'b0100000;
+                                    numBuffer[numIt+6][312:318] = 7'b0100000;
+                                end
+                                4'b1000: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100010;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0100010;
+                                    numBuffer[numIt+5][312:318] = 7'b0100010;
+                                    numBuffer[numIt+6][312:318] = 7'b0111110;
+                                end
+                                4'b1001: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100010;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0000010;
+                                    numBuffer[numIt+5][312:318] = 7'b0000010;
+                                    numBuffer[numIt+6][312:318] = 7'b0111110;
+                                end
+                                4'b1010: begin
+                                    numBuffer[numIt][312:318] = 7'b0011100;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100010;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0100010;
+                                    numBuffer[numIt+5][312:318] = 7'b0100010;
+                                    numBuffer[numIt+6][312:318] = 7'b0100010;
+                                end
+                                4'b1011: begin
+                                    numBuffer[numIt][312:318] = 7'b0111100;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100010;
+                                    numBuffer[numIt+3][312:318] = 7'b0111100;
+                                    numBuffer[numIt+4][312:318] = 7'b0100010;
+                                    numBuffer[numIt+5][312:318] = 7'b0100010;
+                                    numBuffer[numIt+6][312:318] = 7'b0111100;
+                                end
+                                4'b1100: begin
+                                    numBuffer[numIt][312:318] = 7'b0001110;
+                                    numBuffer[numIt+1][312:318] = 7'b0010000;
+                                    numBuffer[numIt+2][312:318] = 7'b0100000;
+                                    numBuffer[numIt+3][312:318] = 7'b0100000;
+                                    numBuffer[numIt+4][312:318] = 7'b0100000;
+                                    numBuffer[numIt+5][312:318] = 7'b0010000;
+                                    numBuffer[numIt+6][312:318] = 7'b0001110;
+                                end
+                                4'b1101: begin
+                                    numBuffer[numIt][312:318] = 7'b0111100;
+                                    numBuffer[numIt+1][312:318] = 7'b0100010;
+                                    numBuffer[numIt+2][312:318] = 7'b0100010;
+                                    numBuffer[numIt+3][312:318] = 7'b0100010;
+                                    numBuffer[numIt+4][312:318] = 7'b0100010;
+                                    numBuffer[numIt+5][312:318] = 7'b0100010;
+                                    numBuffer[numIt+6][312:318] = 7'b0111100;
+                                end
+                                4'b1110: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt+1][312:318] = 7'b0100000;
+                                    numBuffer[numIt+2][312:318] = 7'b0100000;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0100000;
+                                    numBuffer[numIt+5][312:318] = 7'b0100000;
+                                    numBuffer[numIt+6][312:318] = 7'b0111110;
+                                end
+                                4'b1111: begin
+                                    numBuffer[numIt][312:318] = 7'b0111110;
+                                    numBuffer[numIt+1][312:318] = 7'b0100000;
+                                    numBuffer[numIt+2][312:318] = 7'b0100000;
+                                    numBuffer[numIt+3][312:318] = 7'b0111110;
+                                    numBuffer[numIt+4][312:318] = 7'b0100000;
+                                    numBuffer[numIt+5][312:318] = 7'b0100000;
+                                    numBuffer[numIt+6][312:318] = 7'b0100000;
+                                end
+                                default: begin
+                                    numBuffer[numIt][312:318] = 7'b0000000;
+                                    numBuffer[numIt+1][312:318] = 7'b0000000;
+                                    numBuffer[numIt+2][312:318] = 7'b0000000;
+                                    numBuffer[numIt+3][312:318] = 7'b0000000;
+                                    numBuffer[numIt+4][312:318] = 7'b0000000;
+                                    numBuffer[numIt+5][312:318] = 7'b0000000;
+                                    numBuffer[numIt+6][312:318] = 7'b0000000;
+                                end
+                            endcase
+                            case (stats[statIt][23:20]) 
+                                4'b0000: begin
+                                    numBuffer[numIt][305:311] = 7'b0011100;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100010;
+                                    numBuffer[numIt+3][305:311] = 7'b0100010;
+                                    numBuffer[numIt+4][305:311] = 7'b0100010;
+                                    numBuffer[numIt+5][305:311] = 7'b0100010;
+                                    numBuffer[numIt+6][305:311] = 7'b0011100;
+                                end
+                                4'b0001: begin
+                                    numBuffer[numIt][305:311] = 7'b0001000;
+                                    numBuffer[numIt+1][305:311] = 7'b0001000;
+                                    numBuffer[numIt+2][305:311] = 7'b0001000;
+                                    numBuffer[numIt+3][305:311] = 7'b0001000;
+                                    numBuffer[numIt+4][305:311] = 7'b0001000;
+                                    numBuffer[numIt+5][305:311] = 7'b0001000;
+                                    numBuffer[numIt+6][305:311] = 7'b0001000;
+                                end
+                                4'b0010: begin
+                                    numBuffer[numIt][305:311] = 7'b0011100;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100110;
+                                    numBuffer[numIt+3][305:311] = 7'b0001100;
+                                    numBuffer[numIt+4][305:311] = 7'b0011000;
+                                    numBuffer[numIt+5][305:311] = 7'b0110000;
+                                    numBuffer[numIt+6][305:311] = 7'b0111110;
+                                end
+                                4'b0011: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt + 1][305:311] = 7'b0000010;
+                                    numBuffer[numIt + 2][305:311] = 7'b0000010;
+                                    numBuffer[numIt + 3][305:311] = 7'b0111110;
+                                    numBuffer[numIt + 4][305:311] = 7'b0000010;
+                                    numBuffer[numIt + 5][305:311] = 7'b0000010;
+                                    numBuffer[numIt + 6][305:311] = 7'b0111110;
+                                end
+                                4'b0100: begin
+                                    numBuffer[numIt][305:311] = 7'b0100010;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100010;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0000010;
+                                    numBuffer[numIt+5][305:311] = 7'b0000010;
+                                    numBuffer[numIt+6][305:311] = 7'b0000010;
+                                end
+                                4'b0101: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt+1][305:311] = 7'b0100000;
+                                    numBuffer[numIt+2][305:311] = 7'b0100000;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0000010;
+                                    numBuffer[numIt+5][305:311] = 7'b0000010;
+                                    numBuffer[numIt+6][305:311] = 7'b0111110;
+                                end
+                                4'b0110: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt+1][305:311] = 7'b0100000;
+                                    numBuffer[numIt+2][305:311] = 7'b0100000;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0100010;
+                                    numBuffer[numIt+5][305:311] = 7'b0100010;
+                                    numBuffer[numIt+6][305:311] = 7'b0111110;
+                                end
+                                4'b0111: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt+1][305:311] = 7'b0000010;
+                                    numBuffer[numIt+2][305:311] = 7'b0000100;
+                                    numBuffer[numIt+3][305:311] = 7'b0001000;
+                                    numBuffer[numIt+4][305:311] = 7'b0010000;
+                                    numBuffer[numIt+5][305:311] = 7'b0100000;
+                                    numBuffer[numIt+6][305:311] = 7'b0100000;
+                                end
+                                4'b1000: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100010;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0100010;
+                                    numBuffer[numIt+5][305:311] = 7'b0100010;
+                                    numBuffer[numIt+6][305:311] = 7'b0111110;
+                                end
+                                4'b1001: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100010;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0000010;
+                                    numBuffer[numIt+5][305:311] = 7'b0000010;
+                                    numBuffer[numIt+6][305:311] = 7'b0111110;
+                                end
+                                4'b1010: begin
+                                    numBuffer[numIt][305:311] = 7'b0011100;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100010;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0100010;
+                                    numBuffer[numIt+5][305:311] = 7'b0100010;
+                                    numBuffer[numIt+6][305:311] = 7'b0100010;
+                                end
+                                4'b1011: begin
+                                    numBuffer[numIt][305:311] = 7'b0111100;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100010;
+                                    numBuffer[numIt+3][305:311] = 7'b0111100;
+                                    numBuffer[numIt+4][305:311] = 7'b0100010;
+                                    numBuffer[numIt+5][305:311] = 7'b0100010;
+                                    numBuffer[numIt+6][305:311] = 7'b0111100;
+                                end
+                                4'b1100: begin
+                                    numBuffer[numIt][305:311] = 7'b0001110;
+                                    numBuffer[numIt+1][305:311] = 7'b0010000;
+                                    numBuffer[numIt+2][305:311] = 7'b0100000;
+                                    numBuffer[numIt+3][305:311] = 7'b0100000;
+                                    numBuffer[numIt+4][305:311] = 7'b0100000;
+                                    numBuffer[numIt+5][305:311] = 7'b0010000;
+                                    numBuffer[numIt+6][305:311] = 7'b0001110;
+                                end
+                                4'b1101: begin
+                                    numBuffer[numIt][305:311] = 7'b0111100;
+                                    numBuffer[numIt+1][305:311] = 7'b0100010;
+                                    numBuffer[numIt+2][305:311] = 7'b0100010;
+                                    numBuffer[numIt+3][305:311] = 7'b0100010;
+                                    numBuffer[numIt+4][305:311] = 7'b0100010;
+                                    numBuffer[numIt+5][305:311] = 7'b0100010;
+                                    numBuffer[numIt+6][305:311] = 7'b0111100;
+                                end
+                                4'b1110: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt+1][305:311] = 7'b0100000;
+                                    numBuffer[numIt+2][305:311] = 7'b0100000;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0100000;
+                                    numBuffer[numIt+5][305:311] = 7'b0100000;
+                                    numBuffer[numIt+6][305:311] = 7'b0111110;
+                                end
+                                4'b1111: begin
+                                    numBuffer[numIt][305:311] = 7'b0111110;
+                                    numBuffer[numIt+1][305:311] = 7'b0100000;
+                                    numBuffer[numIt+2][305:311] = 7'b0100000;
+                                    numBuffer[numIt+3][305:311] = 7'b0111110;
+                                    numBuffer[numIt+4][305:311] = 7'b0100000;
+                                    numBuffer[numIt+5][305:311] = 7'b0100000;
+                                    numBuffer[numIt+6][305:311] = 7'b0100000;
+                                end
+                                default: begin
+                                    numBuffer[numIt][305:311] = 7'b0000000;
+                                    numBuffer[numIt+1][305:311] = 7'b0000000;
+                                    numBuffer[numIt+2][305:311] = 7'b0000000;
+                                    numBuffer[numIt+3][305:311] = 7'b0000000;
+                                    numBuffer[numIt+4][305:311] = 7'b0000000;
+                                    numBuffer[numIt+5][305:311] = 7'b0000000;
+                                    numBuffer[numIt+6][305:311] = 7'b0000000;
+                                end
+                            endcase
+                            numBuffer[numIt+0][290:304] = 14'b00111000000000;
+                            numBuffer[numIt+1][290:304] = 14'b01000100100010;
+                            numBuffer[numIt+2][290:304] = 14'b01000100010100;
+                            numBuffer[numIt+3][290:304] = 14'b01000100001000;
+                            numBuffer[numIt+4][290:304] = 14'b01000100010100;
+                            numBuffer[numIt+5][290:304] = 14'b01000100100010;
+                            numBuffer[numIt+6][290:304] = 14'b00111000000000;
+                            statIt = statIt + 1;
+                            numIt = numIt + 10;
+                    end 
+                    else begin 
+                        //statIt = 0;
+                    end
             end
-    end
-    else if(numIt > 119) begin 
-       numIt = 30;
-    end 
-    else if(numIt < 30) begin
-       numIt = numIt + 1;
+            else if(numIt > 119) begin 
+               //numIt = 30;
+            end 
+       end
     end
 end
 

@@ -2,7 +2,7 @@ module vga_demo
    #(parameter CD = 12) // CD: Color Depth (12-bit RGB by default)
    (
     input clk,                       // Clock input
-
+    input wire endFile,
     // VGA output signals
     output hsync, vsync,           // Horizontal and vertical sync
     output [CD-1:0] rgb,            // RGB pixel output
@@ -27,6 +27,7 @@ module vga_demo
    // Generates a colored square/bar based on current pixel (hc, vc)
    square_demo square_unit (
       .clk(clk),
+      .endFile(endFile),
       .x(hc), 
       .y(vc),
       .vga_rgb(vga_rgb),

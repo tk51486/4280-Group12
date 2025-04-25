@@ -31,7 +31,8 @@ module SD_Data_Decoder(
     output reg [20:0] LRUInst,
     output reg [31:0] instTotal,
 
-
+    output wire endFile,
+    
     output reg LRULineReady,
     //SD Ports
     input wire          rstn,
@@ -44,7 +45,7 @@ module SD_Data_Decoder(
 );
 wire [7:0] CurrNum;
 wire CurrFlag;
-assign led[7:0] = CurrNum[7:0];
+//assign led[7:0] = CurrNum[7:0];
 reg [127:0] CurrentLine;
 reg [127:0] LRUParse;
 reg [60:0] ParseIT;
@@ -69,7 +70,7 @@ sd_file_reader #(
     //.card_type        ( led[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
     //.filesystem_type  ( led[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
     //.file_found       ( led[8]       ),  // 0=file not found, 1=file found
-    .readTest (led[15]),
+    .endFile (endFile),
     .outen            (CurrFlag         ),
     .outbyte          (CurrNum       )
 );

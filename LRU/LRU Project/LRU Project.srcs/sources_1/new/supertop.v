@@ -35,7 +35,7 @@ module supertop(
         output wire         sddat1, sddat2, sddat3,
         output wire         uart_tx,
         //RAM
-        /*inout[15:0] ddr2_dq,
+        inout[15:0] ddr2_dq,
         inout[1:0] ddr2_dqs_n,
         inout[1:0] ddr2_dqs_p,
         output[12:0] ddr2_addr,
@@ -48,7 +48,7 @@ module supertop(
         output ddr2_cke,
         output ddr2_cs_n,
         output[1:0] ddr2_dm,
-        output ddr2_odt, */
+        output ddr2_odt, 
         //VGA
         output hsync, vsync,           // Horizontal and vertical sync
         output [11:0] rgb 
@@ -101,7 +101,7 @@ module supertop(
     IO_Management u_IO_Management(
         //.start(start),
         .clk(clk100mhz),
-        .led(led),
+        //.led(led),
         
         .accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
@@ -131,7 +131,7 @@ module supertop(
         .vsync(vsync),
         .rgb(rgb)
     );
-    /*
+    
     DirectLRU u_DirectLRU(
         
         .clk(clk100mhz),
@@ -175,5 +175,5 @@ module supertop(
         .ddr2_dm(ddr2_dm),
         .ddr2_odt(ddr2_odt)
     );
-*/
+
 endmodule

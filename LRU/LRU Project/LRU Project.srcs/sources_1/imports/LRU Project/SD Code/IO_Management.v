@@ -44,6 +44,8 @@ module IO_Management (
     
 );
 
+wire endFile;
+
 wire [31:0] instTotal;
 
 SD_Data_Decoder u_SD_Data_Decoder(
@@ -57,6 +59,8 @@ SD_Data_Decoder u_SD_Data_Decoder(
     .LRULineReady(LRULineReady),
     .instTotal(instTotal),
     
+    .endFile(endFile),
+    
     .clk_sd(clk_sd),
     .rstn(rstn),
     .resetn(resetn),
@@ -65,12 +69,13 @@ SD_Data_Decoder u_SD_Data_Decoder(
     .sddat0(sddat0),
     .uart_tx(uart_tx)
 );
-/*
+
 vga_demo u_vga_demo(
     .clk(clk),
     .hsync(hsync),
     .vsync(vsync),
     .rgb(rgb),
+    .endFile(endFile),
     .instTotal(instTotal),
     .accessesTotal(accessesTotal),
     .evictionTotal(evictionTotal),
@@ -81,5 +86,5 @@ vga_demo u_vga_demo(
     .hitTotal(hitTotal),
     .missTotal(missTotal)
 );
-*/
+
 endmodule

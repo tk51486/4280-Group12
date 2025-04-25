@@ -33,7 +33,7 @@ module sd_file_reader #(
     output wire [3:0] card_stat,         // show the sdcard initialize status
     output wire [1:0] card_type,         // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
     output wire [1:0] filesystem_type,   // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32
-    output wire  readTest,
+    output wire  endFile,
     output reg        file_found,        // 0=file not found, 1=file found
     // file content data output (sync with clk)
     output reg        outen,             // when outen=1, a byte of file content is read out from outbyte
@@ -68,7 +68,7 @@ reg         read_start     = 1'b0;
 reg  [31:0] read_sector_no = 0;
 wire        read_done;
 
-assign readTest = ~(filesystem_state == DONE);
+assign endFile = (filesystem_state == DONE);
 
 wire        rvalid;
 wire [ 8:0] raddr;
