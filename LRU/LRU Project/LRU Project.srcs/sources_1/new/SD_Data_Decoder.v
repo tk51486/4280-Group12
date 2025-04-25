@@ -69,6 +69,7 @@ sd_file_reader #(
     //.card_type        ( led[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
     //.filesystem_type  ( led[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
     //.file_found       ( led[8]       ),  // 0=file not found, 1=file found
+    .readTest (led[15]),
     .outen            (CurrFlag         ),
     .outbyte          (CurrNum       )
 );
