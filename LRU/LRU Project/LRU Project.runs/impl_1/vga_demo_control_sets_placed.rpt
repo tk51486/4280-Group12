@@ -1,0 +1,165 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Fri Apr 25 02:38:38 2025
+| Host         : engr-d1409-009 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file vga_demo_control_sets_placed.rpt
+| Design       : vga_demo
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    87 |
+|    Minimum number of control sets                        |    87 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   351 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    87 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    81 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              15 |            8 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               2 |            2 |
+| Yes          | No                    | No                     |             392 |          210 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------+---------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |              Enable Signal              |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------+---------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                                         | sync_unit/frame_unit/vsync_reg0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG |                                         | sync_unit/frame_unit/hsync_reg0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[83][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[0]                |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[79][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[78][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[81][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[84][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[88][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[85][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[96][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[86][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[87][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[92][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[89][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[94][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[91][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[90][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[93][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[97][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[82][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[95][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[98][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[99][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[102][341]_i_1_n_0 |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[100][341]_i_1_n_0 |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[103][341]_i_1_n_0 |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[101][341]_i_1_n_0 |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[104][341]_i_1_n_0 |                                 |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[106][341]_i_1_n_0 |                                 |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[105][341]_i_1_n_0 |                                 |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[107][341]_i_1_n_0 |                                 |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[108][341]_i_1_n_0 |                                 |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[30][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[109][341]_i_1_n_0 |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[110][341]_i_1_n_0 |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[35][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[33][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[32][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[31][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[34][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[40][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[38][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[37][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[36][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[39][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[47][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[42][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[41][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[43][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[45][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[44][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[46][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[50][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[49][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[48][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[51][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[54][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[59][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[55][341]_i_1_n_0  |                                 |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[56][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[53][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[58][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[52][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[57][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[62][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[64][341]_i_1_n_0  |                                 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[60][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[63][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[61][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[66][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[68][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[67][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[70][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[72][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[69][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[71][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[74][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[73][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[80][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[77][341]_i_1_n_0  |                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[76][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | square_unit/numBuffer[75][341]_i_1_n_0  |                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | sync_unit/frame_unit/tick_25M           |                                 |                6 |             11 |         1.83 |
+|  clk_IBUF_BUFG | sync_unit/frame_unit/vcount0            |                                 |                5 |             13 |         2.60 |
+|  clk_IBUF_BUFG |                                         |                                 |                8 |             15 |         1.88 |
+|  clk_IBUF_BUFG | square_unit/statIt                      |                                 |               13 |             44 |         3.38 |
++----------------+-----------------------------------------+---------------------------------+------------------+----------------+--------------+
+
+
