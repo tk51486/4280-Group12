@@ -2,7 +2,7 @@
 
 module square_demo (
     input clk,
-    input [10:0] x, y,                // Current pixel coordinates (x and y)
+    input [10:0] x, y,                
     output [11:0] vga_rgb,
     input wire [31:0] accessesTotal,
     input wire [31:0] evictionTotal,
@@ -24,7 +24,7 @@ initial begin
 end
 reg [11:0] use_rgb;
 initial  use_rgb = 0;
-reg [3:0] r, g, b;                    // Individual RGB color channels
+reg [3:0] r, g, b;                    
 
 reg start;
 reg [30:154] rowBuffer [30:120];
