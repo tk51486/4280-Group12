@@ -99,7 +99,7 @@ module supertop(
     IO_Management u_IO_Management(
         //.start(start),
         .clk(clk100mhz),
-        .led(led),
+        //.led(led),
         
         /*.accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
@@ -152,7 +152,7 @@ module supertop(
         .pll_locked(pll_locked),
         .CPU_RESETN(CPU_RESETN),
         
-        //.led(led),
+        .led(led),
         
         .ddr2_dq(ddr2_dq),
         .ddr2_dqs_n(ddr2_dqs_n),

@@ -49,7 +49,7 @@ reg [127:0] CurrentLine;
 reg [127:0] LRUParse;
 reg [60:0] ParseIT;
 reg [27:0] LRUAddr;
-(* DONT_TOUCH = "yes" *) reg [31:0] instTotal, instTotal_next;
+reg [31:0] instTotal;
 
 reg [15:0] debugLED;
 assign led = debugLED;
@@ -83,7 +83,6 @@ initial begin
     LRUInst = 0;
     LRULineReady = 0;
     instTotal = 0;
-    instTotal_next = 0;
     
     CurrentLine = 0;
     LRUParse = 0;

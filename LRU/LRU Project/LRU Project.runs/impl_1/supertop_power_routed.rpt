@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date             : Thu Apr 24 18:27:32 2025
+| Date             : Thu Apr 24 20:11:50 2025
 | Host             : engr-d1409-008 running 64-bit major release  (build 9200)
 | Command          : report_power -file supertop_power_routed.rpt -pb supertop_power_summary_routed.pb -rpx supertop_power_routed.rpx
 | Design           : supertop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.172        |
+| Total On-Chip Power (W)  | 1.240        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.064        |
+| Dynamic (W)              | 1.132        |
 | Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 79.7         |
-| Junction Temperature (C) | 30.3         |
+| Max Ambient (C)          | 79.3         |
+| Junction Temperature (C) | 30.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,23 +53,24 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.032 |       27 |       --- |             --- |
-| Slice Logic              |     0.010 |    10482 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     4470 |     63400 |            7.05 |
+| Slice Logic              |     0.010 |    10556 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     4463 |     63400 |            7.04 |
 |   LUT as Distributed RAM |    <0.001 |      256 |     19000 |            1.35 |
-|   Register               |    <0.001 |     3951 |    126800 |            3.12 |
-|   CARRY4                 |    <0.001 |      266 |     15850 |            1.68 |
+|   Register               |    <0.001 |     4023 |    126800 |            3.17 |
+|   CARRY4                 |    <0.001 |      263 |     15850 |            1.66 |
 |   F7/F8 Muxes            |    <0.001 |       39 |     63400 |            0.06 |
 |   LUT as Shift Register  |    <0.001 |       11 |     19000 |            0.06 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      138 |       --- |             --- |
-| Signals                  |     0.012 |     8575 |       --- |             --- |
+| Signals                  |     0.013 |     8651 |       --- |             --- |
 | MMCM                     |     0.235 |        2 |         6 |           33.33 |
 | PLL                      |     0.111 |        1 |         6 |           16.67 |
 | DSPs                     |    <0.001 |       11 |       240 |            4.58 |
-| I/O                      |     0.555 |       72 |       210 |           34.29 |
+| I/O                      |     0.621 |       72 |       210 |           34.29 |
 | PHASER                   |     0.106 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.108 |          |           |                 |
-| Total                    |     1.172 |          |           |                 |
+| Total                    |     1.240 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,9 +80,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.111 |       0.093 |      0.018 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.309 |       0.291 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.113 |       0.095 |      0.018 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.312 |       0.293 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.024 |       0.020 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.249 |       0.245 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -171,15 +172,15 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| supertop               |     1.064 |
+| supertop               |     1.132 |
 |   pll1                 |     0.127 |
 |     inst               |     0.127 |
 |   u_IO_Management      |     0.006 |
 |     u_SD_Data_Decoder  |     0.006 |
 |       u_sd_file_reader |     0.005 |
-|   u_StatTracker        |     0.926 |
-|     u_DirectLRU        |     0.926 |
-|       u_MemController  |     0.925 |
+|   u_StatTracker        |     0.928 |
+|     u_DirectLRU        |     0.928 |
+|       u_MemController  |     0.927 |
 +------------------------+-----------+
 
 

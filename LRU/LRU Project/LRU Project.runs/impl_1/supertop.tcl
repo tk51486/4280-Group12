@@ -107,7 +107,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 6
-  set_param synth.incrementalSynthesisCache {C:/Users/tk51486/Documents/GitHub/4280-Group12/LRU/LRU Project/.Xil/Vivado-17236-engr-d1409-008/incrSyn}
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 24  }

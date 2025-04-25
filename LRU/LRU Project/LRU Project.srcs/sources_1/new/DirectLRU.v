@@ -18,11 +18,16 @@ module DirectLRU(
     output wire [15:0] led,
     
     //to stat tracker
-    output reg [1:0] accesses,
-    output reg eviction,
     output reg write,
     output reg hit,
-    output reg processed,
+    output reg [31:0] accessesTotal,
+    output reg [31:0] evictionTotal,
+    output reg [31:0] writeHitTotal,
+    output reg [31:0] readHitTotal,
+    output reg [31:0] writeMissTotal,
+    output reg [31:0] readMissTotal,
+    output reg [31:0] hitTotal,
+    output reg [31:0] missTotal,
 
     //RAM Interface
     inout[15:0] ddr2_dq,
@@ -94,11 +99,12 @@ module DirectLRU(
         ram_start = 0;
         ram_addr = {11'b0, 17'b0};
         ram_addr_next = 28'h0;
-        line_to_ram = 64'hcdcdffff;//a5a5
+        line_to_ram = 64'h0; //a5a5
         debugLED = 16'h0000;
         initializing = 1;
         init_next = 1;
         walloc = 1;
+        evictionTotal = 0;
     end
     
     //state register
@@ -110,8 +116,9 @@ module DirectLRU(
     
     //next-state logic
     always @(*) begin
-        //debugLED = lru_state;
-        debugLED[15:0] = LRUIndex;
+        //debugLED[15:13] = lru_state;
+        debugLED = writeHitTotal[31:16];
+        
         next_state = lru_state;
         ram_addr_next = ram_addr;
         init_next = initializing;
@@ -145,35 +152,35 @@ module DirectLRU(
             LRU_PROCESS: begin
                 if (~ram_transaction_complete) begin //wait until flag is cleared
                     next_state = LRU_UPDATERAM;
-                    line_to_ram[63:45] = {1'b1, LRULoadStore, LRUTag}; //will be written to RAM (maybe)
-                    processed = 1;
+                    line_to_ram[31:13] = {1'b1, LRULoadStore, LRUTag}; //will be written to RAM (maybe)
+                    
                     if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
                         if(LRULoadStore) begin   //write miss
-                            accesses = 1;
+                            accessesTotal = accessesTotal + 1;
                             if (~walloc) begin
                                 next_state = LRU_WAIT;
                             end else if (line_from_ram[62]) begin //dirty eviction (write)
-                                eviction = 1;
-                                accesses = 2;
+                                evictionTotal = evictionTotal + 1;
+                                accessesTotal = accessesTotal + 1;
                             end
-                            write = 1;
+                            writeMissTotal = writeMissTotal + 1;
                         end else begin  //read miss
-                            accesses = 1;
+                            accessesTotal = accessesTotal + 1;
                             if (line_from_ram[62]) begin //dirty eviction (read)
-                                eviction = 1;
-                                accesses = 2;
+                                //debugLED[0] = 1;
+                                evictionTotal = evictionTotal + 1;
+                                accessesTotal = accessesTotal + 1;
                             end
-                            write = 0;
+                            readMissTotal = readMissTotal + 1;
                         end
-                        hit = 0;
+                        missTotal = missTotal + 1;
                     end else begin //hit
                         if (LRULoadStore) begin //write hit
-                            write = 1;
+                            writeHitTotal = writeHitTotal + 1;
                         end else begin  //read hit
-                            write = 0;
+                            readHitTotal = readHitTotal + 1;
                         end
-                        hit = 1;
-                        accesses = 0;
+                        hitTotal = hitTotal + 1;
                     end
                 end
             end
