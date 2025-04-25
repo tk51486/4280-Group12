@@ -19,13 +19,22 @@ reg [3:0] r, g, b;                    // Individual RGB color channels
 reg start;
 reg [30:154] rowBuffer [30:110];
 reg [155:346] numBuffer [30:110];
+reg [6:0] tempBuf [6:0];
 reg [15:0] numIt;
-reg [15:0] statsIt;
-reg [10:0] stats [7:0];
+reg [15:0] statIt;
+reg [23:0] stats [7:0];
 reg [10:0] currStat;
 initial begin
     numIt = 30;
-    statsIt = 0;
+    statIt = 0;
+    stats[0] = 20;
+    stats[1] = 401;
+    stats[2] = 5610;
+    stats[3] = 31;
+    stats[4] = 31;
+    stats[5] = 31;
+    stats[6] = 31;
+    stats[7] = 31;
     currStat = 0;
     
     rowBuffer[30] = 125'b00111000001110000111001111100011110001111001111100011110000000001111100011100011111000111000100000000000000000000000000;
@@ -216,12 +225,186 @@ always @(posedge clk) begin
         end
     end
 end
-
+/*
 always @(posedge clk)begin
     if(numIt < 110)begin
+        if(statIt < 6)begin
+            case (stats[statIt][3:0])
+                4'b0000: begin
+                    tempBuf[0] = 7'b0011100;
+                    tempBuf[1] = 7'b0100010;
+                    tempBuf[2] = 7'b0100010;
+                    tempBuf[3] = 7'b0100010;
+                    tempBuf[4] = 7'b0100010;
+                    tempBuf[5] = 7'b0100010;
+                    tempBuf[6] = 7'b0011100;
+                end
+                4'b0001: begin
+                    tempBuf[0] = 7'b0011100;
+                    tempBuf[1] = 7'b0011100;
+                    tempBuf[2] = 7'b0011100;
+                    tempBuf[3] = 7'b0011100;
+                    tempBuf[4] = 7'b0011100;
+                    tempBuf[5] = 7'b0011100;
+                    tempBuf[6] = 7'b0011100;
+                end
+                4'b0010: begin
+                    tempBuf[0] = 7'b0011100;
+                    tempBuf[1] = 7'b0100010;
+                    tempBuf[2] = 7'b0100110;
+                    tempBuf[3] = 7'b0001100;
+                    tempBuf[4] = 7'b0011000;
+                    tempBuf[5] = 7'b0110000;
+                    tempBuf[6] = 7'b0111110;
+                end
+                4'b0011: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0000010;
+                    tempBuf[2] = 7'b0000010;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0000010;
+                    tempBuf[5] = 7'b0000010;
+                    tempBuf[6] = 7'b0111110;
+                end
+                4'b0100: begin
+                    tempBuf[0] = 7'b0100010;
+                    tempBuf[1] = 7'b0100010;
+                    tempBuf[2] = 7'b0100010;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0000010;
+                    tempBuf[5] = 7'b0000010;
+                    tempBuf[6] = 7'b0000010;
+                end
+                4'b0101: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0100000;
+                    tempBuf[2] = 7'b0100000;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0000010;
+                    tempBuf[5] = 7'b0000010;
+                    tempBuf[6] = 7'b0111110;
+                end
+                4'b0110: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0100000;
+                    tempBuf[2] = 7'b0100000;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0100010;
+                    tempBuf[5] = 7'b0100010;
+                    tempBuf[6] = 7'b0111110;
+                end
+                4'b0111: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0000010;
+                    tempBuf[2] = 7'b0000100;
+                    tempBuf[3] = 7'b0001000;
+                    tempBuf[4] = 7'b0010000;
+                    tempBuf[5] = 7'b0100000;
+                    tempBuf[6] = 7'b0100000;
+                end
+                4'b1000: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0100010;
+                    tempBuf[2] = 7'b0100010;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0100010;
+                    tempBuf[5] = 7'b0100010;
+                    tempBuf[6] = 7'b0111110;
+                end
+                4'b1001: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0100010;
+                    tempBuf[2] = 7'b0100010;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0000010;
+                    tempBuf[5] = 7'b0000010;
+                    tempBuf[6] = 7'b0111110;
+                end
+                4'b1010: begin
+                    tempBuf[0] = 7'b0011100;
+                    tempBuf[1] = 7'b0100010;
+                    tempBuf[2] = 7'b0100010;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0100010;
+                    tempBuf[5] = 7'b0100010;
+                    tempBuf[6] = 7'b0100010;
+                end
+                4'b1011: begin
+                    tempBuf[0] = 7'b0111100;
+                    tempBuf[1] = 7'b0100010;
+                    tempBuf[2] = 7'b0100010;
+                    tempBuf[3] = 7'b0111100;
+                    tempBuf[4] = 7'b0100010;
+                    tempBuf[5] = 7'b0100010;
+                    tempBuf[6] = 7'b0111100;
+                end
+                4'b1100: begin
+                    tempBuf[0] = 7'b0001110;
+                    tempBuf[1] = 7'b0010000;
+                    tempBuf[2] = 7'b0100000;
+                    tempBuf[3] = 7'b0100000;
+                    tempBuf[4] = 7'b0100000;
+                    tempBuf[5] = 7'b0010000;
+                    tempBuf[6] = 7'b0001110;
+                end
+                4'b1101: begin
+                    tempBuf[0] = 7'b0111100;
+                    tempBuf[1] = 7'b01000100;
+                    tempBuf[2] = 7'b0100010;
+                    tempBuf[3] = 7'b0100010;
+                    tempBuf[4] = 7'b0100010;
+                    tempBuf[5] = 7'b0100010;
+                    tempBuf[6] = 7'b0111100;
+                end
+                4'b1110: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0100000;
+                    tempBuf[2] = 7'b0100000;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0100000;
+                    tempBuf[5] = 7'b0100000;
+                    tempBuf[6] = 7'b0111110;
+                end
+                4'b1111: begin
+                    tempBuf[0] = 7'b0111110;
+                    tempBuf[1] = 7'b0100000;
+                    tempBuf[2] = 7'b0100000;
+                    tempBuf[3] = 7'b0111110;
+                    tempBuf[4] = 7'b0100000;
+                    tempBuf[5] = 7'b0100000;
+                    tempBuf[6] = 7'b0100000;
+                end
+                default: begin
+                    tempBuf[0] = 7'b0000000;
+                    tempBuf[1] = 7'b0000000;
+                    tempBuf[2] = 7'b0000000;
+                    tempBuf[3] = 7'b0000000;
+                    tempBuf[4] = 7'b0000000;
+                    tempBuf[5] = 7'b0000000;
+                    tempBuf[6] = 7'b0000000;
+                end
+            endcase
+            stats[statIt] = stats[statIt] >> 4;
+            statIt = statIt + 1;
+            numBuffer[numIt][26:20] = tempBuf[0][6:0];
+            numBuffer[numIt] = numBuffer[numIt] >> 7;
+            numBuffer[numIt+1][26:20] = tempBuf[0][6:0];
+            numBuffer[numIt+1] = numBuffer[numIt] >> 7;
+            numBuffer[numIt+2][26:20] = tempBuf[0][6:0];
+            numBuffer[numIt+2] = numBuffer[numIt] >> 7;
+            numBuffer[numIt+3][26:20] = tempBuf[0][6:0];
+            numBuffer[numIt+3] = numBuffer[numIt] >> 7;
+            numBuffer[numIt+4][26:20] = tempBuf[0][6:0];
+            numBuffer[numIt+4] = numBuffer[numIt] >> 7;
+            numBuffer[numIt+5][26:20] = tempBuf[0][6:0];
+            numBuffer[numIt+5] = numBuffer[numIt] >> 7;
+            numBuffer[numIt+6][26:20] = tempBuf[0][6:0];
+            numBuffer[numIt+6] = numBuffer[numIt] >> 7;
+            numIt = numIt + 10;
+        end
     end
 end
-
+*/
 // Output the final RGB value (reordered from {r,g,b} to {b,g,r})
 assign vga_rgb = {b, g, r};   // Note: VGA often uses BGR order instead of RGB
 

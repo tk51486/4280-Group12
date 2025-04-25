@@ -3,8 +3,8 @@ module vga_sync_demo #(
 )(
     input clk, reset,                     // Main clock and reset
     input [CD-1:0] vga_si_rgb,            // Video stream input (RGB data)
-    output reg hsync, vsync,              // VGA sync signals
-    output reg [CD-1:0] rgb,              // Output pixel color to VGA monitor
+    output hsync, vsync,              // VGA sync signals
+    output [CD-1:0] rgb,              // Output pixel color to VGA monitor
     output [10:0] hc, vc                  // Current pixel coordinates (horizontal & vertical)
 );
 
