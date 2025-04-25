@@ -93,7 +93,7 @@ module DirectLRU(
     localparam LRU_PROCESS = 3'h3;
     localparam LRU_UPDATERAM = 3'h4;
     localparam LRU_WAIT = 3'h5;
-    reg [2:0] lru_state, next_state;
+    reg [2:0] lru_state, next_state, prev_state;
     reg initializing, init_next; //used to initialize RAM
     
     initial begin
@@ -111,20 +111,22 @@ module DirectLRU(
     
     //state register
     always @(posedge clk) begin
+        prev_state <= lru_state;
         lru_state <= next_state;
         ram_addr <= ram_addr_next;
         initializing <= init_next;
     end
    
-   wire leaving_process = (lru_state == LRU_PROCESS && next_state != LRU_PROCESS);
+   wire increment = (prev_state != LRU_PROCESS && lru_state == LRU_PROCESS);
    
    //counter logic
    always @(posedge clk) begin
-        if (leaving_process) begin
+        if (increment) begin
             accessesTotal <= accessesTotal + 1;
             if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
                 if(LRULoadStore) begin   //write miss
-                    if (walloc && line_from_ram[62]) begin//dirty eviction (write)
+                    //if (walloc && line_from_ram[62]) begin//dirty eviction (write)
+                    if (line_from_ram[62]) begin//dirty eviction (write)
                         evictionTotal <= evictionTotal + 1;
                     end 
                     writeMissTotal <= writeMissTotal + 1;
@@ -150,6 +152,7 @@ module DirectLRU(
     always @(*) begin
         //debugLED[15:13] = lru_state;
         debugLED = evictionTotal[15:0];
+        
         
         next_state = lru_state;
         ram_addr_next = ram_addr;
@@ -186,34 +189,15 @@ module DirectLRU(
                     next_state = LRU_UPDATERAM;
                     line_to_ram[31:13] = {1'b1, LRULoadStore, LRUTag}; //will be written to RAM (maybe)
                     
-                    if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
+                    /*if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
                         if(LRULoadStore) begin   //write miss
                             //accessesTotal = accessesTotal + 1;
                             if (~walloc) begin
                                 next_state = LRU_WAIT;
-                            end else if (line_from_ram[62]) begin //dirty eviction (write)
-                                //evictionTotal = evictionTotal + 1;
-                                //accessesTotal = accessesTotal + 1;
                             end
-                            //writeMissTotal = writeMissTotal + 1;
-                        end else begin  //read miss
-                            //accessesTotal = accessesTotal + 1;
-                            if (line_from_ram[62]) begin //dirty eviction (read)
-                                //debugLED[0] = 1;
-                                //evictionTotal = evictionTotal + 1;
-                                //accessesTotal = accessesTotal + 1;
-                            end
-                            //readMissTotal = readMissTotal + 1;
                         end
-                        //missTotal = missTotal + 1;
-                    end else begin //hit
-                        if (LRULoadStore) begin //write hit
-                            //writeHitTotal = writeHitTotal + 1;
-                        end else begin  //read hit
-                            //readHitTotal = readHitTotal + 1;
-                        end
-                        //hitTotal = hitTotal + 1;
-                    end
+                    end*/
+                    
                 end
             end
             LRU_UPDATERAM: begin
