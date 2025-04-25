@@ -26,7 +26,7 @@ module supertop(
         input  wire         resetn,
         output wire [15:0]  led,
         //Pmod
-        input  wire         BTNL,
+        input  wire         JA,
         //SD
         output wire         sdcard_pwr_n,
         output wire         sdclk,
@@ -80,7 +80,8 @@ module supertop(
     wire pll_locked;
     wire resetn;
     
-    reg [15:0] debugLED;
+    //reg [15:0] debugLED;
+    assign led[0] = JA;
     
     assign sdcard_pwr_n = 1'b0;                  // keep SDcard power-on
     assign {sddat1, sddat2, sddat3} = 3'b111;    // Must set sddat1~3 to 1 to avoid SD card from entering SPI mode
@@ -90,7 +91,7 @@ module supertop(
     end
     
     always @(posedge clk100mhz)begin
-        if(BTNL)begin
+        if(JA)begin
             start = 1;
         end
     end
@@ -164,7 +165,7 @@ module supertop(
         .pll_locked(pll_locked),
         .CPU_RESETN(CPU_RESETN),
         
-        .led(led),
+        .led(led[15:1]),
         
         .ddr2_dq(ddr2_dq),
         .ddr2_dqs_n(ddr2_dqs_n),

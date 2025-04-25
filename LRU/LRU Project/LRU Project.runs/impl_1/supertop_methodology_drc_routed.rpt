@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date         : Fri Apr 25 09:15:13 2025
+| Date         : Fri Apr 25 13:35:24 2025
 | Host         : engr-d1409-009 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file supertop_methodology_drc_routed.rpt -pb supertop_methodology_drc_routed.pb -rpx supertop_methodology_drc_routed.rpx
 | Design       : supertop
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 309
+             Checks found: 292
 +-----------+------------------+----------------------------------------------------+--------+
 | Rule      | Severity         | Description                                        | Checks |
 +-----------+------------------+----------------------------------------------------+--------+
@@ -35,7 +35,7 @@ Table of Contents
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 2      |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 12     |
 | TIMING-10 | Warning          | Missing property on synchronizer                   | 1      |
-| TIMING-16 | Warning          | Large setup violation                              | 24     |
+| TIMING-16 | Warning          | Large setup violation                              | 7      |
 | TIMING-18 | Warning          | Missing input or output delay                      | 35     |
 | TIMING-20 | Warning          | Non-clocked latch                                  | 21     |
 | XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1      |
@@ -1058,62 +1058,62 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X5Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X11Y161 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X4Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X9Y159 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X1Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X8Y159 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X2Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X12Y159 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X7Y124 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X11Y159 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X3Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X11Y157 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X3Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X9Y157 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X4Y124 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X11Y155 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X5Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X10Y160 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X1Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X10Y155 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X0Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X10Y157 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X2Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X8Y157 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-10#1 Warning
@@ -1123,127 +1123,42 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.019 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[16]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.148 ns between u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_reg/C (clocked by clk_cpu_pll) and u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.019 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[17]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.615 ns between u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_reg/C (clocked by clk_cpu_pll) and u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.019 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[18]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.980 ns between u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_DirectLRU/FSM_sequential_lru_state_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.019 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[19]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.005 ns between u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_DirectLRU/FSM_sequential_lru_state_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.036 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[10]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.067 ns between u_DirectLRU/u_MemController/mem_ex/ready_sync/out_reg[0]/C (clocked by clk_cpu_pll) and u_DirectLRU/FSM_sequential_lru_state_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.036 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[11]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.595 ns between u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep/C (clocked by clk_pll_i) and u_DirectLRU/u_MemController/mem_ex/ready_sync/sync_reg_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.036 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[8]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -1.036 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[9]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#9 Warning
-Large setup violation  
-There is a large setup violation of -1.060 ns between u_IO_Management/u_vga_demo/square_unit/numIt_reg[10]/C (clocked by sys_clk_pin) and u_IO_Management/u_vga_demo/square_unit/numBuffer_reg[115][335]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#10 Warning
-Large setup violation  
-There is a large setup violation of -1.102 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[4]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#11 Warning
-Large setup violation  
-There is a large setup violation of -1.102 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[5]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#12 Warning
-Large setup violation  
-There is a large setup violation of -1.102 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[6]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#13 Warning
-Large setup violation  
-There is a large setup violation of -1.102 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[7]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#14 Warning
-Large setup violation  
-There is a large setup violation of -1.165 ns between u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_reg/C (clocked by clk_cpu_pll) and u_DirectLRU/u_MemController/mem_ex/ws_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#15 Warning
-Large setup violation  
-There is a large setup violation of -1.180 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#16 Warning
-Large setup violation  
-There is a large setup violation of -1.180 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[1]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#17 Warning
-Large setup violation  
-There is a large setup violation of -1.180 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[2]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#18 Warning
-Large setup violation  
-There is a large setup violation of -1.180 ns between u_DirectLRU/u_MemController/mem_ex/data_out_reg[47]/C (clocked by clk_pll_i) and u_DirectLRU/readHitTotal_reg[3]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#19 Warning
-Large setup violation  
-There is a large setup violation of -1.390 ns between u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_reg/C (clocked by clk_cpu_pll) and u_DirectLRU/u_MemController/mem_ex/rs_sync/flag_sync_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#20 Warning
-Large setup violation  
-There is a large setup violation of -2.375 ns between u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[1]/C (clocked by clk_cpu_pll) and u_DirectLRU/FSM_sequential_lru_state_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#21 Warning
-Large setup violation  
-There is a large setup violation of -2.402 ns between u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[1]/C (clocked by clk_cpu_pll) and u_DirectLRU/FSM_sequential_lru_state_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#22 Warning
-Large setup violation  
-There is a large setup violation of -2.421 ns between u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[1]/C (clocked by clk_cpu_pll) and u_DirectLRU/FSM_sequential_lru_state_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#23 Warning
-Large setup violation  
-There is a large setup violation of -2.592 ns between u_DirectLRU/u_MemController/mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/rstdiv0_sync_r1_reg_rep/C (clocked by clk_pll_i) and u_DirectLRU/u_MemController/mem_ex/ready_sync/sync_reg_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#24 Warning
-Large setup violation  
-There is a large setup violation of -2.668 ns between u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_reg/C (clocked by clk_pll_i) and u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.818 ns between u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_reg/C (clocked by clk_pll_i) and u_DirectLRU/u_MemController/mem_ex/complete_sync/flag_sync_reg[0]/D (clocked by clk_cpu_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on BTNL relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An input delay is missing on JA relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#2 Warning

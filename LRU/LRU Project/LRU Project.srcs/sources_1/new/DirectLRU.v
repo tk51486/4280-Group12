@@ -15,7 +15,7 @@ module DirectLRU(
     input pll_locked,
     input CPU_RESETN,
     
-    output wire [15:0] led,
+    output wire [14:0] led,
     
     //to stat tracker
     output reg write,
@@ -54,8 +54,8 @@ module DirectLRU(
     
     reg [15:0] debugLED;
     //assign led[15:0] = debugLED;
-    assign led[15:8] = accessesTotal[20:13];
-    assign led[7:0] = evictionTotal[31:24];
+    assign led[14:0] = accessesTotal[20:6];
+    //assign led[7:0] = evictionTotal[31:24];
     reg walloc;
     
     MemController u_MemController(
@@ -109,6 +109,8 @@ module DirectLRU(
         evictionTotal = 0;
     end
     
+    wire increment = (prev_state != LRU_PROCESS && lru_state == LRU_PROCESS);
+    
     //state register
     always @(posedge clk) begin
         prev_state <= lru_state;
@@ -117,23 +119,17 @@ module DirectLRU(
         initializing <= init_next;
     end
    
-   wire increment = (prev_state != LRU_PROCESS && lru_state == LRU_PROCESS);
-   
    //counter logic
    always @(posedge clk) begin
         if (increment) begin
             accessesTotal <= accessesTotal + 1;
             if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
+                if (line_from_ram[62]) begin //dirty eviction
+                    evictionTotal <= evictionTotal + 1;
+                end
                 if(LRULoadStore) begin   //write miss
-                    //if (walloc && line_from_ram[62]) begin//dirty eviction (write)
-                    if (line_from_ram[62]) begin//dirty eviction (write)
-                        evictionTotal <= evictionTotal + 1;
-                    end 
                     writeMissTotal <= writeMissTotal + 1;
                 end else begin  //read miss
-                    if (line_from_ram[62]) begin //dirty eviction (read)
-                        evictionTotal <= evictionTotal + 1;
-                    end
                     readMissTotal <= readMissTotal + 1;
                 end
                 missTotal <= missTotal + 1;
@@ -186,18 +182,20 @@ module DirectLRU(
             end
             LRU_PROCESS: begin
                 if (~ram_transaction_complete) begin //wait until flag is cleared
-                    next_state = LRU_UPDATERAM;
-                    line_to_ram[31:13] = {1'b1, LRULoadStore, LRUTag}; //will be written to RAM (maybe)
+                    next_state = LRU_WAIT;
                     
-                    /*if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
-                        if(LRULoadStore) begin   //write miss
-                            //accessesTotal = accessesTotal + 1;
-                            if (~walloc) begin
-                                next_state = LRU_WAIT;
-                            end
+                    if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss
+                        if (line_from_ram[62]) begin //updating cache, maintain dirty
+                            line_to_ram[31:13] = {1'b1, 0, LRUTag};
+                        end else begin
+                            line_to_ram[31:13] = {1'b1, line_from_ram[62], LRUTag};
                         end
-                    end*/
-                    
+                        next_state = LRU_UPDATERAM;
+                    end
+                    if (LRULoadStore) begin //setting dirty on write
+                        line_to_ram[30] = 1;
+                        next_state = LRU_UPDATERAM;
+                    end
                 end
             end
             LRU_UPDATERAM: begin

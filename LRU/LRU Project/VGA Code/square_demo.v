@@ -283,7 +283,7 @@ end
 always @(posedge clk)begin
     //count = count + 1;
     if(endFile)begin
-        if(count < 1000000)begin
+        if(count < 10000000)begin
             count = count + 1;
         end
         else begin

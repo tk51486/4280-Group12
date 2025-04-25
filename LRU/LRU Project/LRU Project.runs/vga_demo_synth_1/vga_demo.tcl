@@ -57,9 +57,9 @@ if {$::dispatch::connected} {
 
 OPTRACE "vga_demo_synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 6
-set_param synth.incrementalSynthesisCache {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/.Xil/Vivado-24292-engr-d1409-009/incrSyn}
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true

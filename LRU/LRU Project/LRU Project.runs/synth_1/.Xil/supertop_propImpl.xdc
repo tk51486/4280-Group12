@@ -3,8 +3,8 @@ set_property SRC_FILE_INFO {cfile:{C:/Users/aam08331/Documents/GitHub/4280-Group
 set_property SRC_FILE_INFO {cfile:{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/Nexys4DDR_VGA.xdc} rfile:{../../../VGA Code/Nexys4DDR_VGA.xdc} id:3} [current_design]
 set_property src_info {type:XDC file:1 line:64 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN N17   IOSTANDARD LVCMOS33} [get_ports CPU_RESETN] #center button
-set_property src_info {type:XDC file:1 line:68 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN P17   IOSTANDARD LVCMOS33 } [get_ports { BTNL }]; #IO_L12P_T1_MRCC_14 Sch=btnl
+set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { JA }]; #IO_L20N_T3_A19_15 Sch=ja[1]
 set_property src_info {type:XDC file:1 line:270 export:INPUT save:INPUT read:READ} [current_design]
 set_false_path -from [get_clocks -of_objects [get_pins mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT]] -to [get_clocks -of_objects [get_pins pll1/inst/mmcm_adv_inst/CLKOUT1]]
 set_property src_info {type:XDC file:1 line:271 export:INPUT save:INPUT read:READ} [current_design]

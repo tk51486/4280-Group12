@@ -8,7 +8,7 @@
   **** SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
   **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
   **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-  **** Start of session at: Fri Apr 25 09:09:27 2025
+  **** Start of session at: Fri Apr 25 13:28:13 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -23,14 +23,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11228
+INFO: [Synth 8-7075] Helper process launched with PID 26424
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1113.664 ; gain = 467.953
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1114.191 ; gain = 467.398
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:189]
 WARNING: [Synth 8-6901] identifier 'filesystem_state' is used before its declaration [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:71]
 WARNING: [Synth 8-6901] identifier 'DONE' is used before its declaration [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:71]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'resetn' is not allowed [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:81]
-INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:165]
+INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:166]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'instTotal' is not allowed [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:55]
 INFO: [Synth 8-11241] undeclared symbol 'mem_transaction_width', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:69]
 INFO: [Synth 8-11241] undeclared symbol 'mem_rstrobe', assumed default net type 'wire' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:72]
@@ -39,8 +40,8 @@ WARNING: [Synth 8-8895] 'mem_transaction_width' is already implicitly declared o
 WARNING: [Synth 8-8895] 'mem_wstrobe' is already implicitly declared on line 73 [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:87]
 WARNING: [Synth 8-8895] 'mem_rstrobe' is already implicitly declared on line 72 [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:87]
 INFO: [Synth 8-6157] synthesizing module 'supertop' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/realtime/pll_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/realtime/pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pll' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/realtime/pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/realtime/pll_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'IO_Management' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/IO_Management.v:11]
 INFO: [Synth 8-6157] synthesizing module 'SD_Data_Decoder' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:23]
 INFO: [Synth 8-6157] synthesizing module 'sd_file_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:12]
@@ -65,16 +66,16 @@ WARNING: [Synth 8-7071] port 'filesystem_type' of module 'sd_file_reader' is unc
 WARNING: [Synth 8-7071] port 'file_found' of module 'sd_file_reader' is unconnected for instance 'u_sd_file_reader' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:64]
 WARNING: [Synth 8-7023] instance 'u_sd_file_reader' of module 'sd_file_reader' has 13 connections declared, but only 9 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:64]
 INFO: [Synth 8-6155] done synthesizing module 'SD_Data_Decoder' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:23]
-INFO: [Synth 8-6157] synthesizing module 'vga_demo' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/realtime/vga_demo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'vga_demo' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/realtime/vga_demo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_demo' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/realtime/vga_demo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vga_demo' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/realtime/vga_demo_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'IO_Management' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/IO_Management.v:11]
-WARNING: [Synth 8-7071] port 'led' of module 'IO_Management' is unconnected for instance 'u_IO_Management' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:107]
-WARNING: [Synth 8-7023] instance 'u_IO_Management' of module 'IO_Management' has 26 connections declared, but only 25 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:107]
+WARNING: [Synth 8-7071] port 'led' of module 'IO_Management' is unconnected for instance 'u_IO_Management' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:108]
+WARNING: [Synth 8-7023] instance 'u_IO_Management' of module 'IO_Management' has 26 connections declared, but only 25 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:108]
 INFO: [Synth 8-6157] synthesizing module 'DirectLRU' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MemController' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mem_example' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/mem_example.v:16]
-INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/realtime/mig_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/realtime/mig_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mig' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/realtime/mig_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/realtime/mig_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'flag_sync' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/flag_sync.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'flag_sync' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/flag_sync.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ff_sync' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ff_sync.v:1]
@@ -85,9 +86,9 @@ INFO: [Synth 8-6155] done synthesizing module 'MemController' (0#1) [C:/Users/aa
 WARNING: [Synth 8-7071] port 'LED' of module 'MemController' is unconnected for instance 'u_MemController' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:61]
 WARNING: [Synth 8-7023] instance 'u_MemController' of module 'MemController' has 26 connections declared, but only 25 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'DirectLRU' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:3]
-WARNING: [Synth 8-7071] port 'write' of module 'DirectLRU' is unconnected for instance 'u_DirectLRU' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:141]
-WARNING: [Synth 8-7071] port 'hit' of module 'DirectLRU' is unconnected for instance 'u_DirectLRU' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:141]
-WARNING: [Synth 8-7023] instance 'u_DirectLRU' of module 'DirectLRU' has 35 connections declared, but only 33 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:141]
+WARNING: [Synth 8-7071] port 'write' of module 'DirectLRU' is unconnected for instance 'u_DirectLRU' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:142]
+WARNING: [Synth 8-7071] port 'hit' of module 'DirectLRU' is unconnected for instance 'u_DirectLRU' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:142]
+WARNING: [Synth 8-7023] instance 'u_DirectLRU' of module 'DirectLRU' has 35 connections declared, but only 33 given [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:142]
 INFO: [Synth 8-6155] done synthesizing module 'supertop' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:23]
 WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[1] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:141]
 WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[2] was removed.  [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/SD Code/sd_file_reader.v:141]
@@ -194,7 +195,7 @@ WARNING: [Synth 8-3848] Net led in module/entity SD_Data_Decoder does not have d
 WARNING: [Synth 8-3848] Net uart_tx in module/entity SD_Data_Decoder does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v:46]
 WARNING: [Synth 8-3848] Net write in module/entity DirectLRU does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:21]
 WARNING: [Synth 8-3848] Net hit in module/entity DirectLRU does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:22]
-WARNING: [Synth 8-3848] Net CPU_RESETN in module/entity supertop does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:165]
+WARNING: [Synth 8-3848] Net CPU_RESETN in module/entity supertop does not have driver. [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/supertop.v:166]
 WARNING: [Synth 8-3917] design supertop has port sdcard_pwr_n driven by constant 0
 WARNING: [Synth 8-3917] design supertop has port sddat1 driven by constant 1
 WARNING: [Synth 8-3917] design supertop has port sddat2 driven by constant 1
@@ -242,26 +243,26 @@ WARNING: [Synth 8-7129] Port uart_tx in module SD_Data_Decoder is either unconne
 WARNING: [Synth 8-7129] Port clk in module SD_Data_Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port resetn in module SD_Data_Decoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.285 ; gain = 621.574
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.164 ; gain = 622.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.285 ; gain = 621.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.164 ; gain = 622.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1267.285 ; gain = 621.574
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.164 ; gain = 622.371
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1267.285 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1269.164 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/vga_demo_synth_1/vga_demo/vga_demo_in_context.xdc] for cell 'u_IO_Management/u_vga_demo'
 Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/vga_demo_synth_1/vga_demo/vga_demo_in_context.xdc] for cell 'u_IO_Management/u_vga_demo'
-Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/pll/pll/pll_in_context.xdc] for cell 'pll1'
-Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/pll/pll/pll_in_context.xdc] for cell 'pll1'
+Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/pll/pll/pll_in_context.xdc] for cell 'pll1'
 Parsing XDC File [c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_DirectLRU/u_MemController/mem_ex/mig1'
 Finished Parsing XDC File [c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'u_DirectLRU/u_MemController/mem_ex/mig1'
 Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
@@ -292,26 +293,26 @@ Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Projec
 Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1351.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1353.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1351.164 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1353.578 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1351.164 ; gain = 705.453
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1353.578 ; gain = 706.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1351.164 ; gain = 705.453
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1353.578 ; gain = 706.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/pll/pll/pll_in_context.xdc}, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-6080-engr-d1409-009/pll/pll/pll_in_context.xdc}, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/pll/pll/pll_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100mhz. (constraint file  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/.Xil/Vivado-15988-engr-d1409-009/pll/pll/pll_in_context.xdc}, line 6).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 2).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 3).
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/mig/mig/mig_in_context.xdc}, line 4).
@@ -407,12 +408,12 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  {
 Applied set_property KEEP_HIERARCHY = SOFT for pll1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for u_DirectLRU/u_MemController/mem_ex/mig1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1351.164 ; gain = 705.453
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1353.578 ; gain = 706.785
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sddat_stat_reg' in module 'sd_reader'
 INFO: [Synth 8-802] inferred FSM for state register 'filesystem_state_reg' in module 'sd_file_reader'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SD_Data_Decoder'
-DSP Debug: swapped A/B pins for adder 000002A6DF165C80
+DSP Debug: swapped A/B pins for adder 000001A0B8706D90
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mem_example'
 INFO: [Synth 8-802] inferred FSM for state register 'lru_state_reg' in module 'DirectLRU'
 ---------------------------------------------------------------------------------------------------
@@ -461,7 +462,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'ram_loadstore_reg' [C:/User
 WARNING: [Synth 8-327] inferring latch for variable 'ram_start_reg' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:68]
 WARNING: [Synth 8-327] inferring latch for variable 'line_to_ram_reg' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/DirectLRU.v:70]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1351.164 ; gain = 705.453
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1353.578 ; gain = 706.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -505,8 +506,8 @@ Detailed RTL Component Info :
 	   2 Input  128 Bit        Muxes := 2     
 	   5 Input  128 Bit        Muxes := 1     
 	   4 Input   64 Bit        Muxes := 4     
-	   2 Input   64 Bit        Muxes := 5     
-	   6 Input   64 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 6     
+	   6 Input   64 Bit        Muxes := 2     
 	   5 Input   64 Bit        Muxes := 1     
 	   2 Input   32 Bit        Muxes := 32    
 	   4 Input   32 Bit        Muxes := 2     
@@ -517,7 +518,6 @@ Detailed RTL Component Info :
 	   6 Input   28 Bit        Muxes := 1     
 	   2 Input   25 Bit        Muxes := 1     
 	   2 Input   19 Bit        Muxes := 1     
-	   6 Input   19 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 8     
 	  10 Input   16 Bit        Muxes := 1     
 	   7 Input   16 Bit        Muxes := 1     
@@ -536,14 +536,14 @@ Detailed RTL Component Info :
 	   8 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 4     
 	   8 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 8     
 	  12 Input    3 Bit        Muxes := 1     
 	   5 Input    3 Bit        Muxes := 2     
 	   6 Input    3 Bit        Muxes := 3     
 	   7 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 123   
+	   2 Input    1 Bit        Muxes := 124   
 	   8 Input    1 Bit        Muxes := 7     
 	  10 Input    1 Bit        Muxes := 2     
 	   4 Input    1 Bit        Muxes := 4     
@@ -650,7 +650,7 @@ WARNING: [Synth 8-7129] Port led[0] in module IO_Management is either unconnecte
 WARNING: [Synth 8-7129] Port uart_tx in module IO_Management is either unconnected or has no load
 WARNING: [Synth 8-7129] Port resetn in module IO_Management is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1434.660 ; gain = 788.949
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1436.445 ; gain = 789.652
 ---------------------------------------------------------------------------------
  Sort Area is  read_sector_no1_0 : 0 0 : 1632 3217 : Used 1 time 0
  Sort Area is  read_sector_no1_0 : 0 1 : 1585 3217 : Used 1 time 0
@@ -692,19 +692,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1506.316 ; gain = 860.605
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1506.379 ; gain = 859.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1543.953 ; gain = 898.242
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1544.855 ; gain = 898.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1575.902 ; gain = 930.191
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1576.668 ; gain = 929.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -722,37 +722,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -794,12 +794,12 @@ Report Cell Usage:
 |3     |vga_demo |     1|
 |4     |CARRY4   |   226|
 |5     |DSP48E1  |    11|
-|8     |LUT1     |    15|
+|8     |LUT1     |    16|
 |9     |LUT2     |   509|
-|10    |LUT3     |   349|
+|10    |LUT3     |   351|
 |11    |LUT4     |   315|
-|12    |LUT5     |   428|
-|13    |LUT6     |   787|
+|12    |LUT5     |   424|
+|13    |LUT6     |   792|
 |14    |MUXF7    |    37|
 |15    |FDCE     |   878|
 |16    |FDPE     |    21|
@@ -811,30 +811,30 @@ Report Cell Usage:
 |22    |OBUFT    |     1|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1738.145 ; gain = 1008.555
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.145 ; gain = 1092.434
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1738.539 ; gain = 1007.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1738.539 ; gain = 1091.746
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1747.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1747.734 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 296 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1750.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1751.387 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 22 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
   LD => LDCE: 21 instances
 
-Synth Design complete | Checksum: d9639d76
+Synth Design complete | Checksum: c80049ae
 INFO: [Common 17-83] Releasing license: Synthesis
-67 Infos, 230 Warnings, 1 Critical Warnings and 0 Errors encountered.
+67 Infos, 231 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1750.949 ; gain = 1309.211
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1751.387 ; gain = 1309.621
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1750.949 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1751.387 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/synth_1/supertop.dcp' has been generated.
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 25 09:10:09 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 25 13:28:55 2025...
