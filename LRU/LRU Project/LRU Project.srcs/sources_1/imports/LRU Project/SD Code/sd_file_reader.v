@@ -21,7 +21,7 @@ module sd_file_reader #(
     parameter            SIMULATE      = 0              // 0:normal use.         1:only for simulation
 ) (
     // rstn active-low, 1:working, 0:reset
-    //input wire        start,
+    input wire        start,
     input  wire       rstn,
     // clock
     input  wire       clk,
@@ -562,7 +562,7 @@ always @ (posedge clk or negedge rstn)
 reg [31:0] fptr = 0;
 
 always @ (posedge clk or negedge rstn)
-//if(start == 1)begin
+if(start == 1)begin
     if(~rstn) begin
         fptr <= 0;
         {outen,outbyte} <= 0;
@@ -573,6 +573,6 @@ always @ (posedge clk or negedge rstn)
         end else
             {outen,outbyte} <= {1'b0,outbyte};
     end
-//end
+end
 
 endmodule

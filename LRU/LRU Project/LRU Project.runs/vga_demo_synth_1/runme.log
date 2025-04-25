@@ -1,0 +1,672 @@
+
+*** Running vivado
+    with args -log vga_demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_demo.tcl
+
+
+
+****** Vivado v2024.2.1 (64-bit)
+  **** SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+  **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+  **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+  **** Start of session at: Fri Apr 25 08:14:01 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/aam08331/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source vga_demo.tcl -notrace
+WARNING: [Board 49-91] Board repository path 'C:ivado-boards-master
+ewoard_files' does not exist, it will not be used to search board files.
+Command: synth_design -top vga_demo -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14972
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1079.359 ; gain = 468.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'vga_demo' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_demo.v:1]
+INFO: [Synth 8-6157] synthesizing module 'square_demo' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:292]
+INFO: [Synth 8-226] default block is never used [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:447]
+INFO: [Synth 8-226] default block is never used [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:602]
+INFO: [Synth 8-226] default block is never used [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:757]
+INFO: [Synth 8-226] default block is never used [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:912]
+INFO: [Synth 8-226] default block is never used [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:1067]
+INFO: [Synth 8-6155] done synthesizing module 'square_demo' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync_demo' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_sync_demo.v:1]
+	Parameter CD bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'frame_counter' [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/frame_counter.v:1]
+	Parameter HMAX bound to: 800 - type: integer 
+	Parameter VMAX bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'frame_counter' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/frame_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync_demo' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_sync_demo.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_demo' (0#1) [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_demo.v:1]
+WARNING: [Synth 8-7129] Port accessesTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeMissTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readMissTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hitTotal[24] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[31] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[30] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[29] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[28] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[27] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[26] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[25] in module square_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port missTotal[24] in module square_demo is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 5155.270 ; gain = 4544.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 5155.270 ; gain = 4544.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 5155.270 ; gain = 4544.797
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 5155.270 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/vga_demo/new/vga_demo_ooc.xdc]
+Finished Parsing XDC File [C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/vga_demo/new/vga_demo_ooc.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 5531.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:56 ; elapsed = 00:01:53 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:56 ; elapsed = 00:01:53 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:56 ; elapsed = 00:01:53 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:53 ; elapsed = 00:04:52 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	              192 Bit    Registers := 91    
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input  192 Bit        Muxes := 546   
+	  16 Input  192 Bit        Muxes := 546   
+	  91 Input  125 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 273   
+	   6 Input   15 Bit        Muxes := 91    
+	   8 Input   15 Bit        Muxes := 85    
+	   7 Input   15 Bit        Muxes := 76    
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 546   
+	   7 Input    7 Bit        Muxes := 456   
+	   2 Input    6 Bit        Muxes := 2014  
+	   6 Input    6 Bit        Muxes := 237   
+	   4 Input    6 Bit        Muxes := 885   
+	   5 Input    6 Bit        Muxes := 301   
+	   3 Input    6 Bit        Muxes := 125   
+	   7 Input    6 Bit        Muxes := 86    
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port accessesTotal[31] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[30] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[29] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[28] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[27] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[26] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[25] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port accessesTotal[24] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[31] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[30] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[29] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[28] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[27] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[26] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[25] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port evictionTotal[24] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[31] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[30] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[29] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[28] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[27] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[26] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[25] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port writeHitTotal[24] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[31] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[30] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[29] in module vga_demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port readHitTotal[28] in module vga_demo is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[63][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[62][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[61][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[60][290]' (FDRE) to 'numBuffer_reg[60][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[59][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[58][290]' (FDRE) to 'numBuffer_reg[58][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[57][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[56][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[55][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[54][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[53][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[52][290]' (FDRE) to 'numBuffer_reg[52][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[51][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[50][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[49][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[48][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[47][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[46][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[45][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[44][290]' (FDRE) to 'numBuffer_reg[44][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[43][290]' (FDRE) to 'numBuffer_reg[43][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[42][290]' (FDRE) to 'numBuffer_reg[42][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[41][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[40][290]' (FDRE) to 'numBuffer_reg[40][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[39][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[38][290]' (FDRE) to 'numBuffer_reg[38][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[37][290]' (FDRE) to 'numBuffer_reg[37][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[36][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][290]' (FDRE) to 'numBuffer_reg[35][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[34][290]' (FDRE) to 'numBuffer_reg[34][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[33][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[32][290]' (FDRE) to 'numBuffer_reg[32][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[31][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[30][290]' (FDRE) to 'numBuffer_reg[30][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[111][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[110][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[109][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[108][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[107][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[106][290]' (FDRE) to 'numBuffer_reg[106][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[105][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[104][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[103][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[102][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[101][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[100][290]' (FDRE) to 'numBuffer_reg[100][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[99][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[98][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[97][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[96][290]' (FDRE) to 'numBuffer_reg[96][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[120][290]' (FDRE) to 'numBuffer_reg[120][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[119][290]' (FDRE) to 'numBuffer_reg[119][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[118][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[117][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[116][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[115][290]' (FDRE) to 'numBuffer_reg[115][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[114][290]' (FDRE) to 'numBuffer_reg[114][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[113][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[112][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[95][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[94][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[93][290]' (FDRE) to 'numBuffer_reg[93][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[92][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[91][290]' (FDRE) to 'numBuffer_reg[91][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[90][290]' (FDRE) to 'numBuffer_reg[90][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[89][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[88][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[87][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[86][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[85][290]' (FDRE) to 'numBuffer_reg[85][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[84][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[83][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[82][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[81][290]' (FDRE) to 'numBuffer_reg[81][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[80][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[79][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[78][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[77][290]' (FDRE) to 'numBuffer_reg[77][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[76][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[75][290]' (FDRE) to 'numBuffer_reg[75][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[74][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[73][290] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[72][290] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[71][290]' (FDRE) to 'numBuffer_reg[71][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[70][290]' (FDRE) to 'numBuffer_reg[70][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[69][290]' (FDRE) to 'numBuffer_reg[69][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[68][290]' (FDRE) to 'numBuffer_reg[68][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[67][290]' (FDRE) to 'numBuffer_reg[67][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[66][290]' (FDRE) to 'numBuffer_reg[66][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[65][290]' (FDRE) to 'numBuffer_reg[65][291]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[64][290]' (FDRE) to 'numBuffer_reg[64][291]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[63][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[62][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[61][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[60][291]' (FDRE) to 'numBuffer_reg[60][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[59][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[58][291]' (FDRE) to 'numBuffer_reg[58][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[57][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[56][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[55][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[54][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[53][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[52][291]' (FDRE) to 'numBuffer_reg[52][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[51][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[50][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[49][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[48][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[47][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[46][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[45][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[44][291]' (FDRE) to 'numBuffer_reg[44][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[43][291]' (FDRE) to 'numBuffer_reg[43][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[42][291]' (FDRE) to 'numBuffer_reg[42][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[41][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[40][291]' (FDRE) to 'numBuffer_reg[40][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[39][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[38][291]' (FDRE) to 'numBuffer_reg[38][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[37][291]' (FDRE) to 'numBuffer_reg[37][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[36][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][291]' (FDRE) to 'numBuffer_reg[35][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[34][291]' (FDRE) to 'numBuffer_reg[34][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[33][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[32][291]' (FDRE) to 'numBuffer_reg[32][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[31][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[30][291]' (FDRE) to 'numBuffer_reg[30][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[111][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[110][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[109][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[108][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[107][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[106][291]' (FDRE) to 'numBuffer_reg[106][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[105][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[104][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[103][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[102][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[101][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[100][291]' (FDRE) to 'numBuffer_reg[100][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[99][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[98][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[97][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[96][291]' (FDRE) to 'numBuffer_reg[96][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[120][291]' (FDRE) to 'numBuffer_reg[120][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[119][291]' (FDRE) to 'numBuffer_reg[119][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[118][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[117][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[116][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[115][291]' (FDRE) to 'numBuffer_reg[115][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[114][291]' (FDRE) to 'numBuffer_reg[114][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[113][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[112][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[95][291] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[94][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[93][291]' (FDRE) to 'numBuffer_reg[93][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[92][291] )
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[91][291]' (FDRE) to 'numBuffer_reg[91][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[90][291]' (FDRE) to 'numBuffer_reg[90][297]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\numBuffer_reg[89][291] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[85][291]' (FDRE) to 'numBuffer_reg[85][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[81][291]' (FDRE) to 'numBuffer_reg[81][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[77][291]' (FDRE) to 'numBuffer_reg[77][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[75][291]' (FDRE) to 'numBuffer_reg[75][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[71][291]' (FDRE) to 'numBuffer_reg[71][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[70][291]' (FDRE) to 'numBuffer_reg[70][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[69][291]' (FDRE) to 'numBuffer_reg[69][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[68][291]' (FDRE) to 'numBuffer_reg[68][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[67][291]' (FDRE) to 'numBuffer_reg[67][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[66][291]' (FDRE) to 'numBuffer_reg[66][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[65][291]' (FDRE) to 'numBuffer_reg[65][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[64][291]' (FDRE) to 'numBuffer_reg[64][297]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[60][292]' (FDRE) to 'numBuffer_reg[60][296]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[42][292]' (FDRE) to 'numBuffer_reg[42][296]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[40][292]' (FDRE) to 'numBuffer_reg[40][296]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[37][292]' (FDRE) to 'numBuffer_reg[37][296]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][292]' (FDRE) to 'numBuffer_reg[35][296]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[60][293]' (FDSE) to 'numBuffer_reg[60][294]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[42][293]' (FDSE) to 'numBuffer_reg[42][294]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[40][293]' (FDSE) to 'numBuffer_reg[40][294]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[37][293]' (FDSE) to 'numBuffer_reg[37][294]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][293]' (FDSE) to 'numBuffer_reg[35][294]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[60][294]' (FDSE) to 'numBuffer_reg[60][295]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[42][294]' (FDSE) to 'numBuffer_reg[42][295]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[40][294]' (FDSE) to 'numBuffer_reg[40][295]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[37][294]' (FDSE) to 'numBuffer_reg[37][295]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][294]' (FDSE) to 'numBuffer_reg[35][295]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[60][297]' (FDRE) to 'numBuffer_reg[60][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[58][297]' (FDRE) to 'numBuffer_reg[58][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[52][297]' (FDRE) to 'numBuffer_reg[52][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[44][297]' (FDRE) to 'numBuffer_reg[44][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[43][297]' (FDRE) to 'numBuffer_reg[43][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[42][297]' (FDRE) to 'numBuffer_reg[42][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[40][297]' (FDRE) to 'numBuffer_reg[40][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[38][297]' (FDRE) to 'numBuffer_reg[38][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[37][297]' (FDRE) to 'numBuffer_reg[37][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[35][297]' (FDRE) to 'numBuffer_reg[35][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[34][297]' (FDRE) to 'numBuffer_reg[34][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[32][297]' (FDRE) to 'numBuffer_reg[32][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[30][297]' (FDRE) to 'numBuffer_reg[30][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[106][297]' (FDRE) to 'numBuffer_reg[106][298]'
+INFO: [Synth 8-3886] merging instance 'numBuffer_reg[100][297]' (FDRE) to 'numBuffer_reg[100][298]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numBuffer2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "numBuffer2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\numIt_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:39 ; elapsed = 00:05:39 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:43 ; elapsed = 00:05:43 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:45 ; elapsed = 00:05:44 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:48 ; elapsed = 00:05:47 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:52 ; elapsed = 00:05:52 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:52 ; elapsed = 00:05:52 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:52 ; elapsed = 00:05:52 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:52 ; elapsed = 00:05:52 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:53 ; elapsed = 00:05:53 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:53 ; elapsed = 00:05:53 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    19|
+|2     |LUT1   |     7|
+|3     |LUT2   |   691|
+|4     |LUT3   |   724|
+|5     |LUT4   |  2642|
+|6     |LUT5   |  4244|
+|7     |LUT6   | 12681|
+|8     |MUXF7  |   482|
+|9     |MUXF8  |   201|
+|10    |FDRE   |  3470|
+|11    |FDSE   |    51|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:53 ; elapsed = 00:05:53 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 72 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:11 ; elapsed = 00:05:02 . Memory (MB): peak = 5531.719 ; gain = 4544.797
+Synthesis Optimization Complete : Time (s): cpu = 00:05:53 ; elapsed = 00:05:53 . Memory (MB): peak = 5531.719 ; gain = 4921.246
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 5531.719 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 702 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'vga_demo' is not ideal for floorplanning, since the cellview 'square_demo' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 5531.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4f12dcc7
+INFO: [Common 17-83] Releasing license: Synthesis
+337 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:57 ; elapsed = 00:06:00 . Memory (MB): peak = 5531.719 ; gain = 5122.375
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 5531.719 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/vga_demo_synth_1/vga_demo.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file vga_demo_utilization_synth.rpt -pb vga_demo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 25 08:20:07 2025...

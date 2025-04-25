@@ -22,6 +22,8 @@
 
 module SD_Data_Decoder(
     //General
+    input wire start,
+    
     input wire clk,
     output wire [15:0]  led,
     //Parsed LRU Values
@@ -72,7 +74,8 @@ sd_file_reader #(
     //.file_found       ( led[8]       ),  // 0=file not found, 1=file found
     .endFile (endFile),
     .outen            (CurrFlag         ),
-    .outbyte          (CurrNum       )
+    .outbyte          (CurrNum       ),
+    .start(start)
 );
 
 localparam [2:0] READLINE = 3'b000, PARSE = 3'b001, PARSEADDR = 3'b010, WAIT = 3'b011, DISPLAY = 3'b100, STOP = 3'b101;

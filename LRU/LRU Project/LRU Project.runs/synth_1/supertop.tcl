@@ -78,6 +78,8 @@ set_property ip_output_repo {c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/vga_demo_synth_1/vga_demo.dcp}}
+set_property used_in_implementation false [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.runs/vga_demo_synth_1/vga_demo.dcp}}]
 read_verilog {
   {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/ddr2_model_parameters.vh}
   {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/io_def.vh}
@@ -97,10 +99,6 @@ read_verilog -library xil_defaultlib {
   {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/SD_Data_Decoder.v}
   {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/new/StatTracker.v}
   {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/imports/LRU Project/RAM Code/MemController.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/square_demo.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_demo.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/vga_sync_demo.v}
-  {C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/VGA Code/frame_counter.v}
 }
 read_ip -quiet {{C:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/aam08331/Documents/GitHub/4280-Group12/LRU/LRU Project/LRU Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc}}]

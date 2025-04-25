@@ -89,17 +89,23 @@ module supertop(
         start = 0;
     end
     
+    always @(posedge clk100mhz)begin
+        if(BTNL)begin
+            start = 1;
+        end
+    end
+    
     pll pll1(
         .resetn(resetn),
         .locked(pll_locked),
         .clk_in(clk100mhz),
-        .clk_mem(clk_mem), //200MHz Memory Reference Clock
+        .clk_mem(clk_mem), //200MHz Memory Reference Clock 
         .clk_sd(clk_sd), 
         .clk_cpu(clk_cpu)  //Clock used for traffic generator
     );
         
     IO_Management u_IO_Management(
-        //.start(start),
+        .start(start),
         .clk(clk100mhz),
         //.led(led),
         
@@ -158,7 +164,7 @@ module supertop(
         .pll_locked(pll_locked),
         .CPU_RESETN(CPU_RESETN),
         
-        //.led(led),
+        .led(led),
         
         .ddr2_dq(ddr2_dq),
         .ddr2_dqs_n(ddr2_dqs_n),

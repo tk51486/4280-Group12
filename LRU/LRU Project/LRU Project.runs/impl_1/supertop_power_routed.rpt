@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date             : Fri Apr 25 07:12:10 2025
+| Date             : Fri Apr 25 08:38:19 2025
 | Host             : engr-d1409-009 running 64-bit major release  (build 9200)
 | Command          : report_power -file supertop_power_routed.rpt -pb supertop_power_summary_routed.pb -rpx supertop_power_routed.rpx
 | Design           : supertop
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.190        |
+| Total On-Chip Power (W)  | 1.194        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.082        |
+| Dynamic (W)              | 1.086        |
 | Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 79.6         |
@@ -53,23 +53,24 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.047 |       27 |       --- |             --- |
-| Slice Logic              |     0.013 |    35312 |       --- |             --- |
-|   LUT as Logic           |     0.011 |    22560 |     63400 |           35.58 |
+| Slice Logic              |     0.014 |    36066 |       --- |             --- |
+|   LUT as Logic           |     0.012 |    23025 |     63400 |           36.32 |
 |   LUT as Distributed RAM |    <0.001 |      256 |     19000 |            1.35 |
-|   Register               |    <0.001 |     7617 |    126800 |            6.01 |
+|   Register               |    <0.001 |     7728 |    126800 |            6.09 |
 |   CARRY4                 |    <0.001 |      330 |     15850 |            2.08 |
-|   F7/F8 Muxes            |    <0.001 |      729 |     63400 |            1.15 |
+|   F7/F8 Muxes            |    <0.001 |      722 |     63400 |            1.14 |
 |   LUT as Shift Register  |    <0.001 |       11 |     19000 |            0.06 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      143 |       --- |             --- |
-| Signals                  |     0.017 |    28841 |       --- |             --- |
+| Signals                  |     0.018 |    29554 |       --- |             --- |
 | MMCM                     |     0.235 |        2 |         6 |           33.33 |
 | PLL                      |     0.111 |        1 |         6 |           16.67 |
 | DSPs                     |    <0.001 |       11 |       240 |            4.58 |
-| I/O                      |     0.550 |       86 |       210 |           40.95 |
+| I/O                      |     0.551 |       87 |       210 |           41.43 |
 | PHASER                   |     0.106 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.108 |          |           |                 |
-| Total                    |     1.190 |          |           |                 |
+| Total                    |     1.194 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +80,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.134 |       0.116 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.137 |       0.119 |      0.018 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.309 |       0.290 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -171,17 +172,18 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| supertop               |     1.082 |
+| supertop               |     1.086 |
 |   pll1                 |     0.128 |
 |     inst               |     0.128 |
-|   u_DirectLRU          |     0.932 |
+|   u_DirectLRU          |     0.927 |
 |     u_MemController    |     0.925 |
 |       mem_ex           |     0.925 |
-|   u_IO_Management      |     0.022 |
+|   u_IO_Management      |     0.030 |
 |     u_SD_Data_Decoder  |     0.006 |
 |       u_sd_file_reader |     0.005 |
-|     u_vga_demo         |     0.017 |
-|       square_unit      |     0.016 |
+|     u_vga_demo         |     0.024 |
+|       square_unit      |     0.023 |
+|       sync_unit        |     0.001 |
 +------------------------+-----------+
 
 

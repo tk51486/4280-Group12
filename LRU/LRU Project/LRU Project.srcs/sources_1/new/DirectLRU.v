@@ -53,7 +53,9 @@ module DirectLRU(
     reg ram_loadstore, ram_start;  //sent to ram 
     
     reg [15:0] debugLED;
-    assign led[15:0] = debugLED;
+    //assign led[15:0] = debugLED;
+    assign led[15:8] = accessesTotal[20:13];
+    assign led[7:0] = evictionTotal[31:24];
     reg walloc;
     
     MemController u_MemController(
@@ -119,19 +121,16 @@ module DirectLRU(
    //counter logic
    always @(posedge clk) begin
         if (leaving_process) begin
+            accessesTotal <= accessesTotal + 1;
             if (~line_from_ram[63] || LRUTag != line_from_ram[61:45]) begin //miss, valid = 0 || no tag match
                 if(LRULoadStore) begin   //write miss
-                    accessesTotal <= accessesTotal + 1;
                     if (walloc && line_from_ram[62]) begin//dirty eviction (write)
                         evictionTotal <= evictionTotal + 1;
-                        accessesTotal <= accessesTotal + 1;
                     end 
                     writeMissTotal <= writeMissTotal + 1;
                 end else begin  //read miss
-                    accessesTotal <= accessesTotal + 1;
                     if (line_from_ram[62]) begin //dirty eviction (read)
                         evictionTotal <= evictionTotal + 1;
-                        accessesTotal <= accessesTotal + 1;
                     end
                     readMissTotal <= readMissTotal + 1;
                 end

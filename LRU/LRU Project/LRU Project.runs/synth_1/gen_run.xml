@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745578787" LaunchWriteIncrSynthDcp="true">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745584325" LaunchWriteIncrSynthDcp="true">
   <File Type="PA-TCL" Name="supertop.tcl"/>
   <File Type="REPORTS-TCL" Name="supertop_reports.tcl"/>
   <File Type="RDS-RDS" Name="supertop.vds"/>
@@ -149,34 +149,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/VGA Code/square_demo.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/VGA Code/vga_demo.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/VGA Code/vga_sync_demo.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/VGA Code/frame_counter.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="supertop"/>
@@ -221,4 +193,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="pll"/>
   <BlockFileSet Type="BlockSrcs" Name="mig"/>
+  <BlockFileSet Type="BlockSrcs" Name="vga_demo"/>
 </GenRun>

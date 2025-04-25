@@ -11,7 +11,7 @@
 module IO_Management (
     //General
     input wire clk,
-    //input wire start,
+    input wire start,
     output wire [15:0]  led, // 16 bit led
     //Stats Tracked
     input wire [31:0] accessesTotal,
@@ -51,6 +51,8 @@ wire [31:0] instTotal;
 SD_Data_Decoder u_SD_Data_Decoder(
     .clk(clk),
     .led(led),
+    
+    .start(start),
     
     .LRUTag(LRUTag),
     .LRUIndex(LRUIndex),
