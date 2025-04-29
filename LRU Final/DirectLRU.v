@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+//this module calls memcontroller, which handles the RAM interaction. it recieves parsed instructions from the SD
+//card, updates the cache, and increments stats.
 
 module DirectLRU(
 
