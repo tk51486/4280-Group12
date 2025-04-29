@@ -106,7 +106,7 @@ module supertop(
         .hitTotal(hitTotal),
         .missTotal(missTotal),
 
-        //each instruction, sent from SD to RAM    
+        //each instruction, sent from SD to LRU    
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),
         .LRULoadStore(LRULoadStore),
@@ -132,7 +132,7 @@ module supertop(
         //clock           
         .clk(clk100mhz),
 
-        //each instruction, sent from SD to RAM    
+        //each instruction, sent from SD to LRU    
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),
         .LRULoadStore(LRULoadStore),
