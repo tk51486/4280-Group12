@@ -1,12 +1,5 @@
 
-//--------------------------------------------------------------------------------------------------------
-// Module  : fpga_top
-// Type    : synthesizable, FPGA's top, IP's example design
-// Standard: Verilog 2001 (IEEE1364-2001)
-// Function: an example of sd_file_reader, read a file from SDcard and send file content to UART
-//           this example runs on Digilent Nexys4-DDR board (Xilinx Artix-7),
-//           see http://www.digilent.com.cn/products/product-nexys-4-ddr-artix-7-fpga-trainer-board.html
-//--------------------------------------------------------------------------------------------------------
+//this module calls the SD decoder and the VGA, it also passes stats to the VGA from the cache controller
 
 module IO_Management (
     //General
@@ -20,7 +13,6 @@ module IO_Management (
     input wire [31:0] readHitTotal,
     input wire [31:0] writeMissTotal,
     input wire [31:0] readMissTotal,
-    //input wire [31:0] instTotal,
     input wire [31:0] hitTotal,
     input wire [31:0] missTotal,
 
@@ -44,10 +36,12 @@ module IO_Management (
     
 );
 
+//flag that determines when the SD reader is done. used to update the VGA once    
 wire endFile;
-
+//instruction total is calculated in SD decoder    
 wire [31:0] instTotal;
 
+    
 SD_Data_Decoder u_SD_Data_Decoder(
     .clk(clk),
     .led(led),
