@@ -34,6 +34,11 @@ set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { rgb_le
 set_property -dict { PACKAGE_PIN M16   IOSTANDARD LVCMOS33 } [get_ports { rgb_led[1] }]; #IO_L10P_T1_D14_14 Sch=led16_g
 set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { rgb_led[0] }]; #IO_L11P_T1_SRCC_14 Sch=led16_r
 
+set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { rgb_led2[2] }]; #IO_L5P_T0_D06_14 Sch=led16_b
+set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { rgb_led2[1] }]; #IO_L10P_T1_D14_14 Sch=led16_g
+set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { rgb_led2[0] }]; #IO_L11P_T1_SRCC_14 Sch=led16_r
+
+
 # SDcard
 set_property -dict { PACKAGE_PIN E2    IOSTANDARD LVCMOS33 } [get_ports { sdcard_pwr_n }];   #IO_L14P_T2_SRCC_35 Sch=sd_resetn
 #set_property -dict { PACKAGE_PIN A1    IOSTANDARD LVCMOS33 } [get_ports { sd_cd }];          #IO_L9N_T1_DQS_AD7N_35 Sch=sd_cd

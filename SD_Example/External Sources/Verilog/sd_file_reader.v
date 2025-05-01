@@ -13,7 +13,7 @@ module sd_file_reader #(
     parameter            FILE_NAME_LEN = 10           , // length of FILE_NAME (in bytes). Since the length of "wxwxwx.txt" is 10, so here is 10.
     parameter [52*8-1:0] FILE_NAME     = "wxwxwx.txt", // file name to read, ignore upper and lower case
                                                         // For example, if you want to read a file named "HeLLo123.txt", this parameter can be "hello123.TXT", "HELLO123.txt" or "HEllo123.Txt"
-    parameter      [2:0] CLK_DIV       = 3'd2,          // when clk =   0~ 25MHz , set CLK_DIV = 3'd1,
+    parameter      [2:0] CLK_DIV       = 3'd3,          // when clk =   0~ 25MHz , set CLK_DIV = 3'd1,
                                                         // when clk =  25~ 50MHz , set CLK_DIV = 3'd2,
                                                         // when clk =  50~100MHz , set CLK_DIV = 3'd3,
                                                         // when clk = 100~200MHz , set CLK_DIV = 3'd4,
@@ -569,7 +569,7 @@ always @ (posedge clk or negedge rstn)
             fptr <= fptr + 1;
             {outen,outbyte} <= {1'b1,rdata};
         end else
-            {outen,outbyte} <= {outen,outbyte};
+            {outen,outbyte} <= 0;
     end
 
 

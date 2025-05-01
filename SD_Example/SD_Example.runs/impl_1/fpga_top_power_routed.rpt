@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Thu May  1 00:10:37 2025
-| Host             : DESKTOP-O22QL9I running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date             : Thu May  1 17:46:13 2025
+| Host             : engr-d1409-010 running 64-bit major release  (build 9200)
 | Command          : report_power -file fpga_top_power_routed.rpt -pb fpga_top_power_summary_routed.pb -rpx fpga_top_power_routed.rpx
 | Design           : fpga_top
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.208        |
+| Total On-Chip Power (W)  | 0.107        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.111        |
+| Dynamic (W)              | 0.010        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.003 |        8 |       --- |             --- |
-| Slice Logic    |     0.001 |     3305 |       --- |             --- |
-|   LUT as Logic |     0.001 |     1547 |     63400 |            2.44 |
+| Clocks         |     0.005 |        3 |       --- |             --- |
+| Slice Logic    |     0.002 |     3315 |       --- |             --- |
+|   LUT as Logic |     0.002 |     1596 |     63400 |            2.52 |
 |   CARRY4       |    <0.001 |      146 |     15850 |            0.92 |
 |   F7/F8 Muxes  |    <0.001 |       37 |     63400 |            0.06 |
-|   Register     |    <0.001 |     1171 |    126800 |            0.92 |
-|   Others       |     0.000 |       16 |       --- |             --- |
-| Signals        |     0.001 |     2956 |       --- |             --- |
-| MMCM           |     0.106 |        1 |         6 |           16.67 |
+|   Register     |    <0.001 |     1210 |    126800 |            0.95 |
+|   Others       |     0.000 |       14 |       --- |             --- |
+| Signals        |     0.003 |     2992 |       --- |             --- |
 | DSPs           |    <0.001 |       11 |       240 |            4.58 |
-| I/O            |    <0.001 |       29 |       210 |           13.81 |
+| I/O            |    <0.001 |       32 |       210 |           15.24 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.208 |          |           |                 |
+| Total          |     0.107 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,8 +73,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.021 |       0.006 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.025 |       0.010 |      0.015 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -127,16 +126,11 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+----------------------+-------------------------------------+-----------------+
-| Clock                | Domain                              | Constraint (ns) |
-+----------------------+-------------------------------------+-----------------+
-| clk100mhz            | clk100mhz                           |            10.0 |
-| clk_out1_clk_wiz_0   | u_clk_wiz_0/inst/clk_out1_clk_wiz_0 |            20.0 |
-| clk_out1_clk_wiz_0_1 | u_clk_wiz_0/inst/clk_out1_clk_wiz_0 |            20.0 |
-| clkfbout_clk_wiz_0   | u_clk_wiz_0/inst/clkfbout_clk_wiz_0 |            10.0 |
-| clkfbout_clk_wiz_0_1 | u_clk_wiz_0/inst/clkfbout_clk_wiz_0 |            10.0 |
-| sys_clk_pin          | clk100mhz                           |            10.0 |
-+----------------------+-------------------------------------+-----------------+
++-------------+-----------+-----------------+
+| Clock       | Domain    | Constraint (ns) |
++-------------+-----------+-----------------+
+| sys_clk_pin | clk100mhz |            10.0 |
++-------------+-----------+-----------------+
 
 
 3. Detailed Reports
@@ -148,10 +142,9 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| fpga_top           |     0.111 |
-|   u_clk_wiz_0      |     0.106 |
-|     inst           |     0.106 |
-|   u_sd_file_reader |     0.005 |
+| fpga_top           |     0.010 |
+|   u_sd_file_reader |     0.010 |
+|     u_sd_reader    |     0.002 |
 +--------------------+-----------+
 
 

@@ -24,8 +24,9 @@ module fpga_top (
     output wire [15:0]  led,
     // UART tx signal, connected to host-PC's UART-RXD, baud=115200
     output wire         uart_tx,
-    // Output to RGB Leds for File Complete
-    output wire [2:0] rgb_led
+    // Output to RGB Leds for File Complete and File Found
+    output wire [2:0] rgb_led,
+    output wire [2:0] rgb_led2
 );
 
 
@@ -42,13 +43,6 @@ assign {sddat1, sddat2, sddat3} = 3'b111;    // Must set sddat1~3 to 1 to avoid 
 wire       clk;
 wire       rstn;
 
-clk_wiz_0 u_clk_wiz_0 (
-    .resetn      ( resetn       ),
-    .clk_in1     ( clk100mhz    ),
-    .locked      ( rstn         ),
-    .clk_out1    ( clk          )        // 50MHz
-);
-
 
 
 //----------------------------------------------------------------------------------------------------
@@ -63,17 +57,17 @@ wire endFile; // Flag used to indicate end of file reached
 sd_file_reader #(
     .FILE_NAME_LEN    ( 10             ),  // the length of "wxwxwx.txt" (in bytes)
     .FILE_NAME        ( "wxwxwx.txt"  ),  // file name to read
-    .CLK_DIV          ( 2              )   // because clk=50MHz, CLK_DIV must ≥2
+    .CLK_DIV          ( 3              )   // because clk=100MHz, CLK_DIV must ≥3
 ) u_sd_file_reader (
-    .rstn             ( rstn           ),
-    .clk              ( clk            ),
+    .rstn             ( resetn           ),
+    .clk              ( clk100mhz            ),
     .sdclk            ( sdclk          ),
     .sdcmd            ( sdcmd          ),
     .sddat0           ( sddat0         ),
 //    .card_stat        ( led[3:0]       ),  // show the sdcard initialize status
 //    .card_type        ( led[5:4]       ),  // 0=UNKNOWN    , 1=SDv1    , 2=SDv2  , 3=SDHCv2
 //    .filesystem_type  ( led[7:6]       ),  // 0=UNASSIGNED , 1=UNKNOWN , 2=FAT16 , 3=FAT32 
-//    .file_found       ( led[  8]       ),  // 0=file not found, 1=file found
+    .file_found       ( rgb_led2[2]       ),  // 0=file not found, 1=file found
     .outen            ( outen          ),
     .outbyte          ( outbyte        ),
     .endFile(endFile)
@@ -84,7 +78,7 @@ sd_file_reader #(
 // send file content to UART
 //----------------------------------------------------------------------------------------------------
 //uart_tx #(
-//    .CLK_FREQ                  ( 50000000             ),    // clk is 50MHz
+//    .CLK_FREQ                  ( 100000000             ),    // clk is 100MHz
 //    .BAUD_RATE                 ( 115200               ),
 //    .PARITY                    ( "NONE"               ),
 //    .STOP_BITS                 ( 4                    ),
@@ -109,10 +103,10 @@ sd_file_reader #(
 // send file content to char counter
 //----------------------------------------------------------------------------------------------------
 sd_example u_sd_example(
-    .clk(clk),
+    .clk(clk100mhz),
     .led(led),
     .rgb_led(rgb_led),
-    .rstn(rstn),
+    .rstn(resetn),
     .outen(outen),
     .outbyte(outbyte),
     .endFile(endFile)

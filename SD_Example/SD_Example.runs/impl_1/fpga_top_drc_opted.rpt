@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu May  1 00:09:48 2025
-| Host         : DESKTOP-O22QL9I running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Thu May  1 17:45:33 2025
+| Host         : engr-d1409-010 running 64-bit major release  (build 9200)
 | Command      : report_drc -file fpga_top_drc_opted.rpt -pb fpga_top_drc_opted.pb -rpx fpga_top_drc_opted.rpx
 | Design       : fpga_top
 | Device       : xc7a100tcsg324-1

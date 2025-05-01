@@ -1,0 +1,86 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Thu May  1 17:08:16 2025
+# Process ID         : 23328
+# Current directory  : C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent21164 C:\Users\aam08331\Documents\GitHub\4280-Group12\SD_Example\SD_Example.xpr
+# Log file           : C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/vivado.log
+# Journal file       : C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example\vivado.jou
+# Running On         : engr-d1409-010
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34033 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36180 MB
+# Available Virtual  : 25145 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+open_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+export_ip_user_files -of_objects  [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/External Sources/IP/clk_wiz_0/clk_wiz_0.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset clk_wiz_0 {{C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/External Sources/IP/clk_wiz_0/clk_wiz_0.xci}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

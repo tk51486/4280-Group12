@@ -1,0 +1,948 @@
+/*
+
+AMD Vivado v2024.2.1 (64-bit) [Major: 2024, Minor: 2]
+SW Build: 5266912 on Sun Dec 15 09:03:24 MST 2024
+IP Build: 5264866 on Sun Dec 15 16:27:47 MST 2024
+IP Build: 5264866 on Sun Dec 15 16:27:47 MST 2024
+
+Process ID (PID): 23328
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu May 01 17:09:12 EDT 2025
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 24
+
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 0, width = 1920, height = 1040
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	C:/Xilinx/Vivado/2024.2/tps/win64/jre21.0.1_12
+Java executable: 	C:/Xilinx/Vivado/2024.2/tps/win64/jre21.0.1_12/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	aam08331
+User home directory: C:/Users/aam08331
+User working directory: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2024.2
+RDI_DATADIR: C:/Xilinx/Vivado/2024.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2024.2/bin
+
+Vivado preferences file: C:/Users/aam08331/AppData/Roaming/Xilinx/Vivado/2024.2/vivado.xml
+Vivado preferences directory: C:/Users/aam08331/AppData/Roaming/Xilinx/Vivado/2024.2/
+Vivado layouts directory: C:/Users/aam08331/AppData/Roaming/Xilinx/Vivado/2024.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2024.2/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/vivado.log
+Vivado journal file: 	C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/vivado.jou
+Engine tmp dir: 	C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/.Xil/Vivado-23328-engr-d1409-010
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: C:/Xilinx/Vivado/2024.2
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent21164 "C:\Users\aam08331\Documents\GitHub\4280-Group12\SD_Example\SD_Example.xpr"
+RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
+RDI_BASEROOT: C:/Xilinx/Vivado
+RDI_BINDIR: C:/Xilinx/Vivado/2024.2/bin
+RDI_BINROOT: C:/Xilinx/Vivado/2024.2/bin
+RDI_BUILD: yes
+RDI_CHECK_PROG: True
+RDI_DATADIR: C:/Xilinx/Vivado/2024.2/data
+RDI_INSTALLROOT: C:/Xilinx
+RDI_INSTALLVER: 2024.2
+RDI_INSTALLVERSION: 2024.2
+RDI_ISE_PLATFORM: nt64
+RDI_JAVACEFROOT: C:/Xilinx/Vivado/2024.2/tps/win64/java-cef-95.0.4638.69
+RDI_JAVAFXROOT: C:/Xilinx/Vivado/2024.2/tps/win64/javafx-sdk-21.0.1
+RDI_JAVAROOT: C:/Xilinx/Vivado/2024.2/tps/win64/jre21.0.1_12
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: C:/Xilinx/Vivado/2024.2/lib/win64.o
+RDI_MINGW_LIB: C:/Xilinx/Vivado/2024.2\tps\mingw\6.2.0\win64.o\nt\bin;C:/Xilinx/Vivado/2024.2\tps\mingw\6.2.0\win64.o\nt\libexec\gcc\x86_64-w64-mingw32\6.2.0
+RDI_OPT_EXT: .o
+RDI_PLATFORM: win64
+RDI_PREPEND_PATH: C:/Xilinx/Vitis/2024.2/bin;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64
+RDI_PROG: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/vivado.exe
+RDI_PROGNAME: vivado.exe
+RDI_PYTHON3: C:/Xilinx/Vivado/2024.2\tps\win64\python-3.8.3
+RDI_PYTHON3_VERSION: 3.8.3
+RDI_PYTHONHOME: C:/Xilinx/Vivado/2024.2\tps\win64\python-3.8.3
+RDI_PYTHONPATH: C:/Xilinx/Vivado/2024.2\tps\win64\python-3.8.3;C:/Xilinx/Vivado/2024.2\tps\win64\python-3.8.3\bin;C:/Xilinx/Vivado/2024.2\tps\win64\python-3.8.3\lib;C:/Xilinx/Vivado/2024.2\tps\win64\python-3.8.3\lib\site-packages
+RDI_PYTHON_LD_LIBPATH: C:/Xilinx/Vivado/2024.2\tps\win64\python-3.8.3\lib
+RDI_SESSION_INFO: C:\Users\aam08331\Documents\GitHub\4280-Group12\SD_Example:ENGR-D1409-010-Thu05-01-2025_17-08-11.74
+RDI_SHARED_DATA: C:/Xilinx/SharedData/2024.2/data
+RDI_TPS_ROOT: C:/Xilinx/Vivado/2024.2/tps/win64
+RDI_USE_JDK21: True
+RDI_VERBOSE: False
+XILINX: C:/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis/2024.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2024.2
+XILINX_SDK: C:/Xilinx/Vitis/2024.2
+XILINX_VITIS: C:/Xilinx/Vitis/2024.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2024.2
+_RDI_BINROOT: C:\Xilinx\Vivado\2024.2\bin
+_RDI_CWD: C:\Users\aam08331\Documents\GitHub\4280-Group12\SD_Example
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 910 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// Tcl Message: Sourcing tcl script 'C:/Users/aam08331/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl' 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\aam08331\Documents\GitHub\4280-Group12\SD_Example\SD_Example.xpr. Version: Vivado v2024.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 922 MB. GUI used memory: 67 MB. Current time: 5/1/25, 5:09:14 PM EDT
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 105 MB (+108016kb) [00:00:18]
+// [Engine Memory]: 955 MB (+849807kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  1651 ms.
+// Tcl Message: open_project C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Amr/Documents/GitHub/4280-Group12/SD_Example' since last save. INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'. 
+// [GUI Memory]: 141 MB (+32092kb) [00:00:19]
+// [Engine Memory]: 1,032 MB (+31235kb) [00:00:19]
+// Project name: SD_Example; location: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1338.586 ; gain = 251.523 
+dismissDialog("Open Project"); // bh (Open Project Progress)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// [GUI Memory]: 152 MB (+4291kb) [00:00:25]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog0)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u (dialog1)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.srcs/utils_1/imports/synth_1/fpga_top.dcp with file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/fpga_top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "24", 23); // d (PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+// 'cM' command handler elapsed time: 9 seconds
+dismissDialog("Launch Runs"); // cP (dialog2)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 24 
+// Tcl Message: [Thu May  1 17:09:35 2025] Launched synth_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/runme.log [Thu May  1 17:09:35 2025] Launched impl_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 214 seconds
+dismissDialog("Bitstream Generation Completed"); // W.a (dialog3)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_example : sd_example (sd_example.v)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_example : sd_example (sd_example.v)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_example : sd_example (sd_example.v)]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v)]", 3, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("sd_file_reader.v", 361, 234); // ae (sd_file_reader.v)
+// Elapsed time: 21 seconds
+selectCodeEditor("sd_file_reader.v", 339, 182); // ae (sd_file_reader.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,058 MB. GUI used memory: 79 MB. Current time: 5/1/25, 5:15:34 PM EDT
+// Elapsed time: 187 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 22, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Tcl (Dont Echo) Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// Tcl Message: open_hw_manager 
+dismissDialog("Open Hardware Manager"); // bh (Open Hardware Manager Progress)
+// Elapsed time: 44 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // aq (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2024.2.1   **** Build date : Dec  9 2024 at 14:31:29     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2024.2.0   ****** Build date   : Oct 30 2024-14:19:07     **** Build number : 2024.2.1730312347       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 1366.973 ; gain = 10.613 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292BCFC34A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// Elapsed time: 15 seconds
+dismissDialog("Auto Connect"); // bh (Auto Connect Progress)
+// [Engine Memory]: 1,126 MB (+44057kb) [00:08:56]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,131 MB. GUI used memory: 83 MB. Current time: 5/1/25, 5:17:54 PM EDT
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+dismissDialog("Program Device"); // aT (dialog4)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'E' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bh (Program Device Progress)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 11 seconds
+selectCodeEditor("sd_example.v", 307, 143); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 232, 234); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 235, 241); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 271, 133); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 290, 95); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 288, 240); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 404, 240); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 380, 121); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 365, 101); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 366, 196); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 202, 265); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 181, 240); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 183, 237); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 161, 205); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 129, 159); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 157, 228); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 168, 236); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 82, 164); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 180, 224); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 180, 224, false, false, false, false, true); // ae (sd_example.v) - Double Click
+selectCodeEditor("sd_example.v", 86, 171); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 81, 163); // ae (sd_example.v)
+selectCodeEditor("sd_example.v", 269, 234); // ae (sd_example.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("sd_file_reader.v", 229, 298); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 229, 299, false, false, false, false, true); // ae (sd_file_reader.v) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("sd_file_reader.v", 289, 282); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 217, 297); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 558, 138); // ae (sd_file_reader.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:18s
+selectCodeEditor("sd_file_reader.v", 303, 212); // ae (sd_file_reader.v)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:20s
+// [Engine Memory]: 1,185 MB (+2577kb) [00:10:41]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,190 MB. GUI used memory: 84 MB. Current time: 5/1/25, 5:19:39 PM EDT
+// Elapsed time: 32 seconds
+selectCodeEditor("sd_file_reader.v", 261, 278); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 235, 336); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 370, 112); // ae (sd_file_reader.v)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog5)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.srcs/utils_1/imports/synth_1/fpga_top.dcp with file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/fpga_top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectCheckBox(PAResourceItoN.LaunchPanel_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // f (PAResourceItoN.LaunchPanel_DONT_SHOW_THIS_DIALOG_AGAIN): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+// 'cM' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // cP (dialog6)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 24 
+// Tcl Message: [Thu May  1 17:20:16 2025] Launched synth_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/runme.log [Thu May  1 17:20:16 2025] Launched impl_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 11 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Launch Run Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Launch Run Critical Messages"); // bc (dialog7)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 110 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Bitstream Generation Completed"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,278 MB. GUI used memory: 86 MB. Current time: 5/1/25, 5:22:19 PM EDT
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel", "Open Implemented Design"); // a (RDIResource.ProgressDialog_CANCEL)
+// TclEventType: DESIGN_CLOSE
+// TclEventType: DESIGN_NEW_FAILED
+// [Engine Memory]: 1,332 MB (+91589kb) [00:13:23]
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1632.383 ; gain = 0.000 
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 196 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2024.2.1 INFO: [Common 17-344] 'open_run' was cancelled 
+dismissDialog("Open Implemented Design"); // bh (Open Implemented Design Progress)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+dismissDialog("Program Device"); // aT (dialog9)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'E' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bh (Program Device Progress)
+// Elapsed time: 112 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenuItem(PAResourceCommand.PACommandNames_FILESET_WINDOW, "Sources"); // aq (PAResourceCommand.PACommandNames_FILESET_WINDOW, view_filesets_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+// Run Command: PAResourceCommand.PACommandNames_FILESET_WINDOW
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_tx (uart_tx.v)]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_tx (uart_tx.v)]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // J (PAResourceOtoP.PAViews_CODE, PlanAheadTabCode)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v), u_sdcmd_ctrl : sdcmd_ctrl (sdcmd_ctrl.v)]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_example : sd_example (sd_example.v)]", 6, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_example : sd_example (sd_example.v)]", 6, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v)]", 4, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v)]", 4, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_example : sd_example (sd_example.v)]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_example : sd_example (sd_example.v)]", 5, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("fpga_top.v", 165, 225); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 116, 280); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 78, 283); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 13, 204, false, false, false, true, false); // ae (fpga_top.v) - Popup Trigger
+selectCodeEditor("fpga_top.v", 401, 205); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 144, 124); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 144, 124, false, false, false, false, true); // ae (fpga_top.v) - Double Click
+typeControlKey((HResource) null, "fpga_top.v", 'c'); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 178, 149); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 178, 149, false, false, false, false, true); // ae (fpga_top.v) - Double Click
+typeControlKey((HResource) null, "fpga_top.v", 'v'); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 69, 198); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 69, 198, false, false, false, false, true); // ae (fpga_top.v) - Double Click
+typeControlKey((HResource) null, "fpga_top.v", 'v'); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 171, 179); // ae (fpga_top.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("sd_file_reader.v", 498, 197); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 682, 198); // ae (sd_file_reader.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("sd_file_reader.v", 713, 200); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 678, 195); // ae (sd_file_reader.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_reader.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("sd_reader.v", 362, 175); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 441, 196); // ae (sd_reader.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("fpga_top.v", 98, 103); // ae (fpga_top.v)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:54s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:56s
+selectCodeEditor("sd_file_reader.v", 338, 175); // ae (sd_file_reader.v)
+// [GUI Memory]: 165 MB (+4740kb) [00:17:16]
+selectCodeEditor("sd_file_reader.v", 320, 166); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 388, 162); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 355, 192); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 293, 138); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 246, 155); // ae (sd_file_reader.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,357 MB. GUI used memory: 87 MB. Current time: 5/1/25, 5:26:19 PM EDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_reader.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("sd_reader.v", 265, 211); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 248, 165); // ae (sd_reader.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:12s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:14s
+// [Engine Memory]: 1,421 MB (+24162kb) [00:17:40]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// HMemoryUtils.trashcanNow. Engine heap size: 1,429 MB. GUI used memory: 87 MB. Current time: 5/1/25, 5:26:39 PM EDT
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog10)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.srcs/utils_1/imports/synth_1/fpga_top.dcp with file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/fpga_top.dcp 
+dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 24 
+// Tcl Message: [Thu May  1 17:26:39 2025] Launched synth_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/runme.log [Thu May  1 17:26:39 2025] Launched impl_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 144 seconds
+dismissDialog("Bitstream Generation Completed"); // W.a (dialog11)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 23, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 24, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // aq (xc7a100t_0)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+dismissDialog("Program Device"); // aT (dialog12)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'E' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bh (Program Device Progress)
+// Elapsed time: 23 seconds
+selectCodeEditor("sd_example.v", 516, 179); // ae (sd_example.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_reader.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("fpga_top.v", 101, 301); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 68, 316); // ae (fpga_top.v)
+// Elapsed time: 14 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 20m:50s
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_ADD_TAB, "IP Sources", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, clk_wiz_0]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, clk_wiz_0]", 1, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // an (PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, IP Documentation)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // aq (RDIResourceCommand.RDICommands_DELETE, global_delete_menu)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Remove Sources"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Remove Sources"); // V (dialog13)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/External Sources/IP/clk_wiz_0/clk_wiz_0.xci}}] -no_script -reset -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: remove_files  -fileset clk_wiz_0 {{C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/External Sources/IP/clk_wiz_0/clk_wiz_0.xci}} 
+// Tcl Message: INFO: [Project 1-386] Moving file 'C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/External Sources/IP/clk_wiz_0/clk_wiz_0.xci' from fileset 'clk_wiz_0' to fileset 'sources_1'. 
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 21m:02s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 21m:04s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTab((HResource) null, (HResource) null, "Hardware", 1); // aa
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, sd_example.v]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, sd_reader.v]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, fpga_top.v]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, fpga_top.v]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, fpga_top.v]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // an (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectCodeEditor("fpga_top.v", 361, 112); // ae (fpga_top.v)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-A7-SD.xdc]", 11, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-A7-SD.xdc]", 11, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("Nexys-A7-SD.xdc", 364, 50); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 378, 43); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 450, 59); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 368, 64); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 372, 53); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 374, 45); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 396, 38); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 396, 38, false, false, false, false, true); // ae (Nexys-A7-SD.xdc) - Double Click
+selectCodeEditor("Nexys-A7-SD.xdc", 374, 63); // ae (Nexys-A7-SD.xdc)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("fpga_top.v", 378, 110); // ae (fpga_top.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_reader.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("sd_reader.v", 404, 169); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 251, 44); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 190, 4); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 306, 293); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 317, 307); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 217, 93); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 344, 317); // ae (sd_reader.v)
+selectCodeEditor("sd_reader.v", 235, 125); // ae (sd_reader.v)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, Unreferenced]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, fpga_top.v]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, fpga_top.v]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // an (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // aq (PAResourceCommand.PACommandNames_ADD_SOURCES, add_sources_menu)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("CANCEL", "Cancel", "Add Sources"); // JButton (CANCEL)
+dismissDialog("Add Sources"); // c (dialog14)
+selectCodeEditor("Nexys-A7-SD.xdc", 405, 171); // ae (Nexys-A7-SD.xdc)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_reader.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog15)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.srcs/utils_1/imports/synth_1/fpga_top.dcp with file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/fpga_top.dcp 
+dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 24 
+// Tcl Message: [Thu May  1 17:31:58 2025] Launched synth_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/runme.log [Thu May  1 17:31:58 2025] Launched impl_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 18 seconds
+selectTab((HResource) null, (HResource) null, "Hardware", 1); // aa
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_INSERT_TAB, "Hierarchy", 0); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_ADD_TAB, "Libraries", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_INSERT_TAB, "Hierarchy", 0); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectCodeEditor("sd_example.v", 428, 202); // ae (sd_example.v)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// TclEventType: RUN_STATUS_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v)]", 3, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("sd_reader.v", 237, 133); // ae (sd_reader.v)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 23m:28s
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v), u_sdcmd_ctrl : sdcmd_ctrl (sdcmd_ctrl.v)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.v), u_sd_file_reader : sd_file_reader (sd_file_reader.v), u_sd_reader : sd_reader (sd_reader.v), u_sdcmd_ctrl : sdcmd_ctrl (sdcmd_ctrl.v)]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 23m:30s
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// TclEventType: RUN_STEP_COMPLETED
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // J (PAResourceOtoP.PAViews_CODE, PlanAheadTabCode)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_reader.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 12 seconds
+selectCodeEditor("sd_file_reader.v", 433, 201); // ae (sd_file_reader.v)
+selectCodeEditor("sd_file_reader.v", 331, 156); // ae (sd_file_reader.v)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 30 seconds
+dismissDialog("Bitstream Generation Completed"); // W.a (dialog16)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+dismissDialog("Program Device"); // aT (dialog17)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'E' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bh (Program Device Progress)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_example.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("fpga_top.v", 192, 82); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 226, 335); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 185, 61); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 185, 61, false, false, false, false, true); // ae (fpga_top.v) - Double Click
+selectCodeEditor("fpga_top.v", 177, 175); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 177, 175, false, false, false, false, true); // ae (fpga_top.v) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("fpga_top.v", 237, 249); // ae (fpga_top.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys-A7-SD.xdc", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("Nexys-A7-SD.xdc", 550, 110); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 550, 110, false, false, false, false, true); // ae (Nexys-A7-SD.xdc) - Double Click
+selectCodeEditor("Nexys-A7-SD.xdc", 591, 118); // ae (Nexys-A7-SD.xdc)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("fpga_top.v", 393, 228); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 200, 215); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 200, 215, false, false, false, false, true); // ae (fpga_top.v) - Double Click
+selectCodeEditor("fpga_top.v", 427, 298); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 433, 283); // ae (fpga_top.v)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 26m:00s
+selectCodeEditor("fpga_top.v", 394, 302); // ae (fpga_top.v)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 26m:02s
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u (dialog18)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.srcs/utils_1/imports/synth_1/fpga_top.dcp with file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/fpga_top.dcp 
+dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 24 
+// Tcl Message: [Thu May  1 17:35:30 2025] Launched synth_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/runme.log [Thu May  1 17:35:30 2025] Launched impl_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 93 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sd_file_reader.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 47 seconds
+dismissDialog("Bitstream Generation Completed"); // W.a (dialog19)
+dismissDialog("Feedback Request"); // aw (dialog20)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+dismissDialog("Program Device"); // aT (dialog21)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'E' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bh (Program Device Progress)
+// Elapsed time: 216 seconds
+selectCodeEditor("fpga_top.v", 215, 221); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 235, 316); // ae (fpga_top.v)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys-A7-SD.xdc", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("Nexys-A7-SD.xdc", 501, 191); // ae (Nexys-A7-SD.xdc)
+// Elapsed time: 34 seconds
+selectCodeEditor("Nexys-A7-SD.xdc", 197, 206); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 2, 142); // ae (Nexys-A7-SD.xdc)
+typeControlKey((HResource) null, "Nexys-A7-SD.xdc", 'c'); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 43, 214); // ae (Nexys-A7-SD.xdc)
+typeControlKey((HResource) null, "Nexys-A7-SD.xdc", 'v'); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 251, 209); // ae (Nexys-A7-SD.xdc)
+// Elapsed time: 46 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Nexys-A7-SD.xdc", 550, 137); // ae (Nexys-A7-SD.xdc)
+selectCodeEditor("Nexys-A7-SD.xdc", 559, 223); // ae (Nexys-A7-SD.xdc)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("fpga_top.v", 178, 336); // ae (fpga_top.v)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:23s
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:25s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:27s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:29s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:31s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:33s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+selectCodeEditor("fpga_top.v", 309, 248); // ae (fpga_top.v)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:35s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:37s
+selectCodeEditor("fpga_top.v", 145, 284); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 13, 318); // ae (fpga_top.v)
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:57s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 34m:59s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 35m:01s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 35m:03s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 35m:05s
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 35m:07s
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Synthesis is Out-of-date"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog22)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.srcs/utils_1/imports/synth_1/fpga_top.dcp with file C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/fpga_top.dcp 
+dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 24 
+// Tcl Message: [Thu May  1 17:44:23 2025] Launched synth_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/synth_1/runme.log [Thu May  1 17:44:23 2025] Launched impl_1... Run output will be captured here: C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 129 seconds
+dismissDialog("Bitstream Generation Completed"); // W.a (dialog23)
+dismissDialog("Feedback Request"); // aw (dialog24)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+dismissDialog("Program Device"); // aT (dialog25)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/aam08331/Documents/GitHub/4280-Group12/SD_Example/SD_Example.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'E' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bh (Program Device Progress)
+// Elapsed time: 197 seconds
+selectCodeEditor("fpga_top.v", 574, 185); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 581, 175); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 414, 179); // ae (fpga_top.v)
+selectCodeEditor("fpga_top.v", 427, 179); // ae (fpga_top.v)
+// Elapsed time: 27 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 41m:11s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 41m:13s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,471 MB. GUI used memory: 96 MB. Current time: 5/1/25, 5:50:39 PM EDT
+// Elapsed time: 23 seconds
+selectCodeEditor("fpga_top.v", 580, 121); // ae (fpga_top.v)
