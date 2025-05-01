@@ -1,12 +1,27 @@
+//this module calls mem_example, which is part of the DDR example and calls the mig IP. it receives instructions from
+//the cache controller and sends strobes to the DDR example as required. several flags are passed up to DirectLRU for
+//handshaking. the rest of the DDR example can be found in this folder, "RAM Code"
+
 module MemController(
-    input [19:0] SendMem,
-    input memFlag,
     input clk_mem,
     input clk_cpu,
     input pll_locked,
     input CPU_RESETN,
     
     output wire [15:0] LED,
+    
+    //from LRUDirect
+    //is the RAM about to write or read
+    input wire loadstore,
+    //flag to send a strobe
+    input wire start,
+    input [27:0] mem_addr,
+    input [63:0] mem_d_to_ram,
+    
+    //to LRUDirect
+    output[63:0] mem_d_from_ram,
+    output mem_transaction_complete,
+    output mem_ready,
 
     //RAM Interface
     inout[15:0] ddr2_dq,
@@ -27,14 +42,8 @@ module MemController(
 
     `include "io_def.vh"   
     reg [15:0] lights;
-    integer waitCounter;
-    integer lightCounter;
-    initial lights = 16'b0000000000000000;
-    initial waitCounter = 0;
-    initial lightCounter = 0;
-    //////////  Clock Generation  //////////
-    
-    //assign LED[15:0] = lights;
+
+    //existing reset stretch. seems to ensure the modules don't start until the RAM is physically ready
     //////////  Reset Sync/Stretch  //////////
     reg[31:0] rst_stretch = 32'hFFFFFFFF;
     wire reset_req_n, rst_n;
@@ -43,16 +52,6 @@ module MemController(
 
     always @(posedge clk_cpu) rst_stretch = {reset_req_n,rst_stretch[31:1]};
     assign rst_n = reset_req_n & &rst_stretch;
-
-    //////////  DUT  //////////
-    wire[63:0] mem_d_from_ram;
-    wire mem_transaction_complete;
-    wire mem_ready;
-    
-    reg[27:0] mem_addr;
-    reg[63:0] mem_d_to_ram;
-    reg[1:0] mem_transaction_width;
-    reg mem_wstrobe, mem_rstrobe;
     
     mem_example mem_ex(
         .clk_mem(clk_mem),
@@ -84,91 +83,75 @@ module MemController(
         .ready(mem_ready)
         );
 
-    //////////  Traffic Generator  //////////
-    reg[31:0] lfsr;
-    reg i;
-    initial i = 0;
-
-    always @(posedge clk_cpu or negedge rst_n) begin
-        if(~rst_n) lfsr <= 32'h0;
-        else begin
-            if (i == 0) begin
-                lfsr <= 32'h01010101;
-                i <= i + 1;
-            end else if (i == 1) begin
-                lfsr <= 32'h02020202;
-                i <= i + 1;
-            end else if (i == 2) begin
-                lfsr <= 32'h03030303;
-                i <= 0;
-            end
-            //lfsr[31:1] <= lfsr[30:0];
-            //lfsr[0] <= ~^{lfsr[31], lfsr[21], lfsr[1:0]};
-        end
-    end
-
-    localparam TGEN_GEN_AD = 3'h0; 
+    //states and state registers
+    localparam TGEN_IDLE = 3'h0; 
     localparam TGEN_WRITE  = 3'h1;
     localparam TGEN_WWAIT  = 3'h2;
     localparam TGEN_READ   = 3'h3;
     localparam TGEN_RWAIT  = 3'h4;
     localparam TGEN_STOP   = 3'h5;
-        
-    reg[2:0] tgen_state;
-    reg dequ; //Data read from RAM equals data written
-        
+    reg[2:0] tgen_state, next_state;
+
+    //set to 32 bits throughout
+    reg[1:0] mem_transaction_width;
+    //read and write strobe that interact with mem_example
+    reg mem_wstrobe, mem_rstrobe;
+    
+    initial begin
+        lights = 0;
+        mem_rstrobe = 0;
+        mem_wstrobe = 0;
+        mem_transaction_width = `RAM_WIDTH32;
+    end
+
+    //state register
+    always @(posedge clk_cpu) begin
+        tgen_state <= next_state;
+    end    
+
+    //next-state logic
     always @(posedge clk_cpu) begin //or negedge rst_n
         if(~rst_n == 1) begin
-            lights <= 16'b0101010101010101;
-            tgen_state <= TGEN_GEN_AD;
-            mem_rstrobe <= 1'b0;
-            mem_wstrobe <= 1'b0;
-            mem_addr <= 28'h0101010;
-            mem_d_to_ram <= 28'h0;
-            mem_transaction_width <= 3'h0;
-            dequ <= 1'b0;
+            next_state = TGEN_IDLE;
         end else begin
             case(tgen_state)
-            TGEN_GEN_AD: begin
-                    if (memFlag == 1) begin
-                        lights <= SendMem[15:0];
-                        //lights <= 16'b1100110011001100;
-                        mem_addr <= 28'h0101010;
-                        mem_d_to_ram <= SendMem;
-                        tgen_state <= TGEN_WRITE;
-                    end 
+            TGEN_IDLE: begin //waiting for start flag
+                if(start) begin
+                    if(loadstore) begin //go to next state based on reading/writing
+                        next_state = TGEN_WRITE;
+                    end else begin
+                        next_state = TGEN_READ;
+                    end
                 end
+            end
             TGEN_WRITE: begin
-                    if(mem_ready) begin
-                        mem_wstrobe <= 1;
-                        //Write the entire 64-bit word
-                        mem_transaction_width <= `RAM_WIDTH32;
-                        tgen_state <= TGEN_WWAIT;
-                    end
+                if(mem_ready) begin //if ram initialized, send strobe
+                    mem_wstrobe = 1;
+                    next_state = TGEN_WWAIT; \ 
                 end
+            end
             TGEN_WWAIT: begin
-                    mem_wstrobe <= 0;
-                    if(mem_transaction_complete) begin
-                        tgen_state <= TGEN_READ;
-                    end
+                mem_wstrobe = 0; //turn off strobe
+                if(mem_transaction_complete) begin //wait for transaction flag
+                    next_state = TGEN_IDLE; //wait until next start flag
                 end
+            end
             TGEN_READ: begin
-                    if(mem_ready) begin
-                        mem_rstrobe <= 1;
-                        //Load only the single byte at that address
-                        mem_transaction_width <= `RAM_WIDTH32;
-                        tgen_state <= TGEN_RWAIT;
-                    end
+                if(mem_ready) begin //if ram initialized, send strobe
+                    mem_rstrobe = 1;
+                    next_state = TGEN_RWAIT;
                 end
+            end
             TGEN_RWAIT: begin
-                    mem_rstrobe <= 0;
-                    if(mem_transaction_complete) begin
-                       lights <= mem_d_from_ram[63:48];
-                       //lights <= 16'b1111111111111111;
-                    end
+                mem_rstrobe = 0; //turn off strobe
+                if(mem_transaction_complete) begin
+                   next_state = TGEN_IDLE;
                 end
-            TGEN_STOP: begin
-                end
+            end
+            TGEN_STOP: begin //for debugging, unused
+                lights = mem_d_from_ram[63:48];
+            end
+            default next_state = TGEN_IDLE; //default state
             endcase
         end
     end 

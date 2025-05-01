@@ -1,24 +1,7 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/09/2025 08:17:02 PM
-// Design Name: 
-// Module Name: supertop
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+//this is our top module, from which all other modules are called. all relevant Verilog files are in this folder,
+//LRU Final. our heirarchy has two halves, one for the cache controller and RAM (starts with DirectLRU)
+//and one for everything else (starts with IO_Management).
 
 module supertop(
         //General
@@ -73,6 +56,7 @@ module supertop(
     wire [20:0] LRUInst;
     wire LRULineReady;
     
+    //tracks on button    
     reg start;
     
     //for pll (clk wiz)
@@ -80,7 +64,7 @@ module supertop(
     wire pll_locked;
     wire resetn;
     
-    //reg [15:0] debugLED;
+    //visualizing on button
     assign led[0] = JA;
     
     assign sdcard_pwr_n = 1'b0;                  // keep SDcard power-on
@@ -92,10 +76,11 @@ module supertop(
     
     always @(posedge clk100mhz)begin
         if(JA)begin
-            start = 1;
+            start = 1; //once on button is pressed, cache simulator will begin
         end
     end
-    
+
+    //clock wizard used for both SD and DDR    
     pll pll1(
         .resetn(resetn),
         .locked(pll_locked),
@@ -104,28 +89,31 @@ module supertop(
         .clk_sd(clk_sd), 
         .clk_cpu(clk_cpu)  //Clock used for traffic generator
     );
-        
+
+    //IO_Management calls VGA and SD modules    
     IO_Management u_IO_Management(
         .start(start),
         .clk(clk100mhz),
         //.led(led),
-        
+
+        //stats to track (from DirectLRU)   
         .accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
         .writeHitTotal(writeHitTotal),
         .readHitTotal(readHitTotal),
         .writeMissTotal(writeMissTotal),
         .readMissTotal(readMissTotal),
-        //.instTotal(instTotal),
         .hitTotal(hitTotal),
         .missTotal(missTotal),
-        
+
+        //each instruction, sent from SD to LRU    
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),
         .LRULoadStore(LRULoadStore),
         .LRUInst(LRUInst),
         .LRULineReady(LRULineReady),
-        
+
+        //for SD    
         .clk_sd(clk_sd),
         .rstn(pll_locked),
         .resetn(resetn),
@@ -133,40 +121,44 @@ module supertop(
         .sdcmd(sdcmd),
         .sddat0(sddat0),
         .uart_tx(uart_tx),
-        
+
+        //for VGA    
         .hsync(hsync),
         .vsync(vsync),
         .rgb(rgb)
     );
     
     DirectLRU u_DirectLRU(
-        
+        //clock           
         .clk(clk100mhz),
-        
+
+        //each instruction, sent from SD to LRU    
         .LRUTag(LRUTag),
         .LRUIndex(LRUIndex),
         .LRULoadStore(LRULoadStore),
         .LRUInst(LRUInst),
         .LRULineReady(LRULineReady),
-        
+
+        //stats to track    
         .accessesTotal(accessesTotal),
         .evictionTotal(evictionTotal),
         .writeHitTotal(writeHitTotal),
         .readHitTotal(readHitTotal),
         .writeMissTotal(writeMissTotal),
         .readMissTotal(readMissTotal),
-        //.instTotal(instTotal),
         .hitTotal(hitTotal),
         .missTotal(missTotal),
         
-        
+        //for RAM
         .clk_mem(clk_mem),
         .clk_cpu(clk_cpu),
         .pll_locked(pll_locked),
         .CPU_RESETN(CPU_RESETN),
-        
+
+        //LEDs, used as a "progress bar"    
         .led(led[15:1]),
-        
+
+        //for mig IP     
         .ddr2_dq(ddr2_dq),
         .ddr2_dqs_n(ddr2_dqs_n),
         .ddr2_dqs_p(ddr2_dqs_p),
